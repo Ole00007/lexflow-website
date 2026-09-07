@@ -52,14 +52,64 @@
     var status = document.querySelector('.alessia-status');
     if (status) status.textContent = t.status;
     var greeting = document.querySelector('.alessia-message p');
-    if (greeting) greeting.textContent = t.greeting;
+    var pageI18n = window.I18N && window.I18N[lang] ? window.I18N[lang] : (window.I18N && window.I18N.en ? window.I18N.en : {});
+    if (greeting) {
+      if (pageI18n.chatbot_greeting) greeting.textContent = pageI18n.chatbot_greeting;
+      else greeting.textContent = t.greeting;
+    }
     var cta = document.getElementById('alessiaCtaLabel');
-    if (cta) cta.textContent = t.cta;
+    if (cta) {
+      if (pageI18n.chatbot_wa_cta) cta.textContent = pageI18n.chatbot_wa_cta;
+      else cta.textContent = t.cta;
+    }
     /* Translate chips */
     document.querySelectorAll('.alessia-chip').forEach(function (chip) {
       var val = chip.getAttribute('data-value');
       if (val && t.chips[val]) chip.textContent = t.chips[val];
     });
+    /* Translate intake fields (from page I18N dict) */
+    var pageI18n = window.I18N && window.I18N[lang] ? window.I18N[lang] : (window.I18N && window.I18N.en ? window.I18N.en : {});
+    var intake = document.querySelector('.alessia-intake');
+    if (intake) {
+      var fieldLabels = intake.querySelectorAll('label');
+      if (fieldLabels[0] && pageI18n.chatbot_field_topic) fieldLabels[0].textContent = pageI18n.chatbot_field_topic;
+      if (fieldLabels[1] && pageI18n.chatbot_field_status) fieldLabels[1].textContent = pageI18n.chatbot_field_status;
+      if (fieldLabels[2] && pageI18n.chatbot_field_urgency) fieldLabels[2].textContent = pageI18n.chatbot_field_urgency;
+      var ta = intake.querySelector('textarea');
+      if (ta && pageI18n.chatbot_message) ta.setAttribute('placeholder', pageI18n.chatbot_message);
+      var sb = intake.querySelector('.alessia-send');
+      if (sb && pageI18n.chatbot_send) sb.textContent = pageI18n.chatbot_send;
+      /* Translate select options */
+      var topicOpts = intake.querySelectorAll('select:nth-of-type(1) option');
+      if (topicOpts.length >= 5 && pageI18n.chatbot_topic_civil) {
+        topicOpts[0].textContent = pageI18n.chatbot_topic_civil;
+        topicOpts[1].textContent = pageI18n.chatbot_topic_criminal;
+        topicOpts[2].textContent = pageI18n.chatbot_topic_family;
+        topicOpts[3].textContent = pageI18n.chatbot_topic_labor;
+        topicOpts[4].textContent = pageI18n.chatbot_topic_other;
+      }
+      var statusOpts = intake.querySelectorAll('select:nth-of-type(2) option');
+      if (statusOpts.length >= 3 && pageI18n.chatbot_status_new) {
+        statusOpts[0].textContent = pageI18n.chatbot_status_new;
+        statusOpts[1].textContent = pageI18n.chatbot_status_active;
+        statusOpts[2].textContent = pageI18n.chatbot_status_closed;
+      }
+      var urgOpts = intake.querySelectorAll('select:nth-of-type(3) option');
+      if (urgOpts.length >= 4 && pageI18n.chatbot_urgency_low) {
+        urgOpts[0].textContent = pageI18n.chatbot_urgency_low;
+        urgOpts[1].textContent = pageI18n.chatbot_urgency_medium;
+        urgOpts[2].textContent = pageI18n.chatbot_urgency_high;
+        urgOpts[3].textContent = pageI18n.chatbot_urgency_critical;
+      }
+    }
+    var note = document.querySelector('.alessia-note');
+    if (note && pageI18n.chatbot_note) note.textContent = pageI18n.chatbot_note;
+    /* WA CTA — use page dict if present */
+    if (pageI18n.chatbot_wa_cta) {
+      if (cta) cta.textContent = pageI18n.chatbot_wa_cta;
+    } else if (cta) {
+      cta.textContent = t.cta;
+    }
   }
 
   function openWidget() {
@@ -121,6 +171,34 @@
 
     var cta = document.querySelector('.alessia-cta');
     if (cta) cta.addEventListener('click', function () { sendMessage("demo-request"); });
+
+    /* Intake send button — collects fields and POSTs to CRM contacts */
+    var sendBtn = document.querySelector('.alessia-send');
+    if (sendBtn) {
+      sendBtn.addEventListener('click', function () {
+        var intake = document.querySelector('.alessia-intake');
+        if (!intake) return;
+        var topic = intake.querySelector('select:nth-of-type(1)').value;
+        var status = intake.querySelector('select:nth-of-type(2)').value;
+        var urgency = intake.querySelector('select:nth-of-type(3)').value;
+        var text = intake.querySelector('textarea').value;
+        var payload = {
+          message: text,
+          topic: topic,
+          status: status,
+          urgency: urgency,
+          source: 'lexflow-website-chatbot',
+          lang: getLang()
+        };
+        sendMessage(text || topic + ' / ' + urgency);
+        try {
+          if (window.LEXFLOW_CONFIG && window.LEXFLOW_CONFIG.webhookBase) {
+            var wh = (window.LEXFLOW_CONFIG.webhooks && window.LEXFLOW_CONFIG.webhooks['chatbot-send']) || (window.LEXFLOW_CONFIG.webhookBase + '/chatbot-message');
+            fetch(wh, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload), keepalive: true }).catch(function(){});
+          }
+        } catch(err) {}
+      });
+    }
 
     // Expose global sync so i18n.js can call it deterministically after setLang
     window.LexFlowAlessiaSync = syncCopy;
