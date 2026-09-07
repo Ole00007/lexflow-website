@@ -44,9 +44,10 @@
   <div class="nav-links">
     <a href="lexflow-index.html" data-i18n="nav_features">Features</a>
     <a href="lexflow-how-it-works.html" data-i18n="nav_howitworks">How It Works</a>
-    <a class="active" href="lexflow-pricing.html" data-i18n="nav_pricing">Pricing</a>
+    <a class="active" href="lexflow-pricing.html" data-i18n="nav_pricing">Features &amp; Pricing</a>
     <a href="lexflow-practice-areas.html" data-i18n="nav_practice">Practice Areas</a>
     <a href="lexflow-faq.html" data-i18n="nav_faq">FAQ</a>
+    <a href="lexflow-blog.html" data-i18n="nav_blog">Blog</a>
   </div><div class="nav-cta">
     <button class="icon-btn" id="themeBtn" aria-label="Toggle dark/light theme">◐</button>
     <div class="lang-wrap">
@@ -57,8 +58,8 @@
         <button data-lang="ru" role="menuitem">🇷🇺 Русский</button>
       </div>
     </div>
-    <a class="btn btn-ghost" href="#login" data-i18n="nav_signin">Sign in</a>
-    <a class="btn btn-gold" data-webhook="demo-request-nav" href="#demo" data-i18n="nav_demo">Book a Demo</a>
+    <a class="btn btn-ghost" href="https://web-production-031a6.up.railway.app/login?ws=lexflow" data-i18n="nav_signin">Sign in</a>
+    <a class="btn btn-gold" data-webhook="demo-request-nav" href="lexflow-index.html#intake" data-i18n="nav_demo">Book a Demo</a>
   </div>
 </nav>
 <!-- /WEBHOOK -->
@@ -81,27 +82,29 @@
   <div class="wrap">
     <div class="pricing-grid">
       <div class="price-card">
-        <div class="price-tier" data-i18n="tier1_name">Starter</div>
+        <div class="price-tier" data-i18n="tier1_name">Organisation &amp; Control</div>
         <div class="price-amount">$39<span>/user/mo</span></div>
         <p class="price-desc" data-i18n="tier1_desc">For solo practitioners and small firms moving off spreadsheets.</p>
         <ul class="price-features">
           <li><span class="tick">✓</span><span data-i18n="tier1_f1">Case & contact management</span></li>
-          <li><span class="tick">✓</span><span data-i18n="tier1_f2">Time tracking & billing</span></li>
-          <li><span class="tick">✓</span><span data-i18n="tier1_f3">Document storage (unlimited)</span></li>
-          <li><span class="tick">✓</span><span data-i18n="tier1_f4">Client portal</span></li>
+          <li><span class="tick">✓</span><span data-i18n="tier1_f2">Client Intake & CRM</span></li>
+          <li><span class="tick">✓</span><span data-i18n="tier1_f3">Workflow Automation</span></li>
+          <li><span class="tick">✓</span><span data-i18n="tier1_f4">Email & messenger automatic notifications</span></li>
+          <li><span class="tick">✓</span><span data-i18n="tier1_f5">Legal Calendaring</span></li>
         </ul>
         <a class="btn btn-ghost" href="#demo" data-webhook="pricing-select-starter" style="width:100%" data-i18n="tier1_cta">Start Free Trial</a>
       </div>
       <div class="price-card featured">
         <div class="price-badge">Popular</div>
-        <div class="price-tier" data-i18n="tier2_name">Professional</div>
+        <div class="price-tier" data-i18n="tier2_name">Steady Growth</div>
         <div class="price-amount">$79<span>/user/mo</span></div>
         <p class="price-desc" data-i18n="tier2_desc">For growing firms ready to automate intake, billing, and workflows.</p>
         <ul class="price-features">
-          <li><span class="tick">✓</span><span data-i18n="tier2_f1">Everything in Starter</span></li>
-          <li><span class="tick">✓</span><span data-i18n="tier2_f2">Document & matter templates</span></li>
-          <li><span class="tick">✓</span><span data-i18n="tier2_f3">300+ app integrations</span></li>
-          <li><span class="tick">✓</span><span data-i18n="tier2_f4">AI document analyser</span></li>
+          <li><span class="tick">✓</span><span data-i18n="tier2_f1">Everything in Organisation &amp; Control</span></li>
+          <li><span class="tick">✓</span><span data-i18n="tier2_f2">More than 10 integrations to select from</span></li>
+          <li><span class="tick">✓</span><span data-i18n="tier2_f3">+ 5 more integrations at your request</span></li>
+          <li><span class="tick">✓</span><span data-i18n="tier2_f4">Document & matter templates</span></li>
+          <li><span class="tick">✓</span><span data-i18n="tier2_f5">Project Management</span></li>
         </ul>
         <a class="btn btn-gold" href="#demo" data-webhook="pricing-select-professional" style="width:100%" data-i18n="tier2_cta">Start Free Trial</a>
       </div>
@@ -110,16 +113,20 @@
         <div class="price-amount" data-i18n="price_custom">Custom quote</div>
         <p class="price-desc" data-i18n="tier3_desc">For large firms needing custom AI workflows and dedicated support.</p>
         <ul class="price-features">
-          <li><span class="tick">✓</span><span data-i18n="tier3_f1">Everything in Professional</span></li>
-          <li><span class="tick">✓</span><span data-i18n="tier3_f2">Custom AI workflow builder</span></li>
-          <li><span class="tick">✓</span><span data-i18n="tier3_f3">Dedicated onboarding & SSO</span></li>
-          <li><span class="tick">✓</span><span data-i18n="tier3_f4">Priority 24/5 support</span></li>
+          <li><span class="tick">✓</span><span data-i18n="tier3_f1">Everything in Steady Growth</span></li>
+          <li><span class="tick">✓</span><span data-i18n="tier3_f2">Advanced marketing solutions</span></li>
+          <li><span class="tick">✓</span><span data-i18n="tier3_f3">Time & Expense Tracking</span></li>
+          <li><span class="tick">✓</span><span data-i18n="tier3_f4">Performance Tracking</span></li>
+          <li><span class="tick">✓</span><span data-i18n="tier3_f5">Billing & Invoicing · Payments</span></li>
+          <li><span class="tick">✓</span><span data-i18n="tier3_f6">More than 20 integrations</span></li>
+          <li><span class="tick">✓</span><span data-i18n="tier3_f7">+ 10 more integrations at your choice</span></li>
+          <li><span class="tick">✓</span><span data-i18n="tier3_f8">Flexible customisation</span></li>
         </ul>
         <a class="btn btn-ghost" href="#demo" data-webhook="pricing-select-enterprise" style="width:100%" data-i18n="tier3_cta">Contact Sales</a>
       </div>
     </div>
 
-    <h2 style="margin-top:56px" data-i18n="compare_title">How LexFlow compares</h2>
+    <h2 style="margin-top:56px" data-i18n="compare_title">LexFlow Vs Competitive Peers comparison</h2>
     <table class="compare-table">
       <thead><tr><th data-i18n="compare_col1">Plan</th><th data-i18n="compare_col2">Starting Price</th><th data-i18n="compare_col3">Billing Note</th></tr></thead>
       <tbody>
@@ -137,6 +144,14 @@
     <div class="compliance-band" style="margin-top:40px">
       <span class="badge">🛡 GDPR</span><span class="badge">🔒 ISO 27001:2022</span><span class="badge">🔐 ISO/IEC 27701:2025</span>
     </div>
+    <p class="roadmap-note" style="margin-top:22px;font-size:13px;color:var(--text-faint);display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap">
+      <span>✓ Archiviazione cloud · or your local server</span>
+      <span>✓ Notifiche email e messenger automatiche</span>
+      <span>✓ PostgreSQL Secure database</span>
+      <span>✓ CRM</span>
+      <span>✓ Legal Calendaring</span>
+      <span>| Prossimamente: Time &amp; Expense Tracking · Payments</span>
+    </p>
   </div>
 </section>
 
@@ -148,12 +163,29 @@
   </div>
 </section>
 
+<!-- CONTACT BLOCK -->
+<section class="section" id="contact">
+  <div class="wrap">
+    <div class="cta-band" style="background:var(--surface-2)">
+      <h2 data-i18n="contact_title">Hai altre domande o hai bisogno di informazioni piu dettagliate? Scrivici.</h2>
+      <div class="faq-contact-links" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:18px">
+        <a class="faq-contact-btn whatsapp" href="https://wa.me/393450234084" target="_blank" rel="noopener" data-webhook="contact-whatsapp">💬 WhatsApp · +39 345 023 4084</a>
+        <a class="faq-contact-btn email" href="mailto:info@lexflow.com" data-webhook="contact-email">✉ info@lexflow.com</a>
+        <a class="faq-contact-btn email" href="mailto:demo@lexflow.com" data-webhook="contact-demo-email">✉ demo@lexflow.com</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="footer-inner">
     <span class="footer-text" data-i18n="footer_text">LexFlow © 2026 — All rights reserved.</span>
-        <div class="footer-social">
-      <a href="#" data-webhook="social-linkedin" aria-label="LinkedIn" target="_blank" rel="noopener">💼</a>
-      <a href="#" data-webhook="social-instagram" aria-label="Instagram" target="_blank" rel="noopener">📸</a>
+            <div class="footer-social">
+      <a href="#" data-webhook="social-linkedin" aria-label="LinkedIn" target="_blank" rel="noopener">in</a>
+      <a href="#" data-webhook="social-instagram" aria-label="Instagram" target="_blank" rel="noopener">ig</a>
+      <a href="https://wa.me/393450234084" data-webhook="social-whatsapp" aria-label="WhatsApp" target="_blank" rel="noopener">wa</a>
+      <a href="#" data-webhook="social-github" aria-label="GitHub" target="_blank" rel="noopener">gh</a>
+      <a href="#" data-webhook="social-telegram" aria-label="Telegram" target="_blank" rel="noopener">tg</a>
     </div>
     <span class="footer-credit" data-i18n="footer_credit">Designed by AVibe Agency</span>
   </div>
@@ -163,11 +195,33 @@
 
 
 <script>
-window.I18N = {"en":{"nav_features":"Features","nav_howitworks":"How It Works","nav_pricing":"Pricing","nav_faq":"FAQ","nav_practice":"Practice Areas","nav_signin":"Sign in","nav_demo":"Book a Demo","cta_title":"See LexFlow in your firm","cta_lede":"Get a tailored walkthrough — no obligation.","cta_button":"Request Demo","footer_text":"LexFlow © 2026 — All rights reserved.","chatbot_name":"Alessia — Online Support","chatbot_greeting":"Hi! How can I help you today?","chatbot_placeholder":"Type your message...","footer_credit":"Designed by AVibe Agency","pricing_eyebrow":"Simple, Transparent Pricing","pricing_title":"Plans that scale with your firm","pricing_lede":"Per-user monthly pricing, billed annually. Compare LexFlow against the market leaders below.","tier1_name":"Starter","tier1_cta":"Start Free Trial","tier1_desc":"For solo practitioners and small firms moving off spreadsheets.","tier2_name":"Professional","tier2_cta":"Start Free Trial","tier2_desc":"For growing firms ready to automate intake, billing, and workflows.","tier3_name":"Enterprise","tier3_cta":"Contact Sales","tier3_desc":"For large firms needing custom AI workflows and dedicated support.","tier1_f1":"Case & contact management","tier1_f2":"Time tracking & billing","tier1_f3":"Document storage (unlimited)","tier1_f4":"Client portal","tier2_f1":"Everything in Starter","tier2_f2":"Document & matter templates","tier2_f3":"300+ app integrations","tier2_f4":"AI document analyser","tier3_f1":"Everything in Professional","tier3_f2":"Custom AI workflow builder","tier3_f3":"Dedicated onboarding & SSO","tier3_f4":"Priority 24/5 support","price_custom":"Custom quote","compare_title":"How LexFlow compares","compare_col1":"Plan","compare_col2":"Starting Price","compare_col3":"Billing Note","compare_note":"Competitor pricing reflects publicly listed rates as of the research date and is subject to change by the vendor."},"it":{"nav_features":"Funzionalità","nav_howitworks":"Come Funziona","nav_pricing":"Prezzi","nav_faq":"Domande e Risposte","nav_practice":"Aree di Pratica","nav_signin":"Accedi","nav_demo":"Prenota una Demo","cta_title":"Scopri LexFlow nel tuo studio","cta_lede":"Ottieni una dimostrazione su misura — senza impegno.","cta_button":"Richiedi una Demo","footer_text":"LexFlow © 2026 — Tutti i diritti riservati.","chatbot_name":"Alessia — Assistenza Online","chatbot_greeting":"Ciao! Come posso aiutarti oggi?","chatbot_placeholder":"Scrivi il tuo messaggio...","footer_credit":"Progettato da AVibe Agency","pricing_eyebrow":"Prezzi semplici e trasparenti","pricing_title":"Piani che crescono con il tuo studio","pricing_lede":"Prezzi mensili per utente, fatturati annualmente. Confronta LexFlow con i leader di mercato.","tier1_name":"Starter","tier1_cta":"Inizia la Prova Gratuita","tier1_desc":"Per liberi professionisti e piccoli studi che abbandonano i fogli di calcolo.","tier2_name":"Professional","tier2_cta":"Inizia la Prova Gratuita","tier2_desc":"Per studi in crescita pronti ad automatizzare intake, fatturazione e flussi di lavoro.","tier3_name":"Enterprise","tier3_cta":"Contatta le Vendite","tier3_desc":"Per grandi studi che necessitano di flussi di lavoro IA personalizzati.","tier1_f1":"Gestione di casi e contatti","tier1_f2":"Tracciamento del tempo e fatturazione","tier1_f3":"Archiviazione documenti illimitata","tier1_f4":"Portale clienti","tier2_f1":"Tutto ciò che include Starter","tier2_f2":"Modelli di documenti e pratiche","tier2_f3":"Oltre 300 integrazioni con app","tier2_f4":"Analizzatore documenti IA","tier3_f1":"Tutto ciò che include Professional","tier3_f2":"Generatore di flussi di lavoro IA personalizzati","tier3_f3":"Onboarding dedicato e SSO","tier3_f4":"Supporto prioritario 24/5","price_custom":"Preventivo personalizzato","compare_title":"Come si confronta LexFlow","compare_col1":"Piano","compare_col2":"Prezzo di partenza","compare_col3":"Nota di fatturazione","compare_note":"I prezzi della concorrenza riflettono le tariffe pubblicate alla data della ricerca."},"ru":{"nav_features":"Возможности","nav_howitworks":"Как это работает","nav_pricing":"Тарифы","nav_faq":"Вопросы и ответы","nav_practice":"Направления практики","nav_signin":"Войти","nav_demo":"Заказать демо","cta_title":"Узнайте, как LexFlow работает в вашей фирме","cta_lede":"Получите индивидуальную демонстрацию — без обязательств.","cta_button":"Запросить демо","footer_text":"LexFlow © 2026 — облегчённый превью-артефакт дизайна.","chatbot_name":"Алесия — Онлайн поддержка","chatbot_greeting":"Привет! Как я могу вам помочь?","chatbot_placeholder":"Введите сообщение...","footer_credit":"Разработано AVibe Agency","pricing_eyebrow":"Простые, прозрачные тарифы","pricing_title":"Тарифы, растущие вместе с вашей фирмой","pricing_lede":"Помесячная оплата за пользователя. Сравните LexFlow с лидерами рынка.","tier1_name":"Starter","tier1_cta":"Начать бесплатно","tier1_desc":"Для частных юристов и небольших фирм.","tier2_name":"Professional","tier2_cta":"Начать бесплатно","tier2_desc":"Для растущих фирм, готовых автоматизировать процессы.","tier3_name":"Enterprise","tier3_cta":"Связаться с отделом продаж","tier3_desc":"Для крупных фирм с индивидуальными ИИ-процессами.","tier1_f1":"Управление делами и контактами","tier1_f2":"Учёт времени и биллинг","tier1_f3":"Неограниченное хранение документов","tier1_f4":"Портал для клиентов","tier2_f1":"Всё из Starter","tier2_f2":"Шаблоны документов и дел","tier2_f3":"Более 300 интеграций","tier2_f4":"ИИ-анализатор документов","tier3_f1":"Всё из Professional","tier3_f2":"Конструктор ИИ-процессов","tier3_f3":"Выделенное внедрение и SSO","tier3_f4":"Приоритетная поддержка 24/5","price_custom":"Индивидуальное предложение","compare_title":"Сравнение LexFlow","compare_col1":"Тариф","compare_col2":"Начальная цена","compare_col3":"Примечание по оплате","compare_note":"Цены конкурентов отражают публично указанные тарифы на дату исследования."}};
+window.I18N = {"en":{"nav_features":"Features","nav_howitworks":"How It Works","nav_pricing":"Pricing","nav_faq":"FAQ","nav_practice":"Practice Areas","nav_signin":"Sign in","nav_demo":"Book a Demo","cta_title":"See LexFlow in your firm","cta_lede":"Get a tailored walkthrough — no obligation.","cta_button":"Request Demo","footer_text":"LexFlow © 2026 — All rights reserved.","chatbot_name":"Alessia — Online Support","chatbot_greeting":"Hi! How can I help you today?","chatbot_placeholder":"Type your message...","footer_credit":"Designed by AVibe Agency","pricing_eyebrow":"Simple, Transparent Pricing","pricing_title":"Plans that scale with your firm","pricing_lede":"Per-user monthly pricing, billed annually. Compare LexFlow against the market leaders below.","tier1_name":"Organisation & Control","tier1_cta":"Start Free Trial","tier1_desc":"For solo practitioners and small firms moving off spreadsheets.","tier2_name":"Steady Growth","tier2_cta":"Start Free Trial","tier2_desc":"For growing firms ready to automate intake, billing, and workflows.","tier3_name":"Enterprise","tier3_cta":"Contact Sales","tier3_desc":"For large firms needing custom AI workflows and dedicated support.","tier1_f1":"Case & contact management","tier1_f2":"Client Intake & CRM","tier1_f3":"Workflow Automation","tier1_f4":"Email & messenger automatic notifications","tier1_f5":"Legal Calendaring","tier2_f1":"Everything in Organisation & Control","tier2_f2":"More than 10 integrations to select from","tier2_f3":"+ 5 more integrations at your request","tier2_f4":"Document & matter templates","tier2_f5":"Project Management","tier3_f1":"Everything in Steady Growth","tier3_f2":"Advanced marketing solutions","tier3_f3":"Time & Expense Tracking","tier3_f4":"Performance Tracking","tier3_f5":"Billing & Invoicing · Payments","tier3_f6":"More than 20 integrations","tier3_f7":"+ 10 more integrations at your choice","tier3_f8":"Flexible customisation","price_custom":"Custom quote","compare_title":"LexFlow Vs Competitive Peers comparison","compare_col1":"Plan","compare_col2":"Starting Price","compare_col3":"Billing Note","compare_note":"Competitor pricing reflects publicly listed rates as of the research date and is subject to change by the vendor."},"it":{"nav_features":"Informazioni sul CRM","nav_howitworks":"Come Funziona","nav_pricing":"Funzionalità e Prezzi","nav_faq":"Domande e Risposte","nav_blog":"Blog","nav_practice":"Aree di Pratica","nav_signin":"Accedi","nav_demo":"Prenota una Demo","cta_title":"Scopri LexFlow nel tuo studio","cta_lede":"Ottieni una dimostrazione su misura — senza impegno.","cta_button":"Richiedi una Demo","footer_text":"LexFlow © 2026 — Tutti i diritti riservati.","chatbot_name":"Alessia — Assistenza Online","chatbot_greeting":"Ciao! Come posso aiutarti oggi?","chatbot_placeholder":"Scrivi il tuo messaggio...","footer_credit":"Progettato da AVibe Agency","pricing_eyebrow":"Prezzi semplici e trasparenti","pricing_title":"Piani che crescono con il tuo studio","pricing_lede":"Prezzi mensili per utente, fatturati annualmente. Confronta LexFlow con i leader di mercato.","tier1_name":"Organizzazione & Controllo","tier1_cta":"Inizia la Prova Gratuita","tier1_desc":"Per liberi professionisti e piccoli studi che abbandonano i fogli di calcolo.","tier2_name":"Crescita Costante","tier2_cta":"Inizia la Prova Gratuita","tier2_desc":"Per studi in crescita pronti ad automatizzare intake, fatturazione e flussi di lavoro.","tier3_name":"Enterprise","tier3_cta":"Contatta le Vendite","tier3_desc":"Per grandi studi che necessitano di flussi di lavoro IA personalizzati.","tier1_f1":"Gestione di casi e contatti","tier1_f2":"Tracciamento del tempo e fatturazione","tier1_f3":"Archiviazione documenti illimitata","tier1_f4":"Portale clienti","tier2_f1":"Tutto ciò che include Starter","tier2_f2":"Modelli di documenti e pratiche","tier2_f3":"Oltre 300 integrazioni con app","tier2_f4":"Analizzatore documenti IA","tier3_f1":"Tutto ciò che include Professional","tier3_f2":"Generatore di flussi di lavoro IA personalizzati","tier3_f3":"Onboarding dedicato e SSO","tier3_f4":"Supporto prioritario 24/5","price_custom":"Preventivo personalizzato","compare_title":"Confronto LexFlow vs Concorrenti","compare_col1":"Piano","compare_col2":"Prezzo di partenza","compare_col3":"Nota di fatturazione","compare_note":"I prezzi della concorrenza riflettono le tariffe pubblicate alla data della ricerca."},"ru":{"nav_features":"О CRM","nav_howitworks":"Как это работает","nav_pricing":"Функции и цены","nav_faq":"Вопросы и ответы","nav_blog":"Блог","nav_practice":"Направления практики","nav_signin":"Войти","nav_demo":"Заказать демо","cta_title":"Узнайте, как LexFlow работает в вашей фирме","cta_lede":"Получите индивидуальную демонстрацию — без обязательств.","cta_button":"Запросить демо","footer_text":"LexFlow © 2026 — облегчённый превью-артефакт дизайна.","chatbot_name":"Алесия — Онлайн поддержка","chatbot_greeting":"Привет! Как я могу вам помочь?","chatbot_placeholder":"Введите сообщение...","footer_credit":"Разработано AVibe Agency","pricing_eyebrow":"Простые, прозрачные тарифы","pricing_title":"Тарифы, растущие вместе с вашей фирмой","pricing_lede":"Помесячная оплата за пользователя. Сравните LexFlow с лидерами рынка.","tier1_name":"Организация и контроль","tier1_cta":"Начать бесплатно","tier1_desc":"Для частных юристов и небольших фирм.","tier2_name":"Устойчивый рост","tier2_cta":"Начать бесплатно","tier2_desc":"Для растущих фирм, готовых автоматизировать процессы.","tier3_name":"Enterprise","tier3_cta":"Связаться с отделом продаж","tier3_desc":"Для крупных фирм с индивидуальными ИИ-процессами.","tier1_f1":"Управление делами и контактами","tier1_f2":"Учёт времени и биллинг","tier1_f3":"Неограниченное хранение документов","tier1_f4":"Портал для клиентов","tier2_f1":"Всё из Starter","tier2_f2":"Шаблоны документов и дел","tier2_f3":"Более 300 интеграций","tier2_f4":"ИИ-анализатор документов","tier3_f1":"Всё из Professional","tier3_f2":"Конструктор ИИ-процессов","tier3_f3":"Выделенное внедрение и SSO","tier3_f4":"Приоритетная поддержка 24/5","price_custom":"Индивидуальное предложение","compare_title":"Сравнение LexFlow с конкурентами","compare_col1":"Тариф","compare_col2":"Начальная цена","compare_col3":"Примечание по оплате","compare_note":"Цены конкурентов отражают публично указанные тарифы на дату исследования."}};
 </script>
 
 <script src="assets/site-config.js"></script>
 <script src="assets/i18n.js"></script>
+<!-- COOKIE CONSENT BANNER -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
+  <p data-i18n="cookie_text">We use local storage only for your language and theme preferences. No advertising trackers. Read our <a href="privacy.html">Privacy Policy</a>.</p>
+  <div class="cookie-actions">
+    <button class="btn btn-gold" id="cookieAccept" type="button" data-i18n="cookie_accept">Accept</button>
+    <button class="btn btn-ghost" id="cookieDecline" type="button" data-i18n="cookie_decline">Decline</button>
+  </div>
+</div>
+<script>
+(function(){
+  var banner = document.getElementById('cookieBanner');
+  if (!banner) return;
+  var saved = localStorage.getItem('lexflow-cookie');
+  if (saved === 'accepted' || saved === 'declined') { banner.style.display = 'none'; return; }
+  function decide(v){ localStorage.setItem('lexflow-cookie', v); banner.style.display = 'none'; }
+  var acc = document.getElementById('cookieAccept');
+  var dec = document.getElementById('cookieDecline');
+  if (acc) acc.addEventListener('click', function(){ decide('accepted'); });
+  if (dec) dec.addEventListener('click', function(){ decide('declined'); });
+})();
+</script>
+
 <!-- ALESSIA CHAT WIDGET (production, from LP) -->
 <div class="alessia-widget" id="alessiaWidget">
   <!-- Launcher bubble -->
