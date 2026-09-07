@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practice Areas — LexFlow</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#D4AF37;--gold-deep:#C5A55A;--navy:#152238;--navy-2:#1C2C48;--surface:#0F1826;--surface-2:#18243A;--border:rgba(212,175,55,0.18);--text:#F2EFE9;--text-dim:#B9C2D0;--text-faint:#7C8AA0;--radius-lg:14px;--radius-xl:20px;--radius-md:10px;--shadow-sm:0 2px 10px rgba(0,0,0,0.25);--shadow-md:0 8px 30px rgba(0,0,0,0.35);}
+[data-theme="light"]{--surface:#FBF9F4;--surface-2:#F2EEE3;--navy:#152238;--text:#1C2333;--text-dim:#4B5568;--text-faint:#8891A0;--border:rgba(21,34,56,0.12);--shadow-sm:0 2px 10px rgba(0,0,0,0.06);--shadow-md:0 8px 30px rgba(0,0,0,0.10);}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:var(--surface);color:var(--text);line-height:1.5;transition:background .3s,color .3s}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+a{color:inherit;text-decoration:none}
+nav{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;border-bottom:1px solid var(--border);position:sticky;top:0;background:var(--surface);z-index:20;backdrop-filter:blur(8px)}
+.logo{display:flex;align-items:center;gap:10px;font-weight:600;font-size:18px;letter-spacing:.02em}
+.logo-mark{width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,var(--navy),#0B1220);border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;color:var(--gold);font-family:'Instrument Serif',serif;font-size:16px}
+.nav-links{display:flex;gap:26px;font-size:14px;color:var(--text-dim)}
+.nav-links a.active{color:var(--gold)}
+.nav-cta{display:flex;gap:10px;align-items:center;position:relative}
+.btn{padding:10px 20px;border-radius:999px;font-size:14px;font-weight:500;cursor:pointer;border:1px solid transparent;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+.btn-gold{background:linear-gradient(135deg,var(--gold-deep),var(--gold));color:#1B1608;border:none}
+.btn-ghost{border:1px solid var(--border);color:var(--text)}
+.icon-btn{width:44px;height:44px;border-radius:50%;border:1px solid var(--border);background:transparent;color:var(--text);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:16px}
+.lang-wrap{position:relative}
+.lang-menu{position:absolute;top:52px;right:0;background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-md);box-shadow:var(--shadow-md);min-width:170px;padding:6px;display:none;flex-direction:column;z-index:30}
+.lang-menu.open{display:flex}
+.lang-menu button{background:none;border:none;color:var(--text);text-align:left;padding:10px 12px;border-radius:8px;font-size:14px;cursor:pointer;min-height:44px;display:flex;align-items:center;gap:10px}
+.lang-menu button:hover,.lang-menu button:focus-visible{background:rgba(212,175,55,0.1)}
+.lang-menu button.active-lang{color:var(--gold);font-weight:600}
+.page-hero{padding:56px 0 32px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);border:1px solid var(--border);padding:6px 14px;border-radius:999px;margin-bottom:18px}
+h1{font-family:'Instrument Serif',serif;font-size:40px;font-weight:400;line-height:1.15;margin-bottom:14px}
+p.lede{color:var(--text-dim);font-size:16px;max-width:600px}
+.section{padding:48px 0}
+h2{font-family:'Instrument Serif',serif;font-size:30px;font-weight:400;margin-bottom:14px}
+.practice-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.practice-card{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:22px;text-align:center}
+.practice-card .icon{width:48px;height:48px;border-radius:var(--radius-md);background:rgba(212,175,55,0.1);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:22px;margin:0 auto 14px}
+.practice-card h3{font-size:15px;font-weight:600;margin-bottom:6px}
+.practice-card p{font-size:13px;color:var(--text-dim)}
+.cta-band{background:linear-gradient(135deg,var(--navy),#0B1220);border:1px solid var(--gold);border-radius:var(--radius-xl);padding:44px;text-align:center;margin:0 24px}
+.cta-band h2{color:var(--text)}
+.cta-band p{color:var(--text-dim);margin-bottom:22px}
+footer{padding:36px 24px;border-top:1px solid var(--border);margin-top:44px}
+.footer-inner{max-width:1120px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center}
+.footer-social{display:flex;gap:14px}
+.footer-social a{width:38px;height:38px;border-radius:50%;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--text-dim);font-size:16px}
+.footer-social a:hover{color:var(--gold);border-color:var(--gold)}
+.footer-credit{font-size:12px;color:var(--text-faint)}
+.footer-text{font-size:13px;color:var(--text-faint)}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.wa-float{position:fixed;bottom:24px;right:24px;width:56px;height:56px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:26px;box-shadow:var(--shadow-md);z-index:50;border:none;cursor:pointer}
+.chat-float{position:fixed;bottom:24px;right:92px;width:56px;height:56px;border-radius:50%;background:var(--gold);color:#1B1608;display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:var(--shadow-md);z-index:50;border:none;cursor:pointer}
+.chat-panel{position:fixed;bottom:92px;right:24px;width:300px;max-width:calc(100vw - 48px);background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-lg);box-shadow:var(--shadow-md);display:none;flex-direction:column;overflow:hidden;z-index:50}
+.chat-panel.open{display:flex}
+.chat-header{background:var(--navy);color:#fff;padding:14px 16px;font-size:14px;font-weight:600;display:flex;align-items:center;gap:8px}
+.chat-body{padding:14px;font-size:13px;color:var(--text-dim);min-height:80px}
+.chat-input-row{display:flex;border-top:1px solid var(--border)}
+.chat-input-row input{flex:1;border:none;background:none;padding:12px;font-size:13px;color:var(--text);min-height:44px}
+.chat-input-row button{border:none;background:none;color:var(--gold);padding:0 14px;cursor:pointer;font-size:14px;min-height:44px}
+@media(max-width:860px){.nav-links{display:none} h1{font-size:30px} .practice-grid{grid-template-columns:repeat(2,1fr)} .chat-float{right:88px}}
+</style>
+</head>
+<body>
+
+<!-- WEBHOOK: id=WH-01 | endpoint: https://hook.example.com/lexflow/demo-request | trigger: CTA button click "Book a Demo" -->
+<nav>
+  <div class="logo"><span class="logo-mark">LF</span> LexFlow</div>
+  <div class="nav-links">
+    <a href="lexflow-index.html" data-i18n="nav_features">Features</a>
+    <a href="lexflow-pricing.html" data-i18n="nav_pricing">Pricing</a>
+    <a class="active" href="lexflow-practice-areas.html" data-i18n="nav_practice">Practice Areas</a>
+    <a href="lexflow-faq.html" data-i18n="nav_faq">FAQ</a>
+  </div>
+  <div class="nav-cta">
+    <button class="icon-btn" id="themeBtn" aria-label="Toggle dark/light theme">◐</button>
+    <div class="lang-wrap">
+      <button class="icon-btn" id="langBtn" aria-label="Change language" aria-haspopup="true">🌐<span id="langLabel" style="font-size:10px;margin-left:2px">EN</span></button>
+      <div class="lang-menu" id="langMenu" role="menu">
+        <button data-lang="en" role="menuitem">🇬🇧 English</button>
+        <button data-lang="it" role="menuitem">🇮🇹 Italiano</button>
+        <button data-lang="ru" role="menuitem">🇷🇺 Русский</button>
+      </div>
+    </div>
+    <a class="btn btn-ghost" href="#login" data-i18n="nav_signin">Sign in</a>
+    <a class="btn btn-gold" data-webhook="demo-request-nav" href="#demo" data-i18n="nav_demo">Book a Demo</a>
+  </div>
+</nav>
+<!-- /WEBHOOK -->
+
+<header class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="practice_eyebrow">Areas of Practice</span>
+    <h1 data-i18n="practice_title">Purpose-built for every practice area</h1>
+    <p class="lede" data-i18n="practice_lede">LexFlow adapts its workflows, templates, and AI assistance to the specific needs of each legal specialty.</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap">
+    <div class="practice-grid">
+      <div class="practice-card"><div class="icon">⚖</div><h3 data-i18n="practice1_h">Civil Law</h3><p data-i18n="practice1_p">Contract disputes, torts, and general civil litigation workflows.</p></div>
+      <div class="practice-card"><div class="icon">🏢</div><h3 data-i18n="practice2_h">Corporate & Business Law</h3><p data-i18n="practice2_p">Entity formation, M&A due diligence, and compliance tracking.</p></div>
+      <div class="practice-card"><div class="icon">👨‍👩‍👧</div><h3 data-i18n="practice3_h">Family Law</h3><p data-i18n="practice3_p">Divorce, custody, and mediation case management.</p></div>
+      <div class="practice-card"><div class="icon">🛡</div><h3 data-i18n="practice4_h">Criminal Defense</h3><p data-i18n="practice4_p">Case timelines, evidence tracking, and court date automation.</p></div>
+      <div class="practice-card"><div class="icon">🏠</div><h3 data-i18n="practice5_h">Real Estate Law</h3><p data-i18n="practice5_p">Title review, closing checklists, and transaction workflows.</p></div>
+      <div class="practice-card"><div class="icon">💡</div><h3 data-i18n="practice6_h">Intellectual Property</h3><p data-i18n="practice6_p">Trademark, patent, and copyright portfolio management.</p></div>
+      <div class="practice-card"><div class="icon">🌍</div><h3 data-i18n="practice7_h">Immigration Law</h3><p data-i18n="practice7_p">Case status tracking and multi-jurisdiction document automation.</p></div>
+      <div class="practice-card"><div class="icon">📋</div><h3 data-i18n="practice8_h">Labor & Employment</h3><p data-i18n="practice8_p">Compliance monitoring and dispute resolution workflows.</p></div>
+      <!-- NEW: additional practice areas sourced from the live product coverage -->
+      <div class="practice-card"><div class="icon">🏛</div><h3 data-i18n="practice9_h">Administrative Law</h3><p data-i18n="practice9_p">Regulatory disputes, public administration appeals, and licensing matters.</p></div>
+      <div class="practice-card"><div class="icon">📜</div><h3 data-i18n="practice10_h">Constitutional Law</h3><p data-i18n="practice10_p">Constitutional review, fundamental rights, and public law litigation.</p></div>
+      <div class="practice-card"><div class="icon">✊</div><h3 data-i18n="practice11_h">Human Rights</h3><p data-i18n="practice11_p">Human rights advocacy, asylum cases, and international protection claims.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="demo">
+  <div class="cta-band">
+    <h2 data-i18n="cta_title">See LexFlow in your firm</h2>
+    <p data-i18n="cta_lede">Get a tailored walkthrough — no obligation.</p>
+    <a class="btn btn-gold" href="lexflow-index.html#demo" data-webhook="practice-cta-demo" data-i18n="cta_button">Request Demo</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <span class="footer-text" data-i18n="footer_text">LexFlow © 2026 — Lightweight design preview artefact. Not for production deployment.</span>
+    <div class="footer-social">
+      <a href="https://linkedin.com/company/lexflow" aria-label="LinkedIn" target="_blank" rel="noopener">in</a>
+      <a href="https://instagram.com/lexflow" aria-label="Instagram" target="_blank" rel="noopener">◎</a>
+    </div>
+    <span class="footer-credit" data-i18n="footer_credit">Designed by AVibe Agency</span>
+  </div>
+</footer>
+
+<!-- WEBHOOK: id=WH-03 | endpoint: https://wa.me/390000000000 | trigger: WhatsApp float button click -->
+<a class="wa-float" href="https://wa.me/390000000000" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" data-webhook="whatsapp-float">💬</a>
+<!-- /WEBHOOK -->
+<!-- WEBHOOK: id=WH-04 | endpoint: https://hook.example.com/lexflow/chatbot-message | trigger: chatbot message send -->
+<button class="chat-float" id="chatToggle" aria-label="Open chat assistant" data-webhook="chatbot-toggle">💭</button>
+<div class="chat-panel" id="chatPanel">
+  <div class="chat-header"><span data-i18n="chatbot_name">Alessia — Online Support</span></div>
+  <div class="chat-body"><p data-i18n="chatbot_greeting">Hi! How can I help you today?</p></div>
+  <div class="chat-input-row">
+    <input type="text" data-i18n-placeholder="chatbot_placeholder" placeholder="Type your message..." aria-label="Chat message">
+    <button data-webhook="chatbot-send" onclick="return false;">➤</button>
+  </div>
+</div>
+<!-- /WEBHOOK -->
+
+<script>
+document.getElementById('themeBtn').addEventListener('click', function(){
+  var html = document.documentElement;
+  html.setAttribute('data-theme', html.getAttribute('data-theme')==='dark'?'light':'dark');
+});
+var langBtn=document.getElementById('langBtn'), langMenu=document.getElementById('langMenu');
+langBtn.addEventListener('click', function(e){ e.stopPropagation(); langMenu.classList.toggle('open'); });
+document.addEventListener('click', function(){ langMenu.classList.remove('open'); });
+var I18N = {"en":{"nav_features":"Features","nav_pricing":"Pricing","nav_faq":"FAQ","nav_practice":"Practice Areas","nav_signin":"Sign in","nav_demo":"Book a Demo","cta_title":"See LexFlow in your firm","cta_lede":"Get a tailored walkthrough — no obligation.","cta_button":"Request Demo","footer_text":"LexFlow © 2026 — Lightweight design preview artefact.","chatbot_name":"Alessia — Online Support","chatbot_greeting":"Hi! How can I help you today?","chatbot_placeholder":"Type your message...","footer_credit":"Designed by AVibe Agency","practice_eyebrow":"Areas of Practice","practice_title":"Purpose-built for every practice area","practice_lede":"LexFlow adapts its workflows, templates, and AI assistance to the specific needs of each legal specialty.","practice1_h":"Civil Law","practice1_p":"Contract disputes, torts, and general civil litigation workflows.","practice2_h":"Corporate & Business Law","practice2_p":"Entity formation, M&A due diligence, and compliance tracking.","practice3_h":"Family Law","practice3_p":"Divorce, custody, and mediation case management.","practice4_h":"Criminal Defense","practice4_p":"Case timelines, evidence tracking, and court date automation.","practice5_h":"Real Estate Law","practice5_p":"Title review, closing checklists, and transaction workflows.","practice6_h":"Intellectual Property","practice6_p":"Trademark, patent, and copyright portfolio management.","practice7_h":"Immigration Law","practice7_p":"Case status tracking and multi-jurisdiction document automation.","practice8_h":"Labor & Employment","practice8_p":"Compliance monitoring and dispute resolution workflows.","practice9_h":"Administrative Law","practice9_p":"Regulatory disputes, public administration appeals, and licensing matters.","practice10_h":"Constitutional Law","practice10_p":"Constitutional review, fundamental rights, and public law litigation.","practice11_h":"Human Rights","practice11_p":"Human rights advocacy, asylum cases, and international protection claims."},"it":{"nav_features":"Funzionalità","nav_pricing":"Prezzi","nav_faq":"Domande e Risposte","nav_practice":"Aree di Pratica","nav_signin":"Accedi","nav_demo":"Prenota una Demo","cta_title":"Scopri LexFlow nel tuo studio","cta_lede":"Ottieni una dimostrazione su misura.","cta_button":"Richiedi una Demo","footer_text":"LexFlow © 2026 — Artefatto di anteprima design leggero.","chatbot_name":"Alessia — Assistenza Online","chatbot_greeting":"Ciao! Come posso aiutarti oggi?","chatbot_placeholder":"Scrivi il tuo messaggio...","footer_credit":"Progettato da AVibe Agency","practice_eyebrow":"Aree di Pratica","practice_title":"Progettato su misura per ogni area di pratica","practice_lede":"LexFlow adatta i propri flussi di lavoro, modelli e assistenza IA alle esigenze specifiche.","practice1_h":"Diritto Civile","practice1_p":"Controversie contrattuali, responsabilità civile e contenzioso generale.","practice2_h":"Diritto Societario e Commerciale","practice2_p":"Costituzione di società, due diligence M&A e monitoraggio della conformità.","practice3_h":"Diritto di Famiglia","practice3_p":"Gestione di divorzi, affidamento e mediazione.","practice4_h":"Diritto Penale","practice4_p":"Cronologia dei casi, tracciamento delle prove e automazione delle udienze.","practice5_h":"Diritto Immobiliare","practice5_p":"Verifica del titolo, checklist di chiusura e flussi di transazione.","practice6_h":"Proprietà Intellettuale","practice6_p":"Gestione di marchi, brevetti e portafogli di copyright.","practice7_h":"Diritto dell'Immigrazione","practice7_p":"Tracciamento dello stato dei casi e automazione documentale.","practice8_h":"Diritto del Lavoro","practice8_p":"Monitoraggio della conformità e risoluzione delle controversie.","practice9_h":"Diritto Amministrativo","practice9_p":"Contenzioso regolatorio, ricorsi alla pubblica amministrazione e licenze.","practice10_h":"Diritto Costituzionale","practice10_p":"Giudizi di legittimità costituzionale e contenzioso di diritto pubblico.","practice11_h":"Diritti Umani","practice11_p":"Tutela dei diritti umani, pratiche di asilo e protezione internazionale."},"ru":{"nav_features":"Возможности","nav_pricing":"Тарифы","nav_faq":"Вопросы и ответы","nav_practice":"Направления практики","nav_signin":"Войти","nav_demo":"Заказать демо","cta_title":"Узнайте, как LexFlow работает в вашей фирме","cta_lede":"Получите демонстрацию — без обязательств.","cta_button":"Запросить демо","footer_text":"LexFlow © 2026 — облегчённый превью-артефакт.","chatbot_name":"Алесия — Онлайн поддержка","chatbot_greeting":"Привет! Как я могу вам помочь?","chatbot_placeholder":"Введите сообщение...","footer_credit":"Разработано AVibe Agency","practice_eyebrow":"Направления практики","practice_title":"Создано для каждого направления практики","practice_lede":"LexFlow адаптирует свои процессы, шаблоны и ИИ-помощь под конкретные потребности.","practice1_h":"Гражданское право","practice1_p":"Договорные споры, деликты и общие судебные разбирательства.","practice2_h":"Корпоративное и коммерческое право","practice2_p":"Создание юридических лиц, due diligence по M&A и мониторинг соответствия.","practice3_h":"Семейное право","practice3_p":"Управление делами о разводе, опеке и медиации.","practice4_h":"Уголовная защита","practice4_p":"Хронология дел, отслеживание доказательств и автоматизация судебных дат.","practice5_h":"Право недвижимости","practice5_p":"Проверка титула, чек-листы закрытия сделок и процессы транзакций.","practice6_h":"Интеллектуальная собственность","practice6_p":"Управление портфелем товарных знаков, патентов и авторских прав.","practice7_h":"Иммиграционное право","practice7_p":"Отслеживание статуса дел и автоматизация документов.","practice8_h":"Трудовое право","practice8_p":"Мониторинг соответствия и разрешение споров.","practice9_h":"Административное право","practice9_p":"Регуляторные споры, обжалование решений госорганов и лицензии.","practice10_h":"Конституционное право","practice10_p":"Конституционный надзор и споры публичного права.","practice11_h":"Права человека","practice11_p":"Защита прав человека, дела о предоставлении убежища и международная защита."}};
+function setLang(lang){
+  document.querySelectorAll('[data-i18n]').forEach(function(el){
+    var k=el.getAttribute('data-i18n');
+    if(I18N[lang]&&I18N[lang][k]){el.textContent=I18N[lang][k];} else if(I18N['en']&&I18N['en'][k]){el.textContent=I18N['en'][k];}
+  });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(function(el){
+    var k=el.getAttribute('data-i18n-placeholder');
+    if(I18N[lang]&&I18N[lang][k]){el.setAttribute('placeholder',I18N[lang][k]);}
+  });
+  document.querySelectorAll('.lang-menu button').forEach(function(b){b.classList.toggle('active-lang', b.getAttribute('data-lang')===lang);});
+  document.getElementById('langLabel').textContent=lang.toUpperCase();
+  document.documentElement.setAttribute('lang', lang);
+  localStorage.setItem('lexflow-lang', lang);
+  langMenu.classList.remove('open');
+}
+document.querySelectorAll('.lang-menu button').forEach(function(b){ b.addEventListener('click', function(){ setLang(b.getAttribute('data-lang')); }); });
+setLang(localStorage.getItem('lexflow-lang')||'en');
+var chatToggle=document.getElementById('chatToggle'), chatPanel=document.getElementById('chatPanel');
+if(chatToggle){ chatToggle.addEventListener('click', function(){ chatPanel.classList.toggle('open'); }); }
+</script>
+
+</body>
+</html>

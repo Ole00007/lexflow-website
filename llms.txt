@@ -1,0 +1,22 @@
+# LexFlow — Legal SaaS for modern law firms
+
+> LexFlow unifies case management, document intelligence, billing, and client communication in one calm, role-aware workspace built for law firms. Designed for firms of 5-20 people. Bilingual EN/IT/RU. Dark/light themes.
+
+## Key facts
+- Product: AI-native legal practice management (case management, document intelligence, client intake, billing)
+- Compliance: GDPR, ISO 27001:2022, ISO/IEC 27701:2025
+- Client model: no client login/install — token-secured private link
+- Team roles: Senior Partner, Associate, Paralegal, Intern
+- Live pilot: Studio Legale X, Genoa, Italy
+
+## Pages
+- [Home](lexflow-index.html): features, verified pilot results, testimonials, compliance
+- [How It Works](lexflow-how-it-works.html): 3-step client journey, per-role dashboards, end-to-end matter timeline
+- [Pricing](lexflow-pricing.html): Starter / Professional / Enterprise tiers + market comparison (Clio, Vincent)
+- [Practice Areas](lexflow-practice-areas.html): Civil, Corporate, Family, Criminal, Real Estate, IP, Immigration, Labor, Administrative, Constitutional, Human Rights
+- [Blog](lexflow-blog.html): news & insights
+- [FAQ](lexflow-faq.html): 13 direct Q&As (app installs, accounts, security, pricing, WCAG, migration)
+
+## Contact
+- WhatsApp: https://wa.me/393450234084
+- Designed by AVibe Agency

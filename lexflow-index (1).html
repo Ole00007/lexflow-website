@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LexFlow — Legal SaaS Preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#D4AF37;--gold-deep:#C5A55A;--navy:#152238;--navy-2:#1C2C48;--surface:#0F1826;--surface-2:#18243A;--border:rgba(212,175,55,0.18);--text:#F2EFE9;--text-dim:#B9C2D0;--text-faint:#7C8AA0;--radius-lg:14px;--radius-xl:20px;--radius-md:10px;--shadow-sm:0 2px 10px rgba(0,0,0,0.25);--shadow-md:0 8px 30px rgba(0,0,0,0.35);}
+[data-theme="light"]{--surface:#FBF9F4;--surface-2:#F2EEE3;--navy:#152238;--text:#1C2333;--text-dim:#4B5568;--text-faint:#8891A0;--border:rgba(21,34,56,0.12);--shadow-sm:0 2px 10px rgba(0,0,0,0.06);--shadow-md:0 8px 30px rgba(0,0,0,0.10);}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:var(--surface);color:var(--text);line-height:1.5;transition:background .3s,color .3s}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+a{color:inherit;text-decoration:none}
+nav{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;border-bottom:1px solid var(--border);position:sticky;top:0;background:var(--surface);z-index:20;backdrop-filter:blur(8px)}
+.logo{display:flex;align-items:center;gap:10px;font-weight:600;font-size:18px;letter-spacing:.02em}
+.logo-mark{width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,var(--navy),#0B1220);border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;color:var(--gold);font-family:'Instrument Serif',serif;font-size:16px}
+.nav-links{display:flex;gap:26px;font-size:14px;color:var(--text-dim)}
+.nav-links a.active{color:var(--gold)}
+.nav-cta{display:flex;gap:10px;align-items:center;position:relative}
+.btn{padding:10px 20px;border-radius:999px;font-size:14px;font-weight:500;cursor:pointer;border:1px solid transparent;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+.btn-gold{background:linear-gradient(135deg,var(--gold-deep),var(--gold));color:#1B1608;border:none}
+.btn-ghost{border:1px solid var(--border);color:var(--text)}
+.icon-btn{width:44px;height:44px;border-radius:50%;border:1px solid var(--border);background:transparent;color:var(--text);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:16px}
+.lang-wrap{position:relative}
+.lang-menu{position:absolute;top:52px;right:0;background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-md);box-shadow:var(--shadow-md);min-width:170px;padding:6px;display:none;flex-direction:column;z-index:30}
+.lang-menu.open{display:flex}
+.lang-menu button{background:none;border:none;color:var(--text);text-align:left;padding:10px 12px;border-radius:8px;font-size:14px;cursor:pointer;min-height:44px;display:flex;align-items:center;gap:10px}
+.lang-menu button:hover,.lang-menu button:focus-visible{background:rgba(212,175,55,0.1)}
+.lang-menu button.active-lang{color:var(--gold);font-weight:600}
+.page-hero{padding:56px 0 32px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);border:1px solid var(--border);padding:6px 14px;border-radius:999px;margin-bottom:18px}
+h1{font-family:'Instrument Serif',serif;font-size:40px;font-weight:400;line-height:1.15;margin-bottom:14px}
+h1 em{font-style:italic;color:var(--gold)}
+p.lede{color:var(--text-dim);font-size:16px;max-width:600px}
+.section{padding:48px 0}
+.section-label{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+h2{font-family:'Instrument Serif',serif;font-size:30px;font-weight:400;margin-bottom:14px}
+.section-sub{color:var(--text-dim);max-width:560px;margin-bottom:32px;font-size:15px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px}
+.card .icon{width:44px;height:44px;border-radius:var(--radius-md);background:rgba(212,175,55,0.1);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:16px}
+.card h3{font-size:16px;font-weight:600;margin-bottom:8px}
+.card p{font-size:14px;color:var(--text-dim)}
+.premium-visual{border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow-md);aspect-ratio:4/3;background:linear-gradient(160deg,var(--navy) 0%,#0B1220 60%),repeating-linear-gradient(45deg, rgba(212,175,55,0.05) 0 2px, transparent 2px 12px);position:relative;display:flex;align-items:flex-end;padding:18px}
+.premium-visual .tag{background:rgba(212,175,55,0.12);border:1px solid var(--gold);color:var(--gold);font-size:11px;letter-spacing:.05em;text-transform:uppercase;padding:6px 12px;border-radius:999px}
+.dash-card{position:absolute;top:18px;right:18px;background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-md);padding:14px;width:150px;box-shadow:var(--shadow-sm)}
+.dash-card .kpi{font-family:'Instrument Serif',serif;font-size:26px;color:var(--gold)}
+.dash-card .kpi-label{font-size:11px;color:var(--text-faint);margin-top:2px}
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center}
+.stat-card{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:26px}
+.stat-num{font-family:'Instrument Serif',serif;font-size:36px;color:var(--gold)}
+.stat-label{font-size:13px;color:var(--text-dim);margin-top:6px}
+.compliance-band{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px}
+.badge{border:1px solid var(--border);border-radius:999px;padding:6px 14px;font-size:12px;color:var(--text-dim)}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.testi-card{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:22px}
+.stars{color:var(--gold);font-size:13px;margin-bottom:12px;letter-spacing:2px}
+.testi-quote{font-size:14px;color:var(--text-dim);margin-bottom:18px}
+.testi-person{display:flex;align-items:center;gap:12px}
+.testi-avatar{width:44px;height:44px;border-radius:50%;background:var(--navy-2);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;font-size:15px;color:var(--gold);font-weight:600;flex-shrink:0}
+.testi-name{font-size:14px;font-weight:600}
+.testi-role{font-size:12px;color:var(--text-faint)}
+.cta-band{background:linear-gradient(135deg,var(--navy),#0B1220);border:1px solid var(--gold);border-radius:var(--radius-xl);padding:44px;text-align:center;margin:0 24px}
+.cta-band h2{color:var(--text)}
+.cta-band p{color:var(--text-dim);margin-bottom:22px}
+footer{padding:36px 24px;border-top:1px solid var(--border);margin-top:44px}
+.footer-inner{max-width:1120px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center}
+.footer-social{display:flex;gap:14px}
+.footer-social a{width:38px;height:38px;border-radius:50%;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--text-dim);font-size:16px}
+.footer-social a:hover{color:var(--gold);border-color:var(--gold)}
+.footer-credit{font-size:12px;color:var(--text-faint)}
+.footer-text{font-size:13px;color:var(--text-faint)}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.wa-float{position:fixed;bottom:24px;right:24px;width:56px;height:56px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:26px;box-shadow:var(--shadow-md);z-index:50;border:none;cursor:pointer}
+.chat-float{position:fixed;bottom:24px;right:92px;width:56px;height:56px;border-radius:50%;background:var(--gold);color:#1B1608;display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:var(--shadow-md);z-index:50;border:none;cursor:pointer}
+.chat-panel{position:fixed;bottom:92px;right:24px;width:300px;max-width:calc(100vw - 48px);background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-lg);box-shadow:var(--shadow-md);display:none;flex-direction:column;overflow:hidden;z-index:50}
+.chat-panel.open{display:flex}
+.chat-header{background:var(--navy);color:#fff;padding:14px 16px;font-size:14px;font-weight:600;display:flex;align-items:center;gap:8px}
+.chat-body{padding:14px;font-size:13px;color:var(--text-dim);min-height:80px}
+.chat-input-row{display:flex;border-top:1px solid var(--border)}
+.chat-input-row input{flex:1;border:none;background:none;padding:12px;font-size:13px;color:var(--text);min-height:44px}
+.chat-input-row button{border:none;background:none;color:var(--gold);padding:0 14px;cursor:pointer;font-size:14px;min-height:44px}
+@media(max-width:860px){.nav-links{display:none} h1{font-size:30px} .grid-3,.stats-grid,.testi-grid{grid-template-columns:1fr} .chat-float{right:88px}}
+</style>
+</head>
+<body>
+
+<!-- WEBHOOK: id=WH-01 | endpoint: https://hook.example.com/lexflow/demo-request | trigger: CTA button click "Book a Demo" -->
+<nav>
+  <div class="logo"><span class="logo-mark">LF</span> LexFlow</div>
+  <div class="nav-links">
+    <a class="active" href="lexflow-index.html" data-i18n="nav_features">Features</a>
+    <a href="lexflow-pricing.html" data-i18n="nav_pricing">Pricing</a>
+    <a href="lexflow-practice-areas.html" data-i18n="nav_practice">Practice Areas</a>
+    <a href="lexflow-faq.html" data-i18n="nav_faq">FAQ</a>
+  </div>
+  <div class="nav-cta">
+    <button class="icon-btn" id="themeBtn" aria-label="Toggle dark/light theme">◐</button>
+    <div class="lang-wrap">
+      <button class="icon-btn" id="langBtn" aria-label="Change language" aria-haspopup="true">🌐<span id="langLabel" style="font-size:10px;margin-left:2px">EN</span></button>
+      <div class="lang-menu" id="langMenu" role="menu">
+        <button data-lang="en" role="menuitem">🇬🇧 English</button>
+        <button data-lang="it" role="menuitem">🇮🇹 Italiano</button>
+        <button data-lang="ru" role="menuitem">🇷🇺 Русский</button>
+      </div>
+    </div>
+    <a class="btn btn-ghost" href="#login" data-i18n="nav_signin">Sign in</a>
+    <a class="btn btn-gold" data-webhook="demo-request-nav" href="#demo" data-i18n="nav_demo">Book a Demo</a>
+  </div>
+</nav>
+<!-- /WEBHOOK -->
+
+<header class="page-hero">
+  <div class="wrap" style="display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center">
+    <div>
+      <span class="eyebrow" data-i18n="hero_eyebrow">AI-Native Legal SaaS</span>
+      <h1><span data-i18n="hero_title1">Legal work, </span><em data-i18n="hero_title_em">finally</em><span data-i18n="hero_title2"> organized.</span></h1>
+      <p class="lede" data-i18n="hero_lede">LexFlow unifies case management, document intelligence, and client communication into one calm, role-aware workspace built for modern law firms.</p>
+      <div style="display:flex;gap:14px;margin:24px 0 28px">
+        <a class="btn btn-gold" data-webhook="demo-request-hero" href="#demo" data-i18n="hero_cta1">Start Free Trial</a>
+        <a class="btn btn-ghost" href="#video">▶ <span data-i18n="hero_cta2">Watch Overview</span></a>
+      </div>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;font-size:14px;color:var(--text-dim)">
+        <li style="display:flex;gap:10px;align-items:center"><span style="width:20px;height:20px;border-radius:50%;background:var(--surface-2);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:11px;border:1px solid var(--border)">✓</span><span data-i18n="check1">Zero-Knowledge Document Security</span></li>
+        <li style="display:flex;gap:10px;align-items:center"><span style="width:20px;height:20px;border-radius:50%;background:var(--surface-2);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:11px;border:1px solid var(--border)">✓</span><span data-i18n="check2">Role-Based Dashboards for every seat</span></li>
+        <li style="display:flex;gap:10px;align-items:center"><span style="width:20px;height:20px;border-radius:50%;background:var(--surface-2);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:11px;border:1px solid var(--border)">✓</span><span data-i18n="check3">WCAG 2.2 AA Accessible by Design</span></li>
+      </ul>
+    </div>
+    <div class="premium-visual">
+      <div class="dash-card"><div class="kpi">128</div><div class="kpi-label">Active Matters</div></div>
+      <span class="tag">Dashboard Preview</span>
+    </div>
+  </div>
+</header>
+
+<section class="section" id="features">
+  <div class="wrap">
+    <div class="section-label" data-i18n="feat_label">Why LexFlow</div>
+    <h2 data-i18n="feat_title">Built for the way lawyers actually work</h2>
+    <p class="section-sub" data-i18n="feat_sub">Progressive disclosure keeps complex case data calm and scannable.</p>
+    <div class="grid-3">
+      <div class="card"><div class="icon">◈</div><h3 data-i18n="feat1_h">Knowledge Self-Organization</h3><p data-i18n="feat1_p">AI-driven metadata enrichment turns unstructured document batches into structured, searchable insight automatically.</p></div>
+      <div class="card"><div class="icon">◎</div><h3 data-i18n="feat2_h">Role-Based Dashboards</h3><p data-i18n="feat2_p">Partners, paralegals, and admins each see a tailored view from one shared codebase.</p></div>
+      <div class="card"><div class="icon">◇</div><h3 data-i18n="feat3_h">Contextual Intelligence</h3><p data-i18n="feat3_p">Jurisdiction and case history aware AI surfaces the right clause or deadline before you ask.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- NEW: Real-world results, sourced from the live LexFlow pilot at Studio Legale X -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-label">Real-World Results</div>
+    <h2>Verified impact from a live pilot</h2>
+    <div class="stats-grid">
+      <div class="stat-card"><div class="stat-num">−2h</div><div class="stat-label" data-i18n="stat1_label">Fewer hours/day on admin</div></div>
+      <div class="stat-card"><div class="stat-num">0</div><div class="stat-label" data-i18n="stat2_label">Missed new intakes</div></div>
+      <div class="stat-card"><div class="stat-num">10×</div><div class="stat-label" data-i18n="stat3_label">Higher client satisfaction</div></div>
+    </div>
+    <div class="compliance-band">
+      <span class="badge">🛡 GDPR</span>
+      <span class="badge">🔒 ISO 27001:2022</span>
+      <span class="badge">🔐 ISO/IEC 27701:2025</span>
+    </div>
+    <p class="section-sub" style="margin-top:14px" data-i18n="compliance_text">Client data is handled under EU GDPR, ISO 27001:2022, and ISO/IEC 27701:2025. Internal notes are never visible to clients.</p>
+  </div>
+</section>
+
+<section class="section" id="testimonials">
+  <div class="wrap">
+    <div class="section-label">Trusted by Firms</div>
+    <h2>What legal teams say</h2>
+    <div class="testi-grid">
+      <div class="testi-card"><div class="stars">★★★★★</div><p class="testi-quote">"LexFlow cut our document intake time in half within the first month."</p><div class="testi-person"><div class="testi-avatar">GP</div><div><div class="testi-name">Avv. G. Parodi</div><div class="testi-role">Senior Partner</div></div></div></div>
+      <div class="testi-card"><div class="stars">★★★★★</div><p class="testi-quote">"Finally a legal tool our whole office actually enjoys using."</p><div class="testi-person"><div class="testi-avatar">LM</div><div><div class="testi-name">L. Marchetti</div><div class="testi-role">Office Manager</div></div></div></div>
+      <div class="testi-card"><div class="stars">★★★★★</div><p class="testi-quote">"The role-based dashboards alone justified the switch."</p><div class="testi-person"><div class="testi-avatar">CE</div><div><div class="testi-name">Avv. C. Esposito</div><div class="testi-role">Civil Law</div></div></div></div>
+      <div class="testi-card"><div class="stars">★★★★★</div><p class="testi-quote" data-i18n="testi4_q">I submitted my case from my phone while waiting in line at the post office. Five minutes and it was already registered.</p><div class="testi-person"><div class="testi-avatar">LB</div><div><div class="testi-name" data-i18n="testi4_n">Luca B.</div><div class="testi-role" data-i18n="testi4_r">Client — Labour Law</div></div></div></div>
+      <div class="testi-card"><div class="stars">★★★★☆</div><p class="testi-quote" data-i18n="testi5_q">My husband finally stopped asking 'when will they call us?' He checks the link himself.</p><div class="testi-person"><div class="testi-avatar">GC</div><div><div class="testi-name" data-i18n="testi5_n">Giulia C.</div><div class="testi-role" data-i18n="testi5_r">Client — Family Law</div></div></div></div>
+      <div class="testi-card"><div class="stars">★★★★★</div><p class="testi-quote" data-i18n="testi6_q">I usually wait days to hear anything. Here I opened the link and saw everything myself.</p><div class="testi-person"><div class="testi-avatar">MR</div><div><div class="testi-name" data-i18n="testi6_n">Maria R.</div><div class="testi-role" data-i18n="testi6_r">Client — Criminal Law</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="demo">
+  <div class="cta-band">
+    <h2 data-i18n="cta_title">See LexFlow in your firm</h2>
+    <p data-i18n="cta_lede">Get a tailored walkthrough — no obligation.</p>
+    <form style="display:flex;gap:10px;justify-content:center;max-width:420px;margin:0 auto;flex-wrap:wrap" data-webhook="newsletter-signup" onsubmit="return false;">
+      <input type="email" placeholder="work@lawfirm.com" aria-label="Work email" required style="flex:1;min-width:200px;padding:12px 16px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,0.04);color:var(--text);font-size:14px;min-height:44px">
+      <button class="btn btn-gold" type="submit" data-i18n="cta_button">Request Demo</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <span class="footer-text" data-i18n="footer_text">LexFlow © 2026 — Lightweight design preview artefact. Not for production deployment.</span>
+    <div class="footer-social">
+      <a href="https://linkedin.com/company/lexflow" aria-label="LinkedIn" target="_blank" rel="noopener">in</a>
+      <a href="https://instagram.com/lexflow" aria-label="Instagram" target="_blank" rel="noopener">◎</a>
+    </div>
+    <span class="footer-credit" data-i18n="footer_credit">Designed by AVibe Agency</span>
+  </div>
+</footer>
+
+<!-- WEBHOOK: id=WH-03 | endpoint: https://wa.me/390000000000 | trigger: WhatsApp float button click -->
+<a class="wa-float" href="https://wa.me/390000000000" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" data-webhook="whatsapp-float">💬</a>
+<!-- /WEBHOOK -->
+<!-- WEBHOOK: id=WH-04 | endpoint: https://hook.example.com/lexflow/chatbot-message | trigger: chatbot message send -->
+<button class="chat-float" id="chatToggle" aria-label="Open chat assistant" data-webhook="chatbot-toggle">💭</button>
+<div class="chat-panel" id="chatPanel">
+  <div class="chat-header"><span data-i18n="chatbot_name">Alessia — Online Support</span></div>
+  <div class="chat-body"><p data-i18n="chatbot_greeting">Hi! How can I help you today?</p></div>
+  <div class="chat-input-row">
+    <input type="text" data-i18n-placeholder="chatbot_placeholder" placeholder="Type your message..." aria-label="Chat message">
+    <button data-webhook="chatbot-send" onclick="return false;">➤</button>
+  </div>
+</div>
+<!-- /WEBHOOK -->
+
+<script>
+document.getElementById('themeBtn').addEventListener('click', function(){
+  var html = document.documentElement;
+  html.setAttribute('data-theme', html.getAttribute('data-theme')==='dark'?'light':'dark');
+});
+var langBtn=document.getElementById('langBtn'), langMenu=document.getElementById('langMenu');
+langBtn.addEventListener('click', function(e){ e.stopPropagation(); langMenu.classList.toggle('open'); });
+document.addEventListener('click', function(){ langMenu.classList.remove('open'); });
+var I18N = {"en":{"nav_features":"Features","nav_pricing":"Pricing","nav_faq":"FAQ","nav_practice":"Practice Areas","nav_signin":"Sign in","nav_demo":"Book a Demo","cta_title":"See LexFlow in your firm","cta_lede":"Get a tailored walkthrough — no obligation.","cta_button":"Request Demo","footer_text":"LexFlow © 2026 — Lightweight design preview artefact. Not for production deployment.","chatbot_name":"Alessia — Online Support","chatbot_greeting":"Hi! How can I help you today?","chatbot_placeholder":"Type your message...","whatsapp_label":"Chat on WhatsApp","footer_credit":"Designed by AVibe Agency","hero_eyebrow":"AI-Native Legal SaaS","hero_title1":"Legal work, ","hero_title_em":"finally","hero_title2":" organized.","hero_lede":"LexFlow unifies case management, document intelligence, and client communication into one calm, role-aware workspace built for modern law firms.","hero_cta1":"Start Free Trial","hero_cta2":"Watch Overview","check1":"Zero-Knowledge Document Security","check2":"Role-Based Dashboards for every seat","check3":"WCAG 2.2 AA Accessible by Design","feat_label":"Why LexFlow","feat_title":"Built for the way lawyers actually work","feat_sub":"Progressive disclosure keeps complex case data calm and scannable.","feat1_h":"Knowledge Self-Organization","feat1_p":"AI-driven metadata enrichment turns unstructured document batches into structured, searchable insight automatically.","feat2_h":"Role-Based Dashboards","feat2_p":"Partners, paralegals, and admins each see a tailored view from one shared codebase.","feat3_h":"Contextual Intelligence","feat3_p":"Jurisdiction and case history aware AI surfaces the right clause or deadline before you ask.","stat1_label":"Fewer hours/day on admin","stat2_label":"Missed new intakes","stat3_label":"Higher client satisfaction","compliance_text":"Client data is handled under EU GDPR, ISO 27001:2022, and ISO/IEC 27701:2025. Internal notes are never visible to clients.","testi4_q":"I submitted my case from my phone while waiting in line at the post office. Five minutes and it was already registered.","testi4_n":"Luca B.","testi4_r":"Client — Labour Law","testi5_q":"My husband finally stopped asking 'when will they call us?' He checks the link himself.","testi5_n":"Giulia C.","testi5_r":"Client — Family Law","testi6_q":"I usually wait days to hear anything. Here I opened the link and saw everything myself.","testi6_n":"Maria R.","testi6_r":"Client — Criminal Law"},"it":{"nav_features":"Funzionalità","nav_pricing":"Prezzi","nav_faq":"Domande e Risposte","nav_practice":"Aree di Pratica","nav_signin":"Accedi","nav_demo":"Prenota una Demo","cta_title":"Scopri LexFlow nel tuo studio","cta_lede":"Ottieni una dimostrazione su misura — senza impegno.","cta_button":"Richiedi una Demo","footer_text":"LexFlow © 2026 — Artefatto di anteprima design leggero. Non per il rilascio in produzione.","chatbot_name":"Alessia — Assistenza Online","chatbot_greeting":"Ciao! Come posso aiutarti oggi?","chatbot_placeholder":"Scrivi il tuo messaggio...","whatsapp_label":"Scrivici su WhatsApp","footer_credit":"Progettato da AVibe Agency","hero_eyebrow":"SaaS Legale Nativo per l'IA","hero_title1":"Il lavoro legale, ","hero_title_em":"finalmente","hero_title2":" organizzato.","hero_lede":"LexFlow unifica la gestione dei casi, l'intelligenza documentale e la comunicazione con i clienti in un unico spazio di lavoro sereno.","hero_cta1":"Inizia la Prova Gratuita","hero_cta2":"Guarda la Panoramica","check1":"Sicurezza documentale a conoscenza zero","check2":"Dashboard basate sui ruoli per ogni utente","check3":"Accessibile secondo lo standard WCAG 2.2 AA","feat_label":"Perché LexFlow","feat_title":"Costruito per il modo in cui lavorano davvero gli avvocati","feat_sub":"La divulgazione progressiva mantiene i dati complessi dei casi ordinati e scorrevoli.","feat1_h":"Auto-organizzazione della conoscenza","feat1_p":"L'arricchimento dei metadati guidato dall'IA trasforma automaticamente lotti di documenti non strutturati in informazioni strutturate.","feat2_h":"Dashboard basate sui ruoli","feat2_p":"Soci, praticanti e amministratori vedono ciascuno una vista su misura.","feat3_h":"Intelligenza contestuale","feat3_p":"L'IA mostra la clausola o la scadenza giusta prima ancora che tu la chieda.","stat1_label":"Ore al giorno in meno di amministrazione","stat2_label":"Nuove richieste perse","stat3_label":"Soddisfazione del cliente in più","compliance_text":"I dati dei clienti sono gestiti ai sensi del GDPR UE, ISO 27001:2022 e ISO/IEC 27701:2025.","testi4_q":"Ho inviato la mia richiesta dal telefono mentre aspettavo in fila alla posta. In cinque minuti era già registrata.","testi4_n":"Luca B.","testi4_r":"Cliente — Diritto del Lavoro","testi5_q":"Finalmente mio marito ha smesso di chiedermi 'ma quando ci chiamano?'. Guarda lui stesso il link.","testi5_n":"Giulia C.","testi5_r":"Cliente — Diritto di Famiglia","testi6_q":"Di solito aspetto giorni prima di sapere qualcosa. Qui ho aperto il link e ho visto tutto da sola.","testi6_n":"Maria R.","testi6_r":"Cliente — Diritto Penale"},"ru":{"nav_features":"Возможности","nav_pricing":"Тарифы","nav_faq":"Вопросы и ответы","nav_practice":"Направления практики","nav_signin":"Войти","nav_demo":"Заказать демо","cta_title":"Узнайте, как LexFlow работает в вашей фирме","cta_lede":"Получите индивидуальную демонстрацию — без обязательств.","cta_button":"Запросить демо","footer_text":"LexFlow © 2026 — облегчённый превью-артефакт дизайна.","chatbot_name":"Алесия — Онлайн поддержка","chatbot_greeting":"Привет! Как я могу вам помочь?","chatbot_placeholder":"Введите сообщение...","whatsapp_label":"Написать в WhatsApp","footer_credit":"Разработано AVibe Agency","hero_eyebrow":"ИИ-платформа для юридических фирм","hero_title1":"Юридическая работа, ","hero_title_em":"наконец,","hero_title2":" организована.","hero_lede":"LexFlow объединяет управление делами, документы и общение с клиентами в едином рабочем пространстве.","hero_cta1":"Начать бесплатно","hero_cta2":"Смотреть обзор","check1":"Безопасность документов с нулевым разглашением","check2":"Панели на основе ролей для каждого сотрудника","check3":"Доступность по стандарту WCAG 2.2 AA","feat_label":"Почему LexFlow","feat_title":"Создано с учётом реальной работы юристов","feat_sub":"Постепенное раскрытие информации делает сложные данные понятными.","feat1_h":"Самоорганизация знаний","feat1_p":"ИИ автоматически превращает неструктурированные документы в структурированную информацию.","feat2_h":"Панели на основе ролей","feat2_p":"Партнёры, помощники и администраторы видят свою настроенную версию.","feat3_h":"Контекстный интеллект","feat3_p":"ИИ находит нужную статью или срок ещё до вашего запроса.","stat1_label":"Меньше часов в день на администрирование","stat2_label":"Пропущенных новых обращений","stat3_label":"Выше удовлетворённость клиентов","compliance_text":"Данные обрабатываются согласно GDPR ЕС, ISO 27001:2022 и ISO/IEC 27701:2025.","testi4_q":"Я отправил своё дело с телефона, стоя в очереди на почте. Через пять минут оно уже было зарегистрировано.","testi4_n":"Лука Б.","testi4_r":"Клиент — трудовое право","testi5_q":"Мой муж наконец перестал спрашивать 'когда нам позвонят?'. Он сам проверяет ссылку.","testi5_n":"Джулия К.","testi5_r":"Клиент — семейное право","testi6_q":"Обычно я жду новостей днями. Здесь я открыла ссылку и увидела всё сама.","testi6_n":"Мария Р.","testi6_r":"Клиент — уголовное право"}};
+function setLang(lang){
+  document.querySelectorAll('[data-i18n]').forEach(function(el){
+    var k=el.getAttribute('data-i18n');
+    if(I18N[lang]&&I18N[lang][k]){el.textContent=I18N[lang][k];} else if(I18N['en']&&I18N['en'][k]){el.textContent=I18N['en'][k];}
+  });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(function(el){
+    var k=el.getAttribute('data-i18n-placeholder');
+    if(I18N[lang]&&I18N[lang][k]){el.setAttribute('placeholder',I18N[lang][k]);}
+  });
+  document.querySelectorAll('.lang-menu button').forEach(function(b){b.classList.toggle('active-lang', b.getAttribute('data-lang')===lang);});
+  document.getElementById('langLabel').textContent=lang.toUpperCase();
+  document.documentElement.setAttribute('lang', lang);
+  localStorage.setItem('lexflow-lang', lang);
+  langMenu.classList.remove('open');
+}
+document.querySelectorAll('.lang-menu button').forEach(function(b){ b.addEventListener('click', function(){ setLang(b.getAttribute('data-lang')); }); });
+setLang(localStorage.getItem('lexflow-lang')||'en');
+var chatToggle=document.getElementById('chatToggle'), chatPanel=document.getElementById('chatPanel');
+if(chatToggle){ chatToggle.addEventListener('click', function(){ chatPanel.classList.toggle('open'); }); }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How It Works — LexFlow</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#D4AF37;--gold-deep:#C5A55A;--navy:#152238;--navy-2:#1C2C48;--surface:#0F1826;--surface-2:#18243A;--border:rgba(212,175,55,0.18);--text:#F2EFE9;--text-dim:#B9C2D0;--text-faint:#7C8AA0;--radius-lg:14px;--radius-xl:20px;--radius-md:10px;--shadow-sm:0 2px 10px rgba(0,0,0,0.25);--shadow-md:0 8px 30px rgba(0,0,0,0.35);}
+[data-theme="light"]{--surface:#FBF9F4;--surface-2:#F2EEE3;--navy:#152238;--text:#1C2333;--text-dim:#4B5568;--text-faint:#8891A0;--border:rgba(21,34,56,0.12);--shadow-sm:0 2px 10px rgba(0,0,0,0.06);--shadow-md:0 8px 30px rgba(0,0,0,0.10);}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:var(--surface);color:var(--text);line-height:1.5;transition:background .3s,color .3s}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+a{color:inherit;text-decoration:none}
+nav{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;border-bottom:1px solid var(--border);position:sticky;top:0;background:var(--surface);z-index:20;backdrop-filter:blur(8px)}
+.logo{display:flex;align-items:center;gap:10px;font-weight:600;font-size:18px;letter-spacing:.02em}
+.logo-mark{width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,var(--navy),#0B1220);border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;color:var(--gold);font-family:'Instrument Serif',serif;font-size:16px}
+.nav-links{display:flex;gap:22px;font-size:14px;color:var(--text-dim)}
+.nav-links a.active{color:var(--gold)}
+.nav-cta{display:flex;gap:10px;align-items:center;position:relative}
+.btn{padding:10px 20px;border-radius:999px;font-size:14px;font-weight:500;cursor:pointer;border:1px solid transparent;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+.btn-gold{background:linear-gradient(135deg,var(--gold-deep),var(--gold));color:#1B1608;border:none}
+.btn-ghost{border:1px solid var(--border);color:var(--text)}
+.icon-btn{width:44px;height:44px;border-radius:50%;border:1px solid var(--border);background:transparent;color:var(--text);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:16px}
+.lang-wrap{position:relative}
+.lang-menu{position:absolute;top:52px;right:0;background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-md);box-shadow:var(--shadow-md);min-width:170px;padding:6px;display:none;flex-direction:column;z-index:30}
+.lang-menu.open{display:flex}
+.lang-menu button{background:none;border:none;color:var(--text);text-align:left;padding:10px 12px;border-radius:8px;font-size:14px;cursor:pointer;min-height:44px;display:flex;align-items:center;gap:10px}
+.lang-menu button:hover,.lang-menu button:focus-visible{background:rgba(212,175,55,0.1)}
+.lang-menu button.active-lang{color:var(--gold);font-weight:600}
+.page-hero{padding:56px 0 32px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);border:1px solid var(--border);padding:6px 14px;border-radius:999px;margin-bottom:18px}
+h1{font-family:'Instrument Serif',serif;font-size:40px;font-weight:400;line-height:1.15;margin-bottom:14px}
+p.lede{color:var(--text-dim);font-size:16px;max-width:600px}
+.section{padding:48px 0}
+.section-label{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+h2{font-family:'Instrument Serif',serif;font-size:30px;font-weight:400;margin-bottom:14px}
+.section-sub{color:var(--text-dim);max-width:560px;margin-bottom:32px;font-size:15px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative}
+.step-card{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:28px;position:relative}
+.step-num{width:36px;height:36px;border-radius:50%;background:var(--gold);color:#1B1608;font-family:'Instrument Serif',serif;font-size:18px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.step-card h3{font-size:17px;font-weight:600;margin-bottom:8px}
+.step-card p{font-size:14px;color:var(--text-dim)}
+.step-arrow{display:none}
+.roles-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.role-card{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:22px;text-align:center}
+.role-card .icon{width:44px;height:44px;border-radius:50%;background:rgba(212,175,55,0.1);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:20px;margin:0 auto 12px}
+.role-card h3{font-size:14px;font-weight:600;margin-bottom:6px}
+.role-card p{font-size:12px;color:var(--text-dim)}
+.timeline{border-left:2px solid var(--border);padding-left:24px;display:flex;flex-direction:column;gap:22px;max-width:640px}
+.timeline-item{position:relative}
+.timeline-item::before{content:"";position:absolute;left:-31px;top:4px;width:12px;height:12px;border-radius:50%;background:var(--gold)}
+.timeline-item h3{font-size:15px;font-weight:600;margin-bottom:4px}
+.timeline-item p{font-size:13px;color:var(--text-dim)}
+.cta-band{background:linear-gradient(135deg,var(--navy),#0B1220);border:1px solid var(--gold);border-radius:var(--radius-xl);padding:44px;text-align:center;margin:0 24px}
+.cta-band h2{color:var(--text)}
+.cta-band p{color:var(--text-dim);margin-bottom:22px}
+footer{padding:36px 24px;border-top:1px solid var(--border);margin-top:44px}
+.footer-inner{max-width:1120px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center}
+.footer-social{display:flex;gap:14px}
+.footer-social a{width:38px;height:38px;border-radius:50%;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--text-dim);font-size:16px}
+.footer-social a:hover{color:var(--gold);border-color:var(--gold)}
+.footer-credit{font-size:12px;color:var(--text-faint)}
+.footer-text{font-size:13px;color:var(--text-faint)}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.wa-float{position:fixed;bottom:24px;right:24px;width:56px;height:56px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:26px;box-shadow:var(--shadow-md);z-index:50;border:none;cursor:pointer}
+.chat-float{position:fixed;bottom:24px;right:92px;width:56px;height:56px;border-radius:50%;background:var(--gold);color:#1B1608;display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:var(--shadow-md);z-index:50;border:none;cursor:pointer}
+.chat-panel{position:fixed;bottom:92px;right:24px;width:300px;max-width:calc(100vw - 48px);background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-lg);box-shadow:var(--shadow-md);display:none;flex-direction:column;overflow:hidden;z-index:50}
+.chat-panel.open{display:flex}
+.chat-header{background:var(--navy);color:#fff;padding:14px 16px;font-size:14px;font-weight:600;display:flex;align-items:center;gap:8px}
+.chat-body{padding:14px;font-size:13px;color:var(--text-dim);min-height:80px}
+.chat-input-row{display:flex;border-top:1px solid var(--border)}
+.chat-input-row input{flex:1;border:none;background:none;padding:12px;font-size:13px;color:var(--text);min-height:44px}
+.chat-input-row button{border:none;background:none;color:var(--gold);padding:0 14px;cursor:pointer;font-size:14px;min-height:44px}
+@media(max-width:860px){.nav-links{display:none} h1{font-size:30px} .steps,.roles-grid{grid-template-columns:1fr} .roles-grid{grid-template-columns:repeat(2,1fr)} .chat-float{right:88px}}
+</style>
+</head>
+<body>
+
+<!-- WEBHOOK: id=WH-01 | endpoint: https://hook.example.com/lexflow/demo-request | trigger: CTA button click "Book a Demo" -->
+<nav>
+  <div class="logo"><span class="logo-mark">LF</span> LexFlow</div>
+  <div class="nav-links">
+    <a href="lexflow-index.html" data-i18n="nav_features">Features</a>
+    <a href="lexflow-how-it-works.html" class="active" data-i18n="nav_howitworks">How It Works</a>
+    <a href="lexflow-pricing.html" data-i18n="nav_pricing">Pricing</a>
+    <a href="lexflow-practice-areas.html" data-i18n="nav_practice">Practice Areas</a>
+    <a href="lexflow-faq.html" data-i18n="nav_faq">FAQ</a>
+  </div>
+  <div class="nav-cta">
+    <button class="icon-btn" id="themeBtn" aria-label="Toggle dark/light theme">◐</button>
+    <div class="lang-wrap">
+      <button class="icon-btn" id="langBtn" aria-label="Change language" aria-haspopup="true">🌐<span id="langLabel" style="font-size:10px;margin-left:2px">EN</span></button>
+      <div class="lang-menu" id="langMenu" role="menu">
+        <button data-lang="en" role="menuitem">🇬🇧 English</button>
+        <button data-lang="it" role="menuitem">🇮🇹 Italiano</button>
+        <button data-lang="ru" role="menuitem">🇷🇺 Русский</button>
+      </div>
+    </div>
+    <a class="btn btn-ghost" href="#login" data-i18n="nav_signin">Sign in</a>
+    <a class="btn btn-gold" data-webhook="demo-request-nav" href="#demo" data-i18n="nav_demo">Book a Demo</a>
+  </div>
+</nav>
+<!-- /WEBHOOK -->
+
+<header class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="hiw_eyebrow">How It Works</span>
+    <h1 data-i18n="hiw_title">From intake to resolution, in three calm steps</h1>
+    <p class="lede" data-i18n="hiw_lede">LexFlow removes the back-and-forth between firm and client. No client login, no installs — just a secure link and a clear timeline.</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-label" data-i18n="hiw_flow_label">The Client Journey</div>
+    <h2 data-i18n="hiw_flow_title">Three steps, zero friction</h2>
+    <div class="steps">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <h3 data-i18n="step1_h">Client submits</h3>
+        <p data-i18n="step1_p">The client fills out a short intake form from any device — phone, tablet, or desktop. No account, no download.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h3 data-i18n="step2_h">Lawyer reviews & acts</h3>
+        <p data-i18n="step2_p">The matter lands directly in the firm's role-based dashboard. The assigned lawyer or paralegal reviews, adds internal notes, and updates status.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h3 data-i18n="step3_h">Client tracks live</h3>
+        <p data-i18n="step3_p">The client opens their unique, token-secured link at any time to see real-time status — no phone calls needed to ask "where are we?"</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-label" data-i18n="hiw_roles_label">Built for Every Role</div>
+    <h2 data-i18n="hiw_roles_title">One workspace, tailored per seat</h2>
+    <p class="section-sub" data-i18n="hiw_roles_sub">Each team member sees exactly what they need — nothing more.</p>
+    <div class="roles-grid">
+      <div class="role-card"><div class="icon">👑</div><h3 data-i18n="role1_h">Senior Partner</h3><p data-i18n="role1_p">Full firm oversight, billing, and reporting.</p></div>
+      <div class="role-card"><div class="icon">⚖</div><h3 data-i18n="role2_h">Associate</h3><p data-i18n="role2_p">Assigned matters, document drafting, deadlines.</p></div>
+      <div class="role-card"><div class="icon">📁</div><h3 data-i18n="role3_h">Paralegal</h3><p data-i18n="role3_p">Intake triage, filing, and client status updates.</p></div>
+      <div class="role-card"><div class="icon">🎓</div><h3 data-i18n="role4_h">Intern</h3><p data-i18n="role4_p">Read-only research access and supervised tasks.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-label" data-i18n="hiw_timeline_label">Behind the Scenes</div>
+    <h2 data-i18n="hiw_timeline_title">A typical matter, end to end</h2>
+    <div class="timeline">
+      <div class="timeline-item"><h3 data-i18n="tl1_h">Intake received</h3><p data-i18n="tl1_p">Client submits case details via a short, mobile-friendly form.</p></div>
+      <div class="timeline-item"><h3 data-i18n="tl2_h">Auto-triage & assignment</h3><p data-i18n="tl2_p">LexFlow routes the matter to the right practice area and available team member.</p></div>
+      <div class="timeline-item"><h3 data-i18n="tl3_h">Internal review</h3><p data-i18n="tl3_p">Lawyer adds private notes, documents, and next steps — never visible to the client.</p></div>
+      <div class="timeline-item"><h3 data-i18n="tl4_h">Status shared</h3><p data-i18n="tl4_p">Client-facing status updates instantly on their personal tracking link.</p></div>
+      <div class="timeline-item"><h3 data-i18n="tl5_h">Resolution & archive</h3><p data-i18n="tl5_p">Matter closes, documents archive automatically, satisfaction feedback requested.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="demo">
+  <div class="cta-band">
+    <h2 data-i18n="cta_title">See LexFlow in your firm</h2>
+    <p data-i18n="cta_lede">Get a tailored walkthrough — no obligation.</p>
+    <a class="btn btn-gold" href="lexflow-index.html#demo" data-webhook="hiw-cta-demo" data-i18n="cta_button">Request Demo</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <span class="footer-text" data-i18n="footer_text">LexFlow © 2026 — Lightweight design preview artefact. Not for production deployment.</span>
+    <div class="footer-social">
+      <a href="https://linkedin.com/company/lexflow" aria-label="LinkedIn" target="_blank" rel="noopener">in</a>
+      <a href="https://instagram.com/lexflow" aria-label="Instagram" target="_blank" rel="noopener">◎</a>
+    </div>
+    <span class="footer-credit" data-i18n="footer_credit">Designed by AVibe Agency</span>
+  </div>
+</footer>
+
+<!-- WEBHOOK: id=WH-03 | endpoint: https://wa.me/390000000000 | trigger: WhatsApp float button click -->
+<a class="wa-float" href="https://wa.me/390000000000" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" data-webhook="whatsapp-float">💬</a>
+<!-- /WEBHOOK -->
+<!-- WEBHOOK: id=WH-04 | endpoint: https://hook.example.com/lexflow/chatbot-message | trigger: chatbot message send -->
+<button class="chat-float" id="chatToggle" aria-label="Open chat assistant" data-webhook="chatbot-toggle">💭</button>
+<div class="chat-panel" id="chatPanel">
+  <div class="chat-header"><span data-i18n="chatbot_name">Alessia — Online Support</span></div>
+  <div class="chat-body"><p data-i18n="chatbot_greeting">Hi! How can I help you today?</p></div>
+  <div class="chat-input-row">
+    <input type="text" data-i18n-placeholder="chatbot_placeholder" placeholder="Type your message..." aria-label="Chat message">
+    <button data-webhook="chatbot-send" onclick="return false;">➤</button>
+  </div>
+</div>
+<!-- /WEBHOOK -->
+
+<script>
+document.getElementById('themeBtn').addEventListener('click', function(){
+  var html = document.documentElement;
+  html.setAttribute('data-theme', html.getAttribute('data-theme')==='dark'?'light':'dark');
+});
+var langBtn=document.getElementById('langBtn'), langMenu=document.getElementById('langMenu');
+langBtn.addEventListener('click', function(e){ e.stopPropagation(); langMenu.classList.toggle('open'); });
+document.addEventListener('click', function(){ langMenu.classList.remove('open'); });
+var I18N = {"en":{"nav_features":"Features","nav_howitworks":"How It Works","nav_pricing":"Pricing","nav_faq":"FAQ","nav_practice":"Practice Areas","nav_signin":"Sign in","nav_demo":"Book a Demo","cta_title":"See LexFlow in your firm","cta_lede":"Get a tailored walkthrough — no obligation.","cta_button":"Request Demo","footer_text":"LexFlow © 2026 — Lightweight design preview artefact.","chatbot_name":"Alessia — Online Support","chatbot_greeting":"Hi! How can I help you today?","chatbot_placeholder":"Type your message...","footer_credit":"Designed by AVibe Agency","hiw_eyebrow":"How It Works","hiw_title":"From intake to resolution, in three calm steps","hiw_lede":"LexFlow removes the back-and-forth between firm and client. No client login, no installs — just a secure link and a clear timeline.","hiw_flow_label":"The Client Journey","hiw_flow_title":"Three steps, zero friction","step1_h":"Client submits","step1_p":"The client fills out a short intake form from any device. No account, no download.","step2_h":"Lawyer reviews & acts","step2_p":"The matter lands in the firm's role-based dashboard for review and status updates.","step3_h":"Client tracks live","step3_p":"The client opens their unique, token-secured link anytime to see real-time status.","hiw_roles_label":"Built for Every Role","hiw_roles_title":"One workspace, tailored per seat","hiw_roles_sub":"Each team member sees exactly what they need — nothing more.","role1_h":"Senior Partner","role1_p":"Full firm oversight, billing, and reporting.","role2_h":"Associate","role2_p":"Assigned matters, document drafting, deadlines.","role3_h":"Paralegal","role3_p":"Intake triage, filing, and client status updates.","role4_h":"Intern","role4_p":"Read-only research access and supervised tasks.","hiw_timeline_label":"Behind the Scenes","hiw_timeline_title":"A typical matter, end to end","tl1_h":"Intake received","tl1_p":"Client submits case details via a short, mobile-friendly form.","tl2_h":"Auto-triage & assignment","tl2_p":"LexFlow routes the matter to the right practice area and team member.","tl3_h":"Internal review","tl3_p":"Lawyer adds private notes and documents — never visible to the client.","tl4_h":"Status shared","tl4_p":"Client-facing status updates instantly on their tracking link.","tl5_h":"Resolution & archive","tl5_p":"Matter closes, documents archive, satisfaction feedback requested."},"it":{"nav_features":"Funzionalità","nav_howitworks":"Come Funziona","nav_pricing":"Prezzi","nav_faq":"Domande e Risposte","nav_practice":"Aree di Pratica","nav_signin":"Accedi","nav_demo":"Prenota una Demo","cta_title":"Scopri LexFlow nel tuo studio","cta_lede":"Ottieni una dimostrazione su misura.","cta_button":"Richiedi una Demo","footer_text":"LexFlow © 2026 — Artefatto di anteprima design leggero.","chatbot_name":"Alessia — Assistenza Online","chatbot_greeting":"Ciao! Come posso aiutarti oggi?","chatbot_placeholder":"Scrivi il tuo messaggio...","footer_credit":"Progettato da AVibe Agency","hiw_eyebrow":"Come Funziona","hiw_title":"Dall'intake alla risoluzione, in tre passaggi semplici","hiw_lede":"LexFlow elimina il continuo avanti e indietro tra studio e cliente. Nessun login, nessuna installazione — solo un link sicuro e una tempistica chiara.","hiw_flow_label":"Il Percorso del Cliente","hiw_flow_title":"Tre passaggi, zero attrito","step1_h":"Il cliente invia","step1_p":"Il cliente compila un breve modulo di intake da qualsiasi dispositivo. Nessun account, nessun download.","step2_h":"L'avvocato revisiona e agisce","step2_p":"La pratica arriva nella dashboard dello studio basata sui ruoli per revisione e aggiornamenti.","step3_h":"Il cliente segue in tempo reale","step3_p":"Il cliente apre il suo link unico e protetto in qualsiasi momento per vedere lo stato in tempo reale.","hiw_roles_label":"Costruito per Ogni Ruolo","hiw_roles_title":"Un unico spazio di lavoro, su misura per ogni ruolo","hiw_roles_sub":"Ogni membro del team vede esattamente ciò di cui ha bisogno — nient'altro.","role1_h":"Socio Senior","role1_p":"Supervisione completa dello studio, fatturazione e reportistica.","role2_h":"Associato","role2_p":"Pratiche assegnate, redazione documenti, scadenze.","role3_h":"Praticante","role3_p":"Smistamento intake, archiviazione e aggiornamenti clienti.","role4_h":"Stagista","role4_p":"Accesso di sola lettura per ricerche e compiti supervisionati.","hiw_timeline_label":"Dietro le Quinte","hiw_timeline_title":"Una pratica tipica, dall'inizio alla fine","tl1_h":"Intake ricevuto","tl1_p":"Il cliente invia i dettagli del caso tramite un modulo semplice e mobile-friendly.","tl2_h":"Smistamento e assegnazione automatici","tl2_p":"LexFlow indirizza la pratica all'area giusta e al membro del team disponibile.","tl3_h":"Revisione interna","tl3_p":"L'avvocato aggiunge note private e documenti — mai visibili al cliente.","tl4_h":"Stato condiviso","tl4_p":"Gli aggiornamenti di stato arrivano istantaneamente sul link di tracciamento del cliente.","tl5_h":"Risoluzione e archiviazione","tl5_p":"La pratica si chiude, i documenti si archiviano, si richiede il feedback di soddisfazione."},"ru":{"nav_features":"Возможности","nav_howitworks":"Как это работает","nav_pricing":"Тарифы","nav_faq":"Вопросы и ответы","nav_practice":"Направления практики","nav_signin":"Войти","nav_demo":"Заказать демо","cta_title":"Узнайте, как LexFlow работает в вашей фирме","cta_lede":"Получите демонстрацию — без обязательств.","cta_button":"Запросить демо","footer_text":"LexFlow © 2026 — облегчённый превью-артефакт.","chatbot_name":"Алесия — Онлайн поддержка","chatbot_greeting":"Привет! Как я могу вам помочь?","chatbot_placeholder":"Введите сообщение...","footer_credit":"Разработано AVibe Agency","hiw_eyebrow":"Как это работает","hiw_title":"От обращения до решения — за три простых шага","hiw_lede":"LexFlow устраняет постоянные переговоры между фирмой и клиентом. Без логина, без установки — только защищённая ссылка и понятная хронология.","hiw_flow_label":"Путь клиента","hiw_flow_title":"Три шага, ноль трудностей","step1_h":"Клиент подаёт заявку","step1_p":"Клиент заполняет короткую форму с любого устройства. Без аккаунта и загрузок.","step2_h":"Юрист рассматривает и действует","step2_p":"Дело попадает в панель фирмы на основе ролей для рассмотрения и обновления статуса.","step3_h":"Клиент отслеживает в реальном времени","step3_p":"Клиент открывает свою уникальную защищённую ссылку в любое время, чтобы увидеть статус.","hiw_roles_label":"Создано для каждой роли","hiw_roles_title":"Единое пространство, настроенное под каждую роль","hiw_roles_sub":"Каждый сотрудник видит именно то, что ему нужно — не больше.","role1_h":"Старший партнёр","role1_p":"Полный контроль фирмы, биллинг и отчётность.","role2_h":"Юрист-ассоциат","role2_p":"Назначенные дела, составление документов, сроки.","role3_h":"Помощник юриста","role3_p":"Сортировка обращений, архивирование и обновления для клиентов.","role4_h":"Стажёр","role4_p":"Доступ только для чтения для исследований и контролируемых задач.","hiw_timeline_label":"За кулисами","hiw_timeline_title":"Типичное дело от начала до конца","tl1_h":"Обращение получено","tl1_p":"Клиент отправляет детали дела через короткую мобильную форму.","tl2_h":"Автосортировка и назначение","tl2_p":"LexFlow направляет дело в нужную область практики и свободному сотруднику.","tl3_h":"Внутренний обзор","tl3_p":"Юрист добавляет закрытые заметки и документы — никогда не видимые клиенту.","tl4_h":"Статус передан","tl4_p":"Обновления статуса мгновенно отображаются на ссылке отслеживания клиента.","tl5_h":"Решение и архивация","tl5_p":"Дело закрывается, документы архивируются, запрашивается отзыв о удовлетворённости."}};
+function setLang(lang){
+  document.querySelectorAll('[data-i18n]').forEach(function(el){
+    var k=el.getAttribute('data-i18n');
+    if(I18N[lang]&&I18N[lang][k]){el.textContent=I18N[lang][k];} else if(I18N['en']&&I18N['en'][k]){el.textContent=I18N['en'][k];}
+  });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(function(el){
+    var k=el.getAttribute('data-i18n-placeholder');
+    if(I18N[lang]&&I18N[lang][k]){el.setAttribute('placeholder',I18N[lang][k]);}
+  });
+  document.querySelectorAll('.lang-menu button').forEach(function(b){b.classList.toggle('active-lang', b.getAttribute('data-lang')===lang);});
+  document.getElementById('langLabel').textContent=lang.toUpperCase();
+  document.documentElement.setAttribute('lang', lang);
+  localStorage.setItem('lexflow-lang', lang);
+  langMenu.classList.remove('open');
+}
+document.querySelectorAll('.lang-menu button').forEach(function(b){ b.addEventListener('click', function(){ setLang(b.getAttribute('data-lang')); }); });
+setLang(localStorage.getItem('lexflow-lang')||'en');
+var chatToggle=document.getElementById('chatToggle'), chatPanel=document.getElementById('chatPanel');
+if(chatToggle){ chatToggle.addEventListener('click', function(){ chatPanel.classList.toggle('open'); }); }
+</script>
+
+</body>
+</html>

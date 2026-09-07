@@ -1,0 +1,5 @@
+"ID","Trigger","Endpoint","Status"
+"WH-01","""Book a Demo"" nav click","hook.example.com/lexflow/demo-request","placeholder"
+"WH-02","Newsletter form submit","hook.example.com/lexflow/newsletter","placeholder"
+"WH-03","WhatsApp float click","wa.me/390000000000","placeholder number"
+"WH-04","Chatbot message send","hook.example.com/lexflow/chatbot-message","placeholder"
