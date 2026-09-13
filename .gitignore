@@ -1,0 +1,5 @@
+.netlify/
+node_modules/
+*.bak
+*.pre_fix
+sqlite_mcp_server.db

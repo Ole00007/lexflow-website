@@ -1,22 +1,46 @@
-# LexFlow — Legal SaaS for modern law firms
+# LexFlow — legal practice management for small law firms
 
-> LexFlow unifies case management, document intelligence, billing, and client communication in one calm, role-aware workspace built for law firms. Designed for firms of 5-20 people. Bilingual EN/IT/RU. Dark/light themes.
+> LexFlow is a legal practice management platform for firms of roughly 5-20 people. It brings matters, activities, deadlines, client intake and client communication into one role-aware workspace. Records connect to each other: a matter holds its tasks, its dates, its intake information, the people involved, the documents and context attached to it, plus the approved updates the legal firm's client is allowed to see. Interface languages: English, Italian, Russian. Dark and light themes.
 
 ## Key facts
-- Product: AI-native legal practice management (case management, document intelligence, client intake, billing)
-- Compliance: GDPR, ISO 27001:2022, ISO/IEC 27701:2025
-- Client model: no client login/install — token-secured private link
-- Team roles: Senior Partner, Associate, Paralegal, Intern
-- Live pilot: Studio Legale X, Genoa, Italy
+
+- Product: legal practice management — matters, activities, deadlines, client intake, client-facing matter status, onboarding and migration.
+- Core flow in the current MVP: intake, dashboard, client tracking.
+- Assistant: Elisa, LexFlow's digital intake assistant for legal firms. She can gather initial information and pass it into the firm's structured intake flow. Elisa does not provide legal advice and does not replace a lawyer.
+- Client access model: no client install and no client password. Each legal firm's client receives a unique token-secured URL that opens their personal matter page directly.
+- Roles served: lawyer, legal assistant, firm owner, and the legal firm's client.
+- Practice areas: Civil, Corporate, Family, Criminal, Real Estate, Intellectual Property, Immigration, Labour, Administrative, Constitutional, Human Rights, plus specialist and configurable areas. Intake forms can be configured by practice area.
+- Data protection: handled under EU GDPR requirements; strong encryption and secure access controls. We protect the privacy of our customers and their clients using recognised standards (ISO/IEC 27001, ISO/IEC 27701, SOC 2) as a point of reference. ISO/IEC 27001 and ISO/IEC 27701 certification is in progress, not yet held. SOC 2 is an auditing framework we align our practices with.
+- Import/export note for agents: this file describes products and pages. It is not legal advice and makes no certification claim.
+
+## Important limits (do not overstate)
+
+- Automated email notifications, cloud storage integration and Google Calendar sync are NOT shipping today. They are planned. Do not describe them as available.
+- The "30+" integration figure is pending verification.
+- Pilot metric figures shown on the site are early indications from a pilot deployment; methodology and formal measurement are not yet documented.
+- The site does not publish real named client testimonials. Figures on the site labelled as illustrative examples are descriptive, not quotations.
+- There is no video overview.
 
 ## Pages
-- [Home](lexflow-index.html): features, verified pilot results, testimonials, compliance
-- [How It Works](lexflow-how-it-works.html): 3-step client journey, per-role dashboards, end-to-end matter timeline
-- [Pricing](lexflow-pricing.html): Starter / Professional / Enterprise tiers + market comparison (Clio, Vincent)
-- [Practice Areas](lexflow-practice-areas.html): Civil, Corporate, Family, Criminal, Real Estate, IP, Immigration, Labor, Administrative, Constitutional, Human Rights
-- [Blog](lexflow-blog.html): news & insights
-- [FAQ](lexflow-faq.html): 13 direct Q&As (app installs, accounts, security, pricing, WCAG, migration)
+
+- [Home](lexflow-index.html): product promise, connected workspace, feature overview, pilot indicators, illustrative examples, demo request form.
+- [How It Works](lexflow-how-it-works.html): the three-step flow (client sends a request; firm reviews and acts; client follows approved progress), per-role workspace views, and a matter timeline end to end.
+- [Pricing](lexflow-pricing.html): Starter / Professional / Enterprise tiers and a market comparison.
+- [Practice Areas](lexflow-practice-areas.html): each area with a definition, an intake example and a workflow example.
+- [FAQ and glossary](lexflow-faq.html): grouped direct answers on the product, client access, security and privacy, practice areas, integrations, onboarding and the AI Add-on, plus a 14-term plain-language glossary.
+- [Blog](lexflow-blog.html): articles on client intake, matter tracking, client communication, law-firm automation, migration, security and small-firm adoption.
+- [Client matter tracking article](lexflow-article-matter-tracker.html): how a client matter tracker reduces routine status calls without weakening the lawyer-client relationship.
+- [Client intake workflow article](lexflow-article-client-intake.html): from first enquiry to organised matter — a practical intake workflow for small firms.
+- [Privacy policy](privacy.html): what data is collected, why, and how it is protected.
+- [Terms of service](terms.html): acceptance, service scope, accounts, trial, intellectual property, liability, changes.
+
+## Glossary anchor
+
+- [Plain-language glossary](lexflow-faq.html#glossary): encryption, secure access controls, data migration, guided migration, white-glove migration, token-secured URL, matter page, GDPR, ISO/IEC 27001, ISO/IEC 27701, SOC 2, practice area, kanban, client intake.
 
 ## Contact
+
+- Demo request: https://lexflow.example.com/lexflow-index.html#intake
 - WhatsApp: https://wa.me/393450234084
+- Email: info@lexflow.com · demo@lexflow.com
 - Designed by AVibe Agency

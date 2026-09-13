@@ -33,8 +33,8 @@
     localStorage.setItem('lexflow-lang', lang);
     var menu = document.getElementById('langMenu');
     if (menu) { menu.classList.remove('open'); }
-    /* Keep the Elisa assistant copy in sync deterministically */
-    if (window.LexFlowElisaSync) { window.LexFlowElisaSync(); }
+    /* Keep Alessia widget copy in sync deterministically */
+    if (window.LexFlowAlessiaSync) { window.LexFlowAlessiaSync(); }
   }
 
   function initLang() {

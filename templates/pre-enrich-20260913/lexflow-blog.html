@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog & News — LexFlow</title>
+<meta name="description" content="LexFlow blog — insights on legal practice management, AI for law firms, and product news.">
+<link rel="canonical" href="https://lexflow.example.com/lexflow-blog.html">
+<link rel="icon" type="image/png" href="assets/lexflow-logo-120.png">
+<link rel="apple-touch-icon" href="assets/lexflow-logo-120.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  .post-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .post-card{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;transition:border-color .2s,transform .2s}
+  .post-card:hover{border-color:var(--gold);transform:translateY(-2px)}
+  .post-card .post-date{font-size:11px;color:var(--text-faint);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}
+  .post-card h3{font-size:17px;font-weight:600;margin-bottom:10px}
+  .post-card p{font-size:13px;color:var(--text-dim);margin-bottom:14px}
+  .post-card .post-more{color:var(--gold);font-size:13px}
+  @media(max-width:860px){.post-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo"><span class="logo-mark">LF</span> LexFlow</div>
+  <div class="nav-links">
+    <a href="lexflow-index.html">About CRM</a>
+    <a href="lexflow-how-it-works.html">How It Works</a>
+    <a href="lexflow-pricing.html">Features &amp; Pricing</a>
+    <a href="lexflow-practice-areas.html">Practice Areas</a>
+    <a href="lexflow-faq.html">FAQ</a>
+    <a class="active" href="lexflow-blog.html">Blog</a>
+  </div>
+  <div class="nav-cta">
+    <a class="btn btn-gold" href="lexflow-index.html#intake">Book a Demo</a>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow">Blog & News</span>
+    <h1>Insights for modern law firms</h1>
+    <p class="lede">Practical guides on legal practice management, AI in law, and LexFlow product updates.</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap">
+    <div class="post-grid">
+      <div class="post-card"><div class="post-date">Coming soon</div><h3>Why small law firms beat enterprise software</h3><p>How a focused 10–15 person firm can out-manoeuvre large competitors with the right tools.</p><span class="post-more">Read more →</span></div>
+      <div class="post-card"><div class="post-date">Coming soon</div><h3>Token-secured client links: privacy by design</h3><p>No app, no password — how clients track their matters with a single secure link.</p><span class="post-more">Read more →</span></div>
+      <div class="post-card"><div class="post-date">Coming soon</div><h3>AI assistants in legal: what actually helps</h3><p>Where AI saves hours and where human empathy is irreplaceable.</p><span class="post-more">Read more →</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="cta-band">
+      <h2>Get the newsletter</h2>
+      <p>One email a month. No spam.</p>
+      <form style="display:flex;gap:10px;justify-content:center;max-width:420px;margin:0 auto;flex-wrap:wrap" data-webhook="newsletter-signup" onsubmit="return false;">
+        <input type="email" placeholder="work@lawfirm.com" aria-label="Work email" required style="flex:1;min-width:200px;padding:12px 16px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,0.04);color:var(--text);font-size:14px;min-height:44px">
+        <button class="btn btn-gold" type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <span class="footer-text">LexFlow © 2026 — All rights reserved.</span>
+    <div class="footer-social">
+      <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener">in</a>
+      <a href="#" aria-label="Instagram" target="_blank" rel="noopener">ig</a>
+    </div>
+    <span class="footer-credit">Designed by AVibe Agency</span>
+  </div>
+</footer>
+</body>
+</html>
