@@ -477,3 +477,177 @@ Two generator safety guards, both prompted by real failures found here:
 | 7 | Webhook URLs (27 keys) | **open** |
 | 8 | WhatsApp final number | **open** — Option C built and proven |
 | 9 | `hermes model` re-auth for worker profiles | **open** — blocks the handoffs |
+
+---
+
+# Batch 3 — humanizer pass, and the exact cause of the blocked handoffs
+
+Commit `63f46d4`. Owner decisions 1–5 from the previous round are all applied.
+
+## Humanizer pass — 259 replacements, 34 distinct strings, EN/IT/RU
+
+Em dash overuse (pattern 14) was the main finding; the copy was otherwise already
+free of AI-isms. Prose em dashes became commas, periods or colons. The final dash
+was also inconsistent (a plain hyphen in some strings, an em dash in others) and
+is now normalised. Accent-accordion titles use a colon consistently.
+
+Your example is applied: Russian **"Напишите нам." → "Свяжитесь с нами."**
+0 occurrences of the old phrasing remain; 18 of the new.
+
+Italian and Russian got the equivalent treatment rather than only the English
+being edited, so the three languages stay parallel.
+
+## Two real bugs found while humanising — both were live on the site
+
+**1. Italian rendered inside English pages.** The runtime only cleared an
+element's *direct* text nodes when swapping language. `<em>disordine</em>` is a
+single Element node, so that Italian word survived and the English home page
+rendered:
+
+- `Every legal firm loses time to chaosdisordine`
+- `Gli studi che usano LexFlow chiudono di più.più.`
+
+`setText` now walks all descendant text nodes with a TreeWalker, matching what the
+build script's `localise_inner` already did.
+
+**2. Italian values sitting in the English dictionary slot.** 13 dictionary values
+and 16 static elements held Italian, so English visitors read Italian:
+`why_results_title/sub`, `problem_label/title/sub`, `problem1_h/p`, `problem3_h/p`,
+`contact_intro`, `contact_consent1/2`, `contact_privacy`, `contact_submit`,
+`contact_name`, `contact_message`, `chatbot_greeting/note/status_new`,
+`contact_title`.
+
+Verified in the browser afterwards: the English page now reads "Firms using
+LexFlow close more.", "Every legal firm loses time to chaos", English consent
+checkboxes, "Name" / "Message" / "Send request".
+
+## Item 2 confirmed — Kanban visual replaced
+
+You confirmed the board data is anonymised. In practice the board is **behind a
+login**, so I could read the column structure but no card data. I did not attempt
+to log in, and no credentials were used.
+
+So the artefact is built from the real structure with placeholder matters only:
+
+- **Real columns read off the live board:** Intake, Conflict Check, Review,
+  In Progress, Waiting Docs, To Verify, Engaged, Closed.
+- Clean three-column excerpt (a partial view, per your earlier instruction not to
+  publish a raw full-board screenshot).
+- Palette and typography taken from `assets/style.css`, not from the CRM, so it
+  is UI-native here: gold `#D4AF37` on the surface/navy ground, Inter, same
+  border and radius treatment.
+- Rendered at 1600×1200 (4:3) to match `.preview-visual`'s aspect-ratio exactly,
+  so `object-fit: cover` does not crop it.
+- Source kept at `templates/kanban-artefact.html` so it can be edited or
+  regenerated rather than only replaced.
+- No client names, no real matters.
+
+The FAQ "notifications" image is now the approved `romanelli-sala-riunioni.png`.
+
+---
+
+# Item 5 — the blocked handoffs, explained, with what to run
+
+## What is actually wrong
+
+`hermes model` performs the **Nous Portal OAuth login**. Each Hermes profile has
+its **own** credential store at `~/.hermes/profiles/<name>/auth.json`, so logging
+in as one profile does nothing for the others.
+
+Status right now, checked directly:
+
+| Profile | Nous Portal |
+|---|---|
+| `default` | logged in |
+| `operator-installer` | **logged out** |
+| `memory-curator` | **logged out** |
+| `lexflow_dev_head_admin` | **logged out** |
+
+The dispatcher runs under `operator-installer`'s gateway (PID 12005). Every
+worker it spawns exits immediately with:
+
+```
+No access token found for Nous Portal login. Run `hermes model` to re-authenticate.
+```
+
+That is why the workers exit `rc=0` without calling `kanban_complete` — logged as
+a protocol violation. **This is an auth problem, not a gateway problem**, so
+`hermes gateway run` would not have fixed it.
+
+## What to run — one command per profile
+
+Each opens your browser for the OAuth flow:
+
+```bash
+hermes -p operator-installer model
+hermes -p memory-curator model
+hermes -p lexflow_dev_head_admin model
+```
+
+Confirm it worked:
+
+```bash
+hermes -p operator-installer auth status nous     # expect: nous: logged in
+```
+
+Then retry the four cards:
+
+```bash
+hermes kanban unblock t_d6065167 t_6c2c8c07 t_85d62411 t_76668155
+```
+
+## Alternative that avoids the browser login
+
+`operator-installer` already holds a working **OpenRouter** credential in its pool
+and `OPENROUTER_API_KEY` is present in its `.env`, while its config points at the
+Nous provider:
+
+```yaml
+model:
+  default: deepseek/deepseek-v4-flash
+  provider: nous
+```
+
+Switching `provider` to `openrouter` would sidestep the login entirely, but the
+model id would also need to change to OpenRouter's naming for that model, and it
+changes how every worker reasons.
+
+**My recommendation:** do the Nous re-login. It is the smaller change, it keeps
+the workers on the model you already chose, and it fixes all three profiles at
+once. I have **not** touched another profile's config — that is yours to approve.
+
+## Docs
+
+- Base: https://hermes-agent.nousresearch.com/docs — verified it returns 200.
+- I could not extract the deep links to the auth pages: the web-extraction tooling
+  is failing right now with a DNS error resolving `firecrawl-gateway.nousresearch.com`.
+  The commands above are verified locally, which is the part that matters.
+- Fastest in-tool reference: `hermes model --help` and `hermes auth --help`.
+
+---
+
+# Handoffs passed (both profiles, as asked)
+
+| Card | Assignee | Contents |
+|---|---|---|
+| `t_85d62411` | operator-installer | The four questions: public lead endpoint, CORS, aLEXy naming, and **what is blocking him** — for you to get an answer back |
+| `t_76668155` | memory-curator | Full batch-3 recap: humanizer work, both leakage bugs, WhatsApp Option C, the Kanban artefact, and the reusable lesson about escaping in the build script |
+| `t_d6065167`, `t_6c2c8c07` | both | The earlier cards, still blocked — unblock after re-auth |
+
+All four sit in `ready`/`blocked` until the re-auth is done.
+
+---
+
+# Everything still to do — consolidated
+
+| # | Item | Status |
+|---|---|---|
+| 1 | Cloudflare deploy | Waiting on you approving a version; you then supply the domain |
+| 2 | Kanban anonymisation | **done** — artefact shipped |
+| 3 | WhatsApp number | **confirmed as-is**; Option C built and proven |
+| 4 | CRM endpoint + CORS | Question handed to operator-installer; awaiting his reply |
+| 5 | Worker re-auth | **explained above** — needs you to run 3 commands |
+| 6 | Domain in `ORIGIN` | Blocked on #1. Still `https://lexflow.example.com`, baked into 26 sitemap URLs, 4 hreflang tags × 24 pages, every canonical |
+| 7 | 27 webhook URLs | Declared as `null`; they log a warning instead of sending |
+| 8 | Article IT/RU bodies | You are sending in batches; not blocking |
+| 9 | Elisa widget pre-localisation | Crawler-only gap; visitors already see correct IT/RU |
