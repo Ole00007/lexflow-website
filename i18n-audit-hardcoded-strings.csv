@@ -1,0 +1,705 @@
+file,line,kind,text,class
+lexflow-index.html,1,text,<!DOCTYPE html>,brand/no-translation-needed
+lexflow-index.html,6,text,LexFlow — Legal SaaS for Modern Law Firms,COPY
+lexflow-index.html,49,text,LexFlow,brand/no-translation-needed
+lexflow-index.html,62,text,🇬🇧 English,COPY
+lexflow-index.html,63,text,🇮🇹 Italiano,COPY
+lexflow-index.html,64,text,🇷🇺 Русский,COPY
+lexflow-index.html,91,attr:alt,Studio legale — interni,COPY
+lexflow-index.html,92,text,Active Matters,COPY
+lexflow-index.html,110,text,✓ Notifiche automatiche sincronizzate al calendario,badge/label
+lexflow-index.html,111,text,✓ Priorità visiva a colpo d'occhio,badge/label
+lexflow-index.html,112,text,✓ Tutto il team aggiornato in tempo reale,badge/label
+lexflow-index.html,121,text,&lt; 5 min,numeric/unit
+lexflow-index.html,159,text,🛡 Handled under EU GDPR requirements,badge/label
+lexflow-index.html,160,text,🔒 Working towards ISO/IEC 27001,badge/label
+lexflow-index.html,161,text,🔐 Working towards ISO/IEC 27701,badge/label
+lexflow-index.html,174,text,"""LexFlow cut our document intake time in half within the first month.""",COPY
+lexflow-index.html,174,text,Illustrative example,COPY
+lexflow-index.html,174,text,"Small firm, document handling",COPY
+lexflow-index.html,175,text,"""Finally a legal tool our whole office actually enjoys using.""",COPY
+lexflow-index.html,175,text,Illustrative example,COPY
+lexflow-index.html,175,text,Firm administration,COPY
+lexflow-index.html,176,text,"""The role-based dashboards alone justified the switch.""",COPY
+lexflow-index.html,176,text,Illustrative example,COPY
+lexflow-index.html,176,text,Practice management,COPY
+lexflow-index.html,177,attr:alt,Luca B.,COPY
+lexflow-index.html,178,attr:alt,Giulia C.,COPY
+lexflow-index.html,179,attr:alt,Maria R.,COPY
+lexflow-index.html,232,text,◉ WhatsApp +39 345 023 4084,COPY
+lexflow-index.html,233,text,✉ Email: demo@lexflow.com,COPY
+lexflow-index.html,262,attr:aria-label,LinkedIn,brand/no-translation-needed
+lexflow-index.html,263,attr:aria-label,Instagram,brand/no-translation-needed
+lexflow-index.html,264,attr:aria-label,WhatsApp,brand/no-translation-needed
+lexflow-index.html,265,attr:aria-label,GitHub,brand/no-translation-needed
+lexflow-index.html,266,attr:aria-label,Telegram,brand/no-translation-needed
+lexflow-index.html,312,text,Elisa,brand/no-translation-needed
+lexflow-index.html,313,text,LexFlow's digital intake assistant,COPY
+lexflow-index.html,314,text,Online — intake only,COPY
+lexflow-index.html,317,attr:aria-label,Minimise assistant,COPY
+lexflow-index.html,318,attr:aria-label,Close assistant,COPY
+lexflow-index.html,318,text,&times;,brand/no-translation-needed
+lexflow-index.html,324,attr:aria-label,Conversation with Elisa,COPY
+lexflow-index.html,328,text,"Hi, I'm Elisa, LexFlow's digital intake assistant. I'll take a few details and pass them to the firm. First, how can the firm reach you?",COPY
+lexflow-index.html,334,text,Elisa is typing…,COPY
+lexflow-index.html,339,text,Your contact details,COPY
+lexflow-index.html,342,text,Email,COPY
+lexflow-index.html,346,text,Phone,COPY
+lexflow-index.html,349,text,Continue,COPY
+lexflow-index.html,354,text,About the matter,COPY
+lexflow-index.html,356,text,Practice area,COPY
+lexflow-index.html,358,text,Civil law,COPY
+lexflow-index.html,359,text,Corporate &amp; business,COPY
+lexflow-index.html,360,text,Family law,COPY
+lexflow-index.html,361,text,Criminal defence,COPY
+lexflow-index.html,362,text,Real estate,COPY
+lexflow-index.html,363,text,Intellectual property,COPY
+lexflow-index.html,364,text,Immigration,COPY
+lexflow-index.html,365,text,Labour &amp; employment,COPY
+lexflow-index.html,366,text,Administrative,COPY
+lexflow-index.html,367,text,Other / not sure,COPY
+lexflow-index.html,371,text,Matter status,COPY
+lexflow-index.html,373,text,New request,COPY
+lexflow-index.html,374,text,Under review,COPY
+lexflow-index.html,375,text,Existing matter,COPY
+lexflow-index.html,379,text,Urgency,COPY
+lexflow-index.html,381,text,Low,COPY
+lexflow-index.html,382,text,Medium,COPY
+lexflow-index.html,383,text,High,COPY
+lexflow-index.html,384,text,Critical,COPY
+lexflow-index.html,387,text,Continue,COPY
+lexflow-index.html,392,text,Describe the matter,COPY
+lexflow-index.html,393,text,Common requests,COPY
+lexflow-index.html,395,text,New matter,COPY
+lexflow-index.html,396,text,Matter status,COPY
+lexflow-index.html,397,text,Urgent,COPY
+lexflow-index.html,398,text,Plans &amp; pricing,COPY
+lexflow-index.html,401,text,What is this about?,COPY
+lexflow-index.html,405,text,Send request,COPY
+lexflow-index.html,410,text,Start again,COPY
+lexflow-index.html,413,text,Elisa does not give legal advice and does not replace a lawyer.,COPY
+lexflow-index.html,414,text,Continue on WhatsApp,COPY
+lexflow-index.html,415,text,Urgent matter? Call the firm directly.,COPY
+lexflow-index.html,416,text,Do not send confidential case details here. Internal firm notes are never shown to clients.,COPY
+lexflow-index.html,417,text,Privacy policy,COPY
+lexflow-index.html,422,attr:aria-label,Talk to Elisa — LexFlow's digital intake assistant,COPY
+lexflow-index.html,427,text,Talk to Elisa,COPY
+lexflow-how-it-works.html,1,text,<!DOCTYPE html>,brand/no-translation-needed
+lexflow-how-it-works.html,6,text,How It Works — LexFlow,COPY
+lexflow-how-it-works.html,49,text,LexFlow,brand/no-translation-needed
+lexflow-how-it-works.html,62,text,🇬🇧 English,COPY
+lexflow-how-it-works.html,63,text,🇮🇹 Italiano,COPY
+lexflow-how-it-works.html,64,text,🇷🇺 Русский,COPY
+lexflow-how-it-works.html,81,attr:alt,Sala riunioni — Studio Legale,COPY
+lexflow-how-it-works.html,82,text,The Client Journey,COPY
+lexflow-how-it-works.html,109,text,"""section"">",COPY
+lexflow-how-it-works.html,120,text,"tion class=""section"">",COPY
+lexflow-how-it-works.html,148,text,💬 WhatsApp · +39 345 023 4084,COPY
+lexflow-how-it-works.html,149,text,✉ info@lexflow.com,COPY
+lexflow-how-it-works.html,150,text,✉ demo@lexflow.com,COPY
+lexflow-how-it-works.html,160,attr:aria-label,LinkedIn,brand/no-translation-needed
+lexflow-how-it-works.html,161,attr:aria-label,Instagram,brand/no-translation-needed
+lexflow-how-it-works.html,162,attr:aria-label,WhatsApp,brand/no-translation-needed
+lexflow-how-it-works.html,163,attr:aria-label,GitHub,brand/no-translation-needed
+lexflow-how-it-works.html,164,attr:aria-label,Telegram,brand/no-translation-needed
+lexflow-how-it-works.html,211,text,Elisa,brand/no-translation-needed
+lexflow-how-it-works.html,212,text,LexFlow's digital intake assistant,COPY
+lexflow-how-it-works.html,213,text,Online — intake only,COPY
+lexflow-how-it-works.html,216,attr:aria-label,Minimise assistant,COPY
+lexflow-how-it-works.html,217,attr:aria-label,Close assistant,COPY
+lexflow-how-it-works.html,217,text,&times;,brand/no-translation-needed
+lexflow-how-it-works.html,223,attr:aria-label,Conversation with Elisa,COPY
+lexflow-how-it-works.html,227,text,"Hi, I'm Elisa, LexFlow's digital intake assistant. I'll take a few details and pass them to the firm. First, how can the firm reach you?",COPY
+lexflow-how-it-works.html,233,text,Elisa is typing…,COPY
+lexflow-how-it-works.html,238,text,Your contact details,COPY
+lexflow-how-it-works.html,241,text,Email,COPY
+lexflow-how-it-works.html,245,text,Phone,COPY
+lexflow-how-it-works.html,248,text,Continue,COPY
+lexflow-how-it-works.html,253,text,About the matter,COPY
+lexflow-how-it-works.html,255,text,Practice area,COPY
+lexflow-how-it-works.html,257,text,Civil law,COPY
+lexflow-how-it-works.html,258,text,Corporate &amp; business,COPY
+lexflow-how-it-works.html,259,text,Family law,COPY
+lexflow-how-it-works.html,260,text,Criminal defence,COPY
+lexflow-how-it-works.html,261,text,Real estate,COPY
+lexflow-how-it-works.html,262,text,Intellectual property,COPY
+lexflow-how-it-works.html,263,text,Immigration,COPY
+lexflow-how-it-works.html,264,text,Labour &amp; employment,COPY
+lexflow-how-it-works.html,265,text,Administrative,COPY
+lexflow-how-it-works.html,266,text,Other / not sure,COPY
+lexflow-how-it-works.html,270,text,Matter status,COPY
+lexflow-how-it-works.html,272,text,New request,COPY
+lexflow-how-it-works.html,273,text,Under review,COPY
+lexflow-how-it-works.html,274,text,Existing matter,COPY
+lexflow-how-it-works.html,278,text,Urgency,COPY
+lexflow-how-it-works.html,280,text,Low,COPY
+lexflow-how-it-works.html,281,text,Medium,COPY
+lexflow-how-it-works.html,282,text,High,COPY
+lexflow-how-it-works.html,283,text,Critical,COPY
+lexflow-how-it-works.html,286,text,Continue,COPY
+lexflow-how-it-works.html,291,text,Describe the matter,COPY
+lexflow-how-it-works.html,292,text,Common requests,COPY
+lexflow-how-it-works.html,294,text,New matter,COPY
+lexflow-how-it-works.html,295,text,Matter status,COPY
+lexflow-how-it-works.html,296,text,Urgent,COPY
+lexflow-how-it-works.html,297,text,Plans &amp; pricing,COPY
+lexflow-how-it-works.html,300,text,What is this about?,COPY
+lexflow-how-it-works.html,304,text,Send request,COPY
+lexflow-how-it-works.html,309,text,Start again,COPY
+lexflow-how-it-works.html,312,text,Elisa does not give legal advice and does not replace a lawyer.,COPY
+lexflow-how-it-works.html,313,text,Continue on WhatsApp,COPY
+lexflow-how-it-works.html,314,text,Urgent matter? Call the firm directly.,COPY
+lexflow-how-it-works.html,315,text,Do not send confidential case details here. Internal firm notes are never shown to clients.,COPY
+lexflow-how-it-works.html,316,text,Privacy policy,COPY
+lexflow-how-it-works.html,321,attr:aria-label,Talk to Elisa — LexFlow's digital intake assistant,COPY
+lexflow-how-it-works.html,326,text,Talk to Elisa,COPY
+lexflow-pricing.html,1,text,<!DOCTYPE html>,brand/no-translation-needed
+lexflow-pricing.html,6,text,Pricing — LexFlow,COPY
+lexflow-pricing.html,49,text,LexFlow,brand/no-translation-needed
+lexflow-pricing.html,62,text,🇬🇧 English,COPY
+lexflow-pricing.html,63,text,🇮🇹 Italiano,COPY
+lexflow-pricing.html,64,text,🇷🇺 Русский,COPY
+lexflow-pricing.html,81,attr:alt,Studio legale — ingresso,COPY
+lexflow-pricing.html,82,text,Transparent Plans,COPY
+lexflow-pricing.html,92,text,/user/mo,COPY
+lexflow-pricing.html,104,text,Popular,brand/no-translation-needed
+lexflow-pricing.html,106,text,/user/mo,COPY
+lexflow-pricing.html,139,text,LexFlow — Starter,COPY
+lexflow-pricing.html,139,text,$39 / user / mo,numeric/unit
+lexflow-pricing.html,139,text,Billed annually,COPY
+lexflow-pricing.html,140,text,LexFlow — Professional,COPY
+lexflow-pricing.html,140,text,$79 / user / mo,numeric/unit
+lexflow-pricing.html,140,text,Billed annually,COPY
+lexflow-pricing.html,141,text,LexFlow — Enterprise,COPY
+lexflow-pricing.html,141,text,Custom quote,COPY
+lexflow-pricing.html,141,text,Contact sales,COPY
+lexflow-pricing.html,142,text,Clio — EasyStart,COPY
+lexflow-pricing.html,142,text,$49 / user / mo,numeric/unit
+lexflow-pricing.html,142,text,"Publicly listed, billed annually",COPY
+lexflow-pricing.html,143,text,Clio — Essentials,COPY
+lexflow-pricing.html,143,text,$89 / user / mo,numeric/unit
+lexflow-pricing.html,143,text,"Publicly listed, billed annually",COPY
+lexflow-pricing.html,144,text,Clio — Advanced / Complete,COPY
+lexflow-pricing.html,144,text,$149 / user / mo,numeric/unit
+lexflow-pricing.html,144,text,"Publicly listed, billed annually",COPY
+lexflow-pricing.html,145,text,Vincent AI (by vLex / Clio),COPY
+lexflow-pricing.html,145,text,Contact vendor,COPY
+lexflow-pricing.html,145,text,No published pricing; third-party reviews cite ~$399/mo for comparable tiers,COPY
+lexflow-pricing.html,151,text,🛡 Handled under EU GDPR requirements,badge/label
+lexflow-pricing.html,151,text,🔒 Working towards ISO/IEC 27001,badge/label
+lexflow-pricing.html,151,text,🔐 Working towards ISO/IEC 27701,badge/label
+lexflow-pricing.html,154,text,✓ Archiviazione cloud · or your local server,badge/label
+lexflow-pricing.html,155,text,✓ Notifiche email e messenger automatiche,badge/label
+lexflow-pricing.html,156,text,✓ PostgreSQL Secure database,badge/label
+lexflow-pricing.html,157,text,✓ CRM,badge/label
+lexflow-pricing.html,158,text,✓ Legal Calendaring,badge/label
+lexflow-pricing.html,159,text,| Prossimamente: Time &amp; Expense Tracking · Payments,COPY
+lexflow-pricing.html,178,text,💬 WhatsApp · +39 345 023 4084,COPY
+lexflow-pricing.html,179,text,✉ info@lexflow.com,COPY
+lexflow-pricing.html,180,text,✉ demo@lexflow.com,COPY
+lexflow-pricing.html,190,attr:aria-label,LinkedIn,brand/no-translation-needed
+lexflow-pricing.html,191,attr:aria-label,Instagram,brand/no-translation-needed
+lexflow-pricing.html,192,attr:aria-label,WhatsApp,brand/no-translation-needed
+lexflow-pricing.html,193,attr:aria-label,GitHub,brand/no-translation-needed
+lexflow-pricing.html,194,attr:aria-label,Telegram,brand/no-translation-needed
+lexflow-pricing.html,242,text,Elisa,brand/no-translation-needed
+lexflow-pricing.html,243,text,LexFlow's digital intake assistant,COPY
+lexflow-pricing.html,244,text,Online — intake only,COPY
+lexflow-pricing.html,247,attr:aria-label,Minimise assistant,COPY
+lexflow-pricing.html,248,attr:aria-label,Close assistant,COPY
+lexflow-pricing.html,248,text,&times;,brand/no-translation-needed
+lexflow-pricing.html,254,attr:aria-label,Conversation with Elisa,COPY
+lexflow-pricing.html,258,text,"Hi, I'm Elisa, LexFlow's digital intake assistant. I'll take a few details and pass them to the firm. First, how can the firm reach you?",COPY
+lexflow-pricing.html,264,text,Elisa is typing…,COPY
+lexflow-pricing.html,269,text,Your contact details,COPY
+lexflow-pricing.html,272,text,Email,COPY
+lexflow-pricing.html,276,text,Phone,COPY
+lexflow-pricing.html,279,text,Continue,COPY
+lexflow-pricing.html,284,text,About the matter,COPY
+lexflow-pricing.html,286,text,Practice area,COPY
+lexflow-pricing.html,288,text,Civil law,COPY
+lexflow-pricing.html,289,text,Corporate &amp; business,COPY
+lexflow-pricing.html,290,text,Family law,COPY
+lexflow-pricing.html,291,text,Criminal defence,COPY
+lexflow-pricing.html,292,text,Real estate,COPY
+lexflow-pricing.html,293,text,Intellectual property,COPY
+lexflow-pricing.html,294,text,Immigration,COPY
+lexflow-pricing.html,295,text,Labour &amp; employment,COPY
+lexflow-pricing.html,296,text,Administrative,COPY
+lexflow-pricing.html,297,text,Other / not sure,COPY
+lexflow-pricing.html,301,text,Matter status,COPY
+lexflow-pricing.html,303,text,New request,COPY
+lexflow-pricing.html,304,text,Under review,COPY
+lexflow-pricing.html,305,text,Existing matter,COPY
+lexflow-pricing.html,309,text,Urgency,COPY
+lexflow-pricing.html,311,text,Low,COPY
+lexflow-pricing.html,312,text,Medium,COPY
+lexflow-pricing.html,313,text,High,COPY
+lexflow-pricing.html,314,text,Critical,COPY
+lexflow-pricing.html,317,text,Continue,COPY
+lexflow-pricing.html,322,text,Describe the matter,COPY
+lexflow-pricing.html,323,text,Common requests,COPY
+lexflow-pricing.html,325,text,New matter,COPY
+lexflow-pricing.html,326,text,Matter status,COPY
+lexflow-pricing.html,327,text,Urgent,COPY
+lexflow-pricing.html,328,text,Plans &amp; pricing,COPY
+lexflow-pricing.html,331,text,What is this about?,COPY
+lexflow-pricing.html,335,text,Send request,COPY
+lexflow-pricing.html,340,text,Start again,COPY
+lexflow-pricing.html,343,text,Elisa does not give legal advice and does not replace a lawyer.,COPY
+lexflow-pricing.html,344,text,Continue on WhatsApp,COPY
+lexflow-pricing.html,345,text,Urgent matter? Call the firm directly.,COPY
+lexflow-pricing.html,346,text,Do not send confidential case details here. Internal firm notes are never shown to clients.,COPY
+lexflow-pricing.html,347,text,Privacy policy,COPY
+lexflow-pricing.html,352,attr:aria-label,Talk to Elisa — LexFlow's digital intake assistant,COPY
+lexflow-pricing.html,357,text,Talk to Elisa,COPY
+lexflow-practice-areas.html,1,text,<!DOCTYPE html>,brand/no-translation-needed
+lexflow-practice-areas.html,6,text,Practice Areas — LexFlow,COPY
+lexflow-practice-areas.html,49,text,LexFlow,brand/no-translation-needed
+lexflow-practice-areas.html,62,text,🇬🇧 English,COPY
+lexflow-practice-areas.html,63,text,🇮🇹 Italiano,COPY
+lexflow-practice-areas.html,64,text,🇷🇺 Русский,COPY
+lexflow-practice-areas.html,81,attr:alt,Bilancia della giustizia,COPY
+lexflow-practice-areas.html,82,text,Practice Areas,COPY
+lexflow-practice-areas.html,292,text,💬 WhatsApp · +39 345 023 4084,COPY
+lexflow-practice-areas.html,293,text,✉ info@lexflow.com,COPY
+lexflow-practice-areas.html,294,text,✉ demo@lexflow.com,COPY
+lexflow-practice-areas.html,304,attr:aria-label,LinkedIn,brand/no-translation-needed
+lexflow-practice-areas.html,305,attr:aria-label,Instagram,brand/no-translation-needed
+lexflow-practice-areas.html,306,attr:aria-label,WhatsApp,brand/no-translation-needed
+lexflow-practice-areas.html,307,attr:aria-label,GitHub,brand/no-translation-needed
+lexflow-practice-areas.html,308,attr:aria-label,Telegram,brand/no-translation-needed
+lexflow-practice-areas.html,358,text,Elisa,brand/no-translation-needed
+lexflow-practice-areas.html,359,text,LexFlow's digital intake assistant,COPY
+lexflow-practice-areas.html,360,text,Online — intake only,COPY
+lexflow-practice-areas.html,363,attr:aria-label,Minimise assistant,COPY
+lexflow-practice-areas.html,364,attr:aria-label,Close assistant,COPY
+lexflow-practice-areas.html,364,text,&times;,brand/no-translation-needed
+lexflow-practice-areas.html,370,attr:aria-label,Conversation with Elisa,COPY
+lexflow-practice-areas.html,374,text,"Hi, I'm Elisa, LexFlow's digital intake assistant. I'll take a few details and pass them to the firm. First, how can the firm reach you?",COPY
+lexflow-practice-areas.html,380,text,Elisa is typing…,COPY
+lexflow-practice-areas.html,385,text,Your contact details,COPY
+lexflow-practice-areas.html,388,text,Email,COPY
+lexflow-practice-areas.html,392,text,Phone,COPY
+lexflow-practice-areas.html,395,text,Continue,COPY
+lexflow-practice-areas.html,400,text,About the matter,COPY
+lexflow-practice-areas.html,402,text,Practice area,COPY
+lexflow-practice-areas.html,404,text,Civil law,COPY
+lexflow-practice-areas.html,405,text,Corporate &amp; business,COPY
+lexflow-practice-areas.html,406,text,Family law,COPY
+lexflow-practice-areas.html,407,text,Criminal defence,COPY
+lexflow-practice-areas.html,408,text,Real estate,COPY
+lexflow-practice-areas.html,409,text,Intellectual property,COPY
+lexflow-practice-areas.html,410,text,Immigration,COPY
+lexflow-practice-areas.html,411,text,Labour &amp; employment,COPY
+lexflow-practice-areas.html,412,text,Administrative,COPY
+lexflow-practice-areas.html,413,text,Other / not sure,COPY
+lexflow-practice-areas.html,417,text,Matter status,COPY
+lexflow-practice-areas.html,419,text,New request,COPY
+lexflow-practice-areas.html,420,text,Under review,COPY
+lexflow-practice-areas.html,421,text,Existing matter,COPY
+lexflow-practice-areas.html,425,text,Urgency,COPY
+lexflow-practice-areas.html,427,text,Low,COPY
+lexflow-practice-areas.html,428,text,Medium,COPY
+lexflow-practice-areas.html,429,text,High,COPY
+lexflow-practice-areas.html,430,text,Critical,COPY
+lexflow-practice-areas.html,433,text,Continue,COPY
+lexflow-practice-areas.html,438,text,Describe the matter,COPY
+lexflow-practice-areas.html,439,text,Common requests,COPY
+lexflow-practice-areas.html,441,text,New matter,COPY
+lexflow-practice-areas.html,442,text,Matter status,COPY
+lexflow-practice-areas.html,443,text,Urgent,COPY
+lexflow-practice-areas.html,444,text,Plans &amp; pricing,COPY
+lexflow-practice-areas.html,447,text,What is this about?,COPY
+lexflow-practice-areas.html,451,text,Send request,COPY
+lexflow-practice-areas.html,456,text,Start again,COPY
+lexflow-practice-areas.html,459,text,Elisa does not give legal advice and does not replace a lawyer.,COPY
+lexflow-practice-areas.html,460,text,Continue on WhatsApp,COPY
+lexflow-practice-areas.html,461,text,Urgent matter? Call the firm directly.,COPY
+lexflow-practice-areas.html,462,text,Do not send confidential case details here. Internal firm notes are never shown to clients.,COPY
+lexflow-practice-areas.html,463,text,Privacy policy,COPY
+lexflow-practice-areas.html,468,attr:aria-label,Talk to Elisa — LexFlow's digital intake assistant,COPY
+lexflow-practice-areas.html,473,text,Talk to Elisa,COPY
+lexflow-faq.html,1,text,<!DOCTYPE html>,brand/no-translation-needed
+lexflow-faq.html,6,text,FAQ and glossary — LexFlow legal practice management,COPY
+lexflow-faq.html,59,text,LexFlow,brand/no-translation-needed
+lexflow-faq.html,72,text,🇬🇧 English,COPY
+lexflow-faq.html,73,text,🇮🇹 Italiano,COPY
+lexflow-faq.html,74,text,🇷🇺 Русский,COPY
+lexflow-faq.html,98,text,✓ Fewer status chases,badge/label
+lexflow-faq.html,99,text,✓ Clear responsibility per matter,badge/label
+lexflow-faq.html,100,text,✓ Visible dates and next actions,badge/label
+lexflow-faq.html,101,text,✓ Clients informed through approved updates,badge/label
+lexflow-faq.html,104,attr:alt,LexFlow matter board showing matters grouped by stage,COPY
+lexflow-faq.html,104,text,Board Kanban per ogni pratica,COPY
+lexflow-faq.html,105,attr:alt,Law firm team working together,COPY
+lexflow-faq.html,105,text,Notifiche sincronizzate al calendario,COPY
+lexflow-faq.html,114,text,&lt; 5 min,numeric/unit
+lexflow-faq.html,154,text,See the,COPY
+lexflow-faq.html,154,text,glossary,COPY
+lexflow-faq.html,154,text,"for what encryption, secure access controls and SOC 2 mean in plain language.",COPY
+lexflow-faq.html,165,text,See,COPY
+lexflow-faq.html,165,text,practice area workflows,COPY
+lexflow-faq.html,165,text,"for a definition, an intake example and a workflow example per area.",COPY
+lexflow-faq.html,185,text,Both terms are defined in the,COPY
+lexflow-faq.html,185,text,glossary,COPY
+lexflow-faq.html,211,text,Filter glossary terms,COPY
+lexflow-faq.html,231,text,No term matches that. Try a shorter word.,COPY
+lexflow-faq.html,269,text,💬 WhatsApp · +39 345 023 4084,COPY
+lexflow-faq.html,270,text,✉ info@lexflow.com,COPY
+lexflow-faq.html,271,text,✉ demo@lexflow.com,COPY
+lexflow-faq.html,281,attr:aria-label,LinkedIn,brand/no-translation-needed
+lexflow-faq.html,282,attr:aria-label,Instagram,brand/no-translation-needed
+lexflow-faq.html,283,attr:aria-label,WhatsApp,brand/no-translation-needed
+lexflow-faq.html,284,attr:aria-label,GitHub,brand/no-translation-needed
+lexflow-faq.html,285,attr:aria-label,Telegram,brand/no-translation-needed
+lexflow-faq.html,449,text,Elisa,brand/no-translation-needed
+lexflow-faq.html,450,text,LexFlow's digital intake assistant,COPY
+lexflow-faq.html,451,text,Online — intake only,COPY
+lexflow-faq.html,454,attr:aria-label,Minimise assistant,COPY
+lexflow-faq.html,455,attr:aria-label,Close assistant,COPY
+lexflow-faq.html,455,text,&times;,brand/no-translation-needed
+lexflow-faq.html,461,attr:aria-label,Conversation with Elisa,COPY
+lexflow-faq.html,465,text,"Hi, I'm Elisa, LexFlow's digital intake assistant. I'll take a few details and pass them to the firm. First, how can the firm reach you?",COPY
+lexflow-faq.html,471,text,Elisa is typing…,COPY
+lexflow-faq.html,476,text,Your contact details,COPY
+lexflow-faq.html,479,text,Email,COPY
+lexflow-faq.html,483,text,Phone,COPY
+lexflow-faq.html,486,text,Continue,COPY
+lexflow-faq.html,491,text,About the matter,COPY
+lexflow-faq.html,493,text,Practice area,COPY
+lexflow-faq.html,495,text,Civil law,COPY
+lexflow-faq.html,496,text,Corporate &amp; business,COPY
+lexflow-faq.html,497,text,Family law,COPY
+lexflow-faq.html,498,text,Criminal defence,COPY
+lexflow-faq.html,499,text,Real estate,COPY
+lexflow-faq.html,500,text,Intellectual property,COPY
+lexflow-faq.html,501,text,Immigration,COPY
+lexflow-faq.html,502,text,Labour &amp; employment,COPY
+lexflow-faq.html,503,text,Administrative,COPY
+lexflow-faq.html,504,text,Other / not sure,COPY
+lexflow-faq.html,508,text,Matter status,COPY
+lexflow-faq.html,510,text,New request,COPY
+lexflow-faq.html,511,text,Under review,COPY
+lexflow-faq.html,512,text,Existing matter,COPY
+lexflow-faq.html,516,text,Urgency,COPY
+lexflow-faq.html,518,text,Low,COPY
+lexflow-faq.html,519,text,Medium,COPY
+lexflow-faq.html,520,text,High,COPY
+lexflow-faq.html,521,text,Critical,COPY
+lexflow-faq.html,524,text,Continue,COPY
+lexflow-faq.html,529,text,Describe the matter,COPY
+lexflow-faq.html,530,text,Common requests,COPY
+lexflow-faq.html,532,text,New matter,COPY
+lexflow-faq.html,533,text,Matter status,COPY
+lexflow-faq.html,534,text,Urgent,COPY
+lexflow-faq.html,535,text,Plans &amp; pricing,COPY
+lexflow-faq.html,538,text,What is this about?,COPY
+lexflow-faq.html,542,text,Send request,COPY
+lexflow-faq.html,547,text,Start again,COPY
+lexflow-faq.html,550,text,Elisa does not give legal advice and does not replace a lawyer.,COPY
+lexflow-faq.html,551,text,Continue on WhatsApp,COPY
+lexflow-faq.html,552,text,Urgent matter? Call the firm directly.,COPY
+lexflow-faq.html,553,text,Do not send confidential case details here. Internal firm notes are never shown to clients.,COPY
+lexflow-faq.html,554,text,Privacy policy,COPY
+lexflow-faq.html,559,attr:aria-label,Talk to Elisa — LexFlow's digital intake assistant,COPY
+lexflow-faq.html,564,text,Talk to Elisa,COPY
+lexflow-blog.html,1,text,<!DOCTYPE html>,brand/no-translation-needed
+lexflow-blog.html,6,text,Blog — LexFlow,COPY
+lexflow-blog.html,85,text,LexFlow,brand/no-translation-needed
+lexflow-blog.html,98,text,🇬🇧 English,COPY
+lexflow-blog.html,99,text,🇮🇹 Italiano,COPY
+lexflow-blog.html,100,text,🇷🇺 Русский,COPY
+lexflow-blog.html,234,text,◉ WhatsApp +39 345 023 4084,COPY
+lexflow-blog.html,235,text,✉ demo@lexflow.com,COPY
+lexflow-blog.html,263,attr:aria-label,LinkedIn,brand/no-translation-needed
+lexflow-blog.html,264,attr:aria-label,Instagram,brand/no-translation-needed
+lexflow-blog.html,265,attr:aria-label,WhatsApp,brand/no-translation-needed
+lexflow-blog.html,266,attr:aria-label,GitHub,brand/no-translation-needed
+lexflow-blog.html,267,attr:aria-label,Telegram,brand/no-translation-needed
+lexflow-blog.html,497,text,Elisa,brand/no-translation-needed
+lexflow-blog.html,498,text,LexFlow's digital intake assistant,COPY
+lexflow-blog.html,499,text,Online — intake only,COPY
+lexflow-blog.html,502,attr:aria-label,Minimise assistant,COPY
+lexflow-blog.html,503,attr:aria-label,Close assistant,COPY
+lexflow-blog.html,503,text,&times;,brand/no-translation-needed
+lexflow-blog.html,509,attr:aria-label,Conversation with Elisa,COPY
+lexflow-blog.html,513,text,"Hi, I'm Elisa, LexFlow's digital intake assistant. I'll take a few details and pass them to the firm. First, how can the firm reach you?",COPY
+lexflow-blog.html,519,text,Elisa is typing…,COPY
+lexflow-blog.html,524,text,Your contact details,COPY
+lexflow-blog.html,527,text,Email,COPY
+lexflow-blog.html,531,text,Phone,COPY
+lexflow-blog.html,534,text,Continue,COPY
+lexflow-blog.html,539,text,About the matter,COPY
+lexflow-blog.html,541,text,Practice area,COPY
+lexflow-blog.html,543,text,Civil law,COPY
+lexflow-blog.html,544,text,Corporate &amp; business,COPY
+lexflow-blog.html,545,text,Family law,COPY
+lexflow-blog.html,546,text,Criminal defence,COPY
+lexflow-blog.html,547,text,Real estate,COPY
+lexflow-blog.html,548,text,Intellectual property,COPY
+lexflow-blog.html,549,text,Immigration,COPY
+lexflow-blog.html,550,text,Labour &amp; employment,COPY
+lexflow-blog.html,551,text,Administrative,COPY
+lexflow-blog.html,552,text,Other / not sure,COPY
+lexflow-blog.html,556,text,Matter status,COPY
+lexflow-blog.html,558,text,New request,COPY
+lexflow-blog.html,559,text,Under review,COPY
+lexflow-blog.html,560,text,Existing matter,COPY
+lexflow-blog.html,564,text,Urgency,COPY
+lexflow-blog.html,566,text,Low,COPY
+lexflow-blog.html,567,text,Medium,COPY
+lexflow-blog.html,568,text,High,COPY
+lexflow-blog.html,569,text,Critical,COPY
+lexflow-blog.html,572,text,Continue,COPY
+lexflow-blog.html,577,text,Describe the matter,COPY
+lexflow-blog.html,578,text,Common requests,COPY
+lexflow-blog.html,580,text,New matter,COPY
+lexflow-blog.html,581,text,Matter status,COPY
+lexflow-blog.html,582,text,Urgent,COPY
+lexflow-blog.html,583,text,Plans &amp; pricing,COPY
+lexflow-blog.html,586,text,What is this about?,COPY
+lexflow-blog.html,590,text,Send request,COPY
+lexflow-blog.html,595,text,Start again,COPY
+lexflow-blog.html,598,text,Elisa does not give legal advice and does not replace a lawyer.,COPY
+lexflow-blog.html,599,text,Continue on WhatsApp,COPY
+lexflow-blog.html,600,text,Urgent matter? Call the firm directly.,COPY
+lexflow-blog.html,601,text,Do not send confidential case details here. Internal firm notes are never shown to clients.,COPY
+lexflow-blog.html,602,text,Privacy policy,COPY
+lexflow-blog.html,607,attr:aria-label,Talk to Elisa — LexFlow's digital intake assistant,COPY
+lexflow-blog.html,612,text,Talk to Elisa,COPY
+lexflow-article-matter-tracker.html,1,text,<!DOCTYPE html>,brand/no-translation-needed
+lexflow-article-matter-tracker.html,6,text,How a client matter tracker reduces routine status calls — LexFlow,COPY
+lexflow-article-matter-tracker.html,65,text,LexFlow,brand/no-translation-needed
+lexflow-article-matter-tracker.html,78,text,🇬🇧 English,COPY
+lexflow-article-matter-tracker.html,79,text,🇮🇹 Italiano,COPY
+lexflow-article-matter-tracker.html,80,text,🇷🇺 Русский,COPY
+lexflow-article-matter-tracker.html,103,attr:aria-label,Language note,COPY
+lexflow-article-matter-tracker.html,105,text,This article is written in English. A full Italian or Russian version is available on request - write to info@lexflow.com or ask Elisa.,COPY
+lexflow-article-matter-tracker.html,106,text,Questo articolo è scritto in inglese. Una versione completa in italiano o in russo è disponibile su richiesta: scrivi a info@lexflow.com o chiedi a Elisa.,COPY
+lexflow-article-matter-tracker.html,107,text,Эта статья написана на английском. Полная версия на итальянском или русском языке доступна по запросу: напишите на info@lexflow.com или спросите Елизу.,COPY
+lexflow-article-matter-tracker.html,110,text,What a client matter tracker is for,COPY
+lexflow-article-matter-tracker.html,111,text,"Clients contact a firm for many reasons, and among the most common is simply to ask what is happening with their matter. That question is reasonable, and it des",COPY
+lexflow-article-matter-tracker.html,112,text,"A matter tracker gives clients a secure place to see approved progress updates, upcoming milestones and requests for information, so they can check a routine st",COPY
+lexflow-article-matter-tracker.html,113,text,"Its purpose is not to replace the lawyer. A tracker separates operational updates from the conversations that genuinely need professional judgement, strategy, r",COPY
+lexflow-article-matter-tracker.html,115,text,How approved updates work,COPY
+lexflow-article-matter-tracker.html,117,text,Why updates matter,COPY
+lexflow-article-matter-tracker.html,118,text,"Legal work continues even when very little of it is visible from outside the firm. Documents are reviewed, deadlines are calculated, correspondence is prepared,",COPY
+lexflow-article-matter-tracker.html,119,text,"Without an update, silence starts to feel like inactivity. The client cannot tell a file that is moving from a file that has been set aside, and the uncertainty",COPY
+lexflow-article-matter-tracker.html,119,text,documents under review,COPY
+lexflow-article-matter-tracker.html,119,text,"clarifies progress without exposing confidential internal notes: it tells the client the matter is being worked on, without disclosing the firm's reasoning, its",COPY
+lexflow-article-matter-tracker.html,121,text,What the page may show,COPY
+lexflow-article-matter-tracker.html,122,text,A client-facing matter page is deliberately narrow. In a typical setup it may show:,COPY
+lexflow-article-matter-tracker.html,124,text,the current stage of the matter;,COPY
+lexflow-article-matter-tracker.html,125,text,the latest approved update;,COPY
+lexflow-article-matter-tracker.html,126,text,the next milestone or expected step;,COPY
+lexflow-article-matter-tracker.html,127,text,information or documents the firm has requested;,COPY
+lexflow-article-matter-tracker.html,128,text,relevant appointments and deadlines;,COPY
+lexflow-article-matter-tracker.html,129,text,a clear route to contact the firm when something is urgent.,COPY
+lexflow-article-matter-tracker.html,131,text,"Just as important is what stays outside the client view. Internal strategy, private notes, draft opinions, conflict information and any non-disclosable material",COPY
+lexflow-article-matter-tracker.html,131,text,how LexFlow works,COPY
+lexflow-article-matter-tracker.html,131,text,follows the same matter from both sides.,COPY
+lexflow-article-matter-tracker.html,133,text,Access and automation,COPY
+lexflow-article-matter-tracker.html,135,text,Passwordless access,COPY
+lexflow-article-matter-tracker.html,136,text,"Clients are not asked to create an account. A token-secured URL is a private link associated with a particular matter or an authorised user, and opening it requ",COPY
+lexflow-article-matter-tracker.html,137,text,"Removing friction is not the same as removing risk. The firm still has to decide how long a link stays valid, how it is revoked once it should no longer work, w",COPY
+lexflow-article-matter-tracker.html,139,text,Proper automation,COPY
+lexflow-article-matter-tracker.html,140,text,"Automation earns its place when it removes a step that carries no judgement. A system can confirm receipt of a document, record an approved stage, or remind a c",COPY
+lexflow-article-matter-tracker.html,141,text,"Automation should not independently give legal advice, interpret an outcome, or replace a communication that needs to come from the lawyer. The firm decides whi",COPY
+lexflow-article-matter-tracker.html,143,text,Who benefits,COPY
+lexflow-article-matter-tracker.html,144,text,"Clients benefit because there is less uncertainty: they can see that the matter is progressing, and they know what is expected of them next. Assistants benefit ",COPY
+lexflow-article-matter-tracker.html,145,text,"None of that arrives by itself. It follows from deciding what is safe to share, who approves each update, and how the firm handles the cases where a routine pro",COPY
+lexflow-article-matter-tracker.html,147,text,Before rollout,COPY
+lexflow-article-matter-tracker.html,149,text,Before rollout ask,COPY
+lexflow-article-matter-tracker.html,150,text,"Before publishing a client-facing matter page, settle these questions:",COPY
+lexflow-article-matter-tracker.html,152,text,Which statuses are safe to show a client without exposing the firm's internal reasoning?,COPY
+lexflow-article-matter-tracker.html,153,text,Who approves an update before it becomes visible to the client?,COPY
+lexflow-article-matter-tracker.html,154,text,"What information stays hidden, and how is that enforced rather than assumed?",COPY
+lexflow-article-matter-tracker.html,155,text,How are links expired and revoked when a matter closes or a recipient changes?,COPY
+lexflow-article-matter-tracker.html,156,text,How does an urgent issue escalate to a person who can act on it?,COPY
+lexflow-article-matter-tracker.html,157,text,"Does the page work on the devices clients actually use, including older phones?",COPY
+lexflow-article-matter-tracker.html,158,text,"How is access logged, and who reviews those logs?",COPY
+lexflow-article-matter-tracker.html,161,text,Scope note,COPY
+lexflow-article-matter-tracker.html,162,text,"LexFlow is intended to organise intake, matter progress and client-facing updates. Access behaviour, security settings and automation rules differ between firms",COPY
+lexflow-article-matter-tracker.html,165,text,Want to see a client-facing matter page before you decide anything?,COPY
+lexflow-article-matter-tracker.html,165,text,Request a walkthrough and demo,COPY
+lexflow-article-matter-tracker.html,165,text,", or compare plans on the",COPY
+lexflow-article-matter-tracker.html,165,text,pricing page,COPY
+lexflow-article-matter-tracker.html,170,text,From first enquiry to organised matter: a practical client-intake workflow for small legal firms,COPY
+lexflow-article-matter-tracker.html,171,text,"How LexFlow works, from intake to resolution",COPY
+lexflow-article-matter-tracker.html,172,text,Practice areas LexFlow supports,COPY
+lexflow-article-matter-tracker.html,173,text,Frequently asked questions about LexFlow,COPY
+lexflow-article-matter-tracker.html,174,text,Glossary of practice-management terms,COPY
+lexflow-article-matter-tracker.html,175,text,Back to the blog hub,COPY
+lexflow-article-matter-tracker.html,188,text,◉ WhatsApp +39 345 023 4084,COPY
+lexflow-article-matter-tracker.html,189,text,✉ demo@lexflow.com,COPY
+lexflow-article-matter-tracker.html,217,attr:aria-label,LinkedIn,brand/no-translation-needed
+lexflow-article-matter-tracker.html,218,attr:aria-label,Instagram,brand/no-translation-needed
+lexflow-article-matter-tracker.html,219,attr:aria-label,WhatsApp,brand/no-translation-needed
+lexflow-article-matter-tracker.html,220,attr:aria-label,GitHub,brand/no-translation-needed
+lexflow-article-matter-tracker.html,221,attr:aria-label,Telegram,brand/no-translation-needed
+lexflow-article-matter-tracker.html,334,text,Elisa,brand/no-translation-needed
+lexflow-article-matter-tracker.html,335,text,LexFlow's digital intake assistant,COPY
+lexflow-article-matter-tracker.html,336,text,Online — intake only,COPY
+lexflow-article-matter-tracker.html,339,attr:aria-label,Minimise assistant,COPY
+lexflow-article-matter-tracker.html,340,attr:aria-label,Close assistant,COPY
+lexflow-article-matter-tracker.html,340,text,&times;,brand/no-translation-needed
+lexflow-article-matter-tracker.html,346,attr:aria-label,Conversation with Elisa,COPY
+lexflow-article-matter-tracker.html,350,text,"Hi! I'm Elisa, LexFlow's digital intake assistant. I can gather the first details of your request and pass them into the firm's structured intake flow. How can ",COPY
+lexflow-article-matter-tracker.html,356,text,Elisa is typing…,COPY
+lexflow-article-matter-tracker.html,359,text,Suggested topics,COPY
+lexflow-article-matter-tracker.html,361,text,New matter,COPY
+lexflow-article-matter-tracker.html,362,text,Matter status,COPY
+lexflow-article-matter-tracker.html,363,text,Urgent,COPY
+lexflow-article-matter-tracker.html,364,text,Plans &amp; pricing,COPY
+lexflow-article-matter-tracker.html,368,text,Write your message to Elisa,COPY
+lexflow-article-matter-tracker.html,369,attr:placeholder,e.g. Contract review before a 15 October deadline,COPY
+lexflow-article-matter-tracker.html,370,text,Send request,COPY
+lexflow-article-matter-tracker.html,374,text,Tell us about the request,COPY
+lexflow-article-matter-tracker.html,377,text,Practice area,COPY
+lexflow-article-matter-tracker.html,379,text,Civil law,COPY
+lexflow-article-matter-tracker.html,380,text,Corporate &amp; business,COPY
+lexflow-article-matter-tracker.html,381,text,Family law,COPY
+lexflow-article-matter-tracker.html,382,text,Criminal defence,COPY
+lexflow-article-matter-tracker.html,383,text,Real estate,COPY
+lexflow-article-matter-tracker.html,384,text,Intellectual property,COPY
+lexflow-article-matter-tracker.html,385,text,Immigration,COPY
+lexflow-article-matter-tracker.html,386,text,Labour &amp; employment,COPY
+lexflow-article-matter-tracker.html,387,text,Administrative,COPY
+lexflow-article-matter-tracker.html,388,text,Other / not sure,COPY
+lexflow-article-matter-tracker.html,392,text,Matter status,COPY
+lexflow-article-matter-tracker.html,394,text,New request,COPY
+lexflow-article-matter-tracker.html,395,text,Under review,COPY
+lexflow-article-matter-tracker.html,396,text,Existing matter,COPY
+lexflow-article-matter-tracker.html,400,text,Urgency,COPY
+lexflow-article-matter-tracker.html,402,text,Low,COPY
+lexflow-article-matter-tracker.html,403,text,Medium,COPY
+lexflow-article-matter-tracker.html,404,text,High,COPY
+lexflow-article-matter-tracker.html,405,text,Critical,COPY
+lexflow-article-matter-tracker.html,409,text,How urgent is this?,COPY
+lexflow-article-matter-tracker.html,411,text,Low,COPY
+lexflow-article-matter-tracker.html,412,text,Medium,COPY
+lexflow-article-matter-tracker.html,413,text,High,COPY
+lexflow-article-matter-tracker.html,414,text,Critical,COPY
+lexflow-article-matter-tracker.html,420,text,Elisa does not give legal advice and does not replace a lawyer.,COPY
+lexflow-article-matter-tracker.html,422,text,Continue on WhatsApp,COPY
+lexflow-article-matter-tracker.html,423,text,Urgent matter? Call the firm directly.,COPY
+lexflow-article-matter-tracker.html,425,text,Do not send confidential case details here. Internal firm notes are never shown to clients.,COPY
+lexflow-article-matter-tracker.html,426,text,Privacy policy,COPY
+lexflow-article-matter-tracker.html,431,attr:aria-label,Talk to Elisa — LexFlow's digital intake assistant,COPY
+lexflow-article-matter-tracker.html,436,text,Talk to Elisa,COPY
+lexflow-article-client-intake.html,1,text,<!DOCTYPE html>,brand/no-translation-needed
+lexflow-article-client-intake.html,6,text,From first enquiry to organised matter: a practical client-intake workflow — LexFlow,COPY
+lexflow-article-client-intake.html,68,text,LexFlow,brand/no-translation-needed
+lexflow-article-client-intake.html,81,text,🇬🇧 English,COPY
+lexflow-article-client-intake.html,82,text,🇮🇹 Italiano,COPY
+lexflow-article-client-intake.html,83,text,🇷🇺 Русский,COPY
+lexflow-article-client-intake.html,106,attr:aria-label,Language note,COPY
+lexflow-article-client-intake.html,108,text,This article is written in English. A full Italian or Russian version is available on request - write to info@lexflow.com or ask Elisa.,COPY
+lexflow-article-client-intake.html,109,text,Questo articolo è scritto in inglese. Una versione completa in italiano o in russo è disponibile su richiesta: scrivi a info@lexflow.com o chiedi a Elisa.,COPY
+lexflow-article-client-intake.html,110,text,Эта статья написана на английском. Полная версия на итальянском или русском языке доступна по запросу: напишите на info@lexflow.com или спросите Елизу.,COPY
+lexflow-article-client-intake.html,113,text,What client intake is for,COPY
+lexflow-article-client-intake.html,114,text,"Client intake collects, checks and organises the information a firm needs before it decides how to handle a new request. It is not the same as taking instructio",COPY
+lexflow-article-client-intake.html,115,text,"A structured flow gives the firm consistent information for every enquiry and reduces the details that get lost when messages arrive across email, chat, handwri",COPY
+lexflow-article-client-intake.html,115,text,the LexFlow walkthrough,COPY
+lexflow-article-client-intake.html,115,text,shows the same journey end to end.,COPY
+lexflow-article-client-intake.html,117,text,The six steps of a repeatable intake workflow,COPY
+lexflow-article-client-intake.html,119,text,1. Collect only what is initially needed,numeric/unit
+lexflow-article-client-intake.html,120,text,"The first form should ask for enough to review the request, and nothing more. That usually means name and contact details; a short summary of the issue; key dat",COPY
+lexflow-article-client-intake.html,121,text,"Mark each field as required or optional, and say why anything sensitive is being asked for. A form that asks for a national identification number with no explan",COPY
+lexflow-article-client-intake.html,123,text,2. Classify and review,numeric/unit
+lexflow-article-client-intake.html,124,text,"A submission should enter review, not automatically become an accepted matter. Between the two there are checks a firm cannot skip: whether there is a conflict ",COPY
+lexflow-article-client-intake.html,125,text,Useful statuses for this stage include: new; conflict review; information required; lawyer review; consultation proposed; accepted; declined; and referred. The ,COPY
+lexflow-article-client-intake.html,127,text,3. Assign responsibility,numeric/unit
+lexflow-article-client-intake.html,128,text,"Every request needs a visible owner - one person responsible for the review and for the next action. Without an owner, a request can sit with no one aware that ",COPY
+lexflow-article-client-intake.html,129,text,A shared flow makes that ownership legible across roles. Assistants can see which requests are missing information and chase it. Lawyers can see what is waiting,COPY
+lexflow-article-client-intake.html,131,text,4. Keep information attached,numeric/unit
+lexflow-article-client-intake.html,132,text,"Connect emails, form submissions, internal notes, tasks and documents to a single matter record instead of leaving them distributed across inboxes and folders. ",COPY
+lexflow-article-client-intake.html,133,text,"Attaching information does not change who may see it. Access must still reflect a person's role, the firm's confidentiality obligations and the security model t",COPY
+lexflow-article-client-intake.html,135,text,5. Explain what follows,numeric/unit
+lexflow-article-client-intake.html,136,text,"The confirmation a client receives should say three things: that the request was received, whether any information is still missing, and how and when the firm w",COPY
+lexflow-article-client-intake.html,137,text,"Be precise about what has not yet happened. Submitting a form does not by itself create a lawyer-client relationship, and it does not guarantee that the firm wi",COPY
+lexflow-article-client-intake.html,139,text,6. Measure sensibly,numeric/unit
+lexflow-article-client-intake.html,140,text,"Track the numbers that reveal where intake breaks down: how many requests are awaiting review, how long they sit unassigned, how often client information is mis",COPY
+lexflow-article-client-intake.html,142,text,Where automation and reviewable AI fit,COPY
+lexflow-article-client-intake.html,143,text,"Automation can acknowledge receipt, classify a request by practice area, create a follow-up task, remind staff that a review is outstanding, and ask a client fo",COPY
+lexflow-article-client-intake.html,144,text,Reviewable AI extraction can map text from a client's message into structured fields - so a date mentioned in a paragraph lands in the right field without someo,COPY
+lexflow-article-client-intake.html,146,text,The intake flow at a glance,COPY
+lexflow-article-client-intake.html,147,text,"Reduced to its simplest form, the workflow runs like this:",COPY
+lexflow-article-client-intake.html,149,text,1. A visitor submits an enquiry.,numeric/unit
+lexflow-article-client-intake.html,150,text,2. Elisa or a member of staff checks that it is complete.,numeric/unit
+lexflow-article-client-intake.html,151,text,3. A lawyer reviews suitability and conflicts.,numeric/unit
+lexflow-article-client-intake.html,152,text,4. The firm requests missing information or proposes a next step.,numeric/unit
+lexflow-article-client-intake.html,153,text,5. An accepted request becomes a matter.,numeric/unit
+lexflow-article-client-intake.html,154,text,6. The client receives approved access and updates.,numeric/unit
+lexflow-article-client-intake.html,156,text,"The steps are short on purpose. A workflow that nobody follows is worse than no workflow, because it gives the firm the appearance of a process without the reli",COPY
+lexflow-article-client-intake.html,156,text,how a client matter tracker reduces routine status calls,COPY
+lexflow-article-client-intake.html,158,text,Scope note,COPY
+lexflow-article-client-intake.html,159,text,"LexFlow is intended to connect intake, matter tracking, responsibility and client updates. Exact fields, integrations, retention periods and automation behaviou",COPY
+lexflow-article-client-intake.html,162,text,Curious how a structured intake flow would look in your firm?,COPY
+lexflow-article-client-intake.html,162,text,Request a walkthrough and demo,COPY
+lexflow-article-client-intake.html,162,text,", or see what each plan includes on the",COPY
+lexflow-article-client-intake.html,162,text,pricing page,COPY
+lexflow-article-client-intake.html,167,text,How a client matter tracker reduces routine status calls without weakening the lawyer-client relationship,COPY
+lexflow-article-client-intake.html,168,text,Practice areas LexFlow supports,COPY
+lexflow-article-client-intake.html,169,text,"How LexFlow works, from intake to resolution",COPY
+lexflow-article-client-intake.html,170,text,Frequently asked questions about LexFlow,COPY
+lexflow-article-client-intake.html,171,text,Glossary of practice-management terms,COPY
+lexflow-article-client-intake.html,172,text,Back to the blog hub,COPY
+lexflow-article-client-intake.html,185,text,◉ WhatsApp +39 345 023 4084,COPY
+lexflow-article-client-intake.html,186,text,✉ demo@lexflow.com,COPY
+lexflow-article-client-intake.html,214,attr:aria-label,LinkedIn,brand/no-translation-needed
+lexflow-article-client-intake.html,215,attr:aria-label,Instagram,brand/no-translation-needed
+lexflow-article-client-intake.html,216,attr:aria-label,WhatsApp,brand/no-translation-needed
+lexflow-article-client-intake.html,217,attr:aria-label,GitHub,brand/no-translation-needed
+lexflow-article-client-intake.html,218,attr:aria-label,Telegram,brand/no-translation-needed
+lexflow-article-client-intake.html,331,text,Elisa,brand/no-translation-needed
+lexflow-article-client-intake.html,332,text,LexFlow's digital intake assistant,COPY
+lexflow-article-client-intake.html,333,text,Online — intake only,COPY
+lexflow-article-client-intake.html,336,attr:aria-label,Minimise assistant,COPY
+lexflow-article-client-intake.html,337,attr:aria-label,Close assistant,COPY
+lexflow-article-client-intake.html,337,text,&times;,brand/no-translation-needed
+lexflow-article-client-intake.html,343,attr:aria-label,Conversation with Elisa,COPY
+lexflow-article-client-intake.html,347,text,"Hi! I'm Elisa, LexFlow's digital intake assistant. I can gather the first details of your request and pass them into the firm's structured intake flow. How can ",COPY
+lexflow-article-client-intake.html,353,text,Elisa is typing…,COPY
+lexflow-article-client-intake.html,356,text,Suggested topics,COPY
+lexflow-article-client-intake.html,358,text,New matter,COPY
+lexflow-article-client-intake.html,359,text,Matter status,COPY
+lexflow-article-client-intake.html,360,text,Urgent,COPY
+lexflow-article-client-intake.html,361,text,Plans &amp; pricing,COPY
+lexflow-article-client-intake.html,365,text,Write your message to Elisa,COPY
+lexflow-article-client-intake.html,366,attr:placeholder,e.g. Contract review before a 15 October deadline,COPY
+lexflow-article-client-intake.html,367,text,Send request,COPY
+lexflow-article-client-intake.html,371,text,Tell us about the request,COPY
+lexflow-article-client-intake.html,374,text,Practice area,COPY
+lexflow-article-client-intake.html,376,text,Civil law,COPY
+lexflow-article-client-intake.html,377,text,Corporate &amp; business,COPY
+lexflow-article-client-intake.html,378,text,Family law,COPY
+lexflow-article-client-intake.html,379,text,Criminal defence,COPY
+lexflow-article-client-intake.html,380,text,Real estate,COPY
+lexflow-article-client-intake.html,381,text,Intellectual property,COPY
+lexflow-article-client-intake.html,382,text,Immigration,COPY
+lexflow-article-client-intake.html,383,text,Labour &amp; employment,COPY
+lexflow-article-client-intake.html,384,text,Administrative,COPY
+lexflow-article-client-intake.html,385,text,Other / not sure,COPY
+lexflow-article-client-intake.html,389,text,Matter status,COPY
+lexflow-article-client-intake.html,391,text,New request,COPY
+lexflow-article-client-intake.html,392,text,Under review,COPY
+lexflow-article-client-intake.html,393,text,Existing matter,COPY
+lexflow-article-client-intake.html,397,text,Urgency,COPY
+lexflow-article-client-intake.html,399,text,Low,COPY
+lexflow-article-client-intake.html,400,text,Medium,COPY
+lexflow-article-client-intake.html,401,text,High,COPY
+lexflow-article-client-intake.html,402,text,Critical,COPY
+lexflow-article-client-intake.html,406,text,How urgent is this?,COPY
+lexflow-article-client-intake.html,408,text,Low,COPY
+lexflow-article-client-intake.html,409,text,Medium,COPY
+lexflow-article-client-intake.html,410,text,High,COPY
+lexflow-article-client-intake.html,411,text,Critical,COPY
+lexflow-article-client-intake.html,417,text,Elisa does not give legal advice and does not replace a lawyer.,COPY
+lexflow-article-client-intake.html,419,text,Continue on WhatsApp,COPY
+lexflow-article-client-intake.html,420,text,Urgent matter? Call the firm directly.,COPY
+lexflow-article-client-intake.html,422,text,Do not send confidential case details here. Internal firm notes are never shown to clients.,COPY
+lexflow-article-client-intake.html,423,text,Privacy policy,COPY
+lexflow-article-client-intake.html,428,attr:aria-label,Talk to Elisa — LexFlow's digital intake assistant,COPY
+lexflow-article-client-intake.html,433,text,Talk to Elisa,COPY

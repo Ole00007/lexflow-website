@@ -210,6 +210,7 @@ def localise_inner(inner: str, value: str) -> str:
 ELEM_RE = re.compile(r"<([a-zA-Z0-9]+)\b([^>]*?)\bdata-i18n=\"([^\"]+)\"([^>]*)>(.*?)</\1>", re.S)
 PH_RE = re.compile(r'(<[a-zA-Z0-9]+\b[^>]*?)\s+data-i18n-placeholder="([^"]+)"(?:\s+placeholder="[^"]*")?')
 ARIA_RE = re.compile(r'(<[a-zA-Z0-9]+\b[^>]*?)\s+data-i18n-aria="([^"]+)"(?:\s+aria-label="[^"]*")?')
+ALT_RE = re.compile(r'(<[a-zA-Z0-9]+\b[^>]*?)\s+data-i18n-alt="([^"]+)"(?:\s+alt="[^"]*")?')
 
 
 
@@ -240,7 +241,7 @@ def dedupe_attr(html: str, attr: str, stats: dict) -> str:
 
 
 def localise_html(html: str, d: dict, lang: str) -> tuple:
-    stats = {"text": 0, "placeholder": 0, "aria": 0, "missing": []}
+    stats = {"text": 0, "placeholder": 0, "aria": 0, "alt": 0, "missing": []}
 
     def repl_text(m):
         tag, pre, key, post, inner = m.group(1), m.group(2), m.group(3), m.group(4), m.group(5)
@@ -277,9 +278,22 @@ def localise_html(html: str, d: dict, lang: str) -> tuple:
 
     html = ARIA_RE.sub(repl_aria, html)
 
+    def repl_alt(m):
+        pre, key = m.group(1), m.group(2)
+        val = d.get(key)
+        if val is None:
+            stats["missing"].append(key)
+            return m.group(0)
+        stats["alt"] = stats.get("alt", 0) + 1
+        # the existing alt="..." is consumed by the pattern, so this replaces it
+        return f'{pre} data-i18n-alt="{key}" alt="{val}"'
+
+    html = ALT_RE.sub(repl_alt, html)
+
     # defensive: make sure no tag ended up with a duplicated attribute
     html = dedupe_attr(html, "aria-label", stats)
     html = dedupe_attr(html, "placeholder", stats)
+    html = dedupe_attr(html, "alt", stats)
 
     # localise link labels for the languages we have them for
     for en_label, loc_label in LINK_LABELS.get(lang, {}).items():

@@ -64,6 +64,10 @@
       var k = el.getAttribute('data-i18n-aria');
       if (I18N[lang] && I18N[lang][k]) { el.setAttribute('aria-label', I18N[lang][k]); }
     });
+    document.querySelectorAll('[data-i18n-alt]').forEach(function (el) {
+      var k = el.getAttribute('data-i18n-alt');
+      if (I18N[lang] && I18N[lang][k]) { el.setAttribute('alt', I18N[lang][k]); }
+    });
     document.querySelectorAll('.lang-menu button').forEach(function (b) {
       b.classList.toggle('active-lang', b.getAttribute('data-lang') === lang);
     });
