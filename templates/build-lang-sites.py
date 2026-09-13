@@ -389,6 +389,56 @@ def install_tags(html: str, page: str, depth: int, lang: str = "en") -> str:
 
 
 
+
+# ------------------------------------------------------------- whatsapp stamp
+def _config_value(name: str, default=None):
+    """Read a value out of assets/site-config.js so the number has one source."""
+    sc = ROOT / "assets" / "site-config.js"
+    if not sc.exists():
+        return default
+    m = re.search(name + r'\s*:\s*"([^"]+)"', sc.read_text(encoding="utf-8"))
+    return m.group(1) if m else default
+
+
+def stamp_whatsapp(html: str) -> str:
+    """Write the configured WhatsApp number into a page.
+
+    The number is public marketing information, so the risk is not exposure but
+    STALENESS: one value edited here and missed in 26 pages. Stamping at build
+    time means no-JS visitors still get the right number, and the runtime reads
+    the same config for anything JavaScript adds.
+
+    Both patterns below are built from CHARACTER CLASSES ONLY, deliberately with
+    no backslash escapes. This file is written by tooling that escapes source
+    twice, and a backslash-escaped pattern silently degrades into something that
+    matches nothing. "[+]" is a literal plus; "[.]" is a literal dot.
+    """
+    digits = _config_value("whatsapp")
+    shown = _config_value("whatsappDisplay")
+    if not digits:
+        return html
+
+    NBSP = chr(0xa0)
+    SP = "[" + " " + NBSP + "]*"
+
+    # 1) normalise every wa.me link to the configured digits
+    link_re = "wa[.]me/[0-9+" + " " + NBSP + "-]+"
+    html = re.sub(link_re, "wa.me/" + digits, html)
+
+    # 2) rewrite the human-readable number. The leading plus is REQUIRED: without
+    #    it this also matches the bare digits inside a wa.me link and corrupts it.
+    if shown:
+        # Generic Italian mobile display: +39 then 3/3/4 digit groups. Generic on
+        # purpose so re-stamping an already-stamped page is idempotent; a pattern
+        # that matched one specific number could only ever run once.
+        D3 = "[0-9][0-9][0-9]"
+        D4 = "[0-9][0-9][0-9][0-9]"
+        disp_re = "[+]" + SP + "39" + SP + D3 + SP + D3 + SP + D4
+        html = re.sub(disp_re, shown, html)
+
+    return html
+
+
 def write_sitemap():
     """Emit sitemap.xml covering every language URL with xhtml:link alternates.
 
@@ -442,6 +492,15 @@ def write_sitemap():
 
 
 def main():
+    # Snapshot every English page's title. A previous bug overwrote all English
+    # pages with the last localised page because a loop reused a stale variable;
+    # comparing against this snapshot makes that failure loud instead of silent.
+    en_titles = {}
+    for _p in CONTENT_PAGES + EN_ONLY_PAGES:
+        _t = (ROOT / _p).read_text(encoding="utf-8")
+        _m = re.search(r"<title>(.*?)</title>", _t, re.S)
+        en_titles[_p] = _m.group(1).strip() if _m else None
+
     shared = {}
     for f in ("assets/glossary.js", "assets/i18n-faq.js", "assets/i18n-ui.js"):
         for lang, d in js_single_quoted_dicts((ROOT / f).read_text(encoding="utf-8")).items():
@@ -459,6 +518,7 @@ def main():
             title, desc = META.get(page, {}).get(lang, (None, None))
             html = rewrite_head(html, page, lang, depth=1, title=title, desc=desc)
             html = nest_paths(html)
+            html = stamp_whatsapp(html)
             html = install_tags(html, page, depth=1, lang=lang)
             out = ROOT / lang / page
             out.parent.mkdir(exist_ok=True)
@@ -468,8 +528,34 @@ def main():
     # English pages get the same hreflang block and the language URL map
     for page in CONTENT_PAGES + EN_ONLY_PAGES:
         p = ROOT / page
-        html = install_tags(p.read_text(encoding="utf-8"), page, depth=0, lang="en")
+        # read this page explicitly: never reuse a variable left over from the
+        # localised-pages loop above, or every English page gets overwritten
+        # with a localised one.
+        html = p.read_text(encoding="utf-8")
+        html = stamp_whatsapp(html)
+        html = install_tags(html, page, depth=0, lang="en")
         p.write_text(html, encoding="utf-8")
+
+        # guard: confirm the file still holds its own title and English lang
+        written = p.read_text(encoding="utf-8")
+        got = re.search(r"<title>(.*?)</title>", written, re.S)
+        got = got.group(1).strip() if got else None
+        if en_titles.get(page) and got != en_titles[page]:
+            raise SystemExit(
+                "ABORT: " + page + " was overwritten with different content.\n"
+                "  expected title: " + str(en_titles[page]) + "\n"
+                "  actual title:   " + str(got) + "\n"
+                "  Restore with: git checkout -- '*.html'"
+            )
+        _bad = [u for u in re.findall(r"wa\.me/([^\"']+)", written) if not u.isdigit()]
+        if _bad:
+            raise SystemExit("ABORT: " + page + " has malformed wa.me links: " + str(_bad[:3]))
+        _html_tag = re.search(r"<html[^>]*>", written)
+        if not _html_tag or 'lang="en"' not in _html_tag.group(0):
+            raise SystemExit(
+                "ABORT: " + page + " lost its lang=\"en\" attribute. Got: "
+                + (_html_tag.group(0) if _html_tag else "no <html> tag")
+            )
         rewritten.append(page)
 
     print(f"generated {len(made)} localised pages")

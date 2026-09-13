@@ -8,7 +8,14 @@
 window.LEXFLOW_CONFIG = {
 
   /* WhatsApp number — international format, digits only (no + or spaces) */
-  whatsapp: "393450234084", // TODO: confirm final number with Ole
+  /* WhatsApp — SINGLE SOURCE OF TRUTH for the whole site.
+     `whatsapp` is digits only (wa.me links). `whatsappDisplay` is the human form.
+     build-lang-sites.py stamps both into every page at build time, so no-JS
+     visitors get the right number; the runtime reads `whatsapp` for anything
+     JavaScript adds (Elisa's CTA, the floating button). Change these two lines
+     and re-run the generator. Never hand-edit a number inside a page. */
+  whatsapp: "393450234084",        // TODO: confirm final number with Ole
+  whatsappDisplay: "+39 345 023 4084",
 
   /* ---------------------------------------------------------------
      INTAKE / CONTACT DELIVERY
