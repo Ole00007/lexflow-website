@@ -651,3 +651,120 @@ All four sit in `ready`/`blocked` until the re-auth is done.
 | 7 | 27 webhook URLs | Declared as `null`; they log a warning instead of sending |
 | 8 | Article IT/RU bodies | You are sending in batches; not blocking |
 | 9 | Elisa widget pre-localisation | Crawler-only gap; visitors already see correct IT/RU |
+
+---
+
+# Batch 4 — factual correction: features the site claimed were not ready
+
+Commit `0291704`. **Awaiting your review before anything further is changed.**
+
+## What was wrong (you caught this)
+
+The FAQ answer `faq_a15` said:
+
+> "Not in the current version. This is on the roadmap. Upcoming versions are
+> planned to include automated email notifications, cloud storage and connections
+> to existing firm tools... Google Calendar sync is not shipping today and should
+> not be relied on when planning a rollout."
+
+Every one of those exists today. The site was selling the product short, and a
+prospect reading that answer would have ruled LexFlow out.
+
+## Corrected, all three languages
+
+**Q:** Can it integrate with email, cloud storage and other tools?
+
+**A:** Yes. Automated email notifications, cloud storage and connections to the
+tools your firm already uses are available today, together with Google Calendar
+sync for deadlines and appointments. They run alongside the core flow: intake,
+dashboard and matter tracking.
+
+Italian and Russian corrected in step. Also fixed the **JSON-LD FAQPage schema**,
+which carried the identical stale claim and feeds Google's rich results, and the
+static HTML fallback.
+
+*Self-inflicted slip, caught and fixed:* the first pass replaced the old answer but
+left its trailing sentence, so the answer briefly read "available today" and "not
+shipping today" in the same paragraph.
+
+## Handed to operator-installer — but he cannot answer yet
+
+Card `t_8c6d4642` asks him to verify ~30 English capability claims against the real
+CRM and report TRUE / FALSE / PARTIALLY TRUE / CANNOT VERIFY. **Report only, no
+edits** — you review before anything is applied.
+
+**He cannot run.** His profile is logged out of Nous Portal, so the worker exits
+immediately. Nothing will come back until you run:
+
+```bash
+hermes -p operator-installer model
+hermes kanban unblock t_8c6d4642
+```
+
+## My own preliminary findings — for YOUR review, NOT applied
+
+While compiling the claims list I found the same class of bug in four more places.
+**I have changed none of these.** They need your decision, and operator-installer's
+verification of the underlying product facts.
+
+### 1. The pricing page contradicts itself (highest value)
+The SAME page lists these as Enterprise features *and* as not-yet-available:
+
+| Where | Text |
+|---|---|
+| `tier3_f3` (feature list) | "Time & Expense Tracking" |
+| `tier3_f5` (feature list) | "Billing & Invoicing · Payments" |
+| roadmap note, same page | "Coming soon: time and expense tracking · payments" |
+
+Either the features shipped and the roadmap note is stale, or the feature list
+overstates. **This is the same contradiction you just found in the FAQ.**
+
+### 2. Billing claimed in a tier description
+`tier2_desc`: "For growing firms ready to automate intake, **billing**, and
+workflows." Billing appears in the Enterprise list but not tier 2.
+
+### 3. The FAQ lede and meta description
+`faq_lede`: "...what integrates today and **what is still on the roadmap**."
+Now that integrations all exist, this sets the wrong expectation, and it is also
+the FAQ page's meta description, so it is what search results show.
+
+### 4. "Additional languages are planned in upcoming versions"
+The FAQ still says this while Italian and Russian are live. Same understating
+pattern: the product is ahead of its own copy.
+
+### 5. Integration arithmetic
+`tier2_f2` "More than 10 integrations", `tier2_f3` "+ 5 more at your request",
+`tier3_f6` "20+ integrations", `tier3_f7` "+ 10 more at your choice". These are
+tier-scoped so they may be fine, but please confirm the real number so the four
+figures add up.
+
+### 6. Practice-area workflow claims
+These need product confirmation — they are detailed and specific:
+"court date automation", "multi-jurisdiction document automation", "a conflict
+check is run before anything else", "hearing dates are tracked with reminders",
+"a checklist of required documents is generated", "filing deadlines trigger
+reminders", "the chronology is built automatically".
+
+### 7. Home hero sub-line
+"Your LexFlow digital personal assistant **does all the boring heavy lifting for
+you**..." — a strong promise in promotional register. Flagging for a tone call.
+
+### 8. Pilot metrics (claims risk)
+The site shows pilot indicators with the disclaimer "Formal measurement,
+methodology and sample size have not yet been documented for publication." The CRM
+exposes `/admin/load-demo`, which seeds demo rows, so I previously flagged that
+these may be synthetic. Worth confirming the published indicators are real and the
+disclaimer is adequate.
+
+## Why this happened, and the fix
+
+A separate `claims-register.csv` tracks individual claims, but nothing checked
+**whole-page consistency** or compared the site against the live product. Every
+bug in this batch is one of two shapes:
+
+1. **Under-claiming** — the product shipped and the copy never caught up (the FAQ,
+   the languages note).
+2. **Internal contradiction** — two parts of one page disagreeing (pricing).
+
+Both are invisible to dictionary-parity checks, which is why the earlier audits
+missed them.
