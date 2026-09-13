@@ -70,14 +70,28 @@
 
   /* ---- FAQ accordion ---- */
   function initFaq() {
+    var items = document.querySelectorAll('.faq-item');
+    /* Keep ARIA state in step with the .open class. This used to toggle the
+       class only, so every control announced aria-expanded="false" even while
+       its answer was visible to screen readers. */
+    function syncAria() {
+      items.forEach(function (item) {
+        var btn = item.querySelector('.faq-q');
+        if (btn) {
+          btn.setAttribute('aria-expanded', item.classList.contains('open') ? 'true' : 'false');
+        }
+      });
+    }
     document.querySelectorAll('.faq-q').forEach(function (q) {
       q.addEventListener('click', function () {
         var item = q.closest('.faq-item');
         var wasOpen = item.classList.contains('open');
         document.querySelectorAll('.faq-item.open').forEach(function (i) { i.classList.remove('open'); });
         if (!wasOpen) { item.classList.add('open'); }
+        syncAria();
       });
     });
+    syncAria();
   }
 
   /* ---- Config / webhooks ---- */

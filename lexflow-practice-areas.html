@@ -315,22 +315,9 @@ window.I18N = {"en":{"nav_features": "Features", "nav_howitworks": "How It Works
 
 <script src="assets/site-config.js"></script>
 <script src="assets/i18n.js"></script>
-<script>
-/* Keep aria-expanded in sync for every .faq-q accordion control on this page (accessibility).
-   The shared accordion engine toggles the .open class; this syncs the ARIA state to match. */
-(function () {
-  function sync() {
-    document.querySelectorAll('.faq-item').forEach(function (item) {
-      var btn = item.querySelector('.faq-q');
-      if (btn) { btn.setAttribute('aria-expanded', item.classList.contains('open') ? 'true' : 'false'); }
-    });
-  }
-  document.addEventListener('click', function (e) {
-    if (e.target && e.target.closest && e.target.closest('.faq-q')) { setTimeout(sync, 0); }
-  });
-  if (document.readyState !== 'loading') { sync(); } else { document.addEventListener('DOMContentLoaded', sync); }
-})();
-</script>
+<!-- aria-expanded sync for the accordions now lives in assets/i18n.js (initFaq),
+     so every page gets it from one place. The page-local workaround that used to
+     sit here was removed to avoid two listeners doing the same job. -->
 <!-- COOKIE CONSENT BANNER -->
 <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
   <p data-i18n="cookie_text">We use local storage only for your language and theme preferences. No advertising trackers. Read our <a href="privacy.html">Privacy Policy</a>.</p>
