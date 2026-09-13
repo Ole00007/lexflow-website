@@ -14,15 +14,55 @@
   var I18N = window.I18N || { en: {}, it: {}, ru: {} };
 
   /* ---- Language ---- */
+  /* Some [data-i18n] elements contain markup (a link, an <em>). Assigning
+     textContent would delete that markup, which used to break the "Pricing page"
+     link inside faq_a2 and the Privacy link inside cookie_text as soon as a
+     visitor switched language. Replace only the element's own text nodes and
+     leave any child elements in place. */
+  function setText(el, value) {
+    if (!el.children || el.children.length === 0) {
+      el.textContent = value;
+      return;
+    }
+    var replaced = false;
+    Array.prototype.forEach.call(el.childNodes, function (node) {
+      if (node.nodeType === 3 && node.nodeValue.trim() !== '') {
+        node.nodeValue = replaced ? '' : value;
+        replaced = true;
+      }
+    });
+    if (!replaced) {
+      el.insertBefore(document.createTextNode(value), el.firstChild);
+    }
+  }
+
+  /* Language URLs, when a page declares them. Used so that switching language on
+     a localised URL navigates to the equivalent page rather than only swapping
+     text in place. */
+  var LANG_URLS = window.LEXFLOW_LANG_URLS || null;
+
+  function goToLang(lang) {
+    if (LANG_URLS && LANG_URLS[lang] && LANG_URLS[lang] !== location.pathname.split('/').pop()) {
+      localStorage.setItem('lexflow-lang', lang);
+      location.href = LANG_URLS[lang];
+      return true;
+    }
+    return false;
+  }
+
   function setLang(lang) {
     document.querySelectorAll('[data-i18n]').forEach(function (el) {
       var k = el.getAttribute('data-i18n');
-      if (I18N[lang] && I18N[lang][k]) { el.textContent = I18N[lang][k]; }
-      else if (I18N.en && I18N.en[k]) { el.textContent = I18N.en[k]; }
+      if (I18N[lang] && I18N[lang][k]) { setText(el, I18N[lang][k]); }
+      else if (I18N.en && I18N.en[k]) { setText(el, I18N.en[k]); }
     });
     document.querySelectorAll('[data-i18n-placeholder]').forEach(function (el) {
       var k = el.getAttribute('data-i18n-placeholder');
       if (I18N[lang] && I18N[lang][k]) { el.setAttribute('placeholder', I18N[lang][k]); }
+    });
+    document.querySelectorAll('[data-i18n-aria]').forEach(function (el) {
+      var k = el.getAttribute('data-i18n-aria');
+      if (I18N[lang] && I18N[lang][k]) { el.setAttribute('aria-label', I18N[lang][k]); }
     });
     document.querySelectorAll('.lang-menu button').forEach(function (b) {
       b.classList.toggle('active-lang', b.getAttribute('data-lang') === lang);
@@ -48,9 +88,17 @@
       document.addEventListener('click', function () { langMenu.classList.remove('open'); });
     }
     document.querySelectorAll('.lang-menu button').forEach(function (b) {
-      b.addEventListener('click', function () { setLang(b.getAttribute('data-lang')); });
+      b.addEventListener('click', function () {
+        var target = b.getAttribute('data-lang');
+        /* On a page that declares language URLs, switching navigates so the
+           visitor lands on the correct URL for that language. */
+        if (!goToLang(target)) { setLang(target); }
+      });
     });
-    setLang(localStorage.getItem('lexflow-lang') || 'en');
+    /* A localised URL (/it/, /ru/) pins the language regardless of what a
+       previous page stored in localStorage. */
+    var lock = document.documentElement.getAttribute('data-lang-lock');
+    setLang(lock || localStorage.getItem('lexflow-lang') || 'en');
   }
 
   /* ---- Theme ---- */

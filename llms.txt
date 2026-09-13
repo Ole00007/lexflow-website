@@ -16,7 +16,7 @@
 ## Important limits (do not overstate)
 
 - Automated email notifications, cloud storage integration and Google Calendar sync are NOT shipping today. They are planned. Do not describe them as available.
-- The "30+" integration figure is pending verification.
+- The "20+" integration figure is pending verification.
 - Pilot metric figures shown on the site are early indications from a pilot deployment; methodology and formal measurement are not yet documented.
 - The site does not publish real named client testimonials. Figures on the site labelled as illustrative examples are descriptive, not quotations.
 - There is no video overview.
