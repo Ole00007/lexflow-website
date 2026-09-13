@@ -1,22 +1,23 @@
 <!-- ============================================================
      LEXFLOW — ELISA DIGITAL INTAKE ASSISTANT (canonical markup)
      ------------------------------------------------------------
-     Interaction model cloned from the a-Lexy LP widget
-     (its #alLaunch / #alWidget). Rebranded Elisa for LexFlow.
+     Three-step intake order, cloned in spirit from the a-Lexy LP
+     widget (#alLaunch / #alWidget) and adapted for LexFlow:
+
+       1  contact details  — email and phone, before anything else
+       2  the matter       — practice area, status, urgency
+       3  describe it      — free text, then send
 
      To change the widget on every page, edit THIS file, then run:
          python3 templates/apply-elisa-widget.py
      That script replaces the block between the two ELISA WIDGET
-     START / END markers in each page. Do not add nested comment
-     markers inside this banner: an early terminator breaks the
-     page and leaks the note text as visible content.
+     START / END markers in each page. Do not put nested comment
+     markers inside this banner: an early terminator breaks the page
+     and leaks the note text as visible content.
 
-     Accessibility notes:
-     - launcher is a real <button> with aria-expanded + aria-controls
-     - panel is role="dialog" labelled by the assistant name
-     - transcript is role="log" aria-live="polite"
-     - all controls are >=44px tall; Escape closes; Tab is trapped
-     - .elisa-visually-hidden labels the composer for screen readers
+     Accessibility: real buttons with aria-expanded/aria-controls, a
+     labelled dialog, a polite log, Escape closes, Tab is trapped,
+     >=44px controls. Every step is a labelled field group.
      ============================================================ -->
 <!-- ELISA WIDGET:START -->
 <div class="elisa-widget" id="elisaWidget">
@@ -24,7 +25,7 @@
   <div class="elisa-panel" id="elisaPanel" role="dialog" aria-labelledby="elisaName">
     <div class="elisa-header">
       <img class="elisa-header-avatar" src="assets/elisa-avatar.png"
-           alt="" aria-hidden="true" width="56" height="56" loading="lazy">
+           alt="" aria-hidden="true" width="44" height="44" loading="lazy">
       <div class="elisa-header-info">
         <h3 id="elisaName">Elisa</h3>
         <p class="elisa-role" id="elisaRole">LexFlow's digital intake assistant</p>
@@ -41,8 +42,8 @@
       <div class="elisa-log" id="elisaLog" role="log" aria-live="polite" aria-label="Conversation with Elisa">
         <div class="elisa-row">
           <img class="elisa-msg-avatar" src="assets/elisa-avatar.png"
-               alt="" aria-hidden="true" width="28" height="28" loading="lazy">
-          <div class="elisa-bubble" id="elisaGreeting">Hi! I'm Elisa, LexFlow's digital intake assistant. I can gather the first details of your request and pass them into the firm's structured intake flow. How can I help?</div>
+               alt="" aria-hidden="true" width="26" height="26" loading="lazy">
+          <div class="elisa-bubble" id="elisaGreeting">Hi, I'm Elisa, LexFlow's digital intake assistant. I'll take a few details and pass them to the firm. First, how can the firm reach you?</div>
         </div>
       </div>
 
@@ -51,72 +52,85 @@
         <span id="elisaThinkingLabel">Elisa is typing…</span>
       </div>
 
-      <p class="elisa-chips-label" id="elisaChipsLabel">Suggested topics</p>
-      <div class="elisa-chips" id="elisaChips">
-        <button class="elisa-chip" type="button" data-chip="new">New matter</button>
-        <button class="elisa-chip" type="button" data-chip="status">Matter status</button>
-        <button class="elisa-chip" type="button" data-chip="urgent">Urgent</button>
-        <button class="elisa-chip" type="button" data-chip="pricing">Plans &amp; pricing</button>
+      <!-- STEP 1 — contact details first -->
+      <div class="elisa-step" id="elisaStepContact">
+        <p class="elisa-step-title" id="elisaStep1Title">Your contact details</p>
+        <p class="elisa-warn" id="elisaContactWarn" role="alert" hidden></p>
+        <div class="elisa-field">
+          <label for="elisaEmail" id="elisaL_email">Email</label>
+          <input id="elisaEmail" type="email" name="email" autocomplete="email" inputmode="email" required>
+        </div>
+        <div class="elisa-field">
+          <label for="elisaPhone" id="elisaL_phone">Phone</label>
+          <input id="elisaPhone" type="tel" name="phone" autocomplete="tel" inputmode="tel" required>
+        </div>
+        <button class="elisa-next" id="elisaContactNext" type="button">Continue</button>
       </div>
 
-      <div class="elisa-composer">
-        <label class="elisa-visually-hidden" for="elisaInput">Write your message to Elisa</label>
-        <input id="elisaInput" type="text" placeholder="e.g. Contract review before a 15 October deadline" autocomplete="off">
+      <!-- STEP 2 — the matter -->
+      <div class="elisa-step" id="elisaStepMatter" hidden>
+        <p class="elisa-step-title" id="elisaStep2Title">About the matter</p>
+        <div class="elisa-field">
+          <label for="elisaPractice" id="elisaL_practice">Practice area</label>
+          <select id="elisaPractice">
+            <option data-area="civil" value="civil">Civil law</option>
+            <option data-area="corporate" value="corporate">Corporate &amp; business</option>
+            <option data-area="family" value="family">Family law</option>
+            <option data-area="criminal" value="criminal">Criminal defence</option>
+            <option data-area="realestate" value="realestate">Real estate</option>
+            <option data-area="ip" value="ip">Intellectual property</option>
+            <option data-area="immigration" value="immigration">Immigration</option>
+            <option data-area="labour" value="labour">Labour &amp; employment</option>
+            <option data-area="administrative" value="administrative">Administrative</option>
+            <option data-area="other" value="other">Other / not sure</option>
+          </select>
+        </div>
+        <div class="elisa-field">
+          <label for="elisaStatusSel" id="elisaL_status">Matter status</label>
+          <select id="elisaStatusSel">
+            <option data-st="new" value="new">New request</option>
+            <option data-st="review" value="review">Under review</option>
+            <option data-st="existing" value="existing">Existing matter</option>
+          </select>
+        </div>
+        <div class="elisa-field">
+          <label for="elisaUrgency" id="elisaL_urgency">Urgency</label>
+          <select id="elisaUrgency">
+            <option data-urg="low" value="low">Low</option>
+            <option data-urg="medium" value="medium" selected>Medium</option>
+            <option data-urg="high" value="high">High</option>
+            <option data-urg="critical" value="critical">Critical</option>
+          </select>
+        </div>
+        <button class="elisa-next" id="elisaMatterNext" type="button">Continue</button>
+      </div>
+
+      <!-- STEP 3 — describe it, then send -->
+      <div class="elisa-step" id="elisaStepDescribe" hidden>
+        <p class="elisa-step-title" id="elisaStep3Title">Describe the matter</p>
+        <p class="elisa-chips-label" id="elisaChipsLabel">Common requests</p>
+        <div class="elisa-chips" id="elisaChips">
+          <button class="elisa-chip" type="button" data-chip="new">New matter</button>
+          <button class="elisa-chip" type="button" data-chip="status">Matter status</button>
+          <button class="elisa-chip" type="button" data-chip="urgent">Urgent</button>
+          <button class="elisa-chip" type="button" data-chip="pricing">Plans &amp; pricing</button>
+        </div>
+        <div class="elisa-field">
+          <label for="elisaInput" id="elisaL_message">What is this about?</label>
+          <textarea id="elisaInput" rows="3"></textarea>
+        </div>
+        <p class="elisa-warn" id="elisaSendWarn" role="alert" hidden></p>
         <button class="elisa-send" id="elisaSend" type="button">Send request</button>
       </div>
 
-      <details class="elisa-struct">
-        <summary id="elisaIntakeTitle">Tell us about the request</summary>
-        <div class="elisa-struct-grid">
-          <div class="elisa-field">
-            <label for="elisaPractice" id="elisaL_practice">Practice area</label>
-            <select id="elisaPractice">
-              <option data-area="civil" value="civil">Civil law</option>
-              <option data-area="corporate" value="corporate">Corporate &amp; business</option>
-              <option data-area="family" value="family">Family law</option>
-              <option data-area="criminal" value="criminal">Criminal defence</option>
-              <option data-area="realestate" value="realestate">Real estate</option>
-              <option data-area="ip" value="ip">Intellectual property</option>
-              <option data-area="immigration" value="immigration">Immigration</option>
-              <option data-area="labour" value="labour">Labour &amp; employment</option>
-              <option data-area="administrative" value="administrative">Administrative</option>
-              <option data-area="other" value="other">Other / not sure</option>
-            </select>
-          </div>
-          <div class="elisa-field">
-            <label for="elisaStatusSel" id="elisaL_status">Matter status</label>
-            <select id="elisaStatusSel">
-              <option data-st="new" value="new">New request</option>
-              <option data-st="review" value="review">Under review</option>
-              <option data-st="existing" value="existing">Existing matter</option>
-            </select>
-          </div>
-          <div class="elisa-field">
-            <label for="elisaUrgency" id="elisaL_urgency">Urgency</label>
-            <select id="elisaUrgency">
-              <option data-urg="low" value="low">Low</option>
-              <option data-urg="medium" value="medium" selected>Medium</option>
-              <option data-urg="high" value="high">High</option>
-              <option data-urg="critical" value="critical">Critical</option>
-            </select>
-          </div>
-          <div class="elisa-field">
-            <span class="elisa-field-label" id="elisaUrgencyLabel">How urgent is this?</span>
-            <div class="elisa-urg-chips">
-              <button class="elisa-urg" type="button" data-urg="low">Low</button>
-              <button class="elisa-urg" type="button" data-urg="medium">Medium</button>
-              <button class="elisa-urg" type="button" data-urg="high">High</button>
-              <button class="elisa-urg" type="button" data-urg="critical">Critical</button>
-            </div>
-          </div>
-        </div>
-      </details>
+      <!-- STEP 4 — sent; option to start again -->
+      <div class="elisa-step" id="elisaStepDone" hidden>
+        <button class="elisa-next ghost" id="elisaAgain" type="button">Start again</button>
+      </div>
 
       <p class="elisa-disclaimer" id="elisaDisclaimer">Elisa does not give legal advice and does not replace a lawyer.</p>
-
       <a class="elisa-wa" id="elisaWa" href="https://wa.me/393450234084" target="_blank" rel="noopener">Continue on WhatsApp</a>
       <p class="elisa-escalate" id="elisaEscalate">Urgent matter? Call the firm directly.</p>
-
       <p class="elisa-privacy"><span id="elisaPrivacy">Do not send confidential case details here. Internal firm notes are never shown to clients.</span>
         <a id="elisaPrivacyLink" href="privacy.html">Privacy policy</a>
       </p>

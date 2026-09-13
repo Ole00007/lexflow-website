@@ -179,6 +179,29 @@
   </div>
 </section>
 
+<section class="section" id="request">
+  <div class="wrap">
+    <div class="section-label" data-i18n="req_label">Contatti</div>
+    <h2 data-i18n="req_title">Parliamo del flusso di lavoro del tuo studio.</h2>
+    <p class="section-sub" data-i18n="req_lede">Scrivici su WhatsApp per una risposta rapida, oppure inviaci una richiesta. Ti risponderemo usando i recapiti forniti.</p>
+    <div class="faq-contact-links" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:0 0 22px">
+        <a class="faq-contact-btn whatsapp" href="https://wa.me/393450234084" target="_blank" rel="noopener">◉ WhatsApp +39 345 023 4084</a>
+        <a class="faq-contact-btn email" href="mailto:demo@lexflow.com">✉ demo@lexflow.com</a>
+      </div>
+    <form class="request-form js-request-form" data-source="lexflow-article-matter-tracker-request">
+      <div class="request-row">
+        <input type="text" name="name" data-i18n-placeholder="req_name" data-i18n-aria="req_name" aria-label="Nome" required placeholder="Nome">
+        <input type="email" name="email" data-i18n-placeholder="req_email" data-i18n-aria="req_email" aria-label="Email" required placeholder="Email">
+      </div>
+      <textarea name="message" rows="4" data-i18n-placeholder="req_message" data-i18n-aria="req_message" aria-label="Messaggio" placeholder="Messaggio"></textarea>
+      <label class="check"><input type="checkbox" name="consent_privacy" required><span data-i18n="req_consent_privacy">Acconsento al trattamento dei miei dati di contatto per ricevere una risposta alla mia richiesta, secondo l’Informativa Privacy.</span></label>
+      <label class="check"><input type="checkbox" name="consent_marketing"><span data-i18n="req_consent_marketing">Acconsento facoltativamente a ricevere comunicazioni marketing via email o WhatsApp. Posso revocare il consenso in qualsiasi momento.</span></label>
+      <div class="request-actions"><button class="btn btn-gold" type="submit" data-i18n="req_send">Invia richiesta</button></div>
+      <p class="intake-note" data-i18n="req_note">Usiamo i tuoi recapiti solo per rispondere a questa richiesta. Le note interne dello studio non vengono mai condivise.</p>
+    </form>
+  </div>
+</section>
+
 <section class="section" id="demo">
   <div class="cta-band">
     <h2 data-i18n="cta_title">Scopri LexFlow nel tuo studio</h2>
@@ -415,6 +438,7 @@ window.I18N = {
 </div>
 <!-- ELISA WIDGET:END -->
 <script src="../assets/elisa-widget.js"></script>
+<script src="../assets/forms.js"></script>
 <a class="wa-float" href="https://wa.me/393450234084" target="_blank" rel="noopener" data-i18n-aria="aria_wa" aria-label="Scrivi su WhatsApp" data-webhook="whatsapp-float">💬</a>
 </body>
 </html>

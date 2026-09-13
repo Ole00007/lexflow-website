@@ -225,17 +225,26 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="request">
   <div class="wrap">
-    <div class="cta-band">
-      <h2 data-i18n="news_title">Подпишитесь на рассылку</h2>
-      <p data-i18n="news_lede">Одно письмо в месяц. Без спама.</p>
-      <form class="news-form" data-webhook="newsletter-signup" onsubmit="return false;">
-        <input type="email" name="email" placeholder="work@lawfirm.com" aria-label="Work email" required>
-        <button class="btn btn-gold" type="submit" data-i18n="news_button">Подписаться</button>
-      </form>
-      <p class="news-note" data-i18n="news_note">Адрес выше - это заполнитель. Замените его на свою рабочую почту, чтобы подписаться.</p>
-    </div>
+    <div class="section-label" data-i18n="req_label">Контакты</div>
+    <h2 data-i18n="req_title">Обсудим рабочий процесс вашей фирмы.</h2>
+    <p class="section-sub" data-i18n="req_lede">Напишите нам в WhatsApp для быстрого ответа или отправьте заявку. Мы ответим по указанным контактам.</p>
+    <div class="faq-contact-links" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:0 0 22px">
+        <a class="faq-contact-btn whatsapp" href="https://wa.me/393450234084" target="_blank" rel="noopener">◉ WhatsApp +39 345 023 4084</a>
+        <a class="faq-contact-btn email" href="mailto:demo@lexflow.com">✉ demo@lexflow.com</a>
+      </div>
+    <form class="request-form js-request-form" data-source="lexflow-blog-request">
+      <div class="request-row">
+        <input type="text" name="name" data-i18n-placeholder="req_name" data-i18n-aria="req_name" aria-label="Имя" required placeholder="Имя">
+        <input type="email" name="email" data-i18n-placeholder="req_email" data-i18n-aria="req_email" aria-label="Электронная почта" required placeholder="Электронная почта">
+      </div>
+      <textarea name="message" rows="4" data-i18n-placeholder="req_message" data-i18n-aria="req_message" aria-label="Сообщение" placeholder="Сообщение"></textarea>
+      <label class="check"><input type="checkbox" name="consent_privacy" required><span data-i18n="req_consent_privacy">Я согласен на обработку моих контактных данных для ответа на заявку, согласно Политике конфиденциальности.</span></label>
+      <label class="check"><input type="checkbox" name="consent_marketing"><span data-i18n="req_consent_marketing">Я добровольно соглашаюсь получать маркетинговые сообщения по почте или в WhatsApp. Согласие можно отозвать в любой момент.</span></label>
+      <div class="request-actions"><button class="btn btn-gold" type="submit" data-i18n="req_send">Отправить заявку</button></div>
+      <p class="intake-note" data-i18n="req_note">Мы используем ваши контакты только для ответа на эту заявку. Внутренние заметки фирмы не передаются.</p>
+    </form>
   </div>
 </section>
 
@@ -483,7 +492,7 @@ window.I18N = {
   <div class="elisa-panel" id="elisaPanel" role="dialog" aria-labelledby="elisaName">
     <div class="elisa-header">
       <img class="elisa-header-avatar" src="../assets/elisa-avatar.png"
-           alt="" aria-hidden="true" width="56" height="56" loading="lazy">
+           alt="" aria-hidden="true" width="44" height="44" loading="lazy">
       <div class="elisa-header-info">
         <h3 id="elisaName">Elisa</h3>
         <p class="elisa-role" id="elisaRole">LexFlow's digital intake assistant</p>
@@ -500,8 +509,8 @@ window.I18N = {
       <div class="elisa-log" id="elisaLog" role="log" aria-live="polite" aria-label="Conversation with Elisa">
         <div class="elisa-row">
           <img class="elisa-msg-avatar" src="../assets/elisa-avatar.png"
-               alt="" aria-hidden="true" width="28" height="28" loading="lazy">
-          <div class="elisa-bubble" id="elisaGreeting">Hi! I'm Elisa, LexFlow's digital intake assistant. I can gather the first details of your request and pass them into the firm's structured intake flow. How can I help?</div>
+               alt="" aria-hidden="true" width="26" height="26" loading="lazy">
+          <div class="elisa-bubble" id="elisaGreeting">Hi, I'm Elisa, LexFlow's digital intake assistant. I'll take a few details and pass them to the firm. First, how can the firm reach you?</div>
         </div>
       </div>
 
@@ -510,72 +519,85 @@ window.I18N = {
         <span id="elisaThinkingLabel">Elisa is typing…</span>
       </div>
 
-      <p class="elisa-chips-label" id="elisaChipsLabel">Suggested topics</p>
-      <div class="elisa-chips" id="elisaChips">
-        <button class="elisa-chip" type="button" data-chip="new">New matter</button>
-        <button class="elisa-chip" type="button" data-chip="status">Matter status</button>
-        <button class="elisa-chip" type="button" data-chip="urgent">Urgent</button>
-        <button class="elisa-chip" type="button" data-chip="pricing">Plans &amp; pricing</button>
+      <!-- STEP 1 — contact details first -->
+      <div class="elisa-step" id="elisaStepContact">
+        <p class="elisa-step-title" id="elisaStep1Title">Your contact details</p>
+        <p class="elisa-warn" id="elisaContactWarn" role="alert" hidden></p>
+        <div class="elisa-field">
+          <label for="elisaEmail" id="elisaL_email">Email</label>
+          <input id="elisaEmail" type="email" name="email" autocomplete="email" inputmode="email" required>
+        </div>
+        <div class="elisa-field">
+          <label for="elisaPhone" id="elisaL_phone">Phone</label>
+          <input id="elisaPhone" type="tel" name="phone" autocomplete="tel" inputmode="tel" required>
+        </div>
+        <button class="elisa-next" id="elisaContactNext" type="button">Continue</button>
       </div>
 
-      <div class="elisa-composer">
-        <label class="elisa-visually-hidden" for="elisaInput">Write your message to Elisa</label>
-        <input id="elisaInput" type="text" placeholder="e.g. Contract review before a 15 October deadline" autocomplete="off">
+      <!-- STEP 2 — the matter -->
+      <div class="elisa-step" id="elisaStepMatter" hidden>
+        <p class="elisa-step-title" id="elisaStep2Title">About the matter</p>
+        <div class="elisa-field">
+          <label for="elisaPractice" id="elisaL_practice">Practice area</label>
+          <select id="elisaPractice">
+            <option data-area="civil" value="civil">Civil law</option>
+            <option data-area="corporate" value="corporate">Corporate &amp; business</option>
+            <option data-area="family" value="family">Family law</option>
+            <option data-area="criminal" value="criminal">Criminal defence</option>
+            <option data-area="realestate" value="realestate">Real estate</option>
+            <option data-area="ip" value="ip">Intellectual property</option>
+            <option data-area="immigration" value="immigration">Immigration</option>
+            <option data-area="labour" value="labour">Labour &amp; employment</option>
+            <option data-area="administrative" value="administrative">Administrative</option>
+            <option data-area="other" value="other">Other / not sure</option>
+          </select>
+        </div>
+        <div class="elisa-field">
+          <label for="elisaStatusSel" id="elisaL_status">Matter status</label>
+          <select id="elisaStatusSel">
+            <option data-st="new" value="new">New request</option>
+            <option data-st="review" value="review">Under review</option>
+            <option data-st="existing" value="existing">Existing matter</option>
+          </select>
+        </div>
+        <div class="elisa-field">
+          <label for="elisaUrgency" id="elisaL_urgency">Urgency</label>
+          <select id="elisaUrgency">
+            <option data-urg="low" value="low">Low</option>
+            <option data-urg="medium" value="medium" selected>Medium</option>
+            <option data-urg="high" value="high">High</option>
+            <option data-urg="critical" value="critical">Critical</option>
+          </select>
+        </div>
+        <button class="elisa-next" id="elisaMatterNext" type="button">Continue</button>
+      </div>
+
+      <!-- STEP 3 — describe it, then send -->
+      <div class="elisa-step" id="elisaStepDescribe" hidden>
+        <p class="elisa-step-title" id="elisaStep3Title">Describe the matter</p>
+        <p class="elisa-chips-label" id="elisaChipsLabel">Common requests</p>
+        <div class="elisa-chips" id="elisaChips">
+          <button class="elisa-chip" type="button" data-chip="new">New matter</button>
+          <button class="elisa-chip" type="button" data-chip="status">Matter status</button>
+          <button class="elisa-chip" type="button" data-chip="urgent">Urgent</button>
+          <button class="elisa-chip" type="button" data-chip="pricing">Plans &amp; pricing</button>
+        </div>
+        <div class="elisa-field">
+          <label for="elisaInput" id="elisaL_message">What is this about?</label>
+          <textarea id="elisaInput" rows="3"></textarea>
+        </div>
+        <p class="elisa-warn" id="elisaSendWarn" role="alert" hidden></p>
         <button class="elisa-send" id="elisaSend" type="button">Send request</button>
       </div>
 
-      <details class="elisa-struct">
-        <summary id="elisaIntakeTitle">Tell us about the request</summary>
-        <div class="elisa-struct-grid">
-          <div class="elisa-field">
-            <label for="elisaPractice" id="elisaL_practice">Practice area</label>
-            <select id="elisaPractice">
-              <option data-area="civil" value="civil">Civil law</option>
-              <option data-area="corporate" value="corporate">Corporate &amp; business</option>
-              <option data-area="family" value="family">Family law</option>
-              <option data-area="criminal" value="criminal">Criminal defence</option>
-              <option data-area="realestate" value="realestate">Real estate</option>
-              <option data-area="ip" value="ip">Intellectual property</option>
-              <option data-area="immigration" value="immigration">Immigration</option>
-              <option data-area="labour" value="labour">Labour &amp; employment</option>
-              <option data-area="administrative" value="administrative">Administrative</option>
-              <option data-area="other" value="other">Other / not sure</option>
-            </select>
-          </div>
-          <div class="elisa-field">
-            <label for="elisaStatusSel" id="elisaL_status">Matter status</label>
-            <select id="elisaStatusSel">
-              <option data-st="new" value="new">New request</option>
-              <option data-st="review" value="review">Under review</option>
-              <option data-st="existing" value="existing">Existing matter</option>
-            </select>
-          </div>
-          <div class="elisa-field">
-            <label for="elisaUrgency" id="elisaL_urgency">Urgency</label>
-            <select id="elisaUrgency">
-              <option data-urg="low" value="low">Low</option>
-              <option data-urg="medium" value="medium" selected>Medium</option>
-              <option data-urg="high" value="high">High</option>
-              <option data-urg="critical" value="critical">Critical</option>
-            </select>
-          </div>
-          <div class="elisa-field">
-            <span class="elisa-field-label" id="elisaUrgencyLabel">How urgent is this?</span>
-            <div class="elisa-urg-chips">
-              <button class="elisa-urg" type="button" data-urg="low">Low</button>
-              <button class="elisa-urg" type="button" data-urg="medium">Medium</button>
-              <button class="elisa-urg" type="button" data-urg="high">High</button>
-              <button class="elisa-urg" type="button" data-urg="critical">Critical</button>
-            </div>
-          </div>
-        </div>
-      </details>
+      <!-- STEP 4 — sent; option to start again -->
+      <div class="elisa-step" id="elisaStepDone" hidden>
+        <button class="elisa-next ghost" id="elisaAgain" type="button">Start again</button>
+      </div>
 
       <p class="elisa-disclaimer" id="elisaDisclaimer">Elisa does not give legal advice and does not replace a lawyer.</p>
-
       <a class="elisa-wa" id="elisaWa" href="https://wa.me/393450234084" target="_blank" rel="noopener">Continue on WhatsApp</a>
       <p class="elisa-escalate" id="elisaEscalate">Urgent matter? Call the firm directly.</p>
-
       <p class="elisa-privacy"><span id="elisaPrivacy">Do not send confidential case details here. Internal firm notes are never shown to clients.</span>
         <a id="elisaPrivacyLink" href="../privacy.html">Privacy policy</a>
       </p>
@@ -592,6 +614,7 @@ window.I18N = {
 </div>
 <!-- ELISA WIDGET:END -->
 <script src="../assets/elisa-widget.js"></script>
+<script src="../assets/forms.js"></script>
 <a class="wa-float" href="https://wa.me/393450234084" target="_blank" rel="noopener" data-i18n-aria="aria_wa" aria-label="Написать в WhatsApp" data-webhook="whatsapp-float">💬</a>
 </body>
 </html>

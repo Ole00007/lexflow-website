@@ -176,6 +176,29 @@
   </div>
 </section>
 
+<section class="section" id="request">
+  <div class="wrap">
+    <div class="section-label" data-i18n="req_label">Контакты</div>
+    <h2 data-i18n="req_title">Обсудим рабочий процесс вашей фирмы.</h2>
+    <p class="section-sub" data-i18n="req_lede">Напишите нам в WhatsApp для быстрого ответа или отправьте заявку. Мы ответим по указанным контактам.</p>
+    <div class="faq-contact-links" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:0 0 22px">
+        <a class="faq-contact-btn whatsapp" href="https://wa.me/393450234084" target="_blank" rel="noopener">◉ WhatsApp +39 345 023 4084</a>
+        <a class="faq-contact-btn email" href="mailto:demo@lexflow.com">✉ demo@lexflow.com</a>
+      </div>
+    <form class="request-form js-request-form" data-source="lexflow-article-client-intake-request">
+      <div class="request-row">
+        <input type="text" name="name" data-i18n-placeholder="req_name" data-i18n-aria="req_name" aria-label="Имя" required placeholder="Имя">
+        <input type="email" name="email" data-i18n-placeholder="req_email" data-i18n-aria="req_email" aria-label="Электронная почта" required placeholder="Электронная почта">
+      </div>
+      <textarea name="message" rows="4" data-i18n-placeholder="req_message" data-i18n-aria="req_message" aria-label="Сообщение" placeholder="Сообщение"></textarea>
+      <label class="check"><input type="checkbox" name="consent_privacy" required><span data-i18n="req_consent_privacy">Я согласен на обработку моих контактных данных для ответа на заявку, согласно Политике конфиденциальности.</span></label>
+      <label class="check"><input type="checkbox" name="consent_marketing"><span data-i18n="req_consent_marketing">Я добровольно соглашаюсь получать маркетинговые сообщения по почте или в WhatsApp. Согласие можно отозвать в любой момент.</span></label>
+      <div class="request-actions"><button class="btn btn-gold" type="submit" data-i18n="req_send">Отправить заявку</button></div>
+      <p class="intake-note" data-i18n="req_note">Мы используем ваши контакты только для ответа на эту заявку. Внутренние заметки фирмы не передаются.</p>
+    </form>
+  </div>
+</section>
+
 <section class="section" id="demo">
   <div class="cta-band">
     <h2 data-i18n="cta_title">Посмотрите LexFlow в вашей фирме</h2>
@@ -412,6 +435,7 @@ window.I18N = {
 </div>
 <!-- ELISA WIDGET:END -->
 <script src="../assets/elisa-widget.js"></script>
+<script src="../assets/forms.js"></script>
 <a class="wa-float" href="https://wa.me/393450234084" target="_blank" rel="noopener" data-i18n-aria="aria_wa" aria-label="Написать в WhatsApp" data-webhook="whatsapp-float">💬</a>
 </body>
 </html>
