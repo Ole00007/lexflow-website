@@ -389,3 +389,91 @@ go-ahead → deploy.
 Note: the cards are queued in `ready`. `operator-installer` has a gateway running
 (PID 12005), so its card should be picked up; the CLI warned that no gateway is
 running for the default board, so if nothing moves, run `hermes gateway run`.
+
+---
+
+# Batch 2 — 2026-09-13, later session
+
+Owner decisions received and acted on. Commit `471d033`.
+
+## WhatsApp — Option C implemented
+
+Two values, one file: **`assets/site-config.js`**
+
+```js
+whatsapp: "393450234084",           // digits only, used for wa.me links
+whatsappDisplay: "+39 345 023 4084", // the human-readable form
+```
+
+`build-lang-sites.py` stamps both into every page at build time (so no-JS
+visitors get the right number too), and the runtime reads the same config for
+anything JavaScript adds — Elisa's CTA and the floating button.
+
+**Proven:** changing both values and regenerating rewrote **98 wa.me links** and
+**38 displayed numbers** across all 27 pages, leaving **zero** occurrences of the
+old number anywhere.
+
+**Still needs you:** confirm `393450234084` is final. You said you would confirm
+shortly — until then the site carries the number currently in config.
+
+## FAQ images
+
+- **Done:** the schematic "notifications" image is replaced by the approved
+  `romanelli-sala-riunioni.png` in all three languages.
+- **Still blocked:** the Kanban image. Confirm the `/kanban` sample data is
+  anonymised before I screenshot it.
+- **You asked about "the old kanban cards":** I have not created any cards on the
+  CRM's `/kanban` board. The "kanban cards" I reported creating were **Hermes
+  kanban tasks** for handing work to other profiles — a different thing with a
+  confusingly similar name. Nothing was added to the CRM board. So if the board
+  still shows old sample cards, that is expected: I have not touched it.
+  Say the word and I can populate the CRM board with anonymised sample cards, but
+  that is a CRM-side write and I would want your explicit go-ahead first.
+
+## Handed-off tasks — they FAILED, and here is why
+
+Both tasks are now `blocked`, and the log gives the reason:
+
+```
+No access token found for Nous Portal login. Run `hermes model` to re-authenticate.
+```
+
+The worker profiles spawn, immediately exit (`rc=0`), and never call
+`kanban_complete` — reported as a protocol violation. This is **not** a stalled
+gateway, so `hermes gateway run` would not have fixed it.
+
+**Action needed from you:** run `hermes model` and re-authenticate, then unblock
+the two cards (`hermes kanban unblock t_d6065167` and `t_6c2c8c07`) so they are
+retried. Until then the CRM questions reach nobody.
+
+## Also fixed in this pass
+
+Two generator safety guards, both prompted by real failures found here:
+
+1. **The English-page loop must read its own page before writing.** An earlier
+   version of this change reused a stale loop variable and **overwrote all ten
+   English pages with the last localised page** — the site briefly had Russian
+   article content at English URLs. Caught and restored from git within the same
+   session. There is now a guard that snapshots every English page title up front
+   and aborts the build if a page comes out with different content, plus an
+   assertion that each page keeps `lang="en"`.
+2. **Any malformed `wa.me` link aborts the build.** A display-substitution
+   pattern previously matched the digits inside a `wa.me` URL and would have
+   published `wa.me/+39 345 023 4084`. Two patterns also silently degraded to
+   "matches nothing" after surviving two layers of source escaping; both are now
+   built from character classes with no backslash escapes, and verified
+   idempotent across consecutive runs.
+
+## Updated pending list
+
+| # | Item | Status |
+|---|---|---|
+| 1 | Public CRM URL + endpoint choice | **open** — blocks lead delivery |
+| 2 | CRM CORS allow-origin | **open** |
+| 3 | Real domain | **open** — you sent `[insert real domain]` literally, so I still need the actual string |
+| 4 | Article IT/RU body text | ongoing, not blocking (your call) |
+| 5 | Newsletter | **resolved** — dropped, keys kept |
+| 6 | Kanban anonymisation confirmation | **open** |
+| 7 | Webhook URLs (27 keys) | **open** |
+| 8 | WhatsApp final number | **open** — Option C built and proven |
+| 9 | `hermes model` re-auth for worker profiles | **open** — blocks the handoffs |
