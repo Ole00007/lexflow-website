@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>LexFlow matter board — artefact source</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --gold:#D4AF37; --gold-deep:#C5A55A; --navy:#152238; --navy-2:#1C2C48;
+    --surface:#0F1826; --surface-2:#18243A; --border:rgba(212,175,55,0.18);
+    --text:#F2EFE9; --text-dim:#B9C2D0; --text-faint:#7C8AA0;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:1600px;height:1200px;overflow:hidden}
+  body{
+    font-family:Inter,system-ui,-apple-system,sans-serif;
+    background:radial-gradient(120% 90% at 12% 0%, #1C2C48 0%, #152238 42%, #0F1826 100%);
+    color:var(--text); padding:64px 60px; display:flex; flex-direction:column;
+  }
+  .kicker{
+    font-size:15px; letter-spacing:.24em; text-transform:uppercase;
+    color:var(--gold); font-weight:600; margin-bottom:18px;
+  }
+  .title{
+    font-size:44px; line-height:1.12; font-weight:600; letter-spacing:-.02em;
+    max-width:1000px; margin-bottom:14px;
+  }
+  .sub{font-size:19px; color:var(--text-dim); max-width:940px; line-height:1.55; margin-bottom:44px}
+
+  .board{
+    flex:1; display:grid; grid-template-columns:repeat(3,1fr); gap:22px;
+    border:1px solid var(--border); border-radius:20px; padding:26px;
+    background:rgba(15,24,38,.55);
+  }
+  .col{display:flex; flex-direction:column; gap:14px; min-width:0}
+  .col-head{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:6px 4px 12px; border-bottom:1px solid rgba(212,175,55,.16);
+  }
+  .col-name{
+    font-size:13px; font-weight:600; letter-spacing:.13em;
+    text-transform:uppercase; color:var(--text-dim);
+  }
+  .col-count{
+    font-size:12px; font-weight:600; color:var(--gold);
+    background:rgba(212,175,55,.12); border:1px solid rgba(212,175,55,.3);
+    border-radius:999px; padding:2px 9px;
+  }
+  .card{
+    background:linear-gradient(180deg, var(--surface-2) 0%, #16223a 100%);
+    border:1px solid rgba(212,175,55,.14); border-radius:14px;
+    padding:16px 16px 14px; box-shadow:0 6px 18px rgba(0,0,0,.3);
+  }
+  .card-title{font-size:16px; font-weight:600; line-height:1.35; margin-bottom:9px}
+  .meta{display:flex; align-items:center; gap:8px; flex-wrap:wrap}
+  .chip{
+    font-size:11px; font-weight:600; letter-spacing:.06em; text-transform:uppercase;
+    padding:4px 10px; border-radius:999px; border:1px solid transparent;
+  }
+  .chip-area{color:var(--text-faint); border-color:rgba(124,138,160,.35); background:rgba(124,138,160,.08)}
+  .chip-low{color:#8FD1A8; border-color:rgba(143,209,168,.35); background:rgba(143,209,168,.1)}
+  .chip-med{color:var(--gold); border-color:rgba(212,175,55,.4); background:rgba(212,175,55,.1)}
+  .chip-high{color:#E89B7A; border-color:rgba(232,155,122,.38); background:rgba(232,155,122,.1)}
+  .date{font-size:12px; color:var(--text-faint); margin-left:auto; white-space:nowrap}
+  .card-ghost{opacity:.42}
+</style>
+</head>
+<body>
+  <div class="kicker">LexFlow · matter board</div>
+  <div class="title">Every matter, visible at the stage it has actually reached</div>
+  <div class="sub">Sample board with placeholder matters. Intake through completion, with the owner and the next date on each card.</div>
+
+  <div class="board">
+    <div class="col">
+      <div class="col-head"><span class="col-name">Intake</span><span class="col-count">3</span></div>
+      <div class="card">
+        <div class="card-title">Contract review — new enquiry</div>
+        <div class="meta"><span class="chip chip-area">Corporate</span><span class="chip chip-med">Medium</span><span class="date">12 Oct</span></div>
+      </div>
+      <div class="card">
+        <div class="card-title">Employment query — dismissal</div>
+        <div class="meta"><span class="chip chip-area">Employment</span><span class="chip chip-high">High</span><span class="date">9 Oct</span></div>
+      </div>
+      <div class="card card-ghost">
+        <div class="card-title">Property purchase enquiry</div>
+        <div class="meta"><span class="chip chip-area">Real estate</span><span class="chip chip-low">Low</span><span class="date">15 Oct</span></div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="col-head"><span class="col-name">Conflict check</span><span class="col-count">2</span></div>
+      <div class="card">
+        <div class="card-title">Supplier payment dispute</div>
+        <div class="meta"><span class="chip chip-area">Civil</span><span class="chip chip-med">Medium</span><span class="date">10 Oct</span></div>
+      </div>
+      <div class="card">
+        <div class="card-title">Trademark filing — new mark</div>
+        <div class="meta"><span class="chip chip-area">IP</span><span class="chip chip-low">Low</span><span class="date">18 Oct</span></div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="col-head"><span class="col-name">Review</span><span class="col-count">3</span></div>
+      <div class="card">
+        <div class="card-title">Lease agreement — amendments</div>
+        <div class="meta"><span class="chip chip-area">Real estate</span><span class="chip chip-med">Medium</span><span class="date">8 Oct</span></div>
+      </div>
+      <div class="card">
+        <div class="card-title">NDA — cross-border counterparty</div>
+        <div class="meta"><span class="chip chip-area">Corporate</span><span class="chip chip-low">Low</span><span class="date">14 Oct</span></div>
+      </div>
+      <div class="card card-ghost">
+        <div class="card-title">Family matter — first consultation</div>
+        <div class="meta"><span class="chip chip-area">Family</span><span class="chip chip-high">High</span><span class="date">7 Oct</span></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
