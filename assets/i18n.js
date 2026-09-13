@@ -24,14 +24,24 @@
       el.textContent = value;
       return;
     }
-    var replaced = false;
-    Array.prototype.forEach.call(el.childNodes, function (node) {
-      if (node.nodeType === 3 && node.nodeValue.trim() !== '') {
-        node.nodeValue = replaced ? '' : value;
-        replaced = true;
+    /* The element contains markup (a link, an <em>). Put the value in the first
+       text node ANYWHERE inside it and blank every other text node.
+
+       Walking only el.childNodes is not enough: "<em>disordine</em>" is a single
+       Element node, so that Italian word survived and the page rendered
+       "chaosdisordine" and "più.più.". A TreeWalker sees text nested inside
+       child elements, which is what we need. The build script's localise_inner
+       already behaves this way; this keeps the two in step. */
+    var walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null, false);
+    var first = null, node;
+    while ((node = walker.nextNode())) {
+      if (node.nodeValue.trim() !== '') {
+        if (first === null) { first = node; } else { node.nodeValue = ''; }
       }
-    });
-    if (!replaced) {
+    }
+    if (first !== null) {
+      first.nodeValue = value;
+    } else {
       el.insertBefore(document.createTextNode(value), el.firstChild);
     }
   }
