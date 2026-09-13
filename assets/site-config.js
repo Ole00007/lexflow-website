@@ -43,14 +43,43 @@ window.LEXFLOW_CONFIG = {
   chatbotUrl: "https://web-production-031a6.up.railway.app",
   chatbotPath: "/api/chatbot", // TODO: confirm real path when deployed
 
-  /* Generic webhook base. Leave null to disable — calls to a
-     placeholder host fail silently, which hides real errors. */
-  webhookBase: null,           // e.g. "https://hooks.zapier.com/hooks/catch/xxxx/yyyy"
+  /* Generic webhook base. Leave null to disable. There is no placeholder
+     fallback: an unconfigured webhook logs a warning and sends nothing, rather
+     than posting to a fake host and reporting success.
+     Fill in the specific URLs in `webhooks` below — one key per trigger. */
+  webhookBase: null,
   webhooks: {
-    "intake-submit":     null, // WH-01 demo/intake request
-    "newsletter-signup": null, // WH-02 newsletter
-    "whatsapp-float":    null, // WH-03
-    "chatbot-toggle":    null  // WH-04
+    /* lead / demo requests */
+    "demo-request-nav":            null,  // nav "Book a Demo" (24 sites)
+    "demo-request-hero":           null,  // hero primary CTA
+    "cta-demo":                    null,  // mid-page CTA band
+    "faq-cta-demo":                null,
+    "hiw-cta-demo":                null,
+    "pricing-cta-demo":            null,
+    "practice-cta-demo":           null,
+    "blog-cta-demo":               null,
+    "article-matter-cta-demo":     null,
+    "article-intake-cta-demo":     null,
+    "intake-submit":               null,  // the visible request form (WH-01)
+    "newsletter-signup":           null,  // WH-02, kept for a future newsletter
+    /* pricing tier selection */
+    "pricing-select-starter":      null,
+    "pricing-select-professional": null,
+    "pricing-select-enterprise":   null,
+    /* engagement signals */
+    "overview-cta":                null,
+    "dashboard-preview":           null,
+    "whatsapp-float":              null,  // WH-03
+    "chatbot-toggle":              null,  // WH-04
+    "contact-whatsapp":            null,
+    "contact-email":               null,
+    "contact-demo-email":          null,
+    /* social clicks */
+    "social-linkedin":             null,
+    "social-instagram":            null,
+    "social-whatsapp":             null,
+    "social-github":               null,
+    "social-telegram":             null
   },
 
   /* Social profiles — no real profiles yet, hook later */

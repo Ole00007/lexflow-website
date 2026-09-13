@@ -148,28 +148,63 @@
 
   /* ---- Config / webhooks ---- */
   var CONFIG = window.LEXFLOW_CONFIG || {};
-  var WEBHOOK_BASE = CONFIG.webhookBase || 'https://hook.example.com/lexflow';
+
+  /* Tell the host page what happened, so a surface can show real state instead
+     of the console being the only witness. Listen with:
+       window.addEventListener('lexflow:webhook', e => ...) */
+  function reportWebhook(name, state, detail) {
+    try {
+      window.dispatchEvent(new CustomEvent('lexflow:webhook', {
+        detail: { name: name, state: state, detail: detail || null }
+      }));
+    } catch (err) { /* CustomEvent unavailable - console already has it */ }
+  }
 
   function fireWebhook(name, payload) {
-    var endpoint = (CONFIG.webhooks && CONFIG.webhooks[name]) || (WEBHOOK_BASE + '/' + name);
-    var body = Object.assign({ trigger: name, page: location.pathname.split('/').pop(), lang: document.documentElement.lang || 'en' }, payload || {});
+    var body = Object.assign({
+      trigger: name,
+      page: location.pathname.split('/').pop(),
+      lang: document.documentElement.lang || 'en'
+    }, payload || {});
+
+    /* Endpoint comes from one place only. There is deliberately no fallback
+       host: posting to a placeholder and reporting success hid real failures. */
+    var endpoint = (CONFIG.webhooks && CONFIG.webhooks[name]) || null;
+
+    if (!endpoint) {
+      console.warn('[LexFlow] webhook "' + name + '" has no endpoint configured, so nothing was sent. ' +
+                   'Set LEXFLOW_CONFIG.webhooks["' + name + '"] in assets/site-config.js to enable it.');
+      reportWebhook(name, 'unconfigured', null);
+      return false;
+    }
+
     try {
-      if (navigator.sendBeacon) {
-        navigator.sendBeacon(endpoint, new Blob([JSON.stringify(body)], { type: 'application/json' }));
-      } else {
-        fetch(endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body), keepalive: true });
-      }
-      console.log('[LexFlow] webhook fired:', name, body);
+      fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+        keepalive: true
+      }).then(function (r) {
+        if (!r.ok) { throw new Error('HTTP ' + r.status); }
+        console.info('[LexFlow] webhook "' + name + '" delivered.');
+        reportWebhook(name, 'ok', r.status);
+      }).catch(function (err) {
+        console.error('[LexFlow] webhook "' + name + '" FAILED (' + (err && err.message) + ') -> ' + endpoint);
+        reportWebhook(name, 'failed', err && err.message);
+      });
+      return true;
     } catch (err) {
-      console.warn('[LexFlow] webhook failed:', name, err);
+      console.error('[LexFlow] webhook "' + name + '" could not be attempted:', err);
+      reportWebhook(name, 'failed', err && err.message);
+      return false;
     }
   }
 
   function initWebhooks() {
     document.querySelectorAll('[data-webhook]').forEach(function (el) {
-      el.addEventListener('click', function (e) {
-        var name = el.getAttribute('data-webhook');
-        fireWebhook(name, { id: el.getAttribute('data-webhook-id') || undefined });
+      el.addEventListener('click', function () {
+        fireWebhook(el.getAttribute('data-webhook'),
+                    { id: el.getAttribute('data-webhook-id') || undefined });
       });
     });
   }
