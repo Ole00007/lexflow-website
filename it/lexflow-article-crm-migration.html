@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="dark" data-lang-lock="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dalle tabelle a una CRM: come pianificare la migrazione a un sistema di gestione dello studio — LexFlow</title>
+<meta name="description" content="Che cosa censire prima della migrazione, come gestire i duplicati e perché le regole di conservazione guidano l’intero piano.">
+<link rel="alternate" hreflang="en" href="https://lexflow.example.com/lexflow-article-crm-migration.html">
+<link rel="alternate" hreflang="it" href="https://lexflow.example.com/it/lexflow-article-crm-migration.html">
+<link rel="alternate" hreflang="ru" href="https://lexflow.example.com/ru/lexflow-article-crm-migration.html">
+<link rel="alternate" hreflang="x-default" href="https://lexflow.example.com/lexflow-article-crm-migration.html">
+<link rel="canonical" href="https://lexflow.example.com/it/lexflow-article-crm-migration.html">
+<meta property="og:title" content="Dalle tabelle a una CRM: come pianificare la migrazione a un sistema di gestione dello studio — LexFlow">
+<meta property="og:description" content="Che cosa censire prima della migrazione, come gestire i duplicati e perché le regole di conservazione guidano l’intero piano.">
+<meta property="og:locale" content="en_GB">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://lexflow.example.com/it/lexflow-article-crm-migration.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="../assets/lexflow-logo-120.png">
+<link rel="apple-touch-icon" href="../assets/lexflow-logo-120.png">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How a client matter tracker reduces routine status calls without weakening the lawyer-client relationship",
+  "url": "https://lexflow.example.com/lexflow-article-matter-tracker.html",
+  "datePublished": "2026-09-13",
+  "dateModified": "2026-09-13",
+  "author": {"@type": "Organization", "name": "LexFlow team"},
+  "publisher": {"@type": "Organization", "name": "LexFlow"}
+}
+</script>
+
+<style>
+  .article{max-width:760px;margin:0 auto}
+  .article-meta{font-size:13px;color:var(--text-dim);margin:6px 0 0}
+  .article-byline{font-size:13px;color:var(--text-dim);margin:4px 0 0}
+  .lang-note{background:var(--surface-2);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:var(--radius-lg);padding:18px 20px;margin:26px 0}
+  .lang-note p{margin:0 0 8px;font-size:13.5px;color:var(--text-dim);line-height:1.6}
+  .lang-note p:last-child{margin-bottom:0}
+  .lang-note-title{font-weight:650;color:var(--text);font-size:13px;letter-spacing:.04em;text-transform:uppercase}
+  .prose h2{font-size:23px;margin:38px 0 12px}
+  .prose h3{font-size:18px;margin:26px 0 10px}
+  .prose p{font-size:15.5px;line-height:1.75;color:var(--text-dim);margin:0 0 16px}
+  .prose ul,.prose ol{margin:0 0 18px;padding-left:22px}
+  .prose li{font-size:15.5px;line-height:1.7;color:var(--text-dim);margin-bottom:8px}
+  .prose a{color:var(--gold);text-decoration:underline}
+  .prose a:hover{text-decoration:none}
+  .article-cta{margin:34px 0 0;padding:18px 20px;border:1px dashed var(--border);border-radius:var(--radius-lg);font-size:14px;color:var(--text-dim)}
+  .related{list-style:none;padding:0;margin:18px 0 0}
+  .related li{margin-bottom:10px;font-size:15px}
+</style>
+<script>window.LEXFLOW_LANG_URLS={"en":"../lexflow-article-crm-migration.html","it":"lexflow-article-crm-migration.html","ru":"../ru/lexflow-article-crm-migration.html"};</script>
+</head>
+<body>
+
+<!-- WEBHOOK: id=WH-01 | endpoint: https://hook.example.com/lexflow/demo-request | trigger: CTA button click "Book a Demo" -->
+<nav>
+  <div class="logo"><span class="logo-mark">LF</span> LexFlow</div>
+  <div class="nav-links">
+    <a href="lexflow-index.html" data-i18n="nav_features">Il CRM</a>
+    <a href="lexflow-how-it-works.html" data-i18n="nav_howitworks">Come funziona</a>
+    <a href="lexflow-pricing.html" data-i18n="nav_pricing">Funzioni e prezzi</a>
+    <a href="lexflow-practice-areas.html" data-i18n="nav_practice">Aree di attività</a>
+    <a href="lexflow-faq.html" data-i18n="nav_faq">FAQ</a>
+    <a class="active" href="lexflow-blog.html" data-i18n="nav_blog">Blog</a>
+  </div><div class="nav-cta">
+    <button class="icon-btn" id="themeBtn" data-i18n-aria="ctrl_theme" aria-label="Cambia tema chiaro o scuro">◐</button>
+    <div class="lang-wrap">
+      <button class="icon-btn" id="langBtn" aria-haspopup="true" data-i18n-aria="ctrl_lang" aria-label="Cambia lingua">🌐<span id="langLabel" style="font-size:10px;margin-left:2px">EN</span></button>
+      <div class="lang-menu" id="langMenu" role="menu">
+        <button data-lang="en" role="menuitem">🇬🇧 English</button>
+        <button data-lang="it" role="menuitem">🇮🇹 Italiano</button>
+        <button data-lang="ru" role="menuitem">🇷🇺 Русский</button>
+      </div>
+    </div>
+    <a class="btn btn-ghost" href="https://web-production-031a6.up.railway.app/login?ws=lexflow" data-i18n="nav_signin">Accedi</a>
+    <a class="btn btn-gold" data-webhook="demo-request-nav" href="lexflow-index.html#intake" data-i18n="nav_demo">Prenota una demo</a>
+  </div>
+</nav>
+<!-- /WEBHOOK -->
+
+<header class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="art4_eyebrow">CRM e migrazione dati</span>
+    <h1 data-i18n="blog_a4_title">Dalle tabelle a una CRM: come pianificare la migrazione a un sistema di gestione dello studio</h1>
+    <p class="lede" data-i18n="art4_lede">Che cosa censire prima della migrazione, come gestire i duplicati e perché le regole di conservazione guidano l’intero piano.</p>
+    <p class="article-meta"><em data-i18n="art_reviewed">Ultima revisione 13 settembre 2026</em></p>
+    <p class="article-byline" data-i18n="art_byline">Scritto dal team LexFlow · Revisionato dal team di onboarding LexFlow</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap">
+    <article class="article prose">
+<p>Un foglio di calcolo è spesso il punto di partenza giusto. È rapido, familiare e abbastanza flessibile per contenere un elenco crescente di clienti, pratiche, contatti e scadenze. Il problema arriva dopo: iniziano a circolare più versioni, non è chiaro chi sia responsabile e nessuno sa più con certezza quale riga sia aggiornata.</p>
+<p>Passare a una CRM o a un sistema di gestione delle pratiche non è soprattutto un progetto software. È una decisione su come lo studio organizzerà le informazioni da quel momento in poi. Una migrazione fatta bene comincia prima di importare il primo dato.</p>
+<h2>Fai l’inventario di ciò che esiste</h2>
+<p>Elenca tutti i luoghi in cui oggi vivono le informazioni sulle pratiche: fogli di calcolo, drive condivisi, caselle personali, strumenti di singole aree, sistemi contabili, fascicoli cartacei e liste di contatti. Non dare per scontato che il foglio più grande contenga tutto. Spesso i campi più importanti si trovano in una cartella personale di un collega o in una directory che nessuno apre più.</p>
+<p>Per ogni fonte, annota proprietario, scopo, tipi di informazioni, qualità dei dati e necessità di conservarli. Così una generica attività di pulizia diventa una mappa concreta.</p>
+<h2>Decidi che cosa trasferire</h2>
+<p>Non tutte le righe storiche devono entrare nel nuovo sistema. Distingui le pratiche attive, quelle chiuse di recente, i record archiviati e i dati da eliminare in base alle regole di conservazione dello studio. La migrazione è l’occasione per rimuovere duplicati e recapiti obsoleti, non per riprodurre anni di disordine in un’interfaccia più moderna.</p>
+<p>Stabilisci una regola semplice per i record incerti. Per esempio: migrare integralmente le pratiche attive; trasferire le pratiche chiuse nell’ultimo periodo definito con i soli dati essenziali; conservare il materiale più datato in un archivio controllato quando necessario. La regola precisa dipende dalle policy e dagli obblighi dello studio.</p>
+<h2>Pulisci i duplicati prima dell’importazione</h2>
+<p>I duplicati non sono soltanto nomi identici. Lo stesso cliente può comparire con un’e-mail personale in un elenco, una professionale in un altro e il cognome scritto in modo diverso in un terzo. Prima dell’importazione, concorda le regole di corrispondenza: quali campi identificano la stessa persona, chi risolve i casi dubbi e quale record diventa quello principale.</p>
+<p>Non chiedere allo strumento di migrazione di esprimere giudizi che il team non ha ancora definito. L’automazione può segnalare i probabili duplicati. Una persona responsabile deve decidere se unire i record, mantenerli separati o richiedere un controllo.</p>
+<h2>Collega i campi al lavoro reale</h2>
+<p>Un nuovo sistema può offrire decine di campi. Parti da quelli che servono ogni giorno: dati del cliente e dei contatti, riferimento della pratica, avvocato responsabile, area legale, fase, date chiave, collegamenti ai documenti e stato delle comunicazioni. Se un campo non ha un responsabile chiaro o un uso pratico, non importarlo soltanto perché compare in un vecchio file.</p>
+<p>Scrivi una breve mappa dei campi: dove va ogni campo di origine, quale formato richiede e come vengono gestite le eccezioni. Serve durante l’importazione e diventa preziosa sei mesi dopo, quando qualcuno chiederà perché una categoria appare incoerente.</p>
+<h2>Prova con un piccolo campione</h2>
+<p>Prima di trasferire tutto, esegui una migrazione di prova con un gruppo rappresentativo di record. Includi fascicoli ordinati, fascicoli incompleti, duplicati, pratiche con più contatti e date insolite. Chiedi alle persone che useranno il sistema di verificare il risultato nel loro normale flusso di lavoro.</p>
+<p>Il test dovrebbe rispondere a domande concrete: il personale trova rapidamente la pratica giusta? Le responsabilità sono visibili? Le date hanno mantenuto il formato corretto? Le autorizzazioni sono appropriate? Il team sa che cosa non è stato importato? Correggere la mappatura ora è molto meno costoso, perché l’impatto è ancora limitato.</p>
+<h2>Pianifica il passaggio</h2>
+<p>Scegli una data di passaggio e indica chiaramente che cosa accadrà al vecchio sistema dopo quella data. Diventerà di sola lettura? Chi potrà correggere i dati storici? Dove verranno create le nuove pratiche da quel momento? Una migrazione fallisce sul piano organizzativo quando il personale continua ad aggiornare il foglio di calcolo perché lo percepisce come più sicuro del nuovo processo.</p>
+<p>Fornisci al team una guida operativa breve e un luogo in cui fare domande. Nelle prime settimane, osserva gli errori più frequenti e affina la configurazione. Piccoli aggiustamenti fatti subito costano molto meno che riparare un sistema parallelo in seguito.</p>
+<h2>Nota sull’ambito di applicazione</h2>
+<p>LexFlow può supportare un client intake ordinato, le schede delle pratiche, l’attribuzione delle responsabilità e gli aggiornamenti rivolti al cliente. Processo di migrazione, campi, integrazioni, tempi di conservazione e autorizzazioni dipendono dai sistemi esistenti dello studio e dalla configurazione scelta. Prima di importare informazioni sui clienti, verifica l’approccio adatto al tuo ambiente.</p>
+<hr />
+
+<div class="article-cta">
+        <p style="margin:0">Curioso di vedere come funzionerebbe nel tuo studio? <a href="lexflow-index.html#intake">Richiedi una demo</a> oppure confronta i piani nella <a href="lexflow-pricing.html">pagina dei prezzi</a>.</p>
+      </div>
+
+      <h2 data-i18n="art_related">Letture correlate</h2>
+      <ul class="related">
+        <li><a href="lexflow-article-client-intake.html">From first enquiry to organised matter: a client-intake workflow</a></li>
+        <li><a href="lexflow-article-client-communication.html">Client communication for small firms</a></li>
+        <li><a href="lexflow-how-it-works.html">How LexFlow works, from intake to resolution</a></li>
+        <li><a href="lexflow-faq.html#glossary">Glossary of practice-management terms</a></li>
+        <li><a href="lexflow-blog.html">Back to the blog hub</a></li>
+      
+
+    </article>
+  </div>
+</section>
+
+<section class="section" id="request">
+  <div class="wrap">
+    <div class="section-label" data-i18n="req_label">Contatti</div>
+    <h2 data-i18n="req_title">Parliamo del flusso di lavoro del tuo studio.</h2>
+    <p class="section-sub" data-i18n="req_lede">Scrivici su WhatsApp per una risposta rapida, oppure invia una richiesta. Ti risponderemo usando i recapiti che fornisci.</p>
+    <div class="faq-contact-links" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:0 0 22px">
+        <a class="faq-contact-btn whatsapp" href="https://wa.me/393450234084" target="_blank" rel="noopener">◉ WhatsApp +39 345 023 4084</a>
+        <a class="faq-contact-btn email" href="mailto:demo@lexflow.com">✉ demo@lexflow.com</a>
+      </div>
+    <form class="request-form js-request-form" data-source="lexflow-article-crm-migration.html-request">
+      <div class="request-row">
+        <input type="text" name="name" data-i18n-placeholder="req_name" data-i18n-aria="req_name" aria-label="Nome" required placeholder="Nome">
+        <input type="email" name="email" data-i18n-placeholder="req_email" data-i18n-aria="req_email" aria-label="Email" required placeholder="Email">
+      </div>
+      <textarea name="message" rows="4" data-i18n-placeholder="req_message" data-i18n-aria="req_message" aria-label="Messaggio" placeholder="Messaggio"></textarea>
+      <label class="check"><input type="checkbox" name="consent_privacy" required><span data-i18n="req_consent_privacy">Acconsento al trattamento dei miei dati di contatto per ricevere una risposta alla mia richiesta, secondo l’Informativa Privacy.</span></label>
+      <label class="check"><input type="checkbox" name="consent_marketing"><span data-i18n="req_consent_marketing">Acconsento facoltativamente a ricevere comunicazioni marketing via email o WhatsApp. Posso revocare il consenso in qualsiasi momento.</span></label>
+      <div class="request-actions"><button class="btn btn-gold" type="submit" data-i18n="req_send">Invia richiesta</button></div>
+      <p class="intake-note" data-i18n="req_note">Usiamo i tuoi dati solo per rispondere a questa richiesta. Le note interne dello studio non vengono mai condivise.</p>
+    </form>
+  </div>
+</section>
+
+<section class="section" id="demo">
+  <div class="cta-band">
+    <h2 data-i18n="cta_title">Scopri LexFlow nel tuo studio</h2>
+    <p data-i18n="cta_lede">Una demo su misura, senza impegno.</p>
+    <a class="btn btn-gold" href="lexflow-index.html#intake" data-webhook="article-crm-migration-cta-demo" data-i18n="cta_button">Richiedi una demo</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <span class="footer-text" data-i18n="footer_text">LexFlow © 2026. Tutti i diritti riservati.</span>
+        <div class="footer-social">
+          <a href="#" data-webhook="social-linkedin" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45z"/></svg></a>
+          <a href="#" data-webhook="social-instagram" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 1.8c-3.15 0-3.52.01-4.77.07-1.08.05-1.67.23-2.06.38-.52.2-.89.44-1.28.83-.39.39-.63.76-.83 1.28-.15.39-.33.98-.38 2.06-.06 1.25-.07 1.62-.07 4.77s.01 3.52.07 4.77c.05 1.08.23 1.67.38 2.06.2.52.44.89.83 1.28.39.39.76.63 1.28.83.39.15.98.33 2.06.38 1.25.06 1.62.07 4.77.07s3.52-.01 4.77-.07c1.08-.05 1.67-.23 2.06-.38.52-.2.89-.44 1.28-.83.39-.39.63-.76.83-1.28.15-.39.33-.98.38-2.06.06-1.25.07-1.62.07-4.77s-.01-3.52-.07-4.77c-.05-1.08-.23-1.67-.38-2.06-.2-.52-.44-.89-.83-1.28a3.44 3.44 0 0 0-1.28-.83c-.39-.15-.98-.33-2.06-.38-1.25-.06-1.62-.07-4.77-.07zm0 3.06a4.98 4.98 0 1 1 0 9.96 4.98 4.98 0 0 1 0-9.96zm0 8.16a3.18 3.18 0 1 0 0-6.36 3.18 3.18 0 0 0 0 6.36zm6.34-8.36a1.16 1.16 0 1 1-2.32 0 1.16 1.16 0 0 1 2.32 0z"/></svg></a>
+          <a href="https://wa.me/393450234084" data-webhook="social-whatsapp" aria-label="WhatsApp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.9.53 3.66 1.46 5.16L2 22l4.95-1.43A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18a7.94 7.94 0 0 1-4.55-1.39l-.33-.2-2.94.85.87-2.86-.21-.34A7.94 7.94 0 1 1 12 20zm5.47-5.63c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35z"/></svg></a>
+          <a href="#" data-webhook="social-github" aria-label="GitHub" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.11-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6.01 0c2.29-1.55 3.3-1.23 3.3-1.23.65 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.49 5.92.43.38.82 1.11.82 2.24v3.32c0 .32.21.7.82.58A12 12 0 0 0 12 .3z"/></svg></a>
+          <a href="#" data-webhook="social-telegram" aria-label="Telegram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M9.04 15.51l-.35 4.95c.5 0 .72-.22.98-.47l2.36-2.28 4.9 3.62c.9.5 1.55.24 1.79-.84L22.9 3.53c.3-1.37-.5-1.9-1.42-1.57L1.77 9.79c-1.35.54-1.34 1.29-.25 1.63l4.66 1.45L17.9 5.2c.5-.34.97-.15.59.18L9.04 15.51z"/></svg></a>
+        </div>
+    <span class="footer-legal" style="display:inline-flex;gap:12px;align-items:center"><a href="../privacy.html" data-i18n="footer_privacy">Privacy</a><a href="../terms.html" data-i18n="footer_terms">Termini</a></span>
+    <span class="footer-credit" data-i18n="footer_credit">Progettato da AVibe Agency</span>
+  </div>
+</footer>
+
+<script>
+window.I18N = {"en": {"nav_features": "About CRM", "nav_howitworks": "How It Works", "nav_pricing": "Features & Pricing", "nav_practice": "Practice Areas", "nav_faq": "FAQ", "nav_blog": "Blog", "nav_signin": "Sign in", "nav_demo": "Book a Demo", "ctrl_theme": "Toggle dark/light theme", "ctrl_lang": "Change language", "footer_text": "LexFlow © 2026. All rights reserved.", "footer_credit": "Designed by AVibe Agency", "cta_title": "See LexFlow in your firm", "cta_lede": "Get a tailored walkthrough, with no obligation.", "cta_button": "Request Demo", "art_eyebrow_matter": "Matter tracking", "blog_a1_title": "How a client matter tracker reduces routine status calls without weakening the lawyer-client relationship", "art1_lede": "A client-facing page can answer the ordinary question - where are we - without turning every routine step into a phone call. Here is how that works, and what a firm should decide first.", "art_reviewed": "Last reviewed 13 September 2026", "art_byline": "Written by the LexFlow team · Reviewed by the LexFlow onboarding team", "art_note_title": "Language note", "art_related": "Related reading", "blog_a4_title": "Moving off spreadsheets: planning a CRM or case-management migration", "art4_lede": "What to inventory before you migrate, how to handle duplicates, and why retention rules shape the whole plan.", "art4_eyebrow": "CRM & data migration"}, "it": {"nav_features": "Il CRM", "nav_howitworks": "Come funziona", "nav_pricing": "Funzioni e prezzi", "nav_practice": "Aree di attività", "nav_faq": "FAQ", "nav_blog": "Blog", "nav_signin": "Accedi", "nav_demo": "Prenota una demo", "ctrl_theme": "Attiva o disattiva il tema chiaro o scuro", "ctrl_lang": "Cambia lingua", "footer_text": "LexFlow © 2026. Tutti i diritti riservati.", "footer_credit": "Progettato da AVibe Agency", "cta_title": "Scopri LexFlow nel tuo studio", "cta_lede": "Una demo su misura, senza impegno.", "cta_button": "Richiedi una demo", "art_eyebrow_matter": "Monitoraggio delle pratiche", "blog_a1_title": "Come un tracker delle pratiche riduce le telefonate di routine senza indebolire il rapporto avvocato-cliente", "art1_lede": "Una pagina dedicata al cliente può rispondere alla domanda più comune - a che punto siamo - senza trasformare ogni passaggio di routine in una telefonata. Ecco come funziona e cosa conviene decidere prima.", "art_reviewed": "Ultima revisione 13 settembre 2026", "art_byline": "Scritto dal team LexFlow · Revisionato dal team di onboarding LexFlow", "art_note_title": "Nota sulla lingua", "art_related": "Letture correlate", "blog_a4_title": "Dalle tabelle a una CRM: come pianificare la migrazione a un sistema di gestione dello studio", "art4_lede": "Che cosa censire prima della migrazione, come gestire i duplicati e perché le regole di conservazione guidano l’intero piano.", "art4_eyebrow": "CRM & data migration"}, "ru": {"nav_features": "О CRM", "nav_howitworks": "Как это работает", "nav_pricing": "Функции и цены", "nav_practice": "Отрасли права", "nav_faq": "Вопросы", "nav_blog": "Блог", "nav_signin": "Войти", "nav_demo": "Заказать демо", "ctrl_theme": "Переключить светлую или тёмную тему", "ctrl_lang": "Сменить язык", "footer_text": "LexFlow © 2026. Все права защищены.", "footer_credit": "Дизайн: AVibe Agency", "cta_title": "Посмотрите LexFlow в вашей фирме", "cta_lede": "Индивидуальный обзор, без обязательств.", "cta_button": "Запросить демо", "art_eyebrow_matter": "Ведение дел", "blog_a1_title": "Как трекер дел снижает число рутинных звонков и не ослабляет связь между юристом и клиентом", "art1_lede": "Страница для клиента отвечает на обычный вопрос - на каком этапе дело - не превращая каждый рутинный шаг в звонок. Вот как это работает и что стоит решить заранее.", "art_reviewed": "Последняя проверка 13 сентября 2026 года", "art_byline": "Автор: команда LexFlow · Проверено командой онбординга LexFlow", "art_note_title": "Примечание о языке", "art_related": "Связанные материалы", "blog_a4_title": "Переход от таблиц: как спланировать миграцию в CRM или систему управления юридической практикой", "art4_lede": "Что нужно учесть до переноса данных, как работать с дублями и почему правила хранения определяют весь план.", "art4_eyebrow": "CRM & data migration"}};
+</script>
+
+<script src="../assets/site-config.js"></script>
+<script src="../assets/i18n-ui.js"></script>
+<script src="../assets/i18n.js"></script>
+<script>
+/* Apply localised aria-labels for the theme and language controls after i18n loads. */
+(function(){
+  function syncAria(){
+    var lang = document.documentElement.getAttribute('lang') || 'en';
+    var dict = (window.I18N && window.I18N[lang]) ? window.I18N[lang] : (window.I18N && window.I18N.en) || {};
+    document.querySelectorAll('[data-i18n-aria]').forEach(function(el){
+      var key = el.getAttribute('data-i18n-aria');
+      var val = dict[key] || (window.I18N && window.I18N.en && window.I18N.en[key]);
+      if (val) { el.setAttribute('aria-label', val); }
+    });
+  }
+  document.addEventListener('DOMContentLoaded', syncAria);
+  document.querySelectorAll('.lang-menu button').forEach(function(b){
+    b.addEventListener('click', function(){ setTimeout(syncAria, 0); });
+  });
+})();
+</script>
+<!-- ELISA WIDGET:START -->
+<div class="elisa-widget" id="elisaWidget">
+
+  <div class="elisa-panel" id="elisaPanel" role="dialog" aria-labelledby="elisaName">
+    <div class="elisa-header">
+      <img class="elisa-header-avatar" src="../assets/elisa-avatar.png"
+           alt="" aria-hidden="true" width="56" height="56" loading="lazy">
+      <div class="elisa-header-info">
+        <h3 id="elisaName">Elisa</h3>
+        <p class="elisa-role" id="elisaRole">LexFlow's digital intake assistant</p>
+        <p class="elisa-status"><span class="elisa-online-dot" aria-hidden="true"></span><span id="elisaStatus">Online — intake only</span></p>
+      </div>
+      <div class="elisa-controls">
+        <button class="elisa-control" id="elisaMinBtn" type="button" aria-label="Minimise assistant">&#8211;</button>
+        <button class="elisa-control" id="elisaCloseBtn" type="button" aria-label="Close assistant">&times;</button>
+      </div>
+    </div>
+
+    <div class="elisa-body">
+
+      <div class="elisa-log" id="elisaLog" role="log" aria-live="polite" aria-label="Conversation with Elisa">
+        <div class="elisa-row">
+          <img class="elisa-msg-avatar" src="../assets/elisa-avatar.png"
+               alt="" aria-hidden="true" width="28" height="28" loading="lazy">
+          <div class="elisa-bubble" id="elisaGreeting">Hi! I'm Elisa, LexFlow's digital intake assistant. I can gather the first details of your request and pass them into the firm's structured intake flow. How can I help?</div>
+        </div>
+      </div>
+
+      <div class="elisa-thinking" id="elisaThinking" hidden>
+        <span class="elisa-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span id="elisaThinkingLabel">Elisa is typing…</span>
+      </div>
+
+      <p class="elisa-chips-label" id="elisaChipsLabel">Suggested topics</p>
+      <div class="elisa-chips" id="elisaChips">
+        <button class="elisa-chip" type="button" data-chip="new">New matter</button>
+        <button class="elisa-chip" type="button" data-chip="status">Matter status</button>
+        <button class="elisa-chip" type="button" data-chip="urgent">Urgent</button>
+        <button class="elisa-chip" type="button" data-chip="pricing">Plans &amp; pricing</button>
+      </div>
+
+      <div class="elisa-composer">
+        <label class="elisa-visually-hidden" for="elisaInput">Write your message to Elisa</label>
+        <input id="elisaInput" type="text" placeholder="e.g. Contract review before a 15 October deadline" autocomplete="off">
+        <button class="elisa-send" id="elisaSend" type="button">Send request</button>
+      </div>
+
+      <details class="elisa-struct">
+        <summary id="elisaIntakeTitle">Tell us about the request</summary>
+        <div class="elisa-struct-grid">
+          <div class="elisa-field">
+            <label for="elisaPractice" id="elisaL_practice">Practice area</label>
+            <select id="elisaPractice">
+              <option data-area="civil" value="civil">Civil law</option>
+              <option data-area="corporate" value="corporate">Corporate &amp; business</option>
+              <option data-area="family" value="family">Family law</option>
+              <option data-area="criminal" value="criminal">Criminal defence</option>
+              <option data-area="realestate" value="realestate">Real estate</option>
+              <option data-area="ip" value="ip">Intellectual property</option>
+              <option data-area="immigration" value="immigration">Immigration</option>
+              <option data-area="labour" value="labour">Labour &amp; employment</option>
+              <option data-area="administrative" value="administrative">Administrative</option>
+              <option data-area="other" value="other">Other / not sure</option>
+            </select>
+          </div>
+          <div class="elisa-field">
+            <label for="elisaStatusSel" id="elisaL_status">Matter status</label>
+            <select id="elisaStatusSel">
+              <option data-st="new" value="new">New request</option>
+              <option data-st="review" value="review">Under review</option>
+              <option data-st="existing" value="existing">Existing matter</option>
+            </select>
+          </div>
+          <div class="elisa-field">
+            <label for="elisaUrgency" id="elisaL_urgency">Urgency</label>
+            <select id="elisaUrgency">
+              <option data-urg="low" value="low">Low</option>
+              <option data-urg="medium" value="medium" selected>Medium</option>
+              <option data-urg="high" value="high">High</option>
+              <option data-urg="critical" value="critical">Critical</option>
+            </select>
+          </div>
+          <div class="elisa-field">
+            <span class="elisa-field-label" id="elisaUrgencyLabel">How urgent is this?</span>
+            <div class="elisa-urg-chips">
+              <button class="elisa-urg" type="button" data-urg="low">Low</button>
+              <button class="elisa-urg" type="button" data-urg="medium">Medium</button>
+              <button class="elisa-urg" type="button" data-urg="high">High</button>
+              <button class="elisa-urg" type="button" data-urg="critical">Critical</button>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <p class="elisa-disclaimer" id="elisaDisclaimer">Elisa does not give legal advice and does not replace a lawyer.</p>
+
+      <a class="elisa-wa" id="elisaWa" href="https://wa.me/393450234084" target="_blank" rel="noopener">Continue on WhatsApp</a>
+      <p class="elisa-escalate" id="elisaEscalate">Urgent matter? Call the firm directly.</p>
+
+      <p class="elisa-privacy"><span id="elisaPrivacy">Do not send confidential case details here. Internal firm notes are never shown to clients.</span>
+        <a id="elisaPrivacyLink" href="../privacy.html">Privacy policy</a>
+      </p>
+    </div>
+  </div>
+
+  <button class="elisa-launcher" id="elisaLauncher" type="button"
+          aria-expanded="false" aria-controls="elisaPanel"
+          aria-label="Talk to Elisa — LexFlow's digital intake assistant">
+    <img class="elisa-launcher-avatar" id="elisaAvatar" src="../assets/elisa-avatar.png"
+         alt="" aria-hidden="true" width="34" height="34" loading="lazy">
+    <span id="elisaLauncherLabel">Talk to Elisa</span>
+  </button>
+</div>
+<!-- ELISA WIDGET:END -->
+<script src="../assets/elisa-widget.js"></script>
+<script src="../assets/forms.js"></script>
+<a class="wa-float" href="https://wa.me/393450234084" target="_blank" rel="noopener" data-i18n-aria="aria_wa" aria-label="Scrivi su WhatsApp" data-webhook="whatsapp-float">💬</a>
+</body>
+</html>

@@ -51,6 +51,9 @@ CONTENT_PAGES = [
     "lexflow-blog.html",
     "lexflow-article-matter-tracker.html",
     "lexflow-article-client-intake.html",
+    "lexflow-article-client-communication.html",
+    "lexflow-article-crm-migration.html",
+    "lexflow-article-law-firm-automation.html",
 ]
 # English-only pages: linked from the language folders with ../ but not localised.
 EN_ONLY_PAGES = ["privacy.html", "terms.html"]
@@ -60,7 +63,19 @@ LANGS = ["it", "ru"]
 # Localised <title> and meta description per page. Without these the most
 # SEO-visible elements would stay English on an /it/ or /ru/ URL.
 META = {
-    "lexflow-index.html": {
+        "lexflow-article-client-communication.html": {
+        "it": ("Meno interruzioni, conversazioni migliori: la comunicazione con i clienti nei piccoli studi legali — LexFlow", "Come definire aggiornamenti, tempi di risposta e contatti urgenti senza promettere ciò che lo studio non può garantire."),
+        "ru": ("Меньше отвлечений, больше содержательных разговоров: коммуникация с клиентами в небольшой юридической фирме — LexFlow", "Как договориться об обновлениях, сроках ответа и срочных контактах, не обещая того, что фирма не сможет выполнить."),
+    },
+    "lexflow-article-crm-migration.html": {
+        "it": ("Dalle tabelle a una CRM: come pianificare la migrazione a un sistema di gestione dello studio — LexFlow", "Che cosa censire prima della migrazione, come gestire i duplicati e perché le regole di conservazione guidano l’intero piano."),
+        "ru": ("Переход от таблиц: как спланировать миграцию в CRM или систему управления юридической практикой — LexFlow", "Что нужно учесть до переноса данных, как работать с дублями и почему правила хранения определяют весь план."),
+    },
+    "lexflow-article-law-firm-automation.html": {
+        "it": ("Automazione che aiuta un piccolo studio — e automazione che crea costi senza farsi notare — LexFlow", "Dove promemoria, checklist e instradamento fanno risparmiare tempo, e dove una decisione deve restare a una persona."),
+        "ru": ("Автоматизация, которая помогает небольшой юридической фирме, — и автоматизация, которая незаметно создаёт расходы — LexFlow", "Где напоминания, чек-листы и маршрутизация действительно экономят время, а где решение должно оставаться за человеком."),
+    },
+"lexflow-index.html": {
         "it": ("LexFlow — Gestione dello studio legale in un unico spazio",
                "LexFlow riunisce pratiche, attività, scadenze, intake dei clienti e comunicazione in un unico spazio di lavoro per studio legale. I clienti non installano nulla e non usano password: accedono tramite link protetto da token."),
         "ru": ("LexFlow — управление юридической практикой в одном месте",
@@ -455,6 +470,9 @@ def write_sitemap():
         "lexflow-blog.html": ("weekly", "0.6"),
         "lexflow-article-matter-tracker.html": ("yearly", "0.6"),
         "lexflow-article-client-intake.html": ("yearly", "0.6"),
+        "lexflow-article-client-communication.html": ("yearly", "0.6"),
+        "lexflow-article-crm-migration.html": ("yearly", "0.6"),
+        "lexflow-article-law-firm-automation.html": ("yearly", "0.6"),
     }
     LASTMOD = "2026-09-13"
     lines = ['<?xml version="1.0" encoding="UTF-8"?>',
@@ -491,6 +509,40 @@ def write_sitemap():
     print(f"sitemap.xml written with {n} URLs")
 
 
+
+
+# ---- localized article bodies (from templates/article_content.py) ----
+import importlib.util as _ilu
+_ac = pathlib.Path(__file__).resolve().parent / "article_content.py"
+_spec = _ilu.spec_from_file_location("_article_content", _ac)
+_artmod = _ilu.module_from_spec(_spec)
+_spec.loader.exec_module(_artmod)
+ARTICLES = getattr(_artmod, "ARTICLES", {})
+
+
+def apply_article(html: str, art: dict) -> str:
+    """Write the localised article content into a generated page."""
+    html = re.sub(r'(data-i18n="[a-z0-9_]*eyebrow[a-z0-9_]*">)[^<]*',
+                  lambda m: m.group(1) + art["eyebrow"], html)
+    html = re.sub(r'(data-i18n="blog_a\d_title">)[^<]*',
+                  lambda m: m.group(1) + art["title"], html)
+    html = re.sub(r'(data-i18n="art\d_lede">)[^<]*',
+                  lambda m: m.group(1) + art["lede"], html)
+    def set_body(m):
+        return m.group(1) + "\n" + art["body"] + "\n\n" + m.group(2)
+    html = re.sub(r'(<article class="article prose">).*?(<div class="article-cta">)',
+                  set_body, html, flags=re.S)
+    if art.get("cta"):
+        html = re.sub(r'(<div class="article-cta">).*?(</div>)',
+                      lambda m: m.group(1) + "\n        <p style=\"margin:0\">" + art["cta"] + "</p>\n      " + m.group(2),
+                      html, flags=re.S)
+    if art.get("related"):
+        html = re.sub(r'(<ul class="related">).*?(</ul>)',
+                      lambda m: m.group(1) + "\n        " + art["related"] + "\n      " + m.group(2),
+                      html, flags=re.S)
+    return html
+
+
 def main():
     # Snapshot every English page's title. A previous bug overwrote all English
     # pages with the last localised page because a loop reused a stale variable;
@@ -515,6 +567,8 @@ def main():
             for source in (base.get("en", {}), shared.get("en", {}), base.get(lang, {}), shared.get(lang, {})):
                 merged.update(source)
             html, stats = localise_html(src, merged, lang)
+            if page in ARTICLES and lang != "en" and ARTICLES[page].get(lang):
+                html = apply_article(html, ARTICLES[page][lang])
             title, desc = META.get(page, {}).get(lang, (None, None))
             html = rewrite_head(html, page, lang, depth=1, title=title, desc=desc)
             html = nest_paths(html)
