@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Moving off spreadsheets: planning a CRM or case-management migration — LexFlow</title>
-<meta name="description" content="What to inventory before a CRM or case-management migration, how to handle duplicates, and why retention rules shape the plan.">
+<title>CRM and data migration: move the history, not the disorder — LexFlow</title>
+<meta name="description" content="Moving from spreadsheets and older tools into a CRM is not a matter of importing every column and hoping for the best.">
 <link rel="alternate" hreflang="en" href="https://lexflow.example.com/lexflow-article-crm-migration.html">
 <link rel="alternate" hreflang="it" href="https://lexflow.example.com/it/lexflow-article-crm-migration.html">
 <link rel="alternate" hreflang="ru" href="https://lexflow.example.com/ru/lexflow-article-crm-migration.html">
@@ -88,9 +88,9 @@
 
 <header class="page-hero">
   <div class="wrap">
-    <span class="eyebrow" data-i18n="art4_eyebrow">CRM & data migration</span>
-    <h1 data-i18n="blog_a4_title">Moving off spreadsheets: planning a CRM or case-management migration</h1>
-    <p class="lede" data-i18n="art4_lede">What to inventory before you migrate, how to handle duplicates, and why retention rules shape the whole plan.</p>
+    <span class="eyebrow" data-i18n="art4_eyebrow">CRM migration</span>
+    <h1 data-i18n="blog_a4_title">CRM and data migration: move the history, not the disorder</h1>
+    <p class="lede" data-i18n="art4_lede">Moving from spreadsheets and older tools into a CRM is not a matter of importing every column and hoping for the best.</p>
     <p class="article-meta"><em data-i18n="art_reviewed">Last reviewed 13 September 2026</em></p>
     <p class="article-byline" data-i18n="art_byline">Written by the LexFlow team · Reviewed by the LexFlow onboarding team</p>
   </div>
@@ -100,43 +100,51 @@
   <div class="wrap">
     <article class="article prose">
 
-<p>A spreadsheet is often the right place to start. It is quick, familiar and flexible enough to hold a growing list of clients, matters, contacts and deadlines. The problem appears later: several versions start circulating, ownership becomes unclear and no one can say with confidence which row is current.</p>
-<p>Moving to a CRM or case-management system is not mainly a software project. It is a decision about how the firm will organise information from now on. A careful migration begins before any data is imported.</p>
-<h2>Inventory what you have</h2>
-<p>List every place where matter information currently lives: spreadsheets, shared drives, individual inboxes, practice-area tools, accounting systems, paper files and client-contact lists. Do not assume the biggest spreadsheet is the whole picture. Often the most important fields sit in a colleague’s private workbook or a folder everyone has stopped opening.</p>
-<p>For each source, note the owner, purpose, information types, quality and whether the data is still needed. This turns a vague clean-up task into a manageable map.</p>
-<h2>Decide what moves</h2>
-<p>Not every historical row belongs in the new system. Separate active matters, recent closed matters, archived records and data that should be deleted under the firm’s retention rules. Migration is an opportunity to remove duplicates and obsolete contact details, not to reproduce years of disorder in a better interface.</p>
-<p>Set a simple rule for uncertain records. For example: migrate active matters in full; migrate closed matters from the last defined period with core information only; retain older material in a controlled archive where required. The exact rule depends on the firm’s policies and obligations.</p>
-<h2>Clean duplicates before import</h2>
-<p>Duplicates are not only identical names. One client may appear with a personal email in one list, a work email in another and a surname spelled differently in a third. Agree on matching rules before the import: which fields identify the same person, who resolves uncertain matches and which record becomes the master record.</p>
-<p>Do not ask the migration tool to make judgement calls that staff have not defined. Automation can flag likely duplicates. A responsible person should decide whether records are merged, kept separate or marked for follow-up.</p>
-<h2>Map fields to real work</h2>
-<p>A new system may offer dozens of fields. Start with the fields that support daily work: client and contact details, matter reference, responsible lawyer, practice area, stage, key dates, document links and communication status. If a field has no clear owner or practical use, do not import it merely because it exists in an old file.</p>
-<p>Write a short field map showing where each source field goes, what format it requires and how exceptions are handled. This is useful during import and invaluable six months later, when someone asks why a category looks inconsistent.</p>
-<h2>Test with a small sample</h2>
-<p>Run a test migration with a representative group of records before moving everything. Include clean files, incomplete files, duplicates, matters with multiple contacts and unusual dates. Ask the people who will use the system to check the results in their normal workflow.</p>
-<p>A test should answer practical questions: can staff find the right matter quickly? Are responsibilities visible? Did dates preserve the correct format? Are permissions appropriate? Can the team see what was not imported? Fix the mapping now, while the impact is small.</p>
-<h2>Plan the cutover</h2>
-<p>Choose a cutover date and state clearly what happens to the old system afterwards. Will it become read-only? Who can correct legacy data? Where will new matters be created from that date? A migration fails socially when staff continue updating the spreadsheet because it feels safer than the new process.</p>
-<p>Give the team a short operating guide and a place to ask questions. In the first weeks, review common errors and refine the setup. Small adjustments made early are far cheaper than repairing a parallel system later.</p>
-<h2>Scope note</h2>
-<p>LexFlow can support organised intake, matter records, responsibilities and client-facing updates. The exact migration process, fields, integrations, retention periods and permissions depend on the firm’s existing systems and chosen deployment. Confirm the approach for your own environment before importing client information.</p>
+<p>Moving from spreadsheets and older tools into a CRM is not a matter of importing every column and hoping for the best. It is a controlled decision about what the firm has, what it still needs and how people will find the history after the move.</p>
+<p>A careful migration protects more than data. It protects deadlines, relationships and the small pieces of context that explain why a matter looks the way it does.</p>
+<h3>1. Inventory the sources</h3>
+<p>List every place that holds relevant information: spreadsheets, inboxes, contact lists, shared drives, document systems, billing tools and old practice-management platforms. Include exports created by individuals; the unofficial spreadsheet is often where the inconvenient truth lives.</p>
+<p>Record the owner, format, date range, sensitivity and intended destination for each source. If nobody can explain a dataset, do not import it blindly.</p>
+<h3>2. Decide what should move</h3>
+<p>Separate active records, historical records, duplicates, incomplete entries and material that has reached its authorised retention limit. Migration is not a reason to keep everything forever.</p>
+<p>Agree the scope with the people who use the records. A field that looks obsolete to a migration team may explain years of client history to the lawyer who relies on it.</p>
+<h3>3. Clean and map the data</h3>
+<p>Standardise names, dates, status values and identifiers before import. Decide how every source field maps to the new system and document any transformation. “Client”, “contact” and “other party” are not interchangeable simply because they all contain names.</p>
+<p>Keep a mapping table and an exception list. They make testing possible and prevent quiet improvisation during the final import.</p>
+<h3>4. Test with a representative sample</h3>
+<p>Run a test migration using active, closed, simple and complicated matters. Check not only that records exist, but that relationships, dates, notes, permissions and documents remain attached correctly.</p>
+<p>Ask real users to test familiar records in a safe environment. They will spot practical gaps that a technically perfect row count cannot reveal.</p>
+<h3>5. Plan the cutover</h3>
+<p>Set a final export time, define which system is the source of truth and explain what staff may enter during the changeover. Without a cutover rule, both systems continue changing and the firm ends up with two plausible versions of reality.</p>
+<p>Prepare a rollback plan and keep protected source exports until the migration has been accepted under the firm’s retention and security rules.</p>
+<h3>6. Validate and support</h3>
+<p>After import, compare record counts, samples, key dates, ownership and document links. Log exceptions, assign them and obtain formal approval before decommissioning the old system.</p>
+<p>Provide short, role-based guidance for the first working days. Migration does not finish when the upload bar reaches 100%; it finishes when staff can find what they need and trust what they see.</p>
+<h3>The migration flow at a glance</h3>
+<ol>
+<li>Inventory every relevant source and integration.</li>
+<li>Define scope, retention and ownership.</li>
+<li>Clean, map and document the data.</li>
+<li>Test representative records with users.</li>
+<li>Run a controlled cutover with rollback available.</li>
+<li>Validate, approve and support the live system.</li>
+</ol>
+<h3>Scope note</h3>
+<p>Migration requirements vary by source system, jurisdiction, record type and firm policy. LexFlow can structure imported contacts, enquiries, matters, responsibilities and histories, but source quality and agreed mapping determine the result. Keep secure backups, restrict migration access and verify the final dataset before retiring earlier tools.</p>
+<p>Explore <a href="http://localhost:9097/lexflow-how-it-works.html">how LexFlow works from intake to resolution</a>, or <a href="http://localhost:9097/lexflow-index.html#intake">request a migration-focused walkthrough</a>.</p>
 
 <div class="article-cta">
-        <p style="margin:0">Want to see a client-facing matter page before you decide anything? <a href="lexflow-index.html#intake">Request a walkthrough and demo</a>, or compare plans on the <a href="lexflow-pricing.html">pricing page</a>.</p>
+        <p style="margin:0">Curious how this would look in your firm? <a href="lexflow-index.html#intake">Request a walkthrough and demo</a>, or compare plans on the <a href="lexflow-pricing.html">pricing page</a>.</p>
       </div>
 
       <h2 data-i18n="art_related">Related reading</h2>
       <ul class="related">
-        <li><a href="lexflow-article-client-intake.html">From first enquiry to organised matter: a client-intake workflow</a></li>
-        <li><a href="lexflow-article-client-communication.html">Client communication for small firms</a></li>
-        <li><a href="lexflow-how-it-works.html">How LexFlow works, from intake to resolution</a></li>
-        <li><a href="lexflow-faq.html#glossary">Glossary of practice-management terms</a></li>
-        <li><a href="lexflow-blog.html">Back to the blog hub</a></li>
+        <li><a href="lexflow-article-adoption-in-small-firm.html">Adoption in a small firm: change the system without stopping billable work</a></li>
+        <li><a href="lexflow-article-client-communication.html">Client communication: set expectations before silence becomes a problem</a></li>
+        <li><a href="lexflow-article-matter-tracker.html">lexflow-article-matter-tracker.html</a></li>
+        <li><a href="lexflow-faq.html#glossary">lexflow-faq.html#glossary</a></li>
+        <li><a href="lexflow-blog.html">lexflow-blog.html</a></li>
       
-
-          </ul>
 
     </article>
   </div>
@@ -189,7 +197,7 @@
 </footer>
 
 <script>
-window.I18N = {"en": {"nav_features": "About CRM", "nav_howitworks": "How It Works", "nav_pricing": "Features & Pricing", "nav_practice": "Practice Areas", "nav_faq": "FAQ", "nav_blog": "Blog", "nav_signin": "Sign in", "nav_demo": "Book a Demo", "ctrl_theme": "Toggle dark/light theme", "ctrl_lang": "Change language", "footer_text": "LexFlow © 2026. All rights reserved.", "footer_credit": "Designed by AVibe Agency", "cta_title": "See LexFlow in your firm", "cta_lede": "Get a tailored walkthrough, with no obligation.", "cta_button": "Request Demo", "art_eyebrow_matter": "Matter tracking", "blog_a1_title": "How a client matter tracker reduces routine status calls without weakening the lawyer-client relationship", "art1_lede": "A client-facing page can answer the ordinary question - where are we - without turning every routine step into a phone call. Here is how that works, and what a firm should decide first.", "art_reviewed": "Last reviewed 13 September 2026", "art_byline": "Written by the LexFlow team · Reviewed by the LexFlow onboarding team", "art_note_title": "Language note", "art_related": "Related reading", "blog_a4_title": "Moving off spreadsheets: planning a CRM or case-management migration", "art4_lede": "What to inventory before you migrate, how to handle duplicates, and why retention rules shape the whole plan.", "art4_eyebrow": "CRM & data migration"}, "it": {"nav_features": "Il CRM", "nav_howitworks": "Come funziona", "nav_pricing": "Funzioni e prezzi", "nav_practice": "Aree di attività", "nav_faq": "FAQ", "nav_blog": "Blog", "nav_signin": "Accedi", "nav_demo": "Prenota una demo", "ctrl_theme": "Attiva o disattiva il tema chiaro o scuro", "ctrl_lang": "Cambia lingua", "footer_text": "LexFlow © 2026. Tutti i diritti riservati.", "footer_credit": "Progettato da AVibe Agency", "cta_title": "Scopri LexFlow nel tuo studio", "cta_lede": "Una demo su misura, senza impegno.", "cta_button": "Richiedi una demo", "art_eyebrow_matter": "Monitoraggio delle pratiche", "blog_a1_title": "Come un tracker delle pratiche riduce le telefonate di routine senza indebolire il rapporto avvocato-cliente", "art1_lede": "Una pagina dedicata al cliente può rispondere alla domanda più comune - a che punto siamo - senza trasformare ogni passaggio di routine in una telefonata. Ecco come funziona e cosa conviene decidere prima.", "art_reviewed": "Ultima revisione 13 settembre 2026", "art_byline": "Scritto dal team LexFlow · Revisionato dal team di onboarding LexFlow", "art_note_title": "Nota sulla lingua", "art_related": "Letture correlate", "blog_a4_title": "Dalle tabelle a una CRM: come pianificare la migrazione a un sistema di gestione dello studio", "art4_lede": "Che cosa censire prima della migrazione, come gestire i duplicati e perché le regole di conservazione guidano l’intero piano.", "art4_eyebrow": "CRM & data migration"}, "ru": {"nav_features": "О CRM", "nav_howitworks": "Как это работает", "nav_pricing": "Функции и цены", "nav_practice": "Отрасли права", "nav_faq": "Вопросы", "nav_blog": "Блог", "nav_signin": "Войти", "nav_demo": "Заказать демо", "ctrl_theme": "Переключить светлую или тёмную тему", "ctrl_lang": "Сменить язык", "footer_text": "LexFlow © 2026. Все права защищены.", "footer_credit": "Дизайн: AVibe Agency", "cta_title": "Посмотрите LexFlow в вашей фирме", "cta_lede": "Индивидуальный обзор, без обязательств.", "cta_button": "Запросить демо", "art_eyebrow_matter": "Ведение дел", "blog_a1_title": "Как трекер дел снижает число рутинных звонков и не ослабляет связь между юристом и клиентом", "art1_lede": "Страница для клиента отвечает на обычный вопрос - на каком этапе дело - не превращая каждый рутинный шаг в звонок. Вот как это работает и что стоит решить заранее.", "art_reviewed": "Последняя проверка 13 сентября 2026 года", "art_byline": "Автор: команда LexFlow · Проверено командой онбординга LexFlow", "art_note_title": "Примечание о языке", "art_related": "Связанные материалы", "blog_a4_title": "Переход от таблиц: как спланировать миграцию в CRM или систему управления юридической практикой", "art4_lede": "Что нужно учесть до переноса данных, как работать с дублями и почему правила хранения определяют весь план.", "art4_eyebrow": "CRM & data migration"}};
+window.I18N = {"en": {"nav_features": "About CRM", "nav_howitworks": "How It Works", "nav_pricing": "Features & Pricing", "nav_practice": "Practice Areas", "nav_faq": "FAQ", "nav_blog": "Blog", "nav_signin": "Sign in", "nav_demo": "Book a Demo", "ctrl_theme": "Toggle dark/light theme", "ctrl_lang": "Change language", "footer_text": "LexFlow © 2026. All rights reserved.", "footer_credit": "Designed by AVibe Agency", "cta_title": "See LexFlow in your firm", "cta_lede": "Get a tailored walkthrough, with no obligation.", "cta_button": "Request Demo", "art_eyebrow_matter": "Matter tracking", "blog_a1_title": "How a client matter tracker reduces routine status calls without weakening the lawyer-client relationship", "art1_lede": "A client-facing page can answer the ordinary question - where are we - without turning every routine step into a phone call. Here is how that works, and what a firm should decide first.", "art_reviewed": "Last reviewed 13 September 2026", "art_byline": "Written by the LexFlow team · Reviewed by the LexFlow onboarding team", "art_note_title": "Language note", "art_related": "Related reading", "blog_a4_title": "CRM and data migration: move the history, not the disorder", "art4_lede": "Moving from spreadsheets and older tools into a CRM is not a matter of importing every column and hoping for the best.", "art4_eyebrow": "CRM migration"}, "it": {"nav_features": "Il CRM", "nav_howitworks": "Come funziona", "nav_pricing": "Funzioni e prezzi", "nav_practice": "Aree di attività", "nav_faq": "FAQ", "nav_blog": "Blog", "nav_signin": "Accedi", "nav_demo": "Prenota una demo", "ctrl_theme": "Attiva o disattiva il tema chiaro o scuro", "ctrl_lang": "Cambia lingua", "footer_text": "LexFlow © 2026. Tutti i diritti riservati.", "footer_credit": "Progettato da AVibe Agency", "cta_title": "Scopri LexFlow nel tuo studio", "cta_lede": "Una demo su misura, senza impegno.", "cta_button": "Richiedi una demo", "art_eyebrow_matter": "Monitoraggio delle pratiche", "blog_a1_title": "Come un tracker delle pratiche riduce le telefonate di routine senza indebolire il rapporto avvocato-cliente", "art1_lede": "Una pagina dedicata al cliente può rispondere alla domanda più comune - a che punto siamo - senza trasformare ogni passaggio di routine in una telefonata. Ecco come funziona e cosa conviene decidere prima.", "art_reviewed": "Ultima revisione 13 settembre 2026", "art_byline": "Scritto dal team LexFlow · Revisionato dal team di onboarding LexFlow", "art_note_title": "Nota sulla lingua", "art_related": "Letture correlate", "blog_a4_title": "CRM e migrazione dei dati: trasferire la storia, non il disordine", "art4_lede": "Passare da fogli di calcolo e strumenti precedenti a un CRM non significa importare ogni colonna e sperare che vada tutto bene.", "art4_eyebrow": "Migrazione CRM"}, "ru": {"nav_features": "О CRM", "nav_howitworks": "Как это работает", "nav_pricing": "Функции и цены", "nav_practice": "Отрасли права", "nav_faq": "Вопросы", "nav_blog": "Блог", "nav_signin": "Войти", "nav_demo": "Заказать демо", "ctrl_theme": "Переключить светлую или тёмную тему", "ctrl_lang": "Сменить язык", "footer_text": "LexFlow © 2026. Все права защищены.", "footer_credit": "Дизайн: AVibe Agency", "cta_title": "Посмотрите LexFlow в вашей фирме", "cta_lede": "Индивидуальный обзор, без обязательств.", "cta_button": "Запросить демо", "art_eyebrow_matter": "Ведение дел", "blog_a1_title": "Как трекер дел снижает число рутинных звонков и не ослабляет связь между юристом и клиентом", "art1_lede": "Страница для клиента отвечает на обычный вопрос - на каком этапе дело - не превращая каждый рутинный шаг в звонок. Вот как это работает и что стоит решить заранее.", "art_reviewed": "Последняя проверка 13 сентября 2026 года", "art_byline": "Автор: команда LexFlow · Проверено командой онбординга LexFlow", "art_note_title": "Примечание о языке", "art_related": "Связанные материалы", "blog_a4_title": "CRM и перенос данных: переносите историю, а не беспорядок", "art4_lede": "Переход от таблиц и старых инструментов к CRM — это не импорт всех столбцов с надеждой, что дальше система разберётся сама.", "art4_eyebrow": "Миграция в CRM"}};
 </script>
 
 <script src="assets/site-config.js"></script>

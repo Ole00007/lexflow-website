@@ -54,6 +54,13 @@ CONTENT_PAGES = [
     "lexflow-article-client-communication.html",
     "lexflow-article-crm-migration.html",
     "lexflow-article-law-firm-automation.html",
+    "lexflow-article-security-privacy.html",
+
+    "lexflow-article-ai-assisted-operations.html",
+
+    "lexflow-article-law-firm-workflows.html",
+
+    "lexflow-article-adoption-in-small-firm.html",
 ]
 # English-only pages: linked from the language folders with ../ but not localised.
 EN_ONLY_PAGES = ["privacy.html", "terms.html", "cookie-policy.html"]
@@ -63,6 +70,31 @@ LANGS = ["it", "ru"]
 # Localised <title> and meta description per page. Without these the most
 # SEO-visible elements would stay English on an /it/ or /ru/ URL.
 META = {
+    "lexflow-article-security-privacy.html": {
+        "it": ("Sicurezza e privacy: trasformare gli standard riconosciuti in abitudini quotidiane — LexFlow", "Uno studio legale non protegge le informazioni dei clienti esibendo sul sito un rassicurante simbolo di sicurezza."),
+    },
+    "lexflow-article-security-privacy.html": {
+        "ru": ("Безопасность и конфиденциальность: превратите признанные стандарты в ежедневные привычки — LexFlow", "Юридическое бюро защищает клиентские данные не знакомым значком безопасности на сайте."),
+    },
+    "lexflow-article-ai-assisted-operations.html": {
+        "it": ("Operatività assistita dall’IA: supporto verificabile, mai giudizio invisibile — LexFlow", "L’IA può aiutare uno studio legale a estrarre informazioni, organizzare materiali e preparare una prima bozza."),
+    },
+    "lexflow-article-ai-assisted-operations.html": {
+        "ru": ("Работа с поддержкой ИИ: проверяемая помощь вместо невидимых решений — LexFlow", "ИИ может извлекать сведения, упорядочивать материалы и готовить первый черновик."),
+    },
+    "lexflow-article-law-firm-workflows.html": {
+        "it": ("Flussi di lavoro dello studio: progettare i passaggi tra assistente, avvocato e cliente — LexFlow", "Un flusso di lavoro non è un diagramma colorato del comportamento ideale."),
+    },
+    "lexflow-article-law-firm-workflows.html": {
+        "ru": ("Рабочие процессы бюро: продумайте передачу между помощником, юристом и клиентом — LexFlow", "Рабочий процесс — это не цветная схема идеального поведения."),
+    },
+    "lexflow-article-adoption-in-small-firm.html": {
+        "it": ("Adozione in uno studio di piccole dimensioni: cambiare sistema senza fermare il lavoro fatturabile — LexFlow", "Introdurre un nuovo software in uno studio di 5–20 persone non può diventare un secondo lavoro a tempo pieno."),
+    },
+    "lexflow-article-adoption-in-small-firm.html": {
+        "ru": ("Внедрение в небольшом бюро: измените систему, не останавливая оплачиваемую работу — LexFlow", "Внедрение новой программы в бюро из 5–20 человек не может превратиться во вторую полноценную работу."),
+    },
+
         "lexflow-article-client-communication.html": {
         "it": ("Meno interruzioni, conversazioni migliori: la comunicazione con i clienti nei piccoli studi legali — LexFlow", "Come definire aggiornamenti, tempi di risposta e contatti urgenti senza promettere ciò che lo studio non può garantire."),
         "ru": ("Меньше отвлечений, больше содержательных разговоров: коммуникация с клиентами в небольшой юридической фирме — LexFlow", "Как договориться об обновлениях, сроках ответа и срочных контактах, не обещая того, что фирма не сможет выполнить."),
