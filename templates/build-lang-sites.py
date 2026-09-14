@@ -56,7 +56,7 @@ CONTENT_PAGES = [
     "lexflow-article-law-firm-automation.html",
 ]
 # English-only pages: linked from the language folders with ../ but not localised.
-EN_ONLY_PAGES = ["privacy.html", "terms.html"]
+EN_ONLY_PAGES = ["privacy.html", "terms.html", "cookie-policy.html"]
 
 LANGS = ["it", "ru"]
 

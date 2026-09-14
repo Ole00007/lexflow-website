@@ -400,3 +400,10 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 .footer-legal a{color:var(--text-dim);text-decoration:none;transition:color .2s}
 .footer-legal a:hover{color:var(--gold)}
 .fl-sep{color:var(--border);opacity:.8;font-size:10px}
+
+main.legal{margin:0 auto;padding:84px 20px 60px;max-width:860px}
+main.legal table{width:100%;border-collapse:collapse;margin:18px 0;font-size:13.5px}
+main.legal th,main.legal td{border:1px solid var(--border,rgba(212,175,55,.18));padding:10px 12px;text-align:left;vertical-align:top}
+main.legal th{background:var(--surface-2,#18243A);font-weight:600}
+main.legal td{color:var(--text-dim,#B9C2D0)}
+.legal-note{border-left:3px solid var(--gold,#D4AF37);padding:10px 14px;background:rgba(212,175,55,.08);border-radius:0 8px 8px 0;font-size:13px;color:var(--text-dim,#B9C2D0)}

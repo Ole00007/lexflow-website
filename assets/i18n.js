@@ -214,7 +214,7 @@
     document.querySelectorAll('[data-cookie-settings]').forEach(function (el) {
       el.addEventListener('click', function (e) {
         e.preventDefault();
-        if (window.LEXFLOW_showCookieBanner) window.LEXFLOW_showCookieBanner();
+        if (window.LexConsent) window.LexConsent.openPreferences();
       });
     });
   }
