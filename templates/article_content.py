@@ -6,7 +6,7 @@ ARTICLES = {
       "eyebrow": "Client communication",
       "lede": "Good client communication is not a constant stream of messages.",
       "cta": "Curious how this would look in your firm? <a href=\"lexflow-index.html#intake\">Request a walkthrough and demo</a>, or compare plans on the <a href=\"lexflow-pricing.html\">pricing page</a>.",
-      "related": "<li><a href=\"lexflow-article-law-firm-workflows.html\">Law-firm workflows: design the handoffs between assistant, lawyer and client</a></li>\n        <li><a href=\"lexflow-article-matter-tracker.html\">lexflow-article-matter-tracker.html</a></li>\n        <li><a href=\"lexflow-article-adoption-in-small-firm.html\">Adoption in a small firm: change the system without stopping billable work</a></li>\n        <li><a href=\"lexflow-faq.html\">lexflow-faq.html</a></li>\n        <li><a href=\"lexflow-blog.html\">lexflow-blog.html</a></li>"
+      "related": "<li><a href=\"lexflow-article-law-firm-workflows.html\">Law-firm workflows: design the handoffs between assistant, lawyer and client</a></li>\n        <li><a href=\"lexflow-article-matter-tracker.html\">How a client matter tracker reduces routine status calls without weakening the lawyer-client relationship</a></li>\n        <li><a href=\"lexflow-article-adoption-in-small-firm.html\">Adoption in a small firm: change the system without stopping billable work</a></li>\n        <li><a href=\"lexflow-faq.html\">FAQ</a></li>\n        <li><a href=\"lexflow-blog.html\">Blog</a></li>"
     },
     "ru": {
       "title": "Общение с клиентом: договоритесь заранее, пока молчание не стало проблемой",
@@ -14,7 +14,7 @@ ARTICLES = {
       "eyebrow": "Коммуникация с клиентами",
       "lede": "Хорошая коммуникация — это не бесконечный поток сообщений.",
       "cta": "Интересно, как это будет работать в вашей фирме? <a href=\"lexflow-index.html#intake\">Запросите демонстрацию</a> или сравните тарифы на <a href=\"lexflow-pricing.html\">странице цен</a>.",
-      "related": "<li><a href=\"lexflow-article-law-firm-workflows.html\">Рабочие процессы бюро: продумайте передачу между помощником, юристом и клиентом</a></li>\n        <li><a href=\"lexflow-article-matter-tracker.html\">lexflow-article-matter-tracker.html</a></li>\n        <li><a href=\"lexflow-article-adoption-in-small-firm.html\">Внедрение в небольшом бюро: измените систему, не останавливая оплачиваемую работу</a></li>\n        <li><a href=\"lexflow-faq.html\">lexflow-faq.html</a></li>\n        <li><a href=\"lexflow-blog.html\">lexflow-blog.html</a></li>"
+      "related": "<li><a href=\"lexflow-article-law-firm-workflows.html\">Рабочие процессы бюро: продумайте передачу между помощником, юристом и клиентом</a></li>\n        <li><a href=\"lexflow-article-matter-tracker.html\">Как трекер дел снижает число рутинных звонков и не ослабляет связь между юристом и клиентом</a></li>\n        <li><a href=\"lexflow-article-adoption-in-small-firm.html\">Внедрение в небольшом бюро: измените систему, не останавливая оплачиваемую работу</a></li>\n        <li><a href=\"lexflow-faq.html\">Часто задаваемые вопросы</a></li>\n        <li><a href=\"lexflow-blog.html\">Блог</a></li>"
     },
     "it": {
       "title": "Comunicazione con il cliente: definire le aspettative prima che il silenzio diventi un problema",
@@ -22,7 +22,7 @@ ARTICLES = {
       "eyebrow": "Comunicazione con i clienti",
       "lede": "Una buona comunicazione non è un flusso continuo di messaggi.",
       "cta": "Curioso di vedere come funzionerebbe nel tuo studio? <a href=\"lexflow-index.html#intake\">Richiedi una demo</a> oppure confronta i piani nella <a href=\"lexflow-pricing.html\">pagina dei prezzi</a>.",
-      "related": "<li><a href=\"lexflow-article-law-firm-workflows.html\">Flussi di lavoro dello studio: progettare i passaggi tra assistente, avvocato e cliente</a></li>\n        <li><a href=\"lexflow-article-matter-tracker.html\">lexflow-article-matter-tracker.html</a></li>\n        <li><a href=\"lexflow-article-adoption-in-small-firm.html\">Adozione in uno studio di piccole dimensioni: cambiare sistema senza fermare il lavoro fatturabile</a></li>\n        <li><a href=\"lexflow-faq.html\">lexflow-faq.html</a></li>\n        <li><a href=\"lexflow-blog.html\">lexflow-blog.html</a></li>"
+      "related": "<li><a href=\"lexflow-article-law-firm-workflows.html\">Flussi di lavoro dello studio: progettare i passaggi tra assistente, avvocato e cliente</a></li>\n        <li><a href=\"lexflow-article-matter-tracker.html\">Come un tracker delle pratiche riduce le telefonate di routine senza indebolire il rapporto avvocato-cliente</a></li>\n        <li><a href=\"lexflow-article-adoption-in-small-firm.html\">Adozione in uno studio di piccole dimensioni: cambiare sistema senza fermare il lavoro fatturabile</a></li>\n        <li><a href=\"lexflow-faq.html\">FAQ</a></li>\n        <li><a href=\"lexflow-blog.html\">Blog</a></li>"
     }
   },
   "lexflow-article-law-firm-automation.html": {
@@ -32,7 +32,7 @@ ARTICLES = {
       "eyebrow": "Law-firm automation",
       "lede": "Automation works best in a law firm when it handles predictable administration and leaves professional judgement where it belongs: with people.",
       "cta": "Curious how this would look in your firm? <a href=\"lexflow-index.html#intake\">Request a walkthrough and demo</a>, or compare plans on the <a href=\"lexflow-pricing.html\">pricing page</a>.",
-      "related": "<li><a href=\"lexflow-article-ai-assisted-operations.html\">AI-assisted operations: use reviewable AI, never invisible judgement</a></li>\n        <li><a href=\"lexflow-article-client-communication.html\">Client communication: set expectations before silence becomes a problem</a></li>\n        <li><a href=\"lexflow-article-crm-migration.html\">CRM and data migration: move the history, not the disorder</a></li>\n        <li><a href=\"lexflow-how-it-works.html\">lexflow-how-it-works.html</a></li>\n        <li><a href=\"lexflow-blog.html\">lexflow-blog.html</a></li>"
+      "related": "<li><a href=\"lexflow-article-ai-assisted-operations.html\">AI-assisted operations: use reviewable AI, never invisible judgement</a></li>\n        <li><a href=\"lexflow-article-client-communication.html\">Client communication: set expectations before silence becomes a problem</a></li>\n        <li><a href=\"lexflow-article-crm-migration.html\">CRM and data migration: move the history, not the disorder</a></li>\n        <li><a href=\"lexflow-how-it-works.html\">How it works</a></li>\n        <li><a href=\"lexflow-blog.html\">Blog</a></li>"
     },
     "ru": {
       "title": "Автоматизация юридического бюро: меньше рутины, но решения остаются за людьми",
@@ -40,7 +40,7 @@ ARTICLES = {
       "eyebrow": "Автоматизация для фирмы",
       "lede": "Автоматизация приносит больше всего пользы, когда берёт на себя предсказуемую административную работу, а профессиональные решения оставляет людям.",
       "cta": "Интересно, как это будет работать в вашей фирме? <a href=\"lexflow-index.html#intake\">Запросите демонстрацию</a> или сравните тарифы на <a href=\"lexflow-pricing.html\">странице цен</a>.",
-      "related": "<li><a href=\"lexflow-article-ai-assisted-operations.html\">Работа с поддержкой ИИ: проверяемая помощь вместо невидимых решений</a></li>\n        <li><a href=\"lexflow-article-client-communication.html\">Общение с клиентом: договоритесь заранее, пока молчание не стало проблемой</a></li>\n        <li><a href=\"lexflow-article-crm-migration.html\">CRM и перенос данных: переносите историю, а не беспорядок</a></li>\n        <li><a href=\"lexflow-how-it-works.html\">lexflow-how-it-works.html</a></li>\n        <li><a href=\"lexflow-blog.html\">lexflow-blog.html</a></li>"
+      "related": "<li><a href=\"lexflow-article-ai-assisted-operations.html\">Работа с поддержкой ИИ: проверяемая помощь вместо невидимых решений</a></li>\n        <li><a href=\"lexflow-article-client-communication.html\">Общение с клиентом: договоритесь заранее, пока молчание не стало проблемой</a></li>\n        <li><a href=\"lexflow-article-crm-migration.html\">CRM и перенос данных: переносите историю, а не беспорядок</a></li>\n        <li><a href=\"lexflow-how-it-works.html\">Как это работает</a></li>\n        <li><a href=\"lexflow-blog.html\">Блог</a></li>"
     },
     "it": {
       "title": "Automazione dello studio: eliminare la ripetizione senza automatizzare il giudizio",
@@ -48,7 +48,7 @@ ARTICLES = {
       "eyebrow": "Automazione per lo studio",
       "lede": "L’automazione funziona meglio quando gestisce attività amministrative prevedibili e lascia le decisioni professionali alle persone.",
       "cta": "Curioso di vedere come funzionerebbe nel tuo studio? <a href=\"lexflow-index.html#intake\">Richiedi una demo</a> oppure confronta i piani nella <a href=\"lexflow-pricing.html\">pagina dei prezzi</a>.",
-      "related": "<li><a href=\"lexflow-article-ai-assisted-operations.html\">Operatività assistita dall’IA: supporto verificabile, mai giudizio invisibile</a></li>\n        <li><a href=\"lexflow-article-client-communication.html\">Comunicazione con il cliente: definire le aspettative prima che il silenzio diventi un problema</a></li>\n        <li><a href=\"lexflow-article-crm-migration.html\">CRM e migrazione dei dati: trasferire la storia, non il disordine</a></li>\n        <li><a href=\"lexflow-how-it-works.html\">lexflow-how-it-works.html</a></li>\n        <li><a href=\"lexflow-blog.html\">lexflow-blog.html</a></li>"
+      "related": "<li><a href=\"lexflow-article-ai-assisted-operations.html\">Operatività assistita dall’IA: supporto verificabile, mai giudizio invisibile</a></li>\n        <li><a href=\"lexflow-article-client-communication.html\">Comunicazione con il cliente: definire le aspettative prima che il silenzio diventi un problema</a></li>\n        <li><a href=\"lexflow-article-crm-migration.html\">CRM e migrazione dei dati: trasferire la storia, non il disordine</a></li>\n        <li><a href=\"lexflow-how-it-works.html\">Come funziona</a></li>\n        <li><a href=\"lexflow-blog.html\">Blog</a></li>"
     }
   },
   "lexflow-article-crm-migration.html": {
@@ -58,7 +58,7 @@ ARTICLES = {
       "eyebrow": "CRM migration",
       "lede": "Moving from spreadsheets and older tools into a CRM is not a matter of importing every column and hoping for the best.",
       "cta": "Curious how this would look in your firm? <a href=\"lexflow-index.html#intake\">Request a walkthrough and demo</a>, or compare plans on the <a href=\"lexflow-pricing.html\">pricing page</a>.",
-      "related": "<li><a href=\"lexflow-article-adoption-in-small-firm.html\">Adoption in a small firm: change the system without stopping billable work</a></li>\n        <li><a href=\"lexflow-article-client-communication.html\">Client communication: set expectations before silence becomes a problem</a></li>\n        <li><a href=\"lexflow-article-matter-tracker.html\">lexflow-article-matter-tracker.html</a></li>\n        <li><a href=\"lexflow-faq.html#glossary\">lexflow-faq.html#glossary</a></li>\n        <li><a href=\"lexflow-blog.html\">lexflow-blog.html</a></li>"
+      "related": "<li><a href=\"lexflow-article-adoption-in-small-firm.html\">Adoption in a small firm: change the system without stopping billable work</a></li>\n        <li><a href=\"lexflow-article-client-communication.html\">Client communication: set expectations before silence becomes a problem</a></li>\n        <li><a href=\"lexflow-article-matter-tracker.html\">How a client matter tracker reduces routine status calls without weakening the lawyer-client relationship</a></li>\n        <li><a href=\"lexflow-faq.html#glossary\">FAQ glossary</a></li>\n        <li><a href=\"lexflow-blog.html\">Blog</a></li>"
     },
     "ru": {
       "title": "CRM и перенос данных: переносите историю, а не беспорядок",
@@ -66,7 +66,7 @@ ARTICLES = {
       "eyebrow": "Миграция в CRM",
       "lede": "Переход от таблиц и старых инструментов к CRM — это не импорт всех столбцов с надеждой, что дальше система разберётся сама.",
       "cta": "Интересно, как это будет работать в вашей фирме? <a href=\"lexflow-index.html#intake\">Запросите демонстрацию</a> или сравните тарифы на <a href=\"lexflow-pricing.html\">странице цен</a>.",
-      "related": "<li><a href=\"lexflow-article-adoption-in-small-firm.html\">Внедрение в небольшом бюро: измените систему, не останавливая оплачиваемую работу</a></li>\n        <li><a href=\"lexflow-article-client-communication.html\">Общение с клиентом: договоритесь заранее, пока молчание не стало проблемой</a></li>\n        <li><a href=\"lexflow-article-matter-tracker.html\">lexflow-article-matter-tracker.html</a></li>\n        <li><a href=\"lexflow-faq.html#glossary\">lexflow-faq.html#glossary</a></li>\n        <li><a href=\"lexflow-blog.html\">lexflow-blog.html</a></li>"
+      "related": "<li><a href=\"lexflow-article-adoption-in-small-firm.html\">Внедрение в небольшом бюро: измените систему, не останавливая оплачиваемую работу</a></li>\n        <li><a href=\"lexflow-article-client-communication.html\">Общение с клиентом: договоритесь заранее, пока молчание не стало проблемой</a></li>\n        <li><a href=\"lexflow-article-matter-tracker.html\">Как трекер дел снижает число рутинных звонков и не ослабляет связь между юристом и клиентом</a></li>\n        <li><a href=\"lexflow-faq.html#glossary\">Глоссарий в разделе вопросов</a></li>\n        <li><a href=\"lexflow-blog.html\">Блог</a></li>"
     },
     "it": {
       "title": "CRM e migrazione dei dati: trasferire la storia, non il disordine",
@@ -74,7 +74,7 @@ ARTICLES = {
       "eyebrow": "Migrazione CRM",
       "lede": "Passare da fogli di calcolo e strumenti precedenti a un CRM non significa importare ogni colonna e sperare che vada tutto bene.",
       "cta": "Curioso di vedere come funzionerebbe nel tuo studio? <a href=\"lexflow-index.html#intake\">Richiedi una demo</a> oppure confronta i piani nella <a href=\"lexflow-pricing.html\">pagina dei prezzi</a>.",
-      "related": "<li><a href=\"lexflow-article-adoption-in-small-firm.html\">Adozione in uno studio di piccole dimensioni: cambiare sistema senza fermare il lavoro fatturabile</a></li>\n        <li><a href=\"lexflow-article-client-communication.html\">Comunicazione con il cliente: definire le aspettative prima che il silenzio diventi un problema</a></li>\n        <li><a href=\"lexflow-article-matter-tracker.html\">lexflow-article-matter-tracker.html</a></li>\n        <li><a href=\"lexflow-faq.html#glossary\">lexflow-faq.html#glossary</a></li>\n        <li><a href=\"lexflow-blog.html\">lexflow-blog.html</a></li>"
+      "related": "<li><a href=\"lexflow-article-adoption-in-small-firm.html\">Adozione in uno studio di piccole dimensioni: cambiare sistema senza fermare il lavoro fatturabile</a></li>\n        <li><a href=\"lexflow-article-client-communication.html\">Comunicazione con il cliente: definire le aspettative prima che il silenzio diventi un problema</a></li>\n        <li><a href=\"lexflow-article-matter-tracker.html\">Come un tracker delle pratiche riduce le telefonate di routine senza indebolire il rapporto avvocato-cliente</a></li>\n        <li><a href=\"lexflow-faq.html#glossary\">Glossario nelle FAQ</a></li>\n        <li><a href=\"lexflow-blog.html\">Blog</a></li>"
     }
   },
   "lexflow-article-security-privacy.html": {
@@ -84,7 +84,7 @@ ARTICLES = {
       "eyebrow": "Security and privacy",
       "lede": "A law firm does not protect client information by displaying a familiar security badge on a website.",
       "cta": "Curious how this would look in your firm? <a href=\"lexflow-index.html#intake\">Request a walkthrough and demo</a>, or compare plans on the <a href=\"lexflow-pricing.html\">pricing page</a>.",
-      "related": "<li><a href=\"lexflow-article-ai-assisted-operations.html\">AI-assisted operations: use reviewable AI, never invisible judgement</a></li>\n        <li><a href=\"lexflow-article-law-firm-automation.html\">Law-firm automation: remove repetition without automating judgement</a></li>\n        <li><a href=\"lexflow-article-crm-migration.html\">CRM and data migration: move the history, not the disorder</a></li>\n        <li><a href=\"lexflow-faq.html\">lexflow-faq.html</a></li>\n        <li><a href=\"lexflow-blog.html\">lexflow-blog.html</a></li>"
+      "related": "<li><a href=\"lexflow-article-ai-assisted-operations.html\">AI-assisted operations: use reviewable AI, never invisible judgement</a></li>\n        <li><a href=\"lexflow-article-law-firm-automation.html\">Law-firm automation: remove repetition without automating judgement</a></li>\n        <li><a href=\"lexflow-article-crm-migration.html\">CRM and data migration: move the history, not the disorder</a></li>\n        <li><a href=\"lexflow-faq.html\">FAQ</a></li>\n        <li><a href=\"lexflow-blog.html\">Blog</a></li>"
     },
     "ru": {
       "title": "Безопасность и конфиденциальность: превратите признанные стандарты в ежедневные привычки",
@@ -92,7 +92,7 @@ ARTICLES = {
       "eyebrow": "Безопасность и конфиденциальность",
       "lede": "Юридическое бюро защищает клиентские данные не знакомым значком безопасности на сайте.",
       "cta": "Интересно, как это будет работать в вашей фирме? <a href=\"lexflow-index.html#intake\">Запросите демонстрацию</a> или сравните тарифы на <a href=\"lexflow-pricing.html\">странице цен</a>.",
-      "related": "<li><a href=\"lexflow-article-ai-assisted-operations.html\">Работа с поддержкой ИИ: проверяемая помощь вместо невидимых решений</a></li>\n        <li><a href=\"lexflow-article-law-firm-automation.html\">Автоматизация юридического бюро: меньше рутины, но решения остаются за людьми</a></li>\n        <li><a href=\"lexflow-article-crm-migration.html\">CRM и перенос данных: переносите историю, а не беспорядок</a></li>\n        <li><a href=\"lexflow-faq.html\">lexflow-faq.html</a></li>\n        <li><a href=\"lexflow-blog.html\">lexflow-blog.html</a></li>"
+      "related": "<li><a href=\"lexflow-article-ai-assisted-operations.html\">Работа с поддержкой ИИ: проверяемая помощь вместо невидимых решений</a></li>\n        <li><a href=\"lexflow-article-law-firm-automation.html\">Автоматизация юридического бюро: меньше рутины, но решения остаются за людьми</a></li>\n        <li><a href=\"lexflow-article-crm-migration.html\">CRM и перенос данных: переносите историю, а не беспорядок</a></li>\n        <li><a href=\"lexflow-faq.html\">Часто задаваемые вопросы</a></li>\n        <li><a href=\"lexflow-blog.html\">Блог</a></li>"
     },
     "it": {
       "title": "Sicurezza e privacy: trasformare gli standard riconosciuti in abitudini quotidiane",
@@ -100,7 +100,7 @@ ARTICLES = {
       "eyebrow": "Sicurezza e privacy",
       "lede": "Uno studio legale non protegge le informazioni dei clienti esibendo sul sito un rassicurante simbolo di sicurezza.",
       "cta": "Curioso di vedere come funzionerebbe nel tuo studio? <a href=\"lexflow-index.html#intake\">Richiedi una demo</a> oppure confronta i piani nella <a href=\"lexflow-pricing.html\">pagina dei prezzi</a>.",
-      "related": "<li><a href=\"lexflow-article-ai-assisted-operations.html\">Operatività assistita dall’IA: supporto verificabile, mai giudizio invisibile</a></li>\n        <li><a href=\"lexflow-article-law-firm-automation.html\">Automazione dello studio: eliminare la ripetizione senza automatizzare il giudizio</a></li>\n        <li><a href=\"lexflow-article-crm-migration.html\">CRM e migrazione dei dati: trasferire la storia, non il disordine</a></li>\n        <li><a href=\"lexflow-faq.html\">lexflow-faq.html</a></li>\n        <li><a href=\"lexflow-blog.html\">lexflow-blog.html</a></li>"
+      "related": "<li><a href=\"lexflow-article-ai-assisted-operations.html\">Operatività assistita dall’IA: supporto verificabile, mai giudizio invisibile</a></li>\n        <li><a href=\"lexflow-article-law-firm-automation.html\">Automazione dello studio: eliminare la ripetizione senza automatizzare il giudizio</a></li>\n        <li><a href=\"lexflow-article-crm-migration.html\">CRM e migrazione dei dati: trasferire la storia, non il disordine</a></li>\n        <li><a href=\"lexflow-faq.html\">FAQ</a></li>\n        <li><a href=\"lexflow-blog.html\">Blog</a></li>"
     }
   },
   "lexflow-article-ai-assisted-operations.html": {
@@ -110,7 +110,7 @@ ARTICLES = {
       "eyebrow": "AI-assisted operations",
       "lede": "AI can help a law firm extract information, organise material and prepare a first draft.",
       "cta": "Curious how this would look in your firm? <a href=\"lexflow-index.html#intake\">Request a walkthrough and demo</a>, or compare plans on the <a href=\"lexflow-pricing.html\">pricing page</a>.",
-      "related": "<li><a href=\"lexflow-article-security-privacy.html\">Security and privacy: turn recognised standards into daily habits</a></li>\n        <li><a href=\"lexflow-article-law-firm-automation.html\">Law-firm automation: remove repetition without automating judgement</a></li>\n        <li><a href=\"lexflow-article-law-firm-workflows.html\">Law-firm workflows: design the handoffs between assistant, lawyer and client</a></li>\n        <li><a href=\"lexflow-how-it-works.html\">lexflow-how-it-works.html</a></li>\n        <li><a href=\"lexflow-blog.html\">lexflow-blog.html</a></li>"
+      "related": "<li><a href=\"lexflow-article-security-privacy.html\">Security and privacy: turn recognised standards into daily habits</a></li>\n        <li><a href=\"lexflow-article-law-firm-automation.html\">Law-firm automation: remove repetition without automating judgement</a></li>\n        <li><a href=\"lexflow-article-law-firm-workflows.html\">Law-firm workflows: design the handoffs between assistant, lawyer and client</a></li>\n        <li><a href=\"lexflow-how-it-works.html\">How it works</a></li>\n        <li><a href=\"lexflow-blog.html\">Blog</a></li>"
     },
     "ru": {
       "title": "Работа с поддержкой ИИ: проверяемая помощь вместо невидимых решений",
@@ -118,7 +118,7 @@ ARTICLES = {
       "eyebrow": "Работа с поддержкой ИИ",
       "lede": "ИИ может извлекать сведения, упорядочивать материалы и готовить первый черновик.",
       "cta": "Интересно, как это будет работать в вашей фирме? <a href=\"lexflow-index.html#intake\">Запросите демонстрацию</a> или сравните тарифы на <a href=\"lexflow-pricing.html\">странице цен</a>.",
-      "related": "<li><a href=\"lexflow-article-security-privacy.html\">Безопасность и конфиденциальность: превратите признанные стандарты в ежедневные привычки</a></li>\n        <li><a href=\"lexflow-article-law-firm-automation.html\">Автоматизация юридического бюро: меньше рутины, но решения остаются за людьми</a></li>\n        <li><a href=\"lexflow-article-law-firm-workflows.html\">Рабочие процессы бюро: продумайте передачу между помощником, юристом и клиентом</a></li>\n        <li><a href=\"lexflow-how-it-works.html\">lexflow-how-it-works.html</a></li>\n        <li><a href=\"lexflow-blog.html\">lexflow-blog.html</a></li>"
+      "related": "<li><a href=\"lexflow-article-security-privacy.html\">Безопасность и конфиденциальность: превратите признанные стандарты в ежедневные привычки</a></li>\n        <li><a href=\"lexflow-article-law-firm-automation.html\">Автоматизация юридического бюро: меньше рутины, но решения остаются за людьми</a></li>\n        <li><a href=\"lexflow-article-law-firm-workflows.html\">Рабочие процессы бюро: продумайте передачу между помощником, юристом и клиентом</a></li>\n        <li><a href=\"lexflow-how-it-works.html\">Как это работает</a></li>\n        <li><a href=\"lexflow-blog.html\">Блог</a></li>"
     },
     "it": {
       "title": "Operatività assistita dall’IA: supporto verificabile, mai giudizio invisibile",
@@ -126,7 +126,7 @@ ARTICLES = {
       "eyebrow": "Operatività assistita dall'IA",
       "lede": "L’IA può aiutare uno studio legale a estrarre informazioni, organizzare materiali e preparare una prima bozza.",
       "cta": "Curioso di vedere come funzionerebbe nel tuo studio? <a href=\"lexflow-index.html#intake\">Richiedi una demo</a> oppure confronta i piani nella <a href=\"lexflow-pricing.html\">pagina dei prezzi</a>.",
-      "related": "<li><a href=\"lexflow-article-security-privacy.html\">Sicurezza e privacy: trasformare gli standard riconosciuti in abitudini quotidiane</a></li>\n        <li><a href=\"lexflow-article-law-firm-automation.html\">Automazione dello studio: eliminare la ripetizione senza automatizzare il giudizio</a></li>\n        <li><a href=\"lexflow-article-law-firm-workflows.html\">Flussi di lavoro dello studio: progettare i passaggi tra assistente, avvocato e cliente</a></li>\n        <li><a href=\"lexflow-how-it-works.html\">lexflow-how-it-works.html</a></li>\n        <li><a href=\"lexflow-blog.html\">lexflow-blog.html</a></li>"
+      "related": "<li><a href=\"lexflow-article-security-privacy.html\">Sicurezza e privacy: trasformare gli standard riconosciuti in abitudini quotidiane</a></li>\n        <li><a href=\"lexflow-article-law-firm-automation.html\">Automazione dello studio: eliminare la ripetizione senza automatizzare il giudizio</a></li>\n        <li><a href=\"lexflow-article-law-firm-workflows.html\">Flussi di lavoro dello studio: progettare i passaggi tra assistente, avvocato e cliente</a></li>\n        <li><a href=\"lexflow-how-it-works.html\">Come funziona</a></li>\n        <li><a href=\"lexflow-blog.html\">Blog</a></li>"
     }
   },
   "lexflow-article-law-firm-workflows.html": {
@@ -136,7 +136,7 @@ ARTICLES = {
       "eyebrow": "Law-firm workflows",
       "lede": "A workflow is not a colourful diagram of ideal behaviour.",
       "cta": "Curious how this would look in your firm? <a href=\"lexflow-index.html#intake\">Request a walkthrough and demo</a>, or compare plans on the <a href=\"lexflow-pricing.html\">pricing page</a>.",
-      "related": "<li><a href=\"lexflow-article-client-communication.html\">Client communication: set expectations before silence becomes a problem</a></li>\n        <li><a href=\"lexflow-article-law-firm-automation.html\">Law-firm automation: remove repetition without automating judgement</a></li>\n        <li><a href=\"lexflow-article-adoption-in-small-firm.html\">Adoption in a small firm: change the system without stopping billable work</a></li>\n        <li><a href=\"lexflow-how-it-works.html\">lexflow-how-it-works.html</a></li>\n        <li><a href=\"lexflow-blog.html\">lexflow-blog.html</a></li>"
+      "related": "<li><a href=\"lexflow-article-client-communication.html\">Client communication: set expectations before silence becomes a problem</a></li>\n        <li><a href=\"lexflow-article-law-firm-automation.html\">Law-firm automation: remove repetition without automating judgement</a></li>\n        <li><a href=\"lexflow-article-adoption-in-small-firm.html\">Adoption in a small firm: change the system without stopping billable work</a></li>\n        <li><a href=\"lexflow-how-it-works.html\">How it works</a></li>\n        <li><a href=\"lexflow-blog.html\">Blog</a></li>"
     },
     "ru": {
       "title": "Рабочие процессы бюро: продумайте передачу между помощником, юристом и клиентом",
@@ -144,7 +144,7 @@ ARTICLES = {
       "eyebrow": "Рабочие процессы бюро",
       "lede": "Рабочий процесс — это не цветная схема идеального поведения.",
       "cta": "Интересно, как это будет работать в вашей фирме? <a href=\"lexflow-index.html#intake\">Запросите демонстрацию</a> или сравните тарифы на <a href=\"lexflow-pricing.html\">странице цен</a>.",
-      "related": "<li><a href=\"lexflow-article-client-communication.html\">Общение с клиентом: договоритесь заранее, пока молчание не стало проблемой</a></li>\n        <li><a href=\"lexflow-article-law-firm-automation.html\">Автоматизация юридического бюро: меньше рутины, но решения остаются за людьми</a></li>\n        <li><a href=\"lexflow-article-adoption-in-small-firm.html\">Внедрение в небольшом бюро: измените систему, не останавливая оплачиваемую работу</a></li>\n        <li><a href=\"lexflow-how-it-works.html\">lexflow-how-it-works.html</a></li>\n        <li><a href=\"lexflow-blog.html\">lexflow-blog.html</a></li>"
+      "related": "<li><a href=\"lexflow-article-client-communication.html\">Общение с клиентом: договоритесь заранее, пока молчание не стало проблемой</a></li>\n        <li><a href=\"lexflow-article-law-firm-automation.html\">Автоматизация юридического бюро: меньше рутины, но решения остаются за людьми</a></li>\n        <li><a href=\"lexflow-article-adoption-in-small-firm.html\">Внедрение в небольшом бюро: измените систему, не останавливая оплачиваемую работу</a></li>\n        <li><a href=\"lexflow-how-it-works.html\">Как это работает</a></li>\n        <li><a href=\"lexflow-blog.html\">Блог</a></li>"
     },
     "it": {
       "title": "Flussi di lavoro dello studio: progettare i passaggi tra assistente, avvocato e cliente",
@@ -152,7 +152,7 @@ ARTICLES = {
       "eyebrow": "Flussi di lavoro dello studio",
       "lede": "Un flusso di lavoro non è un diagramma colorato del comportamento ideale.",
       "cta": "Curioso di vedere come funzionerebbe nel tuo studio? <a href=\"lexflow-index.html#intake\">Richiedi una demo</a> oppure confronta i piani nella <a href=\"lexflow-pricing.html\">pagina dei prezzi</a>.",
-      "related": "<li><a href=\"lexflow-article-client-communication.html\">Comunicazione con il cliente: definire le aspettative prima che il silenzio diventi un problema</a></li>\n        <li><a href=\"lexflow-article-law-firm-automation.html\">Automazione dello studio: eliminare la ripetizione senza automatizzare il giudizio</a></li>\n        <li><a href=\"lexflow-article-adoption-in-small-firm.html\">Adozione in uno studio di piccole dimensioni: cambiare sistema senza fermare il lavoro fatturabile</a></li>\n        <li><a href=\"lexflow-how-it-works.html\">lexflow-how-it-works.html</a></li>\n        <li><a href=\"lexflow-blog.html\">lexflow-blog.html</a></li>"
+      "related": "<li><a href=\"lexflow-article-client-communication.html\">Comunicazione con il cliente: definire le aspettative prima che il silenzio diventi un problema</a></li>\n        <li><a href=\"lexflow-article-law-firm-automation.html\">Automazione dello studio: eliminare la ripetizione senza automatizzare il giudizio</a></li>\n        <li><a href=\"lexflow-article-adoption-in-small-firm.html\">Adozione in uno studio di piccole dimensioni: cambiare sistema senza fermare il lavoro fatturabile</a></li>\n        <li><a href=\"lexflow-how-it-works.html\">Come funziona</a></li>\n        <li><a href=\"lexflow-blog.html\">Blog</a></li>"
     }
   },
   "lexflow-article-adoption-in-small-firm.html": {
@@ -162,7 +162,7 @@ ARTICLES = {
       "eyebrow": "Adoption",
       "lede": "Introducing new software into a firm of 5–20 people cannot become a second full-time occupation.",
       "cta": "Curious how this would look in your firm? <a href=\"lexflow-index.html#intake\">Request a walkthrough and demo</a>, or compare plans on the <a href=\"lexflow-pricing.html\">pricing page</a>.",
-      "related": "<li><a href=\"lexflow-article-crm-migration.html\">CRM and data migration: move the history, not the disorder</a></li>\n        <li><a href=\"lexflow-article-law-firm-workflows.html\">Law-firm workflows: design the handoffs between assistant, lawyer and client</a></li>\n        <li><a href=\"lexflow-article-client-intake.html\">lexflow-article-client-intake.html</a></li>\n        <li><a href=\"lexflow-faq.html\">lexflow-faq.html</a></li>\n        <li><a href=\"lexflow-blog.html\">lexflow-blog.html</a></li>"
+      "related": "<li><a href=\"lexflow-article-crm-migration.html\">CRM and data migration: move the history, not the disorder</a></li>\n        <li><a href=\"lexflow-article-law-firm-workflows.html\">Law-firm workflows: design the handoffs between assistant, lawyer and client</a></li>\n        <li><a href=\"lexflow-article-client-intake.html\">From first enquiry to organised matter: a practical client-intake workflow for small legal firms</a></li>\n        <li><a href=\"lexflow-faq.html\">FAQ</a></li>\n        <li><a href=\"lexflow-blog.html\">Blog</a></li>"
     },
     "ru": {
       "title": "Внедрение в небольшом бюро: измените систему, не останавливая оплачиваемую работу",
@@ -170,7 +170,7 @@ ARTICLES = {
       "eyebrow": "Внедрение",
       "lede": "Внедрение новой программы в бюро из 5–20 человек не может превратиться во вторую полноценную работу.",
       "cta": "Интересно, как это будет работать в вашей фирме? <a href=\"lexflow-index.html#intake\">Запросите демонстрацию</a> или сравните тарифы на <a href=\"lexflow-pricing.html\">странице цен</a>.",
-      "related": "<li><a href=\"lexflow-article-crm-migration.html\">CRM и перенос данных: переносите историю, а не беспорядок</a></li>\n        <li><a href=\"lexflow-article-law-firm-workflows.html\">Рабочие процессы бюро: продумайте передачу между помощником, юристом и клиентом</a></li>\n        <li><a href=\"lexflow-article-client-intake.html\">lexflow-article-client-intake.html</a></li>\n        <li><a href=\"lexflow-faq.html\">lexflow-faq.html</a></li>\n        <li><a href=\"lexflow-blog.html\">lexflow-blog.html</a></li>"
+      "related": "<li><a href=\"lexflow-article-crm-migration.html\">CRM и перенос данных: переносите историю, а не беспорядок</a></li>\n        <li><a href=\"lexflow-article-law-firm-workflows.html\">Рабочие процессы бюро: продумайте передачу между помощником, юристом и клиентом</a></li>\n        <li><a href=\"lexflow-article-client-intake.html\">От первого обращения к организованному делу: практичный процесс приёма клиентов для небольших юридических фирм</a></li>\n        <li><a href=\"lexflow-faq.html\">Часто задаваемые вопросы</a></li>\n        <li><a href=\"lexflow-blog.html\">Блог</a></li>"
     },
     "it": {
       "title": "Adozione in uno studio di piccole dimensioni: cambiare sistema senza fermare il lavoro fatturabile",
@@ -178,7 +178,7 @@ ARTICLES = {
       "eyebrow": "Adozione",
       "lede": "Introdurre un nuovo software in uno studio di 5–20 persone non può diventare un secondo lavoro a tempo pieno.",
       "cta": "Curioso di vedere come funzionerebbe nel tuo studio? <a href=\"lexflow-index.html#intake\">Richiedi una demo</a> oppure confronta i piani nella <a href=\"lexflow-pricing.html\">pagina dei prezzi</a>.",
-      "related": "<li><a href=\"lexflow-article-crm-migration.html\">CRM e migrazione dei dati: trasferire la storia, non il disordine</a></li>\n        <li><a href=\"lexflow-article-law-firm-workflows.html\">Flussi di lavoro dello studio: progettare i passaggi tra assistente, avvocato e cliente</a></li>\n        <li><a href=\"lexflow-article-client-intake.html\">lexflow-article-client-intake.html</a></li>\n        <li><a href=\"lexflow-faq.html\">lexflow-faq.html</a></li>\n        <li><a href=\"lexflow-blog.html\">lexflow-blog.html</a></li>"
+      "related": "<li><a href=\"lexflow-article-crm-migration.html\">CRM e migrazione dei dati: trasferire la storia, non il disordine</a></li>\n        <li><a href=\"lexflow-article-law-firm-workflows.html\">Flussi di lavoro dello studio: progettare i passaggi tra assistente, avvocato e cliente</a></li>\n        <li><a href=\"lexflow-article-client-intake.html\">Dalla prima richiesta alla pratica organizzata: un flusso di intake pratico per studi legali di piccole dimensioni</a></li>\n        <li><a href=\"lexflow-faq.html\">FAQ</a></li>\n        <li><a href=\"lexflow-blog.html\">Blog</a></li>"
     }
   }
 }
