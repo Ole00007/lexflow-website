@@ -185,6 +185,8 @@ window.I18N = {"en":{"nav_features": "Features", "nav_howitworks": "How It Works
 <!-- COOKIE CONSENT CMP:START -->
 <style>
   .cc-overlay{position:fixed;inset:0;z-index:10000;background:rgba(8,12,20,.55);display:flex;align-items:flex-end;justify-content:center;padding:0 16px 20px;backdrop-filter:blur(2px)}
+  .cc-overlay[hidden]{display:none !important}
+  .cc-panel[hidden]{display:none !important}
   .cc-panel{max-width:640px;width:100%;background:var(--surface,#0F1826);border:1px solid var(--border,rgba(212,175,55,.18));border-radius:18px;padding:22px 22px 18px;box-shadow:0 22px 60px rgba(0,0,0,.5);max-height:82vh;overflow:auto}
   .cc-panel h2{font-size:17px;margin:0 0 8px;color:var(--text,#F2EFE9)}
   .cc-panel p{font-size:13.5px;line-height:1.5;color:var(--text-dim,#B9C2D0);margin:0 0 14px}
@@ -383,13 +385,16 @@ window.I18N = {"en":{"nav_features": "Features", "nav_howitworks": "How It Works
   function show(kind){
     if (!overlay) return;
     overlay.hidden = false;
+    overlay.style.display = 'flex';
     document.getElementById('ccBanner').hidden = (kind !== 'banner');
     document.getElementById('ccModal').hidden = (kind !== 'modal');
     var focusEl = kind === 'modal' ? document.getElementById('ccModal') : document.getElementById('ccBanner');
     if (focusEl) focusEl.focus();
   }
   function hide(){
-    if (overlay) overlay.hidden = true;
+    if (!overlay) return;
+    overlay.hidden = true;
+    overlay.style.display = 'none';   /* inline display beats the class rule */
   }
   function apply(cats){
     save(cats);
@@ -475,6 +480,7 @@ window.I18N = {"en":{"nav_features": "Features", "nav_howitworks": "How It Works
 })();
 </script>
 <!-- COOKIE CONSENT CMP:END -->
+
 
 
 <!-- ELISA WIDGET:START -->
