@@ -116,7 +116,26 @@
     /* A localised URL (/it/, /ru/) pins the language regardless of what a
        previous page stored in localStorage. */
     var lock = document.documentElement.getAttribute('data-lang-lock');
-    setLang(lock || localStorage.getItem('lexflow-lang') || 'en');
+    var lang = lock || localStorage.getItem('lexflow-lang') || 'en';
+    /* Article bodies are baked-in HTML rather than data-i18n elements, so an
+       English article page cannot be translated in place the way the homepage
+       can - the /it/ and /ru/ copies are the only place the body exists in that
+       language. When the reader's language is Italian or Russian, take them to
+       the localised copy of the article instead of showing an English body. The
+       relative URL map resolves against the current path, so a page already on
+       its localised copy stays put (no redirect loop). */
+    if (lang !== 'en' && /^lexflow-article-.*\.html$/.test(location.pathname.split('/').pop())
+        && LANG_URLS && LANG_URLS[lang]) {
+      try {
+        var target = new URL(LANG_URLS[lang], location.href).pathname;
+        if (target !== location.pathname) {
+          localStorage.setItem('lexflow-lang', lang);
+          location.href = LANG_URLS[lang];
+          return;
+        }
+      } catch (e) { /* malformed URL map - fall through to in-place render */ }
+    }
+    setLang(lang);
   }
 
   /* ---- Theme ---- */
