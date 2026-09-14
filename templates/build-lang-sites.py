@@ -89,15 +89,15 @@ META = {
         "ru": ("Рабочие процессы бюро: продумайте передачу между помощником, юристом и клиентом — LexFlow", "Рабочий процесс — это не цветная схема идеального поведения."),
     },
     "lexflow-article-adoption-in-small-firm.html": {
-        "it": ("Adozione in uno studio di piccole dimensioni: cambiare sistema senza fermare il lavoro fatturabile — LexFlow", "Introdurre un nuovo software in uno studio di 5–20 persone non può diventare un secondo lavoro a tempo pieno."),
+        "it": ("Adozione in uno studio legale: cambiare sistema senza fermare il lavoro fatturabile — LexFlow", "Introdurre un nuovo software in uno studio di 5–20 persone non può diventare un secondo lavoro a tempo pieno."),
     },
     "lexflow-article-adoption-in-small-firm.html": {
-        "ru": ("Внедрение в небольшом бюро: измените систему, не останавливая оплачиваемую работу — LexFlow", "Внедрение новой программы в бюро из 5–20 человек не может превратиться во вторую полноценную работу."),
+        "ru": ("Внедрение в юридическом бюро: измените систему, не останавливая оплачиваемую работу — LexFlow", "Внедрение новой программы в бюро из 5–20 человек не может превратиться во вторую полноценную работу."),
     },
 
         "lexflow-article-client-communication.html": {
-        "it": ("Meno interruzioni, conversazioni migliori: la comunicazione con i clienti nei piccoli studi legali — LexFlow", "Come definire aggiornamenti, tempi di risposta e contatti urgenti senza promettere ciò che lo studio non può garantire."),
-        "ru": ("Меньше отвлечений, больше содержательных разговоров: коммуникация с клиентами в небольшой юридической фирме — LexFlow", "Как договориться об обновлениях, сроках ответа и срочных контактах, не обещая того, что фирма не сможет выполнить."),
+        "it": ("Meno interruzioni, conversazioni migliori: la comunicazione con i clienti negli studi legali — LexFlow", "Come definire aggiornamenti, tempi di risposta e contatti urgenti senza promettere ciò che lo studio non può garantire."),
+        "ru": ("Меньше отвлечений, больше содержательных разговоров: коммуникация с клиентами в юридической фирме — LexFlow", "Как договориться об обновлениях, сроках ответа и срочных контактах, не обещая того, что фирма не сможет выполнить."),
     },
     "lexflow-article-crm-migration.html": {
         "it": ("Dalle tabelle a una CRM: come pianificare la migrazione a un sistema di gestione dello studio — LexFlow", "Che cosa censire prima della migrazione, come gestire i duplicati e perché le regole di conservazione guidano l’intero piano."),
@@ -105,7 +105,7 @@ META = {
     },
     "lexflow-article-law-firm-automation.html": {
         "it": ("Automazione che aiuta un piccolo studio — e automazione che crea costi senza farsi notare — LexFlow", "Dove promemoria, checklist e instradamento fanno risparmiare tempo, e dove una decisione deve restare a una persona."),
-        "ru": ("Автоматизация, которая помогает небольшой юридической фирме, — и автоматизация, которая незаметно создаёт расходы — LexFlow", "Где напоминания, чек-листы и маршрутизация действительно экономят время, а где решение должно оставаться за человеком."),
+        "ru": ("Автоматизация, которая помогает юридической фирме, — и автоматизация, которая незаметно создаёт расходы — LexFlow", "Где напоминания, чек-листы и маршрутизация действительно экономят время, а где решение должно оставаться за человеком."),
     },
 "lexflow-index.html": {
         "it": ("LexFlow — Gestione dello studio legale in un unico spazio",
@@ -139,9 +139,9 @@ META = {
     },
     "lexflow-blog.html": {
         "it": ("Blog — LexFlow",
-               "Guide pratiche per studi legali di piccole dimensioni: intake dei clienti, monitoraggio delle pratiche, comunicazione, automazione, migrazione dei dati, sicurezza e adozione."),
+               "Guide pratiche per studi legali di tutte le dimensioni: intake dei clienti, monitoraggio delle pratiche, comunicazione, automazione, migrazione dei dati, sicurezza e adozione."),
         "ru": ("Блог — LexFlow",
-               "Практические материалы для небольших юридических фирм: приём заявок, отслеживание дел, коммуникация с клиентами, автоматизация, миграция данных, безопасность и внедрение."),
+               "Практические материалы для юридических фирм всех размеров: приём заявок, отслеживание дел, коммуникация с клиентами, автоматизация, миграция данных, безопасность и внедрение."),
     },
     "lexflow-article-matter-tracker.html": {
         "it": ("Come un tracker delle pratiche riduce le telefonate di stato — LexFlow",
@@ -151,9 +151,9 @@ META = {
     },
     "lexflow-article-client-intake.html": {
         "it": ("Dal primo contatto alla pratica organizzata: flusso di intake per studi legali — LexFlow",
-               "Un flusso di intake in sei passaggi per studi legali di piccole dimensioni: raccogliere solo l'essenziale, classificare, assegnare un responsabile, collegare le informazioni, spiegare cosa segue e misurare."),
-        "ru": ("От первого обращения к организованному делу: приём заявок для небольших фирм — LexFlow",
-               "Приём заявок в шесть шагов для небольших юридических фирм: собрать только необходимое, классифицировать, назначить ответственного, связать данные, объяснить дальнейшие шаги и измерить результат."),
+               "Un flusso di intake in sei passaggi per studi legali di tutte le dimensioni: raccogliere solo l'essenziale, classificare, assegnare un responsabile, collegare le informazioni, spiegare cosa segue e misurare."),
+        "ru": ("От первого обращения к организованному делу: приём заявок для фирм всех размеров — LexFlow",
+               "Приём заявок в шесть шагов для юридических фирм всех размеров: собрать только необходимое, классифицировать, назначить ответственного, связать данные, объяснить дальнейшие шаги и измерить результат."),
     },
 }
 
