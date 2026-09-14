@@ -75,9 +75,35 @@
 <footer>
   <div class="footer-inner">
     <span class="footer-text">LexFlow © 2026. All rights reserved.</span>
-    <span class="footer-legal" style="display:inline-flex;gap:12px;align-items:center"><a href="privacy.html" data-i18n="footer_privacy">Privacy</a><a href="terms.html" data-i18n="footer_terms">Terms</a></span>
+    <span class="footer-legal" role="contentinfo"><a href="privacy.html" data-i18n="footer_privacy">Privacy</a><span class="fl-sep" aria-hidden="true">·</span><a href="terms.html" data-i18n="footer_terms">Terms</a><span class="fl-sep" aria-hidden="true">·</span><a href="#" data-cookie-settings data-i18n="footer_cookie">Cookie settings</a></span>
     <span class="footer-credit">Designed by AVibe Agency</span>
   </div>
 </footer>
+<!-- COOKIE CONSENT BANNER -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
+  <p data-i18n="cookie_text">We use local storage only for your language and theme preferences. No advertising trackers. Read our <a href="privacy.html">Privacy Policy</a>.</p>
+  <div class="cookie-actions">
+    <button class="btn btn-gold" id="cookieAccept" type="button" data-i18n="cookie_accept">Accept</button>
+    <button class="btn btn-ghost" id="cookieDecline" type="button" data-i18n="cookie_decline">Decline</button>
+  </div>
+</div>
+<script>
+(function(){
+  var banner = document.getElementById('cookieBanner');
+  if (!banner) return;
+  var saved = localStorage.getItem('lexflow-cookie');
+  if (saved === 'accepted' || saved === 'declined') { banner.style.display = 'none'; return; }
+  function decide(v){ localStorage.setItem('lexflow-cookie', v); banner.style.display = 'none'; }
+  window.LEXFLOW_showCookieBanner = function () {
+    var b = document.getElementById('cookieBanner');
+    if (b) { b.style.display = ''; }
+  };
+  var acc = document.getElementById('cookieAccept');
+  var dec = document.getElementById('cookieDecline');
+  if (acc) acc.addEventListener('click', function(){ decide('accepted'); });
+  if (dec) dec.addEventListener('click', function(){ decide('declined'); });
+})();
+</script>
+<!-- /COOKIE CONSENT -->
 </body>
 </html>

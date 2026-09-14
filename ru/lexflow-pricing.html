@@ -193,7 +193,7 @@
       <a href="#" data-webhook="social-github" aria-label="GitHub" target="_blank" rel="noopener">gh</a>
       <a href="#" data-webhook="social-telegram" aria-label="Telegram" target="_blank" rel="noopener">tg</a>
     </div>
-    <span class="footer-legal" style="display:inline-flex;gap:12px;align-items:center"><a href="../privacy.html" data-i18n="footer_privacy">Конфиденциальность</a><a href="../terms.html" data-i18n="footer_terms">Условия</a></span>
+    <span class="footer-legal" role="contentinfo"><a href="../privacy.html" data-i18n="footer_privacy">Конфиденциальность</a><span class="fl-sep" aria-hidden="true">·</span><a href="../terms.html" data-i18n="footer_terms">Условия</a><span class="fl-sep" aria-hidden="true">·</span><a href="#" data-cookie-settings data-i18n="footer_cookie">Настройки cookie</a></span>
     <span class="footer-cert intake-note" data-i18n="compliance_small">Статус сертификации: сертификация ISO/IEC 27001 и ISO/IEC 27701 в процессе и пока не получена. SOC 2 — это аудиторский фреймворк, с которым мы соотносим свои практики.</span>
     <span class="footer-credit" data-i18n="footer_credit">Разработано AVibe Agency</span>
   </div>
@@ -221,6 +221,7 @@ window.I18N = {"en": {"nav_features": "Features", "nav_howitworks": "How It Work
 (function(){
   var banner = document.getElementById('cookieBanner');
   if (!banner) return;
+  window.LEXFLOW_showCookieBanner = function () { banner.style.display = ''; };
   var saved = localStorage.getItem('lexflow-cookie');
   if (saved === 'accepted' || saved === 'declined') { banner.style.display = 'none'; return; }
   function decide(v){ localStorage.setItem('lexflow-cookie', v); banner.style.display = 'none'; }

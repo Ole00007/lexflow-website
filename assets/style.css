@@ -395,3 +395,8 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 :lang(ru) .nav-links,.nav-links:lang(ru){font-size:12.5px;gap:17px;letter-spacing:-.005em}
 :lang(it) .nav-cta .btn{font-size:12.5px;padding:9px 14px}
 :lang(ru) .nav-cta .btn{font-size:12.5px;padding:9px 14px}
+
+.footer-legal{display:inline-flex;align-items:center;gap:9px;flex-wrap:wrap;justify-content:center;font-size:12.5px;color:var(--text-faint)}
+.footer-legal a{color:var(--text-dim);text-decoration:none;transition:color .2s}
+.footer-legal a:hover{color:var(--gold)}
+.fl-sep{color:var(--border);opacity:.8;font-size:10px}

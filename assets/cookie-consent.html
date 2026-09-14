@@ -13,6 +13,10 @@
   var saved = localStorage.getItem('lexflow-cookie');
   if (saved === 'accepted' || saved === 'declined') { banner.style.display = 'none'; return; }
   function decide(v){ localStorage.setItem('lexflow-cookie', v); banner.style.display = 'none'; }
+  window.LEXFLOW_showCookieBanner = function () {
+    var b = document.getElementById('cookieBanner');
+    if (b) { b.style.display = ''; }
+  };
   var acc = document.getElementById('cookieAccept');
   var dec = document.getElementById('cookieDecline');
   if (acc) acc.addEventListener('click', function(){ decide('accepted'); });

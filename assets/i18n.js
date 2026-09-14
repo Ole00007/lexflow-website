@@ -210,6 +210,15 @@
     }
   }
 
+  function initCookieSettings() {
+    document.querySelectorAll('[data-cookie-settings]').forEach(function (el) {
+      el.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (window.LEXFLOW_showCookieBanner) window.LEXFLOW_showCookieBanner();
+      });
+    });
+  }
+
   function initWebhooks() {
     document.querySelectorAll('[data-webhook]').forEach(function (el) {
       el.addEventListener('click', function () {
@@ -256,7 +265,8 @@
     initLang();
     initTheme();
     initFaq();
-    initWebhooks();
+    initCookieSettings();
+  initWebhooks();
     initWhatsApp();
     initChat();
     initReveal();
