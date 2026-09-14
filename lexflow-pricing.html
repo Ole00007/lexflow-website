@@ -222,7 +222,7 @@ window.I18N = {"en": {"nav_features": "Features", "nav_howitworks": "How It Work
   .cc-btn-ghost{background:transparent;color:var(--text,#F2EFE9);border-color:var(--border,rgba(212,175,55,.18))}
   .cc-btn-ghost:hover{border-color:var(--gold,#D4AF37);color:var(--gold,#D4AF37)}
   .cc-links{display:flex;gap:16px;justify-content:center;margin:6px 0;flex-wrap:wrap}
-  .cc-links a{font-size:12px;color:var(--text-faint,#7C8AA0);text-decoration:underline;text-underline-offset:2px}
+  .cc-links a{font-size:13px;font-weight:500;color:var(--text-dim,#B9C2D0);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--gold,#D4AF37);cursor:pointer;padding:4px 2px;display:inline-block}
   .cc-links a:hover{color:var(--gold,#D4AF37)}
   .cc-row{display:flex;flex-direction:column;gap:14px;margin:14px 0}
   .cc-cat{border:1px solid var(--border,rgba(212,175,55,.14));border-radius:12px;padding:12px 14px;background:rgba(24,36,58,.4)}
@@ -292,6 +292,10 @@ window.I18N = {"en": {"nav_features": "Features", "nav_howitworks": "How It Work
           <label class="cc-toggle"><input type="checkbox" id="ccCatMarketing"><span class="cc-slider"></span></label>
         </div>
       </div>
+    </div>
+    <div class="cc-links">
+      <a href="privacy.html" id="ccPrefPrivacyLink"></a>
+      <a href="cookie-policy.html" id="ccPrefPolicyLink"></a>
     </div>
     <div class="cc-modal-actions">
       <button class="cc-btn cc-btn-primary" id="ccPrefAccept"></button>
@@ -447,6 +451,8 @@ window.I18N = {"en": {"nav_features": "Features", "nav_howitworks": "How It Work
     document.getElementById('ccPrefReject').textContent = T.reject;
     document.getElementById('ccPrefSave').textContent = T.save;
     document.getElementById('ccBack').textContent = T.back;
+    document.getElementById('ccPrefPrivacyLink').textContent = T.privacy;
+    document.getElementById('ccPrefPolicyLink').textContent = T.policy;
   }
 
   function setToggles(c){
@@ -496,6 +502,7 @@ window.I18N = {"en": {"nav_features": "Features", "nav_howitworks": "How It Work
 })();
 </script>
 <!-- COOKIE CONSENT CMP:END -->
+
 
 <!-- ELISA WIDGET:START -->
 <div class="elisa-widget" id="elisaWidget">
