@@ -194,6 +194,19 @@ h2{font-family:'Instrument Serif',serif;font-size:30px;font-weight:400;margin-bo
 .intake-note{font-size:12px;color:var(--text-faint);text-align:center}
 
 /* ---- CONTACT ---- */
+/* The home contact form uses the same rhythm as .intake-form and .request-form, but
+   it sits inside a .cta-band that already supplies the surface, border and padding,
+   so it deliberately carries none of its own.
+
+   This rule was missing entirely. With no .contact-form selector anywhere, the form
+   stayed display:block, so its children stacked as plain block siblings with no
+   margin: the name/email row sat flush against the message box (measured gap 0px)
+   and the fields rendered with browser default styling (padding:0, a 2px inset
+   border, square corners) instead of the site's own controls. */
+.contact-form{display:flex;flex-direction:column;gap:14px}
+.contact-form input,.contact-form textarea{padding:12px 16px;border-radius:var(--radius-md);border:1px solid var(--border);background:rgba(255,255,255,0.04);color:var(--text);font-size:14px;min-height:44px;font-family:'Inter',sans-serif;width:100%}
+.contact-form textarea{resize:vertical;min-height:110px}
+.contact-form input:focus,.contact-form textarea:focus{outline:2px solid var(--gold);outline-offset:1px;border-color:var(--gold)}
 .faq-contact-btn{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:var(--radius-md);font-size:14px;font-weight:500;transition:all .2s;text-decoration:none;min-height:44px}
 .faq-contact-btn.whatsapp{background:rgba(37,211,102,0.12);color:#25D366;border:1px solid rgba(37,211,102,0.35)}
 .faq-contact-btn.whatsapp:hover{background:rgba(37,211,102,0.22)}

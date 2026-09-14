@@ -89,6 +89,10 @@
     if (menu) { menu.classList.remove('open'); }
     /* Keep the Elisa assistant copy in sync deterministically */
     if (window.LexFlowElisaSync) { window.LexFlowElisaSync(); }
+    /* The cookie dialog renders while the page is still parsing, so it resolves its
+       locale before this function has a chance to set documentElement.lang. Tell it
+       to re-render whenever the language actually changes. */
+    if (window.LexFlowCmpSync) { window.LexFlowCmpSync(); }
   }
 
   function initLang() {

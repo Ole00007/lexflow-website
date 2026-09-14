@@ -387,7 +387,21 @@ window.I18N = {"en": {"nav_features": "About CRM", "nav_howitworks": "How It Wor
     }
   };
 
-  function locale(){ var l=(document.documentElement.lang||'en').toLowerCase(); return (l==='it'||l==='ru')?l:'en'; }
+  /* Locale must be resolved exactly the way assets/i18n.js resolves it. This CMP
+     renders synchronously while the page is still parsing, which is BEFORE i18n.js
+     applies the stored language on DOMContentLoaded. At that moment
+     documentElement.lang is still whatever the static HTML declares, and on the
+     root pages that is always "en" - which is why the dialog stayed in English
+     even for a visitor reading the Italian or Russian version of the page.
+     Prefer the explicit language pin, then the stored choice, and only then fall
+     back to the document attribute. */
+  function locale(){
+    var lock = document.documentElement.getAttribute('data-lang-lock');
+    var stored = null;
+    try { stored = localStorage.getItem('lexflow-lang'); } catch(e){}
+    var l = (lock || stored || document.documentElement.lang || 'en').toLowerCase();
+    return (l==='it'||l==='ru')?l:'en';
+  }
   function copy(){ return COPY[locale()] || COPY.en; }
   var has = function(){ try { return typeof localStorage !== 'undefined'; } catch(e){ return false; } };
 
@@ -523,6 +537,9 @@ window.I18N = {"en": {"nav_features": "About CRM", "nav_howitworks": "How It Wor
 
   render();
   bind();
+  /* i18n.js calls this when the visitor switches language, so the dialog follows the
+     page instead of staying in whichever language it happened to first render in. */
+  window.LexFlowCmpSync = render;
 
   /* ---- consent-gating for non-essential scripts.
      Future analytics/marketing/functional vendor scripts can be tagged with
