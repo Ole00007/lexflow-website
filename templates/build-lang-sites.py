@@ -107,8 +107,8 @@ META = {
         "ru": ('Как это работает — LexFlow', 'Три шага: клиент отправляет запрос, фирма рассматривает и действует, клиент следит за ходом по приватной ссылке. Представления по ролям и полная хронология дела.'),
     },
     "lexflow-pricing.html": {
-        "it": ('Funzioni e prezzi — LexFlow', "Piani Starter, Professional ed Enterprise con prezzo per utente, fatturati annualmente. Confronto con le alternative di mercato. L'AI Add-on è quotato separatamente."),
-        "ru": ('Функции и тарифы — LexFlow', 'Тарифы Starter, Professional и Enterprise с оплатой за пользователя при годовой оплате. Сравнение с рыночными альтернативами. AI Add-on рассчитывается отдельно.'),
+        "it": ('Funzioni e prezzi — LexFlow', "Piani Organizzazione & Controllo, Crescita Costante ed Enterprise con prezzo per utente, fatturati annualmente. Confronto con le alternative di mercato. L'AI Add-on è quotato separatamente."),
+        "ru": ('Функции и тарифы — LexFlow', 'Тарифы Организация и контроль, Устойчивый рост и Enterprise с оплатой за пользователя при годовой оплате. Сравнение с рыночными альтернативами. AI Add-on рассчитывается отдельно.'),
     },
     "lexflow-practice-areas.html": {
         "it": ('Aree di attività — LexFlow', 'Moduli di intake preconfigurati per ogni area di attività: civile, societario, famiglia, penale, immobiliare, proprietà intellettuale, immigrazione, lavoro e altre. Per ogni area: definizione, esempio di intake e flusso di lavoro.'),
