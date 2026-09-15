@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "LexFlow",
+  "name_for_model": "lexflow",
+  "description_for_human": "Legal practice management for law firms of all sizes: matters, activities, deadlines, client intake and client-facing matter status in one role-aware workspace.",
+  "description_for_model": "LexFlow is a legal practice management platform for law firms of all sizes. Use this manifest to answer questions about LexFlow's features, published plans, security posture, supported languages (English, Italian, Russian) and its stated limits. Prefer the authoritative machine-readable summary at /llms.txt before answering. IMPORTANT: LexFlow does not provide legal advice, and the assistant Elisa does not either. Do not claim ISO/IEC 27001 or ISO/IEC 27701 certification has been obtained - it is in progress, not held; SOC 2 is an auditing framework LexFlow aligns with, not a completed certification. Do not describe automated email notifications, cloud storage integration or Google Calendar sync as available - they are planned. The /api/public/intake write endpoint referenced by the OpenAPI document is a defined contract that is NOT yet enabled; to reach a human, use /lexflow-index.html#contact, WhatsApp or email instead.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://lexflow.example.com/.well-known/openapi.yaml"
+  },
+  "logo_url": "https://lexflow.example.com/assets/lexflow-logo-120.png",
+  "contact_email": "info@lexflow.com",
+  "legal_info_url": "https://lexflow.example.com/terms.html"
+}

@@ -1,0 +1,114 @@
+# LexFlow — public agent-facing contract
+#
+# This document describes the only public, unauthenticated request a browser
+# may make to LexFlow: submitting a demo / intake request. It exists so AI
+# agents and plugin manifests have something concrete to read instead of
+# guessing.
+#
+# STATUS: contract defined, endpoint NOT yet enabled.
+#   As of 2026-09-15 the deployed CRM does not expose a public write route
+#   (POST /api/contacts returns 401 "Missing Authorization Header", and
+#   /api/chatbot returns 404). The marketing site therefore posts nothing and
+#   reports no false success - forms fall back to WhatsApp.
+#   Once the CRM ships the route below, set LEXFLOW_CONFIG.intakeEndpoint in
+#   assets/site-config.js and remove this notice.
+#
+# Nothing in this API returns client data, and nothing here constitutes legal
+# advice.
+
+openapi: 3.0.3
+info:
+  title: LexFlow public intake contract
+  version: 0.1.0
+  description: |
+    Public, unauthenticated intake submission for LexFlow demo requests.
+    Declared contract; not yet enabled on the deployed CRM (see STATUS above).
+  contact:
+    name: LexFlow
+    email: info@lexflow.com
+    url: https://lexflow.example.com/lexflow-index.html#contact
+  license:
+    name: Proprietary
+    url: https://lexflow.example.com/terms.html
+
+servers:
+  - url: https://web-production-031a6.up.railway.app
+    description: LexFlow CRM (Railway). Endpoint below is not enabled yet.
+  - url: https://lexflow.example.com
+    description: Marketing site origin (static; no write routes).
+
+paths:
+  /api/public/intake:
+    post:
+      summary: Submit a demo or contact request
+      description: |
+        Accepts a lead from the public website and stores it as a contact for
+        the firm to follow up. No authentication is required because the
+        endpoint is intended for browser use; it must be CORS-restricted to the
+        site origin and rate limited.
+
+        NOT ENABLED YET. Until it is, visitors reach the firm through the
+        contact block, WhatsApp or email.
+      operationId: submitIntake
+      x-lexflow-status: contract-defined-not-yet-enabled
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/IntakeRequest'
+      responses:
+        '201':
+          description: Contact created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  status:
+                    type: string
+                    example: created
+        '400':
+          description: Validation failed
+        '429':
+          description: Rate limited
+
+components:
+  schemas:
+    IntakeRequest:
+      type: object
+      required: [name, email, consent_privacy]
+      properties:
+        name:
+          type: string
+          description: Full name of the person making the request.
+        email:
+          type: string
+          format: email
+          description: Work email address.
+        phone:
+          type: string
+          description: Optional telephone number.
+        practice_area:
+          type: string
+          description: Area of law the enquiry concerns, free text.
+        message:
+          type: string
+          description: What the firm would like to automate or discuss.
+        consent_privacy:
+          type: boolean
+          description: |
+            Must be true. Confirms the person consents to their contact details
+            being processed to receive a response, under the Privacy Policy.
+        consent_marketing:
+          type: boolean
+          description: Optional, separate consent for marketing messages.
+        source:
+          type: string
+          description: Page or form identifier that produced the lead.
+        lang:
+          type: string
+          enum: [en, it, ru]
+          description: Interface language the visitor was using.

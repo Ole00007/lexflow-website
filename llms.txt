@@ -1,6 +1,6 @@
-# LexFlow — legal practice management for small law firms
+# LexFlow — legal practice management for law firms of all sizes
 
-> LexFlow is a legal practice management platform for firms of roughly 5-20 people. It brings matters, activities, deadlines, client intake and client communication into one role-aware workspace. Records connect to each other: a matter holds its tasks, its dates, its intake information, the people involved, the documents and context attached to it, plus the approved updates the legal firm's client is allowed to see. Interface languages: English, Italian, Russian. Dark and light themes.
+> LexFlow is a legal practice management platform for law firms of all sizes. It brings matters, activities, deadlines, client intake and client communication into one role-aware workspace. Records connect to each other: a matter holds its tasks, its dates, its intake information, the people involved, the documents and context attached to it, plus the approved updates the legal firm's client is allowed to see. Interface languages: English, Italian, Russian. Dark and light themes.
 
 ## Key facts
 
@@ -25,18 +25,33 @@
 
 - [Home](lexflow-index.html): product promise, connected workspace, feature overview, pilot indicators, illustrative examples, demo request form.
 - [How It Works](lexflow-how-it-works.html): the three-step flow (client sends a request; firm reviews and acts; client follows approved progress), per-role workspace views, and a matter timeline end to end.
-- [Pricing](lexflow-pricing.html): Starter / Professional / Enterprise tiers and a market comparison.
+- [Pricing](lexflow-pricing.html): Organisation & Control / Steady Growth / Enterprise tiers and a market comparison.
 - [Practice Areas](lexflow-practice-areas.html): each area with a definition, an intake example and a workflow example.
 - [FAQ and glossary](lexflow-faq.html): grouped direct answers on the product, client access, security and privacy, practice areas, integrations, onboarding and the AI Add-on, plus a 14-term plain-language glossary.
-- [Blog](lexflow-blog.html): articles on client intake, matter tracking, client communication, law-firm automation, migration, security and small-firm adoption.
+- [Blog](lexflow-blog.html): nine articles on client intake, matter tracking, client communication, law-firm automation, migration, security, AI-assisted operations, workflows and adoption.
 - [Client matter tracking article](lexflow-article-matter-tracker.html): how a client matter tracker reduces routine status calls without weakening the lawyer-client relationship.
 - [Client intake workflow article](lexflow-article-client-intake.html): from first enquiry to organised matter — a practical intake workflow for small firms.
+- [Client communication article](lexflow-article-client-communication.html): setting expectations before silence becomes a problem.
+- [Law-firm automation article](lexflow-article-law-firm-automation.html): removing repetition without automating judgement.
+- [CRM and data migration article](lexflow-article-crm-migration.html): moving the history, not the disorder.
+- [Security and privacy article](lexflow-article-security-privacy.html): turning recognised standards into daily habits.
+- [AI-assisted operations article](lexflow-article-ai-assisted-operations.html): reviewable AI, never invisible judgement.
+- [Practice workflows article](lexflow-article-law-firm-workflows.html): designing the handoffs between assistant, lawyer and client.
+- [Adoption article](lexflow-article-adoption-in-small-firm.html): changing the system without stopping billable work.
 - [Privacy policy](privacy.html): what data is collected, why, and how it is protected.
 - [Terms of service](terms.html): acceptance, service scope, accounts, trial, intellectual property, liability, changes.
 
 ## Glossary anchor
 
 - [Plain-language glossary](lexflow-faq.html#glossary): encryption, secure access controls, data migration, guided migration, white-glove migration, token-secured URL, matter page, GDPR, ISO/IEC 27001, ISO/IEC 27701, SOC 2, practice area, kanban, client intake.
+
+## Machine-readable and agent surfaces
+
+- [llms.txt](llms.txt): this file — authoritative product facts, pages and the limits we do not overstate.
+- [AI plugin manifest](.well-known/ai-plugin.json): name, description and contact for AI clients, pointing at the OpenAPI contract below.
+- [OpenAPI contract](.well-known/openapi.yaml): the public demo/intake request contract. Declared but NOT yet enabled on the deployed CRM; until then, forms fall back to WhatsApp.
+- [WebMCP](assets/webmcp.js): when the browser implements WebMCP (`navigator.modelContext`), the site registers structured tools for agents — `get_product_facts`, `get_pricing`, `request_demo`, `ask_elisa`, `contact_lexflow`, `find_article`. Progressive enhancement only; no effect in browsers without the API.
+- [Sitemap](sitemap.xml): every language URL with hreflang alternates.
 
 ## Contact
 
