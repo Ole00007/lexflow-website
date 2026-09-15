@@ -367,6 +367,18 @@
     launcher.addEventListener('click', function () {
       widget.classList.contains('open') ? close() : open();
     });
+    /* Anything marked data-elisa-open opens the assistant, so article CTAs can
+       offer "ask Elisa" as a real link next to the intake-form link instead of
+       describing it in plain text. Opens rather than toggles, so the link always
+       lands on an open assistant. */
+    $$('[data-elisa-open]').forEach(function (el) {
+      el.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (!widget.classList.contains('open')) { open(); }
+        var f = document.getElementById('elisaEmail');
+        if (f) { try { f.focus(); } catch (err) { /* focus is best effort */ } }
+      });
+    });
     var cb = $('#elisaCloseBtn', widget); if (cb) cb.addEventListener('click', close);
     var mb = $('#elisaMinBtn', widget); if (mb) mb.addEventListener('click', close);
     document.addEventListener('keydown', function (e) {

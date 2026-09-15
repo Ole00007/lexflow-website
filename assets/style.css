@@ -47,6 +47,11 @@ h1{font-family:'Instrument Serif',serif;font-size:40px;font-weight:400;line-heig
 h1 em{font-style:italic;color:var(--gold)}
 p.lede{color:var(--text-dim);font-size:16px;max-width:600px}
 .section{padding:48px 0}
+/* Article pages put the byline, then the info box, then the body. With the
+   shared 48px section padding on top of the hero's 32px bottom padding and the
+   info box's own top margin, ~106px of dead space sat between the byline and the
+   body, which pushed the first paragraph below the fold. Tighten just that case. */
+.section.section--article{padding-top:24px}
 .section-label{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
 h2{font-family:'Instrument Serif',serif;font-size:30px;font-weight:400;margin-bottom:14px}
 .section-sub{color:var(--text-dim);max-width:560px;margin-bottom:32px;font-size:15px}

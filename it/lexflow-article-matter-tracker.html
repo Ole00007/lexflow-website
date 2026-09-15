@@ -41,9 +41,10 @@
   .article{max-width:760px;margin:0 auto}
   .article-meta{font-size:13px;color:var(--text-dim);margin:6px 0 0}
   .article-byline{font-size:13px;color:var(--text-dim);margin:4px 0 0}
-  .lang-note{background:var(--surface-2);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:var(--radius-lg);padding:18px 20px;margin:26px 0}
+  .lang-note{background:var(--surface-2);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:var(--radius-lg);padding:18px 20px;margin:0 0 18px}
   .lang-note p{margin:0 0 8px;font-size:13.5px;color:var(--text-dim);line-height:1.6}
   .lang-note p:last-child{margin-bottom:0}
+  .article .lang-note + h2{margin-top:16px}
   .lang-note-title{font-weight:650;color:var(--text);font-size:13px;letter-spacing:.04em;text-transform:uppercase}
   .prose h2{font-size:23px;margin:38px 0 12px}
   .prose h3{font-size:18px;margin:26px 0 10px}
@@ -96,12 +97,12 @@
   </div>
 </header>
 
-<section class="section">
+<section class="section section--article">
   <div class="wrap">
     <article class="article prose">
 <aside class="lang-note" aria-label="Serve più informazione?">
         <p class="lang-note-title" data-i18n="art_note_title">Serve più informazione?</p>
-        <p data-i18n="art_note_body">Ci pensiamo noi! Inviaci una richiesta o chiedi a Elisa.</p>
+        <p><span data-i18n="art_note_body">Ci pensiamo noi!</span> <a href="lexflow-index.html#intake" data-i18n="art_note_request">Inviaci una richiesta</a> <span data-i18n="art_note_or">o</span> <a href="#" data-elisa-open data-i18n="art_note_elisa">chiedi a Elisa</a>.</p>
       </aside>
 
       <h2>A cosa serve un tracker della pratica per il cliente</h2>
@@ -111,7 +112,7 @@
 <h2>Come funzionano gli aggiornamenti approvati</h2>
 <h3>Perché gli aggiornamenti contano</h3>
 <p>Il lavoro legale prosegue anche quando, dall’esterno dello studio, se ne vede ben poco. Si esaminano documenti, si calcolano scadenze, si prepara la corrispondenza e talvolta si attende una controparte, un tribunale o un’autorità. Non ogni attività produce un documento che il cliente possa aprire, né un momento evidente in cui prendere il telefono.</p>
-<p>Senza aggiornamenti, il silenzio può sembrare inattività. Il cliente non riesce facilmente a distinguere una pratica che avanza da una rimasta in sospeso, e l’incertezza spesso pesa più del ritardo stesso. Uno stato approvato, come *documenti in esame*, chiarisce che il lavoro prosegue senza esporre note interne riservate. Dice al cliente che la pratica è in corso di gestione, senza rivelare il ragionamento dello studio, la sua valutazione del merito o ciò che viene discusso internamente.</p>
+<p>Senza aggiornamenti, il silenzio può sembrare inattività. Il cliente non riesce facilmente a distinguere una pratica che avanza da una rimasta in sospeso, e l’incertezza spesso pesa più del ritardo stesso. Uno stato approvato, come <em>documenti in esame</em>, chiarisce che il lavoro prosegue senza esporre note interne riservate. Dice al cliente che la pratica è in corso di gestione, senza rivelare il ragionamento dello studio, la sua valutazione del merito o ciò che viene discusso internamente.</p>
 <h3>Cosa può mostrare la pagina</h3>
 <p>Una pagina della pratica visibile al cliente ha contenuti volutamente limitati. In una configurazione tipica può mostrare:</p>
 <ul>
@@ -234,7 +235,7 @@ window.I18N = {
     "art1_lede": "A client-facing page can answer the ordinary question - where are we - without turning every routine step into a phone call. Here is how that works, and what a firm should decide first.",
     "art_reviewed": "Last reviewed 13 September 2026",
     "art_byline": "Written by the LexFlow team · Reviewed by the LexFlow onboarding team",
-    "art_note_title": "Need more information?", "art_note_body": "We've got you covered! Send us a request or ask Elisa.",
+    "art_note_title": "Need more information?", "art_note_body": "We've got you covered!", "art_note_request": "Send us a request", "art_note_or": "or", "art_note_elisa": "ask Elisa",
     "art_related": "Related reading"
   },
   "it": {
@@ -258,7 +259,7 @@ window.I18N = {
     "art1_lede": "Una pagina dedicata al cliente può rispondere alla domanda più comune - a che punto siamo - senza trasformare ogni passaggio di routine in una telefonata. Ecco come funziona e cosa conviene decidere prima.",
     "art_reviewed": "Ultima revisione 13 settembre 2026",
     "art_byline": "Scritto dal team LexFlow · Revisionato dal team di onboarding LexFlow",
-    "art_note_title": "Serve più informazione?", "art_note_body": "Ci pensiamo noi! Inviaci una richiesta o chiedi a Elisa.",
+    "art_note_title": "Serve più informazione?", "art_note_body": "Ci pensiamo noi!", "art_note_request": "Inviaci una richiesta", "art_note_or": "o", "art_note_elisa": "chiedi a Elisa",
     "art_related": "Letture correlate"
   },
   "ru": {
@@ -282,7 +283,7 @@ window.I18N = {
     "art1_lede": "Страница для клиента отвечает на обычный вопрос - на каком этапе дело - не превращая каждый рутинный шаг в звонок. Вот как это работает и что стоит решить заранее.",
     "art_reviewed": "Последняя проверка 13 сентября 2026 года",
     "art_byline": "Автор: команда LexFlow · Проверено командой онбординга LexFlow",
-    "art_note_title": "Нужна дополнительная информация?", "art_note_body": "Мы позаботимся об этом! Отправьте запрос или спросите Элизу.",
+    "art_note_title": "Нужна дополнительная информация?", "art_note_body": "Мы позаботимся об этом!", "art_note_request": "Отправьте запрос", "art_note_or": "или", "art_note_elisa": "спросите Элизу",
     "art_related": "Связанные материалы"
   }
 };

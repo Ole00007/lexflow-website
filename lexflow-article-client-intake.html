@@ -41,9 +41,10 @@
   .article{max-width:760px;margin:0 auto}
   .article-meta{font-size:13px;color:var(--text-dim);margin:6px 0 0}
   .article-byline{font-size:13px;color:var(--text-dim);margin:4px 0 0}
-  .lang-note{background:var(--surface-2);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:var(--radius-lg);padding:18px 20px;margin:26px 0}
+  .lang-note{background:var(--surface-2);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:var(--radius-lg);padding:18px 20px;margin:0 0 18px}
   .lang-note p{margin:0 0 8px;font-size:13.5px;color:var(--text-dim);line-height:1.6}
   .lang-note p:last-child{margin-bottom:0}
+  .article .lang-note + h2{margin-top:16px}
   .lang-note-title{font-weight:650;color:var(--text);font-size:13px;letter-spacing:.04em;text-transform:uppercase}
   .prose h2{font-size:23px;margin:38px 0 12px}
   .prose h3{font-size:18px;margin:26px 0 10px}
@@ -99,13 +100,13 @@
   </div>
 </header>
 
-<section class="section">
+<section class="section section--article">
   <div class="wrap">
     <article class="article prose">
 
       <aside class="lang-note" aria-label="Need more information?">
         <p class="lang-note-title" data-i18n="art_note_title">Need more information?</p>
-        <p data-i18n="art_note_body">We've got you covered! Send us a request or ask Elisa.</p>
+        <p><span data-i18n="art_note_body">We've got you covered!</span> <a href="lexflow-index.html#intake" data-i18n="art_note_request">Send us a request</a> <span data-i18n="art_note_or">or</span> <a href="#" data-elisa-open data-i18n="art_note_elisa">ask Elisa</a>.</p>
       </aside>
 
       <h2>What client intake is for</h2>
@@ -243,7 +244,7 @@ window.I18N = {
     "art2_lede": "Intake is the first thing a client experiences and the first place detail goes missing. A short, repeatable workflow fixes most of it.",
     "art_reviewed": "Last reviewed 13 September 2026",
     "art_byline": "Written by the LexFlow team · Reviewed by the LexFlow onboarding team",
-    "art_note_title": "Need more information?", "art_note_body": "We've got you covered! Send us a request or ask Elisa.",
+    "art_note_title": "Need more information?", "art_note_body": "We've got you covered!", "art_note_request": "Send us a request", "art_note_or": "or", "art_note_elisa": "ask Elisa",
     "art_related": "Related reading"
   },
   "it": {
@@ -267,7 +268,7 @@ window.I18N = {
     "art2_lede": "L'intake è la prima cosa che il cliente vive e il primo punto in cui i dettagli vanno persi. Un flusso breve e ripetibile risolve gran parte del problema.",
     "art_reviewed": "Ultima revisione 13 settembre 2026",
     "art_byline": "Scritto dal team LexFlow · Revisionato dal team di onboarding LexFlow",
-    "art_note_title": "Serve più informazione?", "art_note_body": "Ci pensiamo noi! Inviaci una richiesta o chiedi a Elisa.",
+    "art_note_title": "Serve più informazione?", "art_note_body": "Ci pensiamo noi!", "art_note_request": "Inviaci una richiesta", "art_note_or": "o", "art_note_elisa": "chiedi a Elisa",
     "art_related": "Letture correlate"
   },
   "ru": {
@@ -291,7 +292,7 @@ window.I18N = {
     "art2_lede": "Приём обращений - первое, с чем сталкивается клиент, и первое место, где теряются детали. Короткий повторяемый процесс решает большую часть проблемы.",
     "art_reviewed": "Последняя проверка 13 сентября 2026 года",
     "art_byline": "Автор: команда LexFlow · Проверено командой онбординга LexFlow",
-    "art_note_title": "Нужна дополнительная информация?", "art_note_body": "Мы позаботимся об этом! Отправьте запрос или спросите Элизу.",
+    "art_note_title": "Нужна дополнительная информация?", "art_note_body": "Мы позаботимся об этом!", "art_note_request": "Отправьте запрос", "art_note_or": "или", "art_note_elisa": "спросите Элизу",
     "art_related": "Связанные материалы"
   }
 };
