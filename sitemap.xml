@@ -334,6 +334,126 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lexflow.example.com/lexflow-article-security-privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexflow.example.com/lexflow-article-security-privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://lexflow.example.com/it/lexflow-article-security-privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lexflow.example.com/ru/lexflow-article-security-privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lexflow.example.com/lexflow-article-security-privacy.html"/>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lexflow.example.com/it/lexflow-article-security-privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexflow.example.com/lexflow-article-security-privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://lexflow.example.com/it/lexflow-article-security-privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lexflow.example.com/ru/lexflow-article-security-privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lexflow.example.com/lexflow-article-security-privacy.html"/>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lexflow.example.com/ru/lexflow-article-security-privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexflow.example.com/lexflow-article-security-privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://lexflow.example.com/it/lexflow-article-security-privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lexflow.example.com/ru/lexflow-article-security-privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lexflow.example.com/lexflow-article-security-privacy.html"/>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lexflow.example.com/lexflow-article-ai-assisted-operations.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexflow.example.com/lexflow-article-ai-assisted-operations.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://lexflow.example.com/it/lexflow-article-ai-assisted-operations.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lexflow.example.com/ru/lexflow-article-ai-assisted-operations.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lexflow.example.com/lexflow-article-ai-assisted-operations.html"/>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lexflow.example.com/it/lexflow-article-ai-assisted-operations.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexflow.example.com/lexflow-article-ai-assisted-operations.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://lexflow.example.com/it/lexflow-article-ai-assisted-operations.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lexflow.example.com/ru/lexflow-article-ai-assisted-operations.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lexflow.example.com/lexflow-article-ai-assisted-operations.html"/>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lexflow.example.com/ru/lexflow-article-ai-assisted-operations.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexflow.example.com/lexflow-article-ai-assisted-operations.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://lexflow.example.com/it/lexflow-article-ai-assisted-operations.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lexflow.example.com/ru/lexflow-article-ai-assisted-operations.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lexflow.example.com/lexflow-article-ai-assisted-operations.html"/>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lexflow.example.com/lexflow-article-law-firm-workflows.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexflow.example.com/lexflow-article-law-firm-workflows.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://lexflow.example.com/it/lexflow-article-law-firm-workflows.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lexflow.example.com/ru/lexflow-article-law-firm-workflows.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lexflow.example.com/lexflow-article-law-firm-workflows.html"/>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lexflow.example.com/it/lexflow-article-law-firm-workflows.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexflow.example.com/lexflow-article-law-firm-workflows.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://lexflow.example.com/it/lexflow-article-law-firm-workflows.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lexflow.example.com/ru/lexflow-article-law-firm-workflows.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lexflow.example.com/lexflow-article-law-firm-workflows.html"/>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lexflow.example.com/ru/lexflow-article-law-firm-workflows.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexflow.example.com/lexflow-article-law-firm-workflows.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://lexflow.example.com/it/lexflow-article-law-firm-workflows.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lexflow.example.com/ru/lexflow-article-law-firm-workflows.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lexflow.example.com/lexflow-article-law-firm-workflows.html"/>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lexflow.example.com/lexflow-article-adoption-in-small-firm.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexflow.example.com/lexflow-article-adoption-in-small-firm.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://lexflow.example.com/it/lexflow-article-adoption-in-small-firm.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lexflow.example.com/ru/lexflow-article-adoption-in-small-firm.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lexflow.example.com/lexflow-article-adoption-in-small-firm.html"/>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lexflow.example.com/it/lexflow-article-adoption-in-small-firm.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexflow.example.com/lexflow-article-adoption-in-small-firm.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://lexflow.example.com/it/lexflow-article-adoption-in-small-firm.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lexflow.example.com/ru/lexflow-article-adoption-in-small-firm.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lexflow.example.com/lexflow-article-adoption-in-small-firm.html"/>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lexflow.example.com/ru/lexflow-article-adoption-in-small-firm.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexflow.example.com/lexflow-article-adoption-in-small-firm.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://lexflow.example.com/it/lexflow-article-adoption-in-small-firm.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lexflow.example.com/ru/lexflow-article-adoption-in-small-firm.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lexflow.example.com/lexflow-article-adoption-in-small-firm.html"/>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lexflow.example.com/privacy.html</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>yearly</changefreq>

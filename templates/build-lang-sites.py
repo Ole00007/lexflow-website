@@ -71,89 +71,64 @@ LANGS = ["it", "ru"]
 # SEO-visible elements would stay English on an /it/ or /ru/ URL.
 META = {
     "lexflow-article-security-privacy.html": {
-        "it": ("Sicurezza e privacy: trasformare gli standard riconosciuti in abitudini quotidiane — LexFlow", "Uno studio legale non protegge le informazioni dei clienti esibendo sul sito un rassicurante simbolo di sicurezza."),
-    },
-    "lexflow-article-security-privacy.html": {
-        "ru": ("Безопасность и конфиденциальность: превратите признанные стандарты в ежедневные привычки — LexFlow", "Юридическое бюро защищает клиентские данные не знакомым значком безопасности на сайте."),
+        "it": ('Sicurezza e privacy: trasformare gli standard riconosciuti in abitudini quotidiane — LexFlow', 'Uno studio legale non protegge le informazioni dei clienti esibendo sul sito un rassicurante simbolo di sicurezza.'),
+        "ru": ('Безопасность и конфиденциальность: превратите признанные стандарты в ежедневные привычки — LexFlow', 'Юридическое бюро защищает клиентские данные не знакомым значком безопасности на сайте.'),
     },
     "lexflow-article-ai-assisted-operations.html": {
-        "it": ("Operatività assistita dall’IA: supporto verificabile, mai giudizio invisibile — LexFlow", "L’IA può aiutare uno studio legale a estrarre informazioni, organizzare materiali e preparare una prima bozza."),
-    },
-    "lexflow-article-ai-assisted-operations.html": {
-        "ru": ("Работа с поддержкой ИИ: проверяемая помощь вместо невидимых решений — LexFlow", "ИИ может извлекать сведения, упорядочивать материалы и готовить первый черновик."),
+        "it": ('Operatività assistita dall’IA: supporto verificabile, mai giudizio invisibile — LexFlow', 'L’IA può aiutare uno studio legale a estrarre informazioni, organizzare materiali e preparare una prima bozza.'),
+        "ru": ('Работа с поддержкой ИИ: проверяемая помощь вместо невидимых решений — LexFlow', 'ИИ может извлекать сведения, упорядочивать материалы и готовить первый черновик.'),
     },
     "lexflow-article-law-firm-workflows.html": {
-        "it": ("Flussi di lavoro dello studio: progettare i passaggi tra assistente, avvocato e cliente — LexFlow", "Un flusso di lavoro non è un diagramma colorato del comportamento ideale."),
-    },
-    "lexflow-article-law-firm-workflows.html": {
-        "ru": ("Рабочие процессы бюро: продумайте передачу между помощником, юристом и клиентом — LexFlow", "Рабочий процесс — это не цветная схема идеального поведения."),
+        "it": ('Flussi di lavoro dello studio: progettare i passaggi tra assistente, avvocato e cliente — LexFlow', 'Un flusso di lavoro non è un diagramma colorato del comportamento ideale.'),
+        "ru": ('Рабочие процессы бюро: продумайте передачу между помощником, юристом и клиентом — LexFlow', 'Рабочий процесс — это не цветная схема идеального поведения.'),
     },
     "lexflow-article-adoption-in-small-firm.html": {
-        "it": ("Adozione in uno studio legale: cambiare sistema senza fermare il lavoro fatturabile — LexFlow", "Introdurre un nuovo software in uno studio di 5–20 persone non può diventare un secondo lavoro a tempo pieno."),
+        "it": ('Adozione in uno studio legale: cambiare sistema senza fermare il lavoro fatturabile — LexFlow', 'Introdurre un nuovo software in uno studio di 5–20 persone non può diventare un secondo lavoro a tempo pieno.'),
+        "ru": ('Внедрение в юридическом бюро: измените систему, не останавливая оплачиваемую работу — LexFlow', 'Внедрение новой программы в бюро из 5–20 человек не может превратиться во вторую полноценную работу.'),
     },
-    "lexflow-article-adoption-in-small-firm.html": {
-        "ru": ("Внедрение в юридическом бюро: измените систему, не останавливая оплачиваемую работу — LexFlow", "Внедрение новой программы в бюро из 5–20 человек не может превратиться во вторую полноценную работу."),
-    },
-
-        "lexflow-article-client-communication.html": {
-        "it": ("Meno interruzioni, conversazioni migliori: la comunicazione con i clienti negli studi legali — LexFlow", "Come definire aggiornamenti, tempi di risposta e contatti urgenti senza promettere ciò che lo studio non può garantire."),
-        "ru": ("Меньше отвлечений, больше содержательных разговоров: коммуникация с клиентами в юридической фирме — LexFlow", "Как договориться об обновлениях, сроках ответа и срочных контактах, не обещая того, что фирма не сможет выполнить."),
+    "lexflow-article-client-communication.html": {
+        "it": ('Meno interruzioni, conversazioni migliori: la comunicazione con i clienti negli studi legali — LexFlow', 'Come definire aggiornamenti, tempi di risposta e contatti urgenti senza promettere ciò che lo studio non può garantire.'),
+        "ru": ('Меньше отвлечений, больше содержательных разговоров: коммуникация с клиентами в юридической фирме — LexFlow', 'Как договориться об обновлениях, сроках ответа и срочных контактах, не обещая того, что фирма не сможет выполнить.'),
     },
     "lexflow-article-crm-migration.html": {
-        "it": ("Dalle tabelle a una CRM: come pianificare la migrazione a un sistema di gestione dello studio — LexFlow", "Che cosa censire prima della migrazione, come gestire i duplicati e perché le regole di conservazione guidano l’intero piano."),
-        "ru": ("Переход от таблиц: как спланировать миграцию в CRM или систему управления юридической практикой — LexFlow", "Что нужно учесть до переноса данных, как работать с дублями и почему правила хранения определяют весь план."),
+        "it": ('Dalle tabelle a una CRM: come pianificare la migrazione a un sistema di gestione dello studio — LexFlow', 'Che cosa censire prima della migrazione, come gestire i duplicati e perché le regole di conservazione guidano l’intero piano.'),
+        "ru": ('Переход от таблиц: как спланировать миграцию в CRM или систему управления юридической практикой — LexFlow', 'Что нужно учесть до переноса данных, как работать с дублями и почему правила хранения определяют весь план.'),
     },
     "lexflow-article-law-firm-automation.html": {
-        "it": ("Automazione che aiuta un piccolo studio — e automazione che crea costi senza farsi notare — LexFlow", "Dove promemoria, checklist e instradamento fanno risparmiare tempo, e dove una decisione deve restare a una persona."),
-        "ru": ("Автоматизация, которая помогает юридической фирме, — и автоматизация, которая незаметно создаёт расходы — LexFlow", "Где напоминания, чек-листы и маршрутизация действительно экономят время, а где решение должно оставаться за человеком."),
+        "it": ('Automazione che aiuta un piccolo studio — e automazione che crea costi senza farsi notare — LexFlow', 'Dove promemoria, checklist e instradamento fanno risparmiare tempo, e dove una decisione deve restare a una persona.'),
+        "ru": ('Автоматизация, которая помогает юридической фирме, — и автоматизация, которая незаметно создаёт расходы — LexFlow', 'Где напоминания, чек-листы и маршрутизация действительно экономят время, а где решение должно оставаться за человеком.'),
     },
-"lexflow-index.html": {
-        "it": ("LexFlow — Gestione dello studio legale in un unico spazio",
-               "LexFlow riunisce pratiche, attività, scadenze, intake dei clienti e comunicazione in un unico spazio di lavoro per studio legale. I clienti non installano nulla e non usano password: accedono tramite link protetto da token."),
-        "ru": ("LexFlow — управление юридической практикой в одном месте",
-               "LexFlow объединяет дела, задачи, сроки, приём заявок и общение с клиентами в одном рабочем пространстве. Клиентам не нужны приложение и пароль — доступ по ссылке, защищённой токеном."),
+    "lexflow-index.html": {
+        "it": ('LexFlow — Gestione dello studio legale in un unico spazio', 'LexFlow riunisce pratiche, attività, scadenze, intake dei clienti e comunicazione in un unico spazio di lavoro per studio legale. I clienti non installano nulla e non usano password: accedono tramite link protetto da token.'),
+        "ru": ('LexFlow — управление юридической практикой в одном месте', 'LexFlow объединяет дела, задачи, сроки, приём заявок и общение с клиентами в одном рабочем пространстве. Клиентам не нужны приложение и пароль — доступ по ссылке, защищённой токеном.'),
     },
     "lexflow-how-it-works.html": {
-        "it": ("Come funziona — LexFlow",
-               "Tre passaggi: il cliente invia la richiesta, lo studio esamina e agisce, il cliente segue l'avanzamento tramite un link privato. Viste per ruolo e cronologia completa della pratica."),
-        "ru": ("Как это работает — LexFlow",
-               "Три шага: клиент отправляет запрос, фирма рассматривает и действует, клиент следит за ходом по приватной ссылке. Представления по ролям и полная хронология дела."),
+        "it": ('Come funziona — LexFlow', "Tre passaggi: il cliente invia la richiesta, lo studio esamina e agisce, il cliente segue l'avanzamento tramite un link privato. Viste per ruolo e cronologia completa della pratica."),
+        "ru": ('Как это работает — LexFlow', 'Три шага: клиент отправляет запрос, фирма рассматривает и действует, клиент следит за ходом по приватной ссылке. Представления по ролям и полная хронология дела.'),
     },
     "lexflow-pricing.html": {
-        "it": ("Funzioni e prezzi — LexFlow",
-               "Piani Starter, Professional ed Enterprise con prezzo per utente, fatturati annualmente. Confronto con le alternative di mercato. L'AI Add-on è quotato separatamente."),
-        "ru": ("Функции и тарифы — LexFlow",
-               "Тарифы Starter, Professional и Enterprise с оплатой за пользователя при годовой оплате. Сравнение с рыночными альтернативами. AI Add-on рассчитывается отдельно."),
+        "it": ('Funzioni e prezzi — LexFlow', "Piani Starter, Professional ed Enterprise con prezzo per utente, fatturati annualmente. Confronto con le alternative di mercato. L'AI Add-on è quotato separatamente."),
+        "ru": ('Функции и тарифы — LexFlow', 'Тарифы Starter, Professional и Enterprise с оплатой за пользователя при годовой оплате. Сравнение с рыночными альтернативами. AI Add-on рассчитывается отдельно.'),
     },
     "lexflow-practice-areas.html": {
-        "it": ("Aree di attività — LexFlow",
-               "Moduli di intake preconfigurati per ogni area di attività: civile, societario, famiglia, penale, immobiliare, proprietà intellettuale, immigrazione, lavoro e altre. Per ogni area: definizione, esempio di intake e flusso di lavoro."),
-        "ru": ("Отрасли права — LexFlow",
-               "Формы приёма заявок, настроенные под каждую отрасль: гражданское, корпоративное, семейное, уголовное, недвижимость, интеллектуальная собственность, иммиграция, трудовое и другие. Для каждой отрасли: определение, пример заявки и процесс работы."),
+        "it": ('Aree di attività — LexFlow', 'Moduli di intake preconfigurati per ogni area di attività: civile, societario, famiglia, penale, immobiliare, proprietà intellettuale, immigrazione, lavoro e altre. Per ogni area: definizione, esempio di intake e flusso di lavoro.'),
+        "ru": ('Отрасли права — LexFlow', 'Формы приёма заявок, настроенные под каждую отрасль: гражданское, корпоративное, семейное, уголовное, недвижимость, интеллектуальная собственность, иммиграция, трудовое и другие. Для каждой отрасли: определение, пример заявки и процесс работы.'),
     },
     "lexflow-faq.html": {
-        "it": ("Domande frequenti e glossario — LexFlow",
-               "Risposte dirette su LexFlow: come funziona ogni giorno, come il cliente raggiunge la propria pratica, come sono protetti i dati, quali aree di attività copre, cosa è integrato e cosa è in programma, più un glossario in linguaggio semplice."),
-        "ru": ("Частые вопросы и глоссарий — LexFlow",
-               "Прямые ответы о LexFlow: как это работает каждый день, как клиент попадает на страницу своего дела, как защищены данные, какие отрасли права охвачены, что уже интегрировано и что в планах, плюс глоссарий простыми словами."),
+        "it": ('Domande frequenti e glossario — LexFlow', 'Risposte dirette su LexFlow: come funziona ogni giorno, come il cliente raggiunge la propria pratica, come sono protetti i dati, quali aree di attività copre, cosa è integrato e cosa è in programma, più un glossario in linguaggio semplice.'),
+        "ru": ('Частые вопросы и глоссарий — LexFlow', 'Прямые ответы о LexFlow: как это работает каждый день, как клиент попадает на страницу своего дела, как защищены данные, какие отрасли права охвачены, что уже интегрировано и что в планах, плюс глоссарий простыми словами.'),
     },
     "lexflow-blog.html": {
-        "it": ("Blog — LexFlow",
-               "Guide pratiche per studi legali di tutte le dimensioni: intake dei clienti, monitoraggio delle pratiche, comunicazione, automazione, migrazione dei dati, sicurezza e adozione."),
-        "ru": ("Блог — LexFlow",
-               "Практические материалы для юридических фирм всех размеров: приём заявок, отслеживание дел, коммуникация с клиентами, автоматизация, миграция данных, безопасность и внедрение."),
+        "it": ('Blog — LexFlow', 'Guide pratiche per studi legali di tutte le dimensioni: intake dei clienti, monitoraggio delle pratiche, comunicazione, automazione, migrazione dei dati, sicurezza e adozione.'),
+        "ru": ('Блог — LexFlow', 'Практические материалы для юридических фирм всех размеров: приём заявок, отслеживание дел, коммуникация с клиентами, автоматизация, миграция данных, безопасность и внедрение.'),
     },
     "lexflow-article-matter-tracker.html": {
-        "it": ("Come un tracker delle pratiche riduce le telefonate di stato — LexFlow",
-               "Una pagina privata in cui il cliente vede aggiornamenti approvati, prossime tappe e richieste di documenti, senza sostituire il rapporto con l'avvocato. Include i controlli da fare prima dell'adozione."),
-        "ru": ("Как отслеживание дел снижает число звонков о статусе — LexFlow",
-               "Приватная страница, где клиент видит одобренные обновления, следующие этапы и запросы документов, не заменяя общение с адвокатом. Включает список вопросов перед внедрением."),
+        "it": ('Come un tracker delle pratiche riduce le telefonate di stato — LexFlow', "Una pagina privata in cui il cliente vede aggiornamenti approvati, prossime tappe e richieste di documenti, senza sostituire il rapporto con l'avvocato. Include i controlli da fare prima dell'adozione."),
+        "ru": ('Как отслеживание дел снижает число звонков о статусе — LexFlow', 'Приватная страница, где клиент видит одобренные обновления, следующие этапы и запросы документов, не заменяя общение с адвокатом. Включает список вопросов перед внедрением.'),
     },
     "lexflow-article-client-intake.html": {
-        "it": ("Dal primo contatto alla pratica organizzata: flusso di intake per studi legali — LexFlow",
-               "Un flusso di intake in sei passaggi per studi legali di tutte le dimensioni: raccogliere solo l'essenziale, classificare, assegnare un responsabile, collegare le informazioni, spiegare cosa segue e misurare."),
-        "ru": ("От первого обращения к организованному делу: приём заявок для фирм всех размеров — LexFlow",
-               "Приём заявок в шесть шагов для юридических фирм всех размеров: собрать только необходимое, классифицировать, назначить ответственного, связать данные, объяснить дальнейшие шаги и измерить результат."),
+        "it": ('Dal primo contatto alla pratica organizzata: flusso di intake per studi legali — LexFlow', "Un flusso di intake in sei passaggi per studi legali di tutte le dimensioni: raccogliere solo l'essenziale, classificare, assegnare un responsabile, collegare le informazioni, spiegare cosa segue e misurare."),
+        "ru": ('От первого обращения к организованному делу: приём заявок для фирм всех размеров — LexFlow', 'Приём заявок в шесть шагов для юридических фирм всех размеров: собрать только необходимое, классифицировать, назначить ответственного, связать данные, объяснить дальнейшие шаги и измерить результат.'),
     },
 }
 
@@ -505,6 +480,10 @@ def write_sitemap():
         "lexflow-article-client-communication.html": ("yearly", "0.6"),
         "lexflow-article-crm-migration.html": ("yearly", "0.6"),
         "lexflow-article-law-firm-automation.html": ("yearly", "0.6"),
+        "lexflow-article-security-privacy.html": ("yearly", "0.6"),
+        "lexflow-article-ai-assisted-operations.html": ("yearly", "0.6"),
+        "lexflow-article-law-firm-workflows.html": ("yearly", "0.6"),
+        "lexflow-article-adoption-in-small-firm.html": ("yearly", "0.6"),
     }
     LASTMOD = "2026-09-13"
     lines = ['<?xml version="1.0" encoding="UTF-8"?>',
@@ -524,7 +503,12 @@ def write_sitemap():
         lines.append(f"    <priority>{prio}</priority>")
         lines.append("  </url>")
 
-    for page, (freq, prio) in PRIO.items():
+    # Iterate the page set itself rather than a second hand-maintained list. PRIO
+    # used to be the iteration source and silently drifted: the four articles added
+    # later were present in CONTENT_PAGES but absent from PRIO, so they were missing
+    # from the sitemap entirely and could never be indexed.
+    for page in CONTENT_PAGES:
+        freq, prio = PRIO.get(page, ("monthly", "0.6"))
         alts = [("en", f"{ORIGIN}/{page}"),
                 ("it", f"{ORIGIN}/it/{page}"),
                 ("ru", f"{ORIGIN}/ru/{page}"),
