@@ -100,7 +100,8 @@
       alt_sala_riunioni: 'Meeting room',
       alt_bilancia: 'Scales of justice',
       alt_kanban_board: 'LexFlow matter board showing matters grouped by stage',
-      alt_team: 'Law firm team working together'
+      alt_team: 'Law firm team working together',
+      alt_calendar: 'LexFlow calendar showing deadlines and appointments synced from notifications'
     },
 
     it: {
@@ -167,7 +168,8 @@
       alt_sala_riunioni: 'Sala riunioni',
       alt_bilancia: 'Bilancia della giustizia',
       alt_kanban_board: 'Board delle pratiche LexFlow raggruppate per fase',
-      alt_team: 'Team dello studio legale al lavoro'
+      alt_team: 'Team dello studio legale al lavoro',
+      alt_calendar: 'Calendario LexFlow con scadenze e appuntamenti sincronizzati dalle notifiche'
     },
 
     ru: {
@@ -234,7 +236,8 @@
       alt_sala_riunioni: '\u041f\u0435\u0440\u0435\u0433\u043e\u0432\u043e\u0440\u043d\u0430\u044f',
       alt_bilancia: '\u0412\u0435\u0441\u044b \u043f\u0440\u0430\u0432\u043e\u0441\u0443\u0434\u0438\u044f',
       alt_kanban_board: '\u0414\u043e\u0441\u043a\u0430 \u0434\u0435\u043b LexFlow \u043f\u043e \u044d\u0442\u0430\u043f\u0430\u043c',
-      alt_team: '\u041a\u043e\u043c\u0430\u043d\u0434\u0430 \u044e\u0440\u0438\u0434\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u0444\u0438\u0440\u043c\u044b \u0437\u0430 \u0440\u0430\u0431\u043e\u0442\u043e\u0439'
+      alt_team: '\u041a\u043e\u043c\u0430\u043d\u0434\u0430 \u044e\u0440\u0438\u0434\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u0444\u0438\u0440\u043c\u044b \u0437\u0430 \u0440\u0430\u0431\u043e\u0442\u043e\u0439',
+      alt_calendar: '\u041a\u0430\u043b\u0435\u043d\u0434\u0430\u0440\u044c LexFlow \u0441\u043e \u0441\u0440\u043e\u043a\u0430\u043c\u0438 \u0438 \u0432\u0441\u0442\u0440\u0435\u0447\u0430\u043c\u0438, \u0441\u0438\u043d\u0445\u0440\u043e\u043d\u0438\u0437\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u043c\u0438 \u0438\u0437 \u0443\u0432\u0435\u0434\u043e\u043c\u043b\u0435\u043d\u0438\u0439'
     }
   };
 
