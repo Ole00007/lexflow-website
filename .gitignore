@@ -1,5 +1,10 @@
-.netlify/
-node_modules/
-*.bak
-*.pre_fix
-sqlite_mcp_server.db
+# Build output — assembled by templates/build-dist.py, never committed.
+# Deploy dist/, never the repo root.
+dist/
+
+# Python
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
