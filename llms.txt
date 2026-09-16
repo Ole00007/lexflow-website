@@ -55,7 +55,7 @@
 
 ## Contact
 
-- Demo request: https://lexflow.example.com/lexflow-index.html#intake
+- Demo request: https://lexflow-site.pages.dev/lexflow-index.html#intake
 - WhatsApp: https://wa.me/393450234084
 - Email: info@lexflow.com · demo@lexflow.com
 - Designed by AVibe Agency

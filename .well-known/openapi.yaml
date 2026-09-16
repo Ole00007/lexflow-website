@@ -26,15 +26,15 @@ info:
   contact:
     name: LexFlow
     email: info@lexflow.com
-    url: https://lexflow.example.com/lexflow-index.html#contact
+    url: https://lexflow-site.pages.dev/lexflow-index.html#contact
   license:
     name: Proprietary
-    url: https://lexflow.example.com/terms.html
+    url: https://lexflow-site.pages.dev/terms.html
 
 servers:
   - url: https://web-production-031a6.up.railway.app
     description: LexFlow CRM (Railway). Endpoint below is not enabled yet.
-  - url: https://lexflow.example.com
+  - url: https://lexflow-site.pages.dev
     description: Marketing site origin (static; no write routes).
 
 paths:

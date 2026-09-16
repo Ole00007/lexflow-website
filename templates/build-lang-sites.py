@@ -39,7 +39,7 @@ import re
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-ORIGIN = "https://lexflow.example.com"
+ORIGIN = "https://lexflow-site.pages.dev"
 
 # Pages that have full EN/IT/RU translations and therefore get localised copies.
 CONTENT_PAGES = [
@@ -396,10 +396,23 @@ def rewrite_head(html: str, page: str, lang: str, depth: int, title=None, desc=N
 def install_tags(html: str, page: str, depth: int, lang: str = "en") -> str:
     html = HREFLANG_RE.sub("", html)
     html = LANGURLS_RE.sub("", html)
+    # global origin sweep: any stale origin (old placeholder or a previous
+    # pages.dev host) becomes ORIGIN everywhere — including inline JSON-LD
+    # schema (@id / url / logo / target), which the canonical/og:url edits
+    # above do not touch. Idempotent: a current ORIGIN matches and rewrites
+    # to itself.
+    html = re.sub(r"https?://(?:[a-z0-9.-]+\.pages\.dev|lexflow\.example\.com)",
+                  ORIGIN, html)
     if page in EN_ONLY_PAGES:
         return html
     block = hreflang_block(page, depth)
     html = html.replace('<link rel="canonical"', block + '<link rel="canonical"', 1)
+    # canonical + og:url must point at this language's own URL (English too)
+    url = f"{ORIGIN}/{'' if depth == 0 else lang + '/'}{page}"
+    html = re.sub(r'(<link rel="canonical" href=")[^"]*(")',
+                  lambda m: m.group(1) + url + m.group(2), html, count=1)
+    html = re.sub(r'(<meta property="og:url" content=")[^"]*(")',
+                  lambda m: m.group(1) + url + m.group(2), html, count=1)
     # og:locale belongs on every page, English included
     if 'property="og:locale"' not in html and '<meta property="og:type"' in html:
         loc = {"en": "en_GB", "it": "it_IT", "ru": "ru_RU"}[lang]
@@ -521,6 +534,22 @@ def write_sitemap():
 
     lines.append("</urlset>")
     (ROOT / "sitemap.xml").write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+    # ---- origin sync for static agent-facing files not regenerated above ----
+    # llms.txt, robots.txt and .well-known/ai-plugin.json carry canonical
+    # URLs. Rewrite any known origin (the old placeholder or a previous
+    # pages.dev host) to the current ORIGIN so there is exactly one source.
+    for rel in ("llms.txt", "robots.txt", ".well-known/ai-plugin.json",
+                ".well-known/openapi.yaml"):
+        p = ROOT / rel
+        if not p.exists():
+            continue
+        text = p.read_text(encoding="utf-8")
+        new = re.sub(r"https?://(?:[a-z0-9.-]+\.pages\.dev|lexflow\.example\.com)",
+                     ORIGIN, text)
+        if new != text:
+            p.write_text(new, encoding="utf-8")
+            print(f"  origin-sync: {rel}")
     n = sum(1 for l in lines if l.strip().startswith("<loc>"))
     print(f"sitemap.xml written with {n} URLs")
 

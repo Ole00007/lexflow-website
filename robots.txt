@@ -22,4 +22,4 @@ Allow: /
 User-agent: cohere-ai
 Allow: /
 
-Sitemap: https://lexflow.example.com/sitemap.xml
+Sitemap: https://lexflow-site.pages.dev/sitemap.xml

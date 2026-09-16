@@ -9,9 +9,9 @@
   },
   "api": {
     "type": "openapi",
-    "url": "https://lexflow.example.com/.well-known/openapi.yaml"
+    "url": "https://lexflow-site.pages.dev/.well-known/openapi.yaml"
   },
-  "logo_url": "https://lexflow.example.com/assets/lexflow-logo-120.png",
+  "logo_url": "https://lexflow-site.pages.dev/assets/lexflow-logo-120.png",
   "contact_email": "info@lexflow.com",
-  "legal_info_url": "https://lexflow.example.com/terms.html"
+  "legal_info_url": "https://lexflow-site.pages.dev/terms.html"
 }
