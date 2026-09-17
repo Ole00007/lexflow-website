@@ -234,8 +234,7 @@ window.I18N = {"en":{"nav_features": "Features", "nav_howitworks": "How It Works
       <button class="cc-btn cc-btn-ghost" id="ccManage"></button>
     </div>
     <div class="cc-links">
-      <a href="privacy.html" id="ccPrivacyLink"></a>
-      <a href="cookie-policy.html" id="ccPolicyLink"></a>
+      <a href="privacy.html" id="ccPrivacyLink">Privacy Notice</a>
     </div>
   </div>
 
@@ -270,8 +269,7 @@ window.I18N = {"en":{"nav_features": "Features", "nav_howitworks": "How It Works
       </div>
     </div>
     <div class="cc-links">
-      <a href="privacy.html" id="ccPrefPrivacyLink"></a>
-      <a href="cookie-policy.html" id="ccPrefPolicyLink"></a>
+      <a href="privacy.html" id="ccPrefPrivacyLink">Privacy Notice</a>
     </div>
     <div class="cc-modal-actions">
       <button class="cc-btn cc-btn-primary" id="ccPrefAccept"></button>
@@ -293,7 +291,7 @@ window.I18N = {"en":{"nav_features": "Features", "nav_howitworks": "How It Works
       title:'Your privacy choices',
       body:'LexFlow uses strictly necessary cookies to make the website work. With your permission, we also use optional cookies and similar technologies to understand how the site is used and to measure or personalise marketing. You can accept all optional cookies, reject them, or choose by category. You can change your choice at any time in Cookie Settings.',
       accept:'Accept all', reject:'Reject non-essential', manage:'Manage preferences',
-      privacy:'Privacy Notice', policy:'Cookie Policy', close:'Close',
+      privacy:'Privacy Notice', close:'Close',
       prefTitle:'Cookie preferences',
       prefIntro:'Choose which optional categories LexFlow may use. Strictly necessary cookies are always active because they are needed to provide the site and protect it from abuse.',
       neededH:'Strictly necessary', neededP:'These cookies are required for core website functions, security, load balancing, fraud prevention, remembering your cookie choice and, where applicable, authentication. They cannot be switched off in our systems.', always:'Always active',
@@ -306,7 +304,7 @@ window.I18N = {"en":{"nav_features": "Features", "nav_howitworks": "How It Works
       title:'Le tue preferenze sulla privacy',
       body:'LexFlow utilizza cookie strettamente necessari per il funzionamento del sito. Solo con il tuo consenso utilizziamo cookie e tecnologie analoghe facoltativi per comprendere l\'utilizzo del sito e per misurare o personalizzare le attività di marketing. Puoi accettare tutti i cookie facoltativi, rifiutarli oppure scegliere per categoria. Puoi modificare la tua scelta in qualsiasi momento nelle Impostazioni cookie.',
       accept:'Accetta tutti', reject:'Rifiuta i cookie non necessari', manage:'Gestisci preferenze',
-      privacy:'Informativa Privacy', policy:'Cookie Policy', close:'Chiudi',
+      privacy:'Informativa Privacy', close:'Chiudi',
       prefTitle:'Preferenze sui cookie',
       prefIntro:'Puoi scegliere quali categorie facoltative LexFlow può utilizzare. I cookie strettamente necessari rimangono sempre attivi perché necessari per fornire il sito e proteggerlo da utilizzi illeciti.',
       neededH:'Cookie strettamente necessari', neededP:'Sono necessari per le funzionalità essenziali del sito, la sicurezza, il bilanciamento del carico, la prevenzione delle frodi, la memorizzazione della scelta sui cookie e, ove applicabile, l\'autenticazione. Non possono essere disattivati nei nostri sistemi.', always:'Sempre attivi',
@@ -319,7 +317,7 @@ window.I18N = {"en":{"nav_features": "Features", "nav_howitworks": "How It Works
       title:'Ваши настройки конфиденциальности',
       body:'LexFlow использует строго необходимые cookie для работы сайта. Только с вашего согласия мы также используем необязательные cookie и аналогичные технологии, чтобы понимать, как используется сайт, а также измерять или персонализировать маркетинг. Вы можете принять все необязательные cookie, отклонить их или выбрать категории отдельно. Вы можете изменить выбор в любой момент в разделе «Настройки cookie».',
       accept:'Принять все', reject:'Отклонить необязательные cookie', manage:'Настроить предпочтения',
-      privacy:'Политика конфиденциальности', policy:'Политика cookie', close:'Закрыть',
+      privacy:'Политика конфиденциальности', close:'Закрыть',
       prefTitle:'Предпочтения по cookie',
       prefIntro:'Выберите, какие необязательные категории может использовать LexFlow. Строго необходимые cookie всегда активны, потому что нужны для работы сайта и защиты от злоупотреблений.',
       neededH:'Строго необходимые', neededP:'Эти cookie необходимы для основных функций сайта, безопасности, балансировки нагрузки, предотвращения мошенничества, запоминания вашего выбора по cookie и, где применимо, аутентификации. Их нельзя отключить в наших системах.', always:'Всегда активны',
@@ -427,7 +425,6 @@ window.I18N = {"en":{"nav_features": "Features", "nav_howitworks": "How It Works
     document.getElementById('ccReject').textContent = T.reject;
     document.getElementById('ccManage').textContent = T.manage;
     document.getElementById('ccPrivacyLink').textContent = T.privacy;
-    document.getElementById('ccPolicyLink').textContent = T.policy;
     document.getElementById('ccClose').setAttribute('aria-label', T.close);
     document.getElementById('ccPrefTitle').textContent = T.prefTitle;
     document.getElementById('ccPrefIntro').textContent = T.prefIntro;
@@ -445,7 +442,6 @@ window.I18N = {"en":{"nav_features": "Features", "nav_howitworks": "How It Works
     document.getElementById('ccPrefSave').textContent = T.save;
     document.getElementById('ccBack').textContent = T.back;
     document.getElementById('ccPrefPrivacyLink').textContent = T.privacy;
-    document.getElementById('ccPrefPolicyLink').textContent = T.policy;
   }
 
   function setToggles(c){
